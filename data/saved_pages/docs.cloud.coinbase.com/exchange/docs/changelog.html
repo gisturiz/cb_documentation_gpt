@@ -1,0 +1,3504 @@
+<!DOCTYPE html>
+<html class="docs-wrapper docs-doc-page docs-version-current plugin-docs plugin-id-exchange docs-doc-id-docs/changes-changelog" dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="Docusaurus v2.3.1" name="generator"/>
+  <title data-rh="true">
+   Changelog | Coinbase Cloud
+  </title>
+  <meta content="width=device-width,initial-scale=1" data-rh="true" name="viewport"/>
+  <meta content="summary_large_image" data-rh="true" name="twitter:card"/>
+  <meta content="https://docs.cloud.coinbase.com/exchange/docs/changelog" data-rh="true" property="og:url"/>
+  <meta content="en" data-rh="true" name="docusaurus_locale"/>
+  <meta content="en" data-rh="true" name="docsearch:language"/>
+  <meta content="current" data-rh="true" name="docusaurus_version"/>
+  <meta content="docs-exchange-current" data-rh="true" name="docusaurus_tag"/>
+  <meta content="current" data-rh="true" name="docsearch:version"/>
+  <meta content="docs-exchange-current" data-rh="true" name="docsearch:docusaurus_tag"/>
+  <meta content="Changelog | Coinbase Cloud" data-rh="true" property="og:title"/>
+  <meta content="These release notes list changes to all Coinbase Exchange and Coinbase Pro products." data-rh="true" name="description"/>
+  <meta content="These release notes list changes to all Coinbase Exchange and Coinbase Pro products." data-rh="true" property="og:description"/>
+  <link data-rh="true" href="/img/favicon.png" rel="icon"/>
+  <link data-rh="true" href="https://docs.cloud.coinbase.com/exchange/docs/changelog" rel="canonical"/>
+  <link data-rh="true" href="https://docs.cloud.coinbase.com/exchange/docs/changelog" hreflang="en" rel="alternate"/>
+  <link data-rh="true" href="https://docs.cloud.coinbase.com/exchange/docs/changelog" hreflang="x-default" rel="alternate"/>
+  <link crossorigin="anonymous" data-rh="true" href="https://BPPU41WTIR-dsn.algolia.net" rel="preconnect"/>
+  <link href="https://www.google-analytics.com" rel="preconnect"/>
+  <link href="https://www.googletagmanager.com" rel="preconnect"/>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-1X60WF4D7F">
+  </script>
+  <script>
+   function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-1X60WF4D7F",{anonymize_ip:!0})
+  </script>
+  <link href="/opensearch.xml" rel="search" title="Coinbase Cloud" type="application/opensearchdescription+xml"/>
+  <link href="/assets/css/styles.22f44638.css" rel="stylesheet"/>
+  <link as="script" href="/assets/js/runtime~main.91f0d63d.js" rel="preload"/>
+  <link as="script" href="/assets/js/main.440d9293.js" rel="preload"/>
+ </head>
+ <body class="navigation-with-keyboard">
+  <script>
+   !function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}()
+  </script>
+  <div id="__docusaurus">
+   <div aria-label="Skip to main content" role="region">
+    <a class="skipToContent_fXgn" href="#docusaurus_skipToContent_fallback">
+     Skip to main content
+    </a>
+   </div>
+   <nav aria-label="Main" class="navbar navbar--fixed-top">
+    <div class="navbar__container_rqDs">
+     <div class="navbar__inner">
+      <div class="navbar__items">
+       <button aria-expanded="false" aria-label="Toggle navigation bar" class="navbar__toggle clean-btn" type="button">
+        <svg aria-hidden="true" height="30" viewbox="0 0 30 30" width="30">
+         <path d="M4 7h22M4 15h22M4 23h22" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2">
+         </path>
+        </svg>
+       </button>
+       <a class="navbar__brand" href="/">
+        <div class="navbar__logo">
+         <img alt="Coinbase Pay" class="themedImage_ToTc themedImage--light_HNdA" src="/img/logo.svg"/>
+         <img alt="Coinbase Pay" class="themedImage_ToTc themedImage--dark_i4oU" src="/img/logo.svg"/>
+        </div>
+       </a>
+       <a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/">
+        Documentation
+       </a>
+      </div>
+      <div class="navbar__items navbar__items--right">
+       <div class="searchBox_ZlJk">
+        <button aria-label="Search" class="DocSearch DocSearch-Button" type="button">
+         <span class="DocSearch-Button-Container">
+          <svg class="DocSearch-Search-Icon" height="20" viewbox="0 0 20 20" width="20">
+           <path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+           </path>
+          </svg>
+          <span class="DocSearch-Button-Placeholder">
+           Search
+          </span>
+         </span>
+         <span class="DocSearch-Button-Keys">
+         </span>
+        </button>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="menubar_iWH4">
+     <div class="menubar__inner_eCwJ">
+      <div class="navbar__item dropdown dropdown--hoverable">
+       <a aria-expanded="false" aria-haspopup="true" class="navbar__link" href="#" role="button">
+        Exchange/Pro
+       </a>
+       <ul class="dropdown__menu">
+        <li>
+         <a class="dropdown__link" href="/advanced-trade-api/docs/welcome">
+          Advanced Trade API
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/blockchain-infrastructure/docs/welcome">
+          Blockchain Infrastructure
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/pay-sdk/docs/intro">
+          Coinbase Pay
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/wallet-sdk/docs/welcome">
+          Coinbase Wallet
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/commerce/docs/welcome">
+          Commerce API
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/delegation/docs/about-cloud-staking">
+          Delegation Guides
+         </a>
+        </li>
+        <li>
+         <a aria-current="page" class="dropdown__link dropdown__link--active" href="/exchange/docs/welcome">
+          Exchange/Pro
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/kyt/reference/introduction">
+          KYT
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/prime/docs/introduction">
+          Prime
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/rosetta/docs/welcome">
+          Rosetta
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/sign-in-with-coinbase/docs/welcome">
+          Sign in with Coinbase
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/waas/docs/welcome">
+          Wallet as a Service
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="navbar__item dropdown dropdown--hoverable">
+       <a aria-expanded="false" aria-haspopup="true" class="navbar__link" href="#" role="button">
+        Guides
+       </a>
+       <ul class="dropdown__menu">
+        <li>
+         <a aria-current="page" class="dropdown__link dropdown__link--active" href="/exchange/docs/welcome">
+          Guides
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/exchange/reference">
+          API Reference
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="menubarItems_end_INfc">
+       <a class="menubarBtn_Xh25" href="https://forums.coinbasecloud.dev">
+        Discuss in the Forum
+       </a>
+       <a class="menubarBtn_Xh25" href="https://help.coinbase.com/en/contact-us?product=coinbase-cloud">
+        Need Support?
+       </a>
+       <button class="menubarBtn_Xh25">
+        <svg class="icon_HrvF" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+         <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z">
+         </path>
+        </svg>
+        Search
+       </button>
+       <div class="searchToggleShortcut_VFcV">
+        ⌘K
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="navbar-sidebar__backdrop" role="presentation">
+    </div>
+   </nav>
+   <div class="main-wrapper mainWrapper_z2l0 docsWrapper_BCFX" id="docusaurus_skipToContent_fallback">
+    <button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button">
+    </button>
+    <div class="docPage__5DB">
+     <aside class="theme-doc-sidebar-container docSidebarContainer_b6E3">
+      <div class="sidebarViewport_Xe31">
+       <div class="sidebar_njMd">
+        <nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG">
+         <ul class="theme-doc-sidebar-menu menu__list">
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Introduction
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/welcome" tabindex="0">
+              Welcome
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/getting-started" tabindex="0">
+              Getting Started
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/matching-engine" tabindex="0">
+              Matching Engine
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/rate-limits" tabindex="0">
+              Rate Limits Overview
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/data-centers" tabindex="0">
+              Data Centers
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/sandbox" tabindex="0">
+              Sandbox
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Rest API
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/requests" tabindex="0">
+              Requests
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/authorization-and-authentication" tabindex="0">
+              Authorization and Authentication
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/rest-rate-limits" tabindex="0">
+              Rate Limits
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/types" tabindex="0">
+              Types
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/profiles" tabindex="0">
+              Profiles
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/pagination" tabindex="0">
+              Pagination
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Fix API
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/connectivity" tabindex="0">
+              Connectivity
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/ssl-tunnels" tabindex="0">
+              SSL Tunnels
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/messages" tabindex="0">
+              Order Entry Messages
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/messages-md" tabindex="0">
+              Market Data Messages
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/fix-rate-limits" tabindex="0">
+              Rate Limits
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/dictionaries" tabindex="0">
+              Dictionaries
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/fix-best-practices" tabindex="0">
+              Best Practices
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Websocket Feed
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/websocket-overview" tabindex="0">
+              Overview
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/websocket-auth" tabindex="0">
+              Authentication
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/websocket-channels" tabindex="0">
+              Channels
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/websocket-rate-limits" tabindex="0">
+              Rate Limits
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/websocket-errors" tabindex="0">
+              Errors
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/websocket-best-practices" tabindex="0">
+              Best Practices
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link menu__link--active">
+             Changes
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/upcoming-changes" tabindex="0">
+              Upcoming Changes
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a aria-current="page" class="menu__link menu__link--active" href="/exchange/docs/changelog" tabindex="0">
+              Changelog
+             </a>
+            </li>
+           </ul>
+          </li>
+         </ul>
+        </nav>
+       </div>
+      </div>
+     </aside>
+     <main class="docMainContainer_gTbr">
+      <div class="container padding-top--md padding-bottom--lg">
+       <div class="row">
+        <div class="col docItemCol_z5aJ">
+         <div class="docItemContainer_c0TR">
+          <article>
+           <nav aria-label="Breadcrumbs" class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl">
+            <ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+             <li class="breadcrumbs__item">
+              <a aria-label="Home page" class="breadcrumbs__link" href="/">
+               <svg class="breadcrumbHomeIcon_YNFT" viewbox="0 0 24 24">
+                <path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor">
+                </path>
+               </svg>
+              </a>
+             </li>
+             <li class="breadcrumbs__item">
+              <span class="breadcrumbs__link">
+               Changes
+              </span>
+              <meta content="1" itemprop="position"/>
+             </li>
+             <li class="breadcrumbs__item breadcrumbs__item--active" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+              <span class="breadcrumbs__link" itemprop="name">
+               Changelog
+              </span>
+              <meta content="2" itemprop="position"/>
+             </li>
+            </ul>
+           </nav>
+           <div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo">
+            <button class="clean-btn tocCollapsibleButton_TO0P" type="button">
+             On this page
+            </button>
+           </div>
+           <div class="theme-doc-markdown markdown">
+            <header>
+             <h1>
+              Changelog
+             </h1>
+            </header>
+            <p>
+             These release notes list changes to all Coinbase Exchange and Coinbase Pro products.
+            </p>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2023-apr-24">
+             2023-APR-24
+             <a aria-label="Direct link to 2023-APR-24" class="hash-link" href="#2023-apr-24" title="Direct link to 2023-APR-24">
+              ​
+             </a>
+            </h3>
+            <p>
+             We added USD
+             <!-- -->
+             ⟨
+             <!-- -->
+             ⟩
+             <!-- -->
+             USDC unification which lets Coinbase Exchange users update their settlement preference to be either the stable coin counterpart for a fiat currency, or the fiat currency itself.
+            </p>
+            <ul>
+             <li>
+              <p>
+               <a href="/exchange/reference/exchangerestapi_postuserlevelsettlementpreferences">
+                Update settlement preference
+               </a>
+              </p>
+              <p>
+               <code>
+                POST https://api.exchange.coinbase.com/users/{user_id}/settlement-preferences
+               </code>
+              </p>
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2023-apr-19">
+             2023-APR-19
+             <a aria-label="Direct link to 2023-APR-19" class="hash-link" href="#2023-apr-19" title="Direct link to 2023-APR-19">
+              ​
+             </a>
+            </h3>
+            <p>
+             Added functionality for users to stake-wrap ETH to CBETH via Web &amp; API:
+            </p>
+            <ul>
+             <li>
+              <p>
+               <a href="/exchange/reference/exchangerestapi_postwrappedassetstakewrap">
+                Create a new stake-wrap
+               </a>
+              </p>
+              <p>
+               <code>
+                POST https://api.exchange.coinbase.com/wrapped-assets/stake-wrap
+               </code>
+              </p>
+             </li>
+             <li>
+              <p>
+               <a href="/exchange/reference/exchangerestapi_getallwrappedassetstakewraps">
+                Get all stake-wraps
+               </a>
+              </p>
+              <p>
+               <code>
+                GET https://api.exchange.coinbase.com/wrapped-assets/stake-wrap
+               </code>
+              </p>
+             </li>
+             <li>
+              <p>
+               <a href="/exchange/reference/exchangerestapi_getwrappedassetstakewrap">
+                Get a single stake-wrap
+               </a>
+              </p>
+              <p>
+               <code>
+                GET https://api.exchange.coinbase.com/wrapped-assets/stake-wrap/{stake_wrap_id}
+               </code>
+              </p>
+             </li>
+            </ul>
+            <p>
+             Learn more at
+             <a href="https://coinbase.bynder.com/m/5d3cff1b03f8aeb0/original/Coinbase-Exchange-CBETH-Stake-Wrap-Instructions.pdf" rel="noopener noreferrer" target="_blank">
+              Coinbase Exchange CBETH Stake Wrap Instructions
+             </a>
+             .
+            </p>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2023-mar-29">
+             2023-MAR-29
+             <a aria-label="Direct link to 2023-MAR-29" class="hash-link" href="#2023-mar-29" title="Direct link to 2023-MAR-29">
+              ​
+             </a>
+            </h3>
+            <p>
+             We added a new
+             <a href="/exchange/docs/websocket-channels#level3-channel">
+              Level3 WebSocket channel
+             </a>
+             which is a compact, low bandwidth, and easier to parse version of the Full channel.
+            </p>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2023-mar-15">
+             2023-MAR-15
+             <a aria-label="Direct link to 2023-MAR-15" class="hash-link" href="#2023-mar-15" title="Direct link to 2023-MAR-15">
+              ​
+             </a>
+            </h3>
+            <p>
+             Added new
+             <code>
+              apy
+             </code>
+             field to
+             <a href="/exchange/reference/exchangerestapi_getwrappedasset">
+              Get Wrapped Asset Details
+             </a>
+             .
+            </p>
+            <p>
+             Implied APY is the current annualized percentage yield earned as the net rewards by the staked ETH underlying cbETH. This estimate is based on the past 7 days of staking performance and is updated daily. For more details, refer to the "rate calculation" section of the
+             <a href="https://www.coinbase.com/cbeth/whitepaper" rel="noopener noreferrer" target="_blank">
+              cbETH whitepaper
+             </a>
+             .
+            </p>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2023-mar-02">
+             2023-MAR-02
+             <a aria-label="Direct link to 2023-MAR-02" class="hash-link" href="#2023-mar-02" title="Direct link to 2023-MAR-02">
+              ​
+             </a>
+            </h3>
+            <p>
+             We added a
+             <code>
+              time
+             </code>
+             property that denotes the last time our system processed an update.
+            </p>
+            <p>
+             <strong>
+              REST API
+             </strong>
+            </p>
+            <p>
+             <a href="https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getproductbook" rel="noopener noreferrer" target="_blank">
+              Get product book
+             </a>
+             now returns
+             <code>
+              time
+             </code>
+             as a property when passing in "level=L1" / "level=L2" / "level=L3" on the
+             <code>
+              /products/{product_id}/book/
+             </code>
+             endpoint.
+            </p>
+            <p>
+             <strong>
+              Websocket API
+             </strong>
+            </p>
+            <p>
+             <a href="/exchange/docs/websocket-channels#level2-channel">
+              Level2 Channel
+             </a>
+             now includes the
+             <code>
+              time
+             </code>
+             property on the level2 snapshot message.
+            </p>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2023-mar-01">
+             2023-MAR-01
+             <a aria-label="Direct link to 2023-MAR-01" class="hash-link" href="#2023-mar-01" title="Direct link to 2023-MAR-01">
+              ​
+             </a>
+            </h3>
+            <p>
+             We updated the Market Data feed:
+             <code>
+              client-oid
+             </code>
+             was removed from the
+             <strong>
+              unauthenticated
+             </strong>
+             <a href="/exchange/docs/websocket-channels#received">
+              Full Channel Received message
+             </a>
+             .
+            </p>
+            <p>
+             The
+             <code>
+              client-oid
+             </code>
+             field will still be available in the authenticated Full Channel, and also the
+             <a href="/exchange/docs/websocket-channels#user-channel">
+              User Channel
+             </a>
+             (which also requires authentication). You can only see your own
+             <code>
+              client-oid
+             </code>
+             .
+            </p>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2023-feb-23">
+             2023-FEB-23
+             <a aria-label="Direct link to 2023-FEB-23" class="hash-link" href="#2023-feb-23" title="Direct link to 2023-FEB-23">
+              ​
+             </a>
+            </h3>
+            <h4 class="anchor anchorWithStickyNavbar_LWe7" id="fix-execution-report-execid">
+             FIX Execution Report ExecID
+             <a aria-label="Direct link to FIX Execution Report ExecID" class="hash-link" href="#fix-execution-report-execid" title="Direct link to FIX Execution Report ExecID">
+              ​
+             </a>
+            </h4>
+            <p>
+             We released a change to how we publish the FIX tag,
+             <code>
+              ExecID (Tag=17)
+             </code>
+             .
+             <code>
+              ExecID
+             </code>
+             will now be consistent across sessions for the same underlying
+             <a href="/exchange/docs/messages#execution-report-8">
+              Execution Report
+             </a>
+             . This should allow users the
+             <strong>
+              ability to join Execution Reports
+             </strong>
+             between their trading session and their drop-copy session for the same profile ID.
+            </p>
+            <h4 class="anchor anchorWithStickyNavbar_LWe7" id="fix-market-data-gateway">
+             FIX Market Data Gateway
+             <a aria-label="Direct link to FIX Market Data Gateway" class="hash-link" href="#fix-market-data-gateway" title="Direct link to FIX Market Data Gateway">
+              ​
+             </a>
+            </h4>
+            <p>
+             We released
+             <a href="/exchange/docs/messages-md">
+              FIX Market Data gateway
+             </a>
+             (
+             <strong>
+              beta
+             </strong>
+             ) to production. It is based on the
+             <a href="https://www.onixs.biz/fix-dictionary/5.0.sp2/index.html" rel="noopener noreferrer" target="_blank">
+              FIX 5.0 SP2 specification
+             </a>
+             .
+            </p>
+            <div class="theme-admonition theme-admonition-info alert alert--info admonition_WoCw">
+             <div class="admonitionHeading_TMsN">
+              <span class="admonitionIcon_Ibzs">
+               <svg viewbox="0 0 14 16">
+                <path d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z" fill-rule="evenodd">
+                </path>
+               </svg>
+              </span>
+              info
+             </div>
+             <div class="admonitionContent_vXIg">
+              <ul>
+               <li>
+                Sandbox URL:
+                <code>
+                 tcp+ssl//fix-md.sandbox.exchange.coinbase.com:6121
+                </code>
+               </li>
+               <li>
+                Production URL:
+                <code>
+                 tcp+ssl//fix-md.exchange.coinbase.com:6121
+                </code>
+               </li>
+              </ul>
+             </div>
+            </div>
+            <p>
+             This new offering provides an L3 feed only with direct, low-latency, deterministic access. Users must connect with the same authentication as our existing FIX order-entry system.
+            </p>
+            <ul>
+             <li>
+              <a href="/exchange/docs/messages-md#header">
+               Header
+              </a>
+             </li>
+             <li>
+              <a href="/exchange/docs/messages-md#logon-35a">
+               Logon (35=A)
+              </a>
+             </li>
+             <li>
+              <a href="/exchange/docs/messages-md#market-data-request-35v">
+               Market Data Request (35=V)
+              </a>
+             </li>
+             <li>
+              <a href="/exchange/docs/messages-md#market-data-request-reject-35y">
+               Market Data Request Reject (35=Y)
+              </a>
+             </li>
+             <li>
+              <a href="/exchange/docs/messages-md#security-status-35f">
+               Security Status (35=f)
+              </a>
+             </li>
+             <li>
+              <a href="/exchange/docs/messages-md#market-data-incremental-refresh-35x">
+               Market Data Incremental Refresh (35=X)
+              </a>
+             </li>
+             <li>
+              <a href="/exchange/docs/messages-md#market-data-snapshot-full-refresh-35w">
+               Market Data Snapshot Full Refresh (35=W)
+              </a>
+             </li>
+             <li>
+              <a href="/exchange/docs/messages-md#security-list-request-35x">
+               Security List Request (35=x)
+              </a>
+             </li>
+             <li>
+              <a href="/exchange/docs/messages-md#security-list-35y">
+               Security List (35=y)
+              </a>
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2023-jan-30">
+             2023-JAN-30
+             <a aria-label="Direct link to 2023-JAN-30" class="hash-link" href="#2023-jan-30" title="Direct link to 2023-JAN-30">
+              ​
+             </a>
+            </h3>
+            <h4 class="anchor anchorWithStickyNavbar_LWe7" id="expire-time-tag">
+             Expire Time Tag
+             <a aria-label="Direct link to Expire Time Tag" class="hash-link" href="#expire-time-tag" title="Direct link to Expire Time Tag">
+              ​
+             </a>
+            </h4>
+            <p>
+             Added FIX message tag
+             <code>
+              ExpireTime
+             </code>
+             to
+             <a href="/exchange/docs/messages#quote-request-r">
+              Quote Request (R)
+             </a>
+             and
+             <a href="/exchange/docs/messages#quote-status-report-ai">
+              Quote Status Report (AI)
+             </a>
+             .
+            </p>
+            <h4 class="anchor anchorWithStickyNavbar_LWe7" id="high-bid-limit-percentage">
+             High Bid Limit Percentage
+             <a aria-label="Direct link to High Bid Limit Percentage" class="hash-link" href="#high-bid-limit-percentage" title="Direct link to High Bid Limit Percentage">
+              ​
+             </a>
+            </h4>
+            <p>
+             Added new
+             <code>
+              high_bid_limit_percentage
+             </code>
+             field to our products endpoint.
+            </p>
+            <p>
+             As described in our
+             <a href="https://www.coinbase.com/legal/trading_rules" rel="noopener noreferrer" target="_blank">
+              Trading Rules
+             </a>
+             , the
+             <strong>
+              High Bid Limit
+             </strong>
+             (HBL) order control limits how high a Buy Limit Order can be filled based on the last sale price or the current best bid price.
+            </p>
+            <p>
+             Currently, the High Bid Limit is calculated as follows:
+            </p>
+            <ul>
+             <li>
+              <strong>
+               Last execution price +
+               <code>
+                high_bid_limit_percentage
+               </code>
+              </strong>
+              if the current best bid price is &lt; 95% of the last execution execution.
+             </li>
+             <li>
+              <strong>
+               Current best bid price +
+               <code>
+                high_bid_limit_percentage
+               </code>
+              </strong>
+              otherwise.
+             </li>
+            </ul>
+            <p>
+             HBL is only enforced for specific trading pairs. You can see which trading pairs have an HBL set by looking at the
+             <code>
+              high_bid_limit_percentage
+             </code>
+             field of our
+             <a href="https://api.exchange.coinbase.com/products" rel="noopener noreferrer" target="_blank">
+              /products
+             </a>
+             endpoint.
+            </p>
+            <p>
+             For example, the following value represents a 3% high bid limit.
+            </p>
+            <div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-text codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  "high_bid_limit_percentage":"0.03000000"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2023-jan-26">
+             2023-JAN-26
+             <a aria-label="Direct link to 2023-JAN-26" class="hash-link" href="#2023-jan-26" title="Direct link to 2023-JAN-26">
+              ​
+             </a>
+            </h3>
+            <p>
+             We made a breaking change to
+             <strong>
+              <a href="/exchange/reference/exchangerestapi_getwrappedassets">
+               Get all wrapped assets
+              </a>
+             </strong>
+             . Specifically,
+             <code>
+              GET /wrapped-assets/
+             </code>
+             now returns a list of json objects instead of a list of strings.
+            </p>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2023-jan-06">
+             2023-JAN-06
+             <a aria-label="Direct link to 2023-JAN-06" class="hash-link" href="#2023-jan-06" title="Direct link to 2023-JAN-06">
+              ​
+             </a>
+            </h3>
+            <p>
+             Added new
+             <a href="/exchange/reference/exchangerestapi_getwrappedasset">
+              Get Wrapped Asset Details
+             </a>
+             endpoint:
+             <code>
+              /wrapped-assets/{wrapped_asset_id}/
+             </code>
+            </p>
+            <p>
+             Get Wrapped Asset Details returns the following properties:
+            </p>
+            <ul>
+             <li>
+              <code>
+               circulating_supply
+              </code>
+              : Customer held wrapped assets, not pre-minted or held in abeyance.
+             </li>
+             <li>
+              <code>
+               total_supply
+              </code>
+              : Wrapped assets that have been minted and exist on-chain.
+             </li>
+             <li>
+              <code>
+               conversion_rate
+              </code>
+              : Underlying staked units that can be exchanged for 1 wrapped asset.
+             </li>
+            </ul>
+            <p>
+             For example:
+            </p>
+            <div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-text codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  "wrapped_assets":[</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "id":"CBETH",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "circulating_supply":"314666.9334401934801646",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "total_supply":"1067354.0841178434801646",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "conversion_rate":"1.0241755005866786"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  ]</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <p>
+             You can test for cbETH in the sandbox at
+             <code>
+              https://api-public.sandbox.exchange.coinbase.com/wrapped-assets/CBETH/
+             </code>
+            </p>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-dec-09">
+             2022-DEC-09
+             <a aria-label="Direct link to 2022-DEC-09" class="hash-link" href="#2022-dec-09" title="Direct link to 2022-DEC-09">
+              ​
+             </a>
+            </h3>
+            <p>
+             Request For Quote on Coinbase Exchange is live in production. RFQ allows liquidity providers to respond and interact with real-time RFQ requests.
+            </p>
+            <p>
+             <strong>
+              New FIX Messages:
+             </strong>
+            </p>
+            <ul>
+             <li>
+              <a href="/exchange/docs/messages#rfq-request-ah">
+               RFQ Request (AH)
+              </a>
+             </li>
+             <li>
+              <a href="/exchange/docs/messages#quote-request-r">
+               Quote Request (R)
+              </a>
+             </li>
+             <li>
+              <a href="/exchange/docs/messages#quote-s">
+               Quote (S)
+              </a>
+             </li>
+             <li>
+              <a href="/exchange/docs/messages#quote-status-report-ai">
+               Quote Status Report (AI)
+              </a>
+             </li>
+            </ul>
+            <p>
+             <strong>
+              New WebSocket Channel:
+             </strong>
+             <a href="/exchange/docs/websocket-channels#rfq-matches-channel">
+              RFQ Matches Channel
+             </a>
+             .
+            </p>
+            <p>
+             <strong>
+              Updated REST API:
+             </strong>
+            </p>
+            <ul>
+             <li>
+              Order and fill information for RFQ can be queried with new
+              <code>
+               market_type
+              </code>
+              query parameter.
+             </li>
+             <li>
+              New report type option,
+              <code>
+               rfq-fills
+              </code>
+              , can be used to generate reports for RFQ fills.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-nov-22">
+             2022-NOV-22
+             <a aria-label="Direct link to 2022-NOV-22" class="hash-link" href="#2022-nov-22" title="Direct link to 2022-NOV-22">
+              ​
+             </a>
+            </h3>
+            <p>
+             We released
+             <a href="/exchange/docs/websocket-overview">
+              Coinbase Direct Market Data
+             </a>
+             , a WebSocket endpoint with direct access to Coinbase Exchange servers.
+             <a href="/exchange/docs/websocket-auth">
+              Authentication
+             </a>
+             is required. You can subscribe to both endpoints, but if
+             <code>
+              ws-direct
+             </code>
+             becomes your primary connection, we recommend using the existing
+             <code>
+              ws-feed
+             </code>
+             as a failover connection.
+            </p>
+            <p>
+             <strong>
+              Coinbase Direct Market Data endpoint:
+             </strong>
+             <code>
+              wss://ws-direct.exchange.coinbase.com
+             </code>
+            </p>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-oct-26">
+             2022-OCT-26
+             <a aria-label="Direct link to 2022-OCT-26" class="hash-link" href="#2022-oct-26" title="Direct link to 2022-OCT-26">
+              ​
+             </a>
+            </h3>
+            <p>
+             Updated
+             <strong>
+              <a href="/exchange/reference/exchangerestapi_getfills">
+               Get all fills
+              </a>
+             </strong>
+             with new response property,
+             <code>
+              market_type
+             </code>
+             , in preparation for the upcoming Request For Quote (RFQ) feature.
+            </p>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-oct-17">
+             2022-OCT-17
+             <a aria-label="Direct link to 2022-OCT-17" class="hash-link" href="#2022-oct-17" title="Direct link to 2022-OCT-17">
+              ​
+             </a>
+            </h3>
+            <p>
+             Added two new fields to the
+             <a href="/exchange/docs/websocket-channels#ticker-channel">
+              Ticker Channel
+             </a>
+             :
+             <code>
+              best_bid_size
+             </code>
+             and
+             <code>
+              best_ask_size
+             </code>
+             .
+            </p>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-oct-04">
+             2022-OCT-04
+             <a aria-label="Direct link to 2022-OCT-04" class="hash-link" href="#2022-oct-04" title="Direct link to 2022-OCT-04">
+              ​
+             </a>
+            </h3>
+            <p>
+             <a href="/exchange/docs/messages#modify-order-request-g">
+              Modify Order Request (G)
+             </a>
+             is live in production. See
+             <a href="/exchange/docs/changelog#2022-jun-27">
+              2022-JUN-27
+             </a>
+             for release details.
+            </p>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-sep-22">
+             2022-SEP-22
+             <a aria-label="Direct link to 2022-SEP-22" class="hash-link" href="#2022-sep-22" title="Direct link to 2022-SEP-22">
+              ​
+             </a>
+            </h3>
+            <p>
+             <a href="/exchange/docs/messages#logon-a">
+              FIX Logon (A) messages
+             </a>
+             now require that MsgSeqNum (34) be equal to
+             <code>
+              1
+             </code>
+             . Any other value is rejected.
+            </p>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-sep-19">
+             2022-SEP-19
+             <a aria-label="Direct link to 2022-SEP-19" class="hash-link" href="#2022-sep-19" title="Direct link to 2022-SEP-19">
+              ​
+             </a>
+            </h3>
+            <p>
+             Added
+             <strong>
+              <a href="/exchange/reference/exchangerestapi_postreports#balance-reports">
+               Balance Statement Reports
+              </a>
+             </strong>
+             for historical and current crypto/fiat balances, with the Exchange REST API and in the Exchange UI at
+             <a href="https://exchange.coinbase.com/profile/statements" rel="noopener noreferrer" target="_blank">
+              <code>
+               exchange.coinbase.com/profile/statements
+              </code>
+             </a>
+             .
+            </p>
+            <ul>
+             <li>
+              <a href="/exchange/reference/exchangerestapi_postreports">
+               Create Balance Statement Report
+              </a>
+             </li>
+             <li>
+              <a href="/exchange/reference/exchangerestapi_getreports">
+               Get Balance Statement Reports
+              </a>
+             </li>
+            </ul>
+            <p>
+             The Balance Report API:
+            </p>
+            <ul>
+             <li>
+              Leverages the existing
+              <code>
+               /reports
+              </code>
+              endpoint.
+             </li>
+             <li>
+              Adds a new report type of
+              <code>
+               balance
+              </code>
+              .
+             </li>
+             <li>
+              Adds a
+              <code>
+               balance
+              </code>
+              object to the request with
+              <code>
+               datetime
+              </code>
+              (and
+              <code>
+               group_by_portfolio_id
+              </code>
+              for the UI only).
+             </li>
+             <li>
+              Keeps the same response schema (with the possibility that
+              <code>
+               "type"="balance"
+              </code>
+              ).
+             </li>
+            </ul>
+            <p>
+             <em>
+              Example of Balance Report API Request
+             </em>
+            </p>
+            <div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-json codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic">// Create balance statement for the portfolio tied to the API key</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"balance"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token property" style="color:#36acaa">"datetime"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"2022-02-25T05:00:00.000Z"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"email"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"user1@example.com"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"format"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"csv"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"type"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"balance"</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-aug-24">
+             2022-AUG-24
+             <a aria-label="Direct link to 2022-AUG-24" class="hash-link" href="#2022-aug-24" title="Direct link to 2022-AUG-24">
+              ​
+             </a>
+            </h3>
+            <p>
+             Added a new Wrapped Asset API, comprised of two endpoints:
+            </p>
+            <ul>
+             <li>
+              <p>
+               <a href="/exchange/reference/exchangerestapi_getwrappedassets">
+                Get all wrapped assets
+               </a>
+               : Returns a list of all Coinbase supported wrapped asset IDs.
+              </p>
+              <div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+               <div class="codeBlockContent_biex">
+                <pre class="prism-code language-text codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">/wrapped-assets</span><br/></span></code></pre>
+                <div class="buttonGroup__atx">
+                 <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                  <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                   <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                    <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                    </path>
+                   </svg>
+                   <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                    <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                    </path>
+                   </svg>
+                  </span>
+                 </button>
+                </div>
+               </div>
+              </div>
+             </li>
+             <li>
+              <p>
+               <a href="/exchange/reference/exchangerestapi_getwrappedassetconversionrate">
+                Get conversion rate of wrapped asset
+               </a>
+               : Returns the conversion rate of a wrapped asset to its corresponding staked asset.
+              </p>
+              <div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+               <div class="codeBlockContent_biex">
+                <pre class="prism-code language-text codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">/wrapped-assets/{wrapped_asset_id}/conversion-rate</span><br/></span></code></pre>
+                <div class="buttonGroup__atx">
+                 <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                  <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                   <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                    <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                    </path>
+                   </svg>
+                   <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                    <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                    </path>
+                   </svg>
+                  </span>
+                 </button>
+                </div>
+               </div>
+              </div>
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-aug-16">
+             2022-AUG-16
+             <a aria-label="Direct link to 2022-AUG-16" class="hash-link" href="#2022-aug-16" title="Direct link to 2022-AUG-16">
+              ​
+             </a>
+            </h3>
+            <p>
+             Added a
+             <code>
+              reason
+             </code>
+             field to the WebSocket Full Channel
+             <a href="/exchange/docs/websocket-channels#change">
+              Change message
+             </a>
+             :
+            </p>
+            <ul>
+             <li>
+              <code>
+               "reason":"STP"
+              </code>
+              for Self-Trade Prevention message
+             </li>
+             <li>
+              <code>
+               "reason":"modify_order"
+              </code>
+              for Modify Order Request (See
+              <a href="/exchange/docs/changelog#2022-jun-27">
+               2022-JUN-27
+              </a>
+              entry for more.)
+             </li>
+            </ul>
+            <div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-json codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"type"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"change"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"reason"</span><span class="token operator" style="color:#393A34">:</span><span class="token string" style="color:#e3116c">"STP"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"time"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"2014-11-07T08:19:27.028459Z"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"sequence"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">80</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"order_id"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"ac928c66-ca53-498f-9c13-a110027a60e8"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"side"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"sell"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"product_id"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"BTC-USD"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"old_size"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"12.234412"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"new_size"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"5.23512"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"price"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"400.23"</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-jul-27">
+             2022-JUL-27
+             <a aria-label="Direct link to 2022-JUL-27" class="hash-link" href="#2022-jul-27" title="Direct link to 2022-JUL-27">
+              ​
+             </a>
+            </h3>
+            <p>
+             We added support for multiple blockchain networks. Users can now withdraw USDC on Solana, and ETH, USDC, and MATIC on Polygon.
+            </p>
+            <p>
+             A new
+             <code>
+              network
+             </code>
+             field was added for select endpoints and in the UI. Affected API endpoints are:
+            </p>
+            <ul>
+             <li>
+              <p>
+               <code>
+                /withdrawals/crypto
+               </code>
+               accepts an optional network parameter as part of its
+               <code>
+                POST
+               </code>
+               request parameters.
+              </p>
+              <p>
+               This parameter designates which network the currency will be sent on. For example, if the user withdraws USDC on Solana or Ethereum, the withdrawal address is validated against the network, the appropriate fee is calculated based on the network, and the currency is sent over the network. If no network is specified in the
+               <code>
+                POST
+               </code>
+               request, the default network (Ethereum) is used.
+              </p>
+             </li>
+             <li>
+              <p>
+               <code>
+                /address-book
+               </code>
+               validates new addresses against all supported networks for the currency.
+              </p>
+             </li>
+             <li>
+              <p>
+               <code>
+                /address-validation
+               </code>
+               accepts an optional
+               <code>
+                network
+               </code>
+               parameter in the
+               <code>
+                address_info
+               </code>
+               object or
+               <code>
+                source
+               </code>
+               parameter in the body as part of its
+               <code>
+                POST
+               </code>
+               request parameters.
+              </p>
+              <p>
+               The address validator uses the
+               <code>
+                network
+               </code>
+               parameter to verify that the address is valid for the designated network. If no
+               <code>
+                network
+               </code>
+               is specified in the
+               <code>
+                POST
+               </code>
+               request, the default network is used.
+              </p>
+              <p>
+               The
+               <code>
+                source
+               </code>
+               parameter currently only accepts the value
+               <code>
+                address_book
+               </code>
+               . When
+               <code>
+                source
+               </code>
+               has the value
+               <code>
+                address_book
+               </code>
+               , the address is validated against all supported networks for the currency.
+              </p>
+             </li>
+            </ul>
+            <div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-json codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token property" style="color:#36acaa">"id"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"ATOM"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token property" style="color:#36acaa">"name"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"Cosmos"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token property" style="color:#36acaa">"min_size"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"1"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token property" style="color:#36acaa">"status"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"online"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token property" style="color:#36acaa">"message"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">""</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token property" style="color:#36acaa">"max_precision"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"0.000001"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token property" style="color:#36acaa">"convertible_to"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">[</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">]</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token property" style="color:#36acaa">"details"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"type"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"crypto"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"symbol"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token null keyword" style="color:#00009f">null</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"network_confirmations"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token null keyword" style="color:#00009f">null</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"sort_order"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">51</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"crypto_address_link"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"https://cosmos.bigdipper.live/account/{{address}}"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"crypto_transaction_link"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"https://cosmos.bigdipper.live/transactions/{{txId}}"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"push_payment_methods"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">[</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token string" style="color:#e3116c">"crypto"</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">]</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"group_types"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">[</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">]</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"display_name"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token null keyword" style="color:#00009f">null</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"processing_time_seconds"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">5</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"min_withdrawal_amount"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">0.1</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"max_withdrawal_amount"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">302000</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token property" style="color:#36acaa">"default_network"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"cosmos"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token property" style="color:#36acaa">"supported_networks"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">[</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"id"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"ETH"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"name"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"ethereum"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"status"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"offline"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"contract_address"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"0x.."</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"crypto_address_link"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"address_link"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"crypto_transaction_link"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"tx_link"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"network_confirmations"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">15</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"min_withdrawal_amount"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">0.001</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"max_withdrawal_amount"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">250</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">]</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-jul-25">
+             2022-JUL-25
+             <a aria-label="Direct link to 2022-JUL-25" class="hash-link" href="#2022-jul-25" title="Direct link to 2022-JUL-25">
+              ​
+             </a>
+            </h3>
+            <p>
+             We increased the order size for two FIX batched messages from 10 to 15:
+            </p>
+            <ul>
+             <li>
+              <a href="/exchange/docs/messages#new-order-batch-u6">
+               New Order Batch (U6)
+              </a>
+             </li>
+             <li>
+              <a href="/exchange/docs/messages#order-cancel-batch-request-u4">
+               Order Cancel Batch Request (U4)
+              </a>
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-jun-30">
+             2022-JUN-30
+             <a aria-label="Direct link to 2022-JUN-30" class="hash-link" href="#2022-jun-30" title="Direct link to 2022-JUN-30">
+              ​
+             </a>
+            </h3>
+            <p>
+             The following API parameters were removed per the lifting of
+             <a href="/exchange/docs/changelog#2022-jun-02">
+              maximum and minimum order size limits
+             </a>
+             :
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                API Parameter
+               </th>
+               <th align="left">
+                Description
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                base_max_size
+               </td>
+               <td align="left">
+                Base order size max (limit orders)
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                base_min_size
+               </td>
+               <td align="left">
+                Base order size min (limit orders)
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                max_market_funds
+               </td>
+               <td align="left">
+                Quote order size max (market orders)
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <p>
+             Affected features are:
+            </p>
+            <ul>
+             <li>
+              REST API:
+              <a href="/exchange/reference/exchangerestapi_getproducts">
+               Get all known trading pairs
+              </a>
+             </li>
+             <li>
+              REST API:
+              <a href="/exchange/reference/exchangerestapi_postorders#size">
+               Create a new order
+              </a>
+             </li>
+             <li>
+              Websocket API
+              <a href="/exchange/docs/websocket-channels#status-channel">
+               Status Channel
+              </a>
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-jun-27">
+             2022-JUN-27
+             <a aria-label="Direct link to 2022-JUN-27" class="hash-link" href="#2022-jun-27" title="Direct link to 2022-JUN-27">
+              ​
+             </a>
+            </h3>
+            <p>
+             <a href="/exchange/docs/messages#modify-order-request-g">
+              Modify Order Request (G)
+             </a>
+             is now
+             <strong>
+              available for testing
+             </strong>
+             in the
+             <a href="/exchange/docs/sandbox">
+              public sandbox
+             </a>
+             . It will go to production in a few weeks.
+            </p>
+            <p>
+             Modify Order Request is an implementation of the
+             <a href="https://www.onixs.biz/fix-dictionary/4.2/msgtype_g_71.html" rel="noopener noreferrer" target="_blank">
+              Order Replace Request
+             </a>
+             outlined in the FIX 4.2 protocol. You can send a single request to modify the price or size of an existing order using the FIX API.
+            </p>
+            <p>
+             <a href="/exchange/docs/websocket-channels#change">
+              WebSocket Full channel "Change"
+             </a>
+             messages (and by extension the
+             <a href="/exchange/docs/websocket-channels#user-channel">
+              User channel
+             </a>
+             ) are also affected. Three fields are being added (
+             <code>
+              new_price
+             </code>
+             ,
+             <code>
+              old_price
+             </code>
+             ,
+             <code>
+              reason
+             </code>
+             ).
+            </p>
+            <div class="theme-admonition theme-admonition-info alert alert--info admonition_WoCw">
+             <div class="admonitionHeading_TMsN">
+              <span class="admonitionIcon_Ibzs">
+               <svg viewbox="0 0 14 16">
+                <path d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z" fill-rule="evenodd">
+                </path>
+               </svg>
+              </span>
+              info
+             </div>
+             <div class="admonitionContent_vXIg">
+              <p>
+               Modify Order Requests that amend size down will retain queue priority in the Exchange order book.
+              </p>
+             </div>
+            </div>
+            <p>
+             <strong>
+              FIX API
+             </strong>
+            </p>
+            <p>
+             Example FIX Request:
+            </p>
+            <div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-text codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">BeginString=FIX.4.2 BodyLength=265 MsgType=ORDER_CANCEL_REPLACE_REQUEST MsgSeqNum=17 SenderCompID=00000000100000000000000000000003 SendingTime=20220609-04:01:48.757 TargetCompID=Coinbase ClOrdID=907b6ae6-bcbe-441a-b7bb-d932afdb9edb OrderID=71de0cdf-938f-495b-9fad-108837bde704 OrderQty=2 OrdType=LIMIT OrigClOrdID=907b6ae6-bcbe-441a-b7bb-d932afdb9eda Price=100.00 Side=BUY Symbol=ETH-USD TransactTime=20220609-04:01:48.757 CheckSum=107</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                Tag
+               </th>
+               <th align="left">
+                Name
+               </th>
+               <th align="left">
+                Description
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                37
+               </td>
+               <td align="left">
+                OrderID
+               </td>
+               <td align="left">
+                Unique identifier of most recent order as assigned by broker
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                41
+               </td>
+               <td align="left">
+                OrigClOrdID
+               </td>
+               <td align="left">
+                <code>
+                 ClOrdID &lt;11&gt;
+                </code>
+                of previous order (NOT initial order of the day) when canceling or replacing an order
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                11
+               </td>
+               <td align="left">
+                ClOrdID
+               </td>
+               <td align="left">
+                Unique identifier of replacement order as assigned by institution.
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                55
+               </td>
+               <td align="left">
+                Symbol
+               </td>
+               <td align="left">
+                Must match original order
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                54
+               </td>
+               <td align="left">
+                Side
+               </td>
+               <td align="left">
+                Must match original side
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                38
+               </td>
+               <td align="left">
+                OrderQty
+               </td>
+               <td align="left">
+                Total Intended Order Quantity (including the amount already executed for this chain of orders)
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                60
+               </td>
+               <td align="left">
+                TransactTime
+               </td>
+               <td align="left">
+                Time this order request was initiated/released by the trader or trading system
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                40
+               </td>
+               <td align="left">
+                OrdType
+               </td>
+               <td align="left">
+                Only limit orders are supported for now (2)
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                44
+               </td>
+               <td align="left">
+                Price
+               </td>
+               <td align="left">
+                Price per share
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <p>
+             <strong>
+              Websocket Full Channel Change Message
+             </strong>
+            </p>
+            <p>
+             Example of a change message from a Modify Order Request:
+            </p>
+            <div class="theme-admonition theme-admonition-caution alert alert--warning admonition_WoCw">
+             <div class="admonitionHeading_TMsN">
+              <span class="admonitionIcon_Ibzs">
+               <svg viewbox="0 0 16 16">
+                <path d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z" fill-rule="evenodd">
+                </path>
+               </svg>
+              </span>
+              caution
+             </div>
+             <div class="admonitionContent_vXIg">
+              <p>
+               The fields
+               <code>
+                new_price
+               </code>
+               ,
+               <code>
+                old_price
+               </code>
+               , and
+               <code>
+                reason
+               </code>
+               are being added. (The
+               <code>
+                reason
+               </code>
+               field was added on
+               <a href="/exchange/docs/changelog#2022-aug-16">
+                2022-AUG-16
+               </a>
+               .
+              </p>
+             </div>
+            </div>
+            <div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-json codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"type"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"change"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"reason"</span><span class="token operator" style="color:#393A34">:</span><span class="token string" style="color:#e3116c">"modify_order"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"time"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"2022-06-06T22:55:43.433114Z"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"sequence"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">24753</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"order_id"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"c3f16063-77b1-408f-a743-88b7bc20cdcd"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"side"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"buy"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"product_id"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"ETH-USD"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"old_size"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"80"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"new_size"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"80"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"old_price"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"7"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"new_price"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"6"</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-jun-02">
+             2022-JUN-02
+             <a aria-label="Direct link to 2022-JUN-02" class="hash-link" href="#2022-jun-02" title="Direct link to 2022-JUN-02">
+              ​
+             </a>
+            </h3>
+            <p>
+             Lifted maximum and minimum order size limits. With this change:
+            </p>
+            <ul>
+             <li>
+              Market orders are no longer subject to max or min size checks unless market funds are specified.
+             </li>
+             <li>
+              Limit orders are now subject to
+              <strong>
+               notional minimum size checks only
+              </strong>
+              . We repurposed the existing API parameter,
+              <code>
+               min_market_funds
+              </code>
+              , to represent this value.
+             </li>
+            </ul>
+            <p>
+             Price Protection Points serve as a dynamic and real-time protection against slippage for large-sized orders.
+            </p>
+            <p>
+             The following API parameters have been deprecated (and will be removed June 30):
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                API Parameter
+               </th>
+               <th align="left">
+                Description
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                base_max_size
+               </td>
+               <td align="left">
+                Base order size max (limit orders)
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                base_min_size
+               </td>
+               <td align="left">
+                Base order size min (limit orders)
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                max_market_funds
+               </td>
+               <td align="left">
+                Quote order size max (market orders)
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <p>
+             Affected APIs are
+             <a href="/exchange/reference/exchangerestapi_getproducts">
+              Get all known trading pairs
+             </a>
+             and
+             <a href="/exchange/reference/exchangerestapi_postorders#size">
+              Create a new order
+             </a>
+             .
+            </p>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-may-25">
+             2022-MAY-25
+             <a aria-label="Direct link to 2022-MAY-25" class="hash-link" href="#2022-may-25" title="Direct link to 2022-MAY-25">
+              ​
+             </a>
+            </h3>
+            <p>
+             Changes were made to Coinbase Pro:
+            </p>
+            <ul>
+             <li>
+              <p>
+               We disabled the Coinbase Pro API,
+               <a href="/exchange/reference/exchangerestapi_postdepositcoinbaseaccount">
+                Deposit from Coinbase account
+               </a>
+               , which lets you deposit funds from a Coinbase retail account into Coinbase Pro. The endpoint
+               <code>
+                /deposits/coinbase-account
+               </code>
+               now returns a
+               <code>
+                403
+               </code>
+               when called from a Coinbase Pro account.
+              </p>
+              <p>
+               All other payment methods into Coinbase Pro remain the same and Coinbase Exchange is not affected.
+              </p>
+             </li>
+             <li>
+              <p>
+               Creating a new API Key on Coinbase Pro with the Transfer permission has new requirements (the use of old API keys will remain the same):
+              </p>
+              <ul>
+               <li>
+                <p>
+                 You must enable non-SMS 2FA.
+                </p>
+               </li>
+               <li>
+                <p>
+                 You must allowlist all receive addresses for your transfers.
+                </p>
+                <p>
+                 Creating new API Keys on Coinbase Exchange is not affected by this change.
+                </p>
+               </li>
+              </ul>
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-may-05">
+             2022-MAY-05
+             <a aria-label="Direct link to 2022-MAY-05" class="hash-link" href="#2022-may-05" title="Direct link to 2022-MAY-05">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              Added cancel reason to the FIX and websocket feeds.
+             </li>
+            </ul>
+            <ul>
+             <li>
+              For FIX, we enhanced the
+              <a href="/exchange/docs/messages#execution-report-8">
+               Execution Report
+              </a>
+              to include the cancel reason using the
+              <a href="https://www.onixs.biz/fix-dictionary/4.2/tagNum_58.html" rel="noopener noreferrer" target="_blank">
+               Text field
+              </a>
+              .
+             </li>
+             <li>
+              For the websocket feed, we added a new
+              <code>
+               cancel_reason
+              </code>
+              field for authenticated messages by the user, accessible in the
+              <a href="/exchange/docs/websocket-channels#full-channel">
+               Full
+              </a>
+              and
+              <a href="/exchange/docs/websocket-channels#user-channel">
+               User
+              </a>
+              channels.
+             </li>
+            </ul>
+            <p>
+             Supported cancel reasons are:
+            </p>
+            <div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-text codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">101:Time In Force</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">102:Self Trade Prevention</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">103:Admin</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">104:Price Bound Order Protection</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">105:Insufficient Funds"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">106:Insufficient Liquidity</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">107:Broker</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-may-02">
+             2022-MAY-02
+             <a aria-label="Direct link to 2022-MAY-02" class="hash-link" href="#2022-may-02" title="Direct link to 2022-MAY-02">
+              ​
+             </a>
+            </h3>
+            <p>
+             We enabled new TLS/SSL features on the FIX servers for Exchange/Pro to increase security and performance. This includes limiting the supported ciphers and a new SSL certificate. Please check that your FIX SSL client:
+            </p>
+            <ul>
+             <li>
+              Can support the new ciphers listed below.
+             </li>
+             <li>
+              Is not validating a specific SSL server certificate. If it is, you must update to the new certificate.
+             </li>
+            </ul>
+            <p>
+             The new infrastructure will support only
+             <strong>
+              TLSv1.2
+             </strong>
+             with the following Supported Server Ciphers:
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                Recommend
+               </th>
+               <th align="left">
+                Length
+               </th>
+               <th align="left">
+                Cipher Suite
+               </th>
+               <th align="left">
+                Elliptic Curve
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                Preferred
+               </td>
+               <td align="left">
+                128 bits
+               </td>
+               <td align="left">
+                ECDHE-RSA-AES128-GCM-SHA256
+               </td>
+               <td align="left">
+                Curve P-256 DHE 256
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                Accepted
+               </td>
+               <td align="left">
+                128 bits
+               </td>
+               <td align="left">
+                ECDHE-RSA-AES128-SHA256
+               </td>
+               <td align="left">
+                Curve P-256 DHE 256
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                Accepted
+               </td>
+               <td align="left">
+                256 bits
+               </td>
+               <td align="left">
+                ECDHE-RSA-AES256-GCM-SHA384
+               </td>
+               <td align="left">
+                Curve P-256 DHE 256
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                Accepted
+               </td>
+               <td align="left">
+                256 bits
+               </td>
+               <td align="left">
+                ECDHE-RSA-AES256-SHA384
+               </td>
+               <td align="left">
+                Curve P-256 DHE 256
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <p>
+             Affected Endpoints:
+            </p>
+            <ul>
+             <li>
+              <p>
+               In sandbox
+              </p>
+              <div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+               <div class="codeBlockContent_biex">
+                <pre class="prism-code language-text codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">fix-public.sandbox.pro.coinbase.com:4198</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">fix-public.sandbox.exchange.coinbase.com:4198</span><br/></span></code></pre>
+                <div class="buttonGroup__atx">
+                 <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                  <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                   <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                    <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                    </path>
+                   </svg>
+                   <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                    <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                    </path>
+                   </svg>
+                  </span>
+                 </button>
+                </div>
+               </div>
+              </div>
+             </li>
+             <li>
+              <p>
+               In production
+              </p>
+              <div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+               <div class="codeBlockContent_biex">
+                <pre class="prism-code language-text codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">fix.pro.coinbase.com:4198</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">fix.exchange.coinbase.com:4198</span><br/></span></code></pre>
+                <div class="buttonGroup__atx">
+                 <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                  <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                   <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                    <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                    </path>
+                   </svg>
+                   <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                    <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                    </path>
+                   </svg>
+                  </span>
+                 </button>
+                </div>
+               </div>
+              </div>
+             </li>
+            </ul>
+            <p>
+             New Production FIX Server SSL Certificate:
+            </p>
+            <div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-text codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">-----BEGIN CERTIFICATE-----</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">MIIEezCCA2OgAwIBAgIQB4BoKHs2w7hI3RLss1nw7DANBgkqhkiG9w0BAQsFADBG</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">MQswCQYDVQQGEwJVUzEPMA0GA1UEChMGQW1hem9uMRUwEwYDVQQLEwxTZXJ2ZXIg</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">Q0EgMUIxDzANBgNVBAMTBkFtYXpvbjAeFw0yMjAzMzEwMDAwMDBaFw0yMzA0Mjky</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">MzU5NTlaMCIxIDAeBgNVBAMMFyouZXhjaGFuZ2UuY29pbmJhc2UuY29tMIIBIjAN</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnmFkdVt+0k/d+HkZaX/kgjtCU6Ts</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">5TePVbYCGOjT05ClT7GHu7fSzUjO/BNCkBItp5WwFRdOOkWV8Zeg2WSHpDBOZNJt</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">cXiQx6BSTRD/myjv0NBxVsKby9BbKmj8df3C1PehakUQPdsiP7DkviYUpXz+T4FQ</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">PAg8M6PXu7sT7Rfbc6gY49VyyRU6slcij/Xwn4WSVWK+GMYPlsu7M2Vp0rr+sCIZ</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">uLHh/23TNzlGiYzXgypoZ/F57AIi+ToeRvnLe++ZfIKP37uhNxYfYrr4c3wPBoGc</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">LIWgSNMK9/Oue6VUCG7AVioCy2yL0CEiTmvS4Eb2urbt3iDWI+6wySW9LwIDAQAB</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">o4IBhzCCAYMwHwYDVR0jBBgwFoAUWaRmBlKge5WSPKOUByeWdFv5PdAwHQYDVR0O</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">BBYEFOlcV+BjGTnleq713Nzl4UifIPZCMDkGA1UdEQQyMDCCFyouZXhjaGFuZ2Uu</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">Y29pbmJhc2UuY29tghVleGNoYW5nZS5jb2luYmFzZS5jb20wDgYDVR0PAQH/BAQD</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">AgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjA9BgNVHR8ENjA0MDKg</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">MKAuhixodHRwOi8vY3JsLnNjYTFiLmFtYXpvbnRydXN0LmNvbS9zY2ExYi0xLmNy</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">bDATBgNVHSAEDDAKMAgGBmeBDAECATB1BggrBgEFBQcBAQRpMGcwLQYIKwYBBQUH</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">MAGGIWh0dHA6Ly9vY3NwLnNjYTFiLmFtYXpvbnRydXN0LmNvbTA2BggrBgEFBQcw</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">AoYqaHR0cDovL2NydC5zY2ExYi5hbWF6b250cnVzdC5jb20vc2NhMWIuY3J0MAwG</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">A1UdEwEB/wQCMAAwDQYJKoZIhvcNAQELBQADggEBADemhPMMlRRLMlnSvaVaaSCF</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">ncdehfDVg3Lmr2UjcMCq2MJxriz8elgu7M6TqVGwiRVrMb4j2kD+3EUc/+V+W1dE</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">uX8aEzxuV01MKTFEh4R/WihCKM2l0NCfg6O8jYmtKPE9gkHe+5hW4igsM90mK+hA</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">GlhH7hGSouHDjkwbvlN0yrNFJXaTZE8wHd1VTDtYmzTQXkn8hAR4muesAgEtc22W</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">B8vbLCt6ZOeoMH/SKh2vsAmWE/3DR7+TIh9Dm+54jEwuUID+nmETaacY2wDT1XU9</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">eWR4xJMa8QuK1sGuO3TgvYZPCyzAXoXCjR5mVYit8PteMVwfJnTm1nLc73rAiWA=</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">-----END CERTIFICATE-----</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <p>
+             New Sandbox FIX Server SSL Certificate:
+            </p>
+            <div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-text codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">-----BEGIN CERTIFICATE-----</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">MIIEdDCCA1ygAwIBAgIQD03L1cHVypYSDFuvcnpAHzANBgkqhkiG9w0BAQsFADBG</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">MQswCQYDVQQGEwJVUzEPMA0GA1UEChMGQW1hem9uMRUwEwYDVQQLEwxTZXJ2ZXIg</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">Q0EgMUIxDzANBgNVBAMTBkFtYXpvbjAeFw0yMjAzMjcwMDAwMDBaFw0yMzA0MjUy</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">MzU5NTlaMCoxKDAmBgNVBAMMHyouc2FuZGJveC5leGNoYW5nZS5jb2luYmFzZS5j</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">b20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC8LYRdqMoVNa/0M4MF</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">+Wkr8SiybZ95JycTE+0ZVmf92DKo4I8m/8fBtOrH0jgrhvamVSJ0lI6VFiAzlTd1</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">doUbliQ9Xm1aE/YHQO9J64AIP97peysgHBd+g3/Vhz33aaaU2vyHH5kPHiekU8n/</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">ObXPPoFd/Awul8uxxlXsVFx8oBWL2MeMjLNLLWNiGWq+lQloGKsQYVR/fQZizvpP</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">vyZO6pCLRId6+Wq3Tcb7NHQZc6+tePVi+5fovE+lm/yQrhjGqDzI7P4rWjJqCPrA</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">sYJeYFcVJhdSuFY2Ngm8eKeDP14TVEs9pkIWvyMGmB17QBPbRJipdoKu1N6fsx54</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">N9JDAgMBAAGjggF4MIIBdDAfBgNVHSMEGDAWgBRZpGYGUqB7lZI8o5QHJ5Z0W/k9</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">0DAdBgNVHQ4EFgQUa5RZ0yvv71YteSuqO1VRvmGGKv0wKgYDVR0RBCMwIYIfKi5z</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">YW5kYm94LmV4Y2hhbmdlLmNvaW5iYXNlLmNvbTAOBgNVHQ8BAf8EBAMCBaAwHQYD</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">VR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMD0GA1UdHwQ2MDQwMqAwoC6GLGh0</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">dHA6Ly9jcmwuc2NhMWIuYW1hem9udHJ1c3QuY29tL3NjYTFiLTEuY3JsMBMGA1Ud</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">IAQMMAowCAYGZ4EMAQIBMHUGCCsGAQUFBwEBBGkwZzAtBggrBgEFBQcwAYYhaHR0</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">cDovL29jc3Auc2NhMWIuYW1hem9udHJ1c3QuY29tMDYGCCsGAQUFBzAChipodHRw</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">Oi8vY3J0LnNjYTFiLmFtYXpvbnRydXN0LmNvbS9zY2ExYi5jcnQwDAYDVR0TAQH/</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">BAIwADANBgkqhkiG9w0BAQsFAAOCAQEATpjyCMwAOSFKFTA67UaVkDCjz/ULBY6P</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">L4JwTJ+7kmT+HMvGimx15CsVjne64bT5twWlzqA/l4h25HGj0hD0TU2ktqmFhfAm</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">DpjGVp4KgIcZpvv7oRIU4e5I422Y++2UVuATwLWdELgpnm4AVq1aqI10XrQlJeHL</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">gRVfV5qkr9Vsc+fk7HY7YwbNQk2jXbRaj22f6GxiJ/6VmUcCD7zZ1GZtUipv0JEy</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">PtWD/BbSKNx1GJnLZ6L+QytPs+MW+FEetlU/oqPuyYRhmJUBUiwKkm6yKWRj9tQf</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">sq0a4uLI3SUgsBv/CQ/Qa9LnRdNjvlWSKLzeIX2LU9rE/3F3oQh7HQ==</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">-----END CERTIFICATE-----</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-apr-14">
+             2022-APR-14
+             <a aria-label="Direct link to 2022-APR-14" class="hash-link" href="#2022-apr-14" title="Direct link to 2022-APR-14">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              Updated the maximum number of portfolios (or profiles) to 25.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-mar-21">
+             2022-MAR-21
+             <a aria-label="Direct link to 2022-MAR-21" class="hash-link" href="#2022-mar-21" title="Direct link to 2022-MAR-21">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              Updated the maximum number of portfolios (or profiles) to 15.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-mar-17">
+             2022-MAR-17
+             <a aria-label="Direct link to 2022-MAR-17" class="hash-link" href="#2022-mar-17" title="Direct link to 2022-MAR-17">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              Added FIX message tags:
+              <code>
+               cumQty
+              </code>
+              ,
+              <code>
+               leaveQty
+              </code>
+              ,
+              <code>
+               AvgPx
+              </code>
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-feb-22">
+             2022-FEB-22
+             <a aria-label="Direct link to 2022-FEB-22" class="hash-link" href="#2022-feb-22" title="Direct link to 2022-FEB-22">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              REST API will enforce case sensitivity for all URLs.
+              <ul>
+               <li>
+                Example:
+                <a href="https://api.exchange.coinbase.com/products/BTC-USD/Ticker" rel="noopener noreferrer" target="_blank">
+                 https://api.exchange.coinbase.com/products/BTC-USD/Ticker
+                </a>
+                should be
+                <a href="https://api.exchange.coinbase.com/products/BTC-USD/ticker" rel="noopener noreferrer" target="_blank">
+                 https://api.exchange.coinbase.com/products/BTC-USD/ticker
+                </a>
+                . Note the lowercase
+                <code>
+                 t
+                </code>
+                in
+                <code>
+                 ticker
+                </code>
+                .
+               </li>
+               <li>
+                This does not apply to URL parameters, just the URL itself:
+                <code>
+                 https://api.exchange.coinbase.com/orders?product_id=BTC-USD&amp;sortedBy=created_at&amp;sorting=desc&amp;limit=100
+                </code>
+                is valid as the the URL is lowercase. Query parameters such as
+                <code>
+                 product_id
+                </code>
+                can have values with capitals. However
+                <code>
+                 https://api.exchange.coinbase.com/Orders?product_id=BTC-USD&amp;sortedBy=created_at&amp;sorting=desc&amp;limit=100
+                </code>
+                would be invalid as the
+                <code>
+                 O
+                </code>
+                in
+                <code>
+                 /Orders
+                </code>
+                is not the same URL as specified in its
+                <a href="/exchange/reference/exchangerestapi_getorders">
+                 docs
+                </a>
+                .
+               </li>
+              </ul>
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-jan-31">
+             2022-JAN-31
+             <a aria-label="Direct link to 2022-JAN-31" class="hash-link" href="#2022-jan-31" title="Direct link to 2022-JAN-31">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              Web Socket API users are notified when the client is actively disconnected for having a full buffer, or for being too slow to consume or read messages.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-jan-25">
+             2022-JAN-25
+             <a aria-label="Direct link to 2022-JAN-25" class="hash-link" href="#2022-jan-25" title="Direct link to 2022-JAN-25">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              <code>
+               GET
+              </code>
+              and
+              <code>
+               POST
+              </code>
+              responses for the
+              <code>
+               /orders
+              </code>
+              endpoint will return client order id as
+              <code>
+               client_oid
+              </code>
+              if exists.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2021-oct-25">
+             2021-OCT-25
+             <a aria-label="Direct link to 2021-OCT-25" class="hash-link" href="#2021-oct-25" title="Direct link to 2021-OCT-25">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              FIX API will now enforce CheckSum validations for incoming FIX messages.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2021-sep-21">
+             2021-SEP-21
+             <a aria-label="Direct link to 2021-SEP-21" class="hash-link" href="#2021-sep-21" title="Direct link to 2021-SEP-21">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              All reports can be generated in parallel. Clients are no longer restricted to only have 3 reports being created at a time. Now clients can have up to 3 accounts reports and 3 fills reports
+              <em>
+               per
+              </em>
+              product generating at a time.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2021-sep-09">
+             2021-SEP-09
+             <a aria-label="Direct link to 2021-SEP-09" class="hash-link" href="#2021-sep-09" title="Direct link to 2021-SEP-09">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              Return the full aggregated order book for Level 2 queries under the
+              <code>
+               GET /products/&lt;product-id&gt;/book
+              </code>
+              endpoint.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2021-aug-23">
+             2021-AUG-23
+             <a aria-label="Direct link to 2021-AUG-23" class="hash-link" href="#2021-aug-23" title="Direct link to 2021-AUG-23">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              Reduced the set of fields returned by orders in "pending" status for
+              <code>
+               GET /orders
+              </code>
+              ,
+              <code>
+               GET /orders/&lt;id&gt;
+              </code>
+              , and
+              <code>
+               GET /orders/client:&lt;client_oid&gt;
+              </code>
+              APIs. See
+              <code>
+               List Orders
+              </code>
+              documentation for more details. Orders with non-pending statuses will be unaffected by this change.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2021-aug-17">
+             2021-AUG-17
+             <a aria-label="Direct link to 2021-AUG-17" class="hash-link" href="#2021-aug-17" title="Direct link to 2021-AUG-17">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              Return client order ID rather than order ID in successful cancel order response for REST API endpoint
+              <code>
+               DELETE /orders/client:&lt;client_oid&gt;
+              </code>
+              .
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2021-aug-12">
+             2021-AUG-12
+             <a aria-label="Direct link to 2021-AUG-12" class="hash-link" href="#2021-aug-12" title="Direct link to 2021-AUG-12">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              Require the field Symbol(55) on the following FIX API messages: OrderCancelRequest(F) and OrderStatusRequest(H). Messages (F) and (H) without Symbol(55) will be rejected.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2021-aug-06">
+             2021-AUG-06
+             <a aria-label="Direct link to 2021-AUG-06" class="hash-link" href="#2021-aug-06" title="Direct link to 2021-AUG-06">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              Add pagination support for the
+              <code>
+               GET /fills
+              </code>
+              endpoint.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2021-aug-01">
+             2021-AUG-01
+             <a aria-label="Direct link to 2021-AUG-01" class="hash-link" href="#2021-aug-01" title="Direct link to 2021-AUG-01">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              Increased the maximum number of FIX connections allowed per profile from 5 to 7.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2021-jul-01">
+             2021-JUL-01
+             <a aria-label="Direct link to 2021-JUL-01" class="hash-link" href="#2021-jul-01" title="Direct link to 2021-JUL-01">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              Added sendingTime 5 minute validation.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2021-jun-22">
+             2021-JUN-22
+             <a aria-label="Direct link to 2021-JUN-22" class="hash-link" href="#2021-jun-22" title="Direct link to 2021-JUN-22">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              Added fx_stablecoin to products.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2021-jun-21">
+             2021-JUN-21
+             <a aria-label="Direct link to 2021-JUN-21" class="hash-link" href="#2021-jun-21" title="Direct link to 2021-JUN-21">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              Order Cancel Batch Request(U4) will accept optional ClOrdID(11) field for each cancel request. The provided ClOrdID(11) will be included in Order Cancel Reject(9) for partial reject.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2021-jun-14">
+             2021-JUN-14
+             <a aria-label="Direct link to 2021-JUN-14" class="hash-link" href="#2021-jun-14" title="Direct link to 2021-JUN-14">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              Order Cancel Batch Request(U4) will now return Order Cancel Reject(9) for partial rejected cancel request.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2021-jun-10">
+             2021-JUN-10
+             <a aria-label="Direct link to 2021-JUN-10" class="hash-link" href="#2021-jun-10" title="Direct link to 2021-JUN-10">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              Added failed status to reports.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2021-jun-03">
+             2021-JUN-03
+             <a aria-label="Direct link to 2021-JUN-03" class="hash-link" href="#2021-jun-03" title="Direct link to 2021-JUN-03">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              Our API endpoints were moved to
+              <code>
+               exchange.coinbase.com
+              </code>
+              from
+              <code>
+               prime.coinbase.com
+              </code>
+              .
+             </li>
+            </ul>
+            <p>
+             <strong>
+              <em>
+               Production URLs
+              </em>
+             </strong>
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                Product
+               </th>
+               <th align="left">
+                Old URL
+               </th>
+               <th align="left">
+                New URL
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                Website
+               </td>
+               <td align="left">
+                <a href="https://prime.coinbase.com" rel="noopener noreferrer" target="_blank">
+                 https://prime.coinbase.com
+                </a>
+               </td>
+               <td align="left">
+                <a href="https://exchange.coinbase.com" rel="noopener noreferrer" target="_blank">
+                 https://exchange.coinbase.com
+                </a>
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                REST API
+               </td>
+               <td align="left">
+                <a href="https://api.prime.coinbase.com" rel="noopener noreferrer" target="_blank">
+                 https://api.prime.coinbase.com
+                </a>
+               </td>
+               <td align="left">
+                <a href="https://api.exchange.coinbase.com" rel="noopener noreferrer" target="_blank">
+                 https://api.exchange.coinbase.com
+                </a>
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                FIX API
+               </td>
+               <td align="left">
+                tcp+ssl://fix.prime.coinbase.com:4198
+               </td>
+               <td align="left">
+                tcp+ssl://fix.exchange.coinbase.com:4198
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                Web Socket API
+               </td>
+               <td align="left">
+                wss://ws-feed.prime.coinbase.com
+               </td>
+               <td align="left">
+                wss://ws-feed.exchange.coinbase.com
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <p>
+             <strong>
+              <em>
+               Sandbox URLs
+              </em>
+             </strong>
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                Product
+               </th>
+               <th align="left">
+                Old URL
+               </th>
+               <th align="left">
+                New URL
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                Website
+               </td>
+               <td align="left">
+                <a href="https://public.sandbox.prime.coinbase.com" rel="noopener noreferrer" target="_blank">
+                 https://public.sandbox.prime.coinbase.com
+                </a>
+               </td>
+               <td align="left">
+                <a href="https://public.sandbox.exchange.coinbase.com" rel="noopener noreferrer" target="_blank">
+                 https://public.sandbox.exchange.coinbase.com
+                </a>
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                REST API
+               </td>
+               <td align="left">
+                <a href="https://api-public.sandbox.prime.coinbase.com" rel="noopener noreferrer" target="_blank">
+                 https://api-public.sandbox.prime.coinbase.com
+                </a>
+               </td>
+               <td align="left">
+                <a href="https://api-public.sandbox.exchange.coinbase.com" rel="noopener noreferrer" target="_blank">
+                 https://api-public.sandbox.exchange.coinbase.com
+                </a>
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                FIX API
+               </td>
+               <td align="left">
+                tcp+ssl://fix-public.sandbox.prime.coinbase.com:4198
+               </td>
+               <td align="left">
+                tcp+ssl://fix-public.sandbox.exchange.coinbase.com:4198
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                Web Socket API
+               </td>
+               <td align="left">
+                wss://ws-feed-public.sandbox.prime.coinbase.com
+               </td>
+               <td align="left">
+                wss://ws-feed-public.sandbox.exchange.coinbase.com
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2021-may-27">
+             2021-MAY-27
+             <a aria-label="Direct link to 2021-MAY-27" class="hash-link" href="#2021-may-27" title="Direct link to 2021-MAY-27">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              API FIX - Order Cancel Request (F) endpoint requires the Symbol field now.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2021-may-20">
+             2021-MAY-20
+             <a aria-label="Direct link to 2021-MAY-20" class="hash-link" href="#2021-may-20" title="Direct link to 2021-MAY-20">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              <code>
+               /fills
+              </code>
+              custom rate limit.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2021-may-14">
+             2021-MAY-14
+             <a aria-label="Direct link to 2021-MAY-14" class="hash-link" href="#2021-may-14" title="Direct link to 2021-MAY-14">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              Increased public and private rate limits.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2021-apr-22">
+             2021-APR-22
+             <a aria-label="Direct link to 2021-APR-22" class="hash-link" href="#2021-apr-22" title="Direct link to 2021-APR-22">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              Increase pagination limit from 100 to 1000.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2021-apr-05">
+             2021-APR-05
+             <a aria-label="Direct link to 2021-APR-05" class="hash-link" href="#2021-apr-05" title="Direct link to 2021-APR-05">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              Updated max profiles to 10 and max API keys to 200.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2021-feb-04">
+             2021-FEB-04
+             <a aria-label="Direct link to 2021-FEB-04" class="hash-link" href="#2021-feb-04" title="Direct link to 2021-FEB-04">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              The Trailing Volume endpoint has been deprecated in favor of the Fees endpoint to get the latest volumes.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2021-jan-15">
+             2021-JAN-15
+             <a aria-label="Direct link to 2021-JAN-15" class="hash-link" href="#2021-jan-15" title="Direct link to 2021-JAN-15">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              Now recommending that clients opt to batch cancel orders by profile rather than session due to recent performance optimizations.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2020-dec-23">
+             2020-DEC-23
+             <a aria-label="Direct link to 2020-DEC-23" class="hash-link" href="#2020-dec-23" title="Direct link to 2020-DEC-23">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              <code>
+               HandlInst
+              </code>
+              in API FIX is no longer required.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2020-nov-16">
+             2020-NOV-16
+             <a aria-label="Direct link to 2020-NOV-16" class="hash-link" href="#2020-nov-16" title="Direct link to 2020-NOV-16">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              Addition of
+              <code>
+               max_withdrawal_amount
+              </code>
+              field in the
+              <code>
+               /currencies
+              </code>
+              endpoint.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2020-oct-05">
+             2020-OCT-05
+             <a aria-label="Direct link to 2020-OCT-05" class="hash-link" href="#2020-oct-05" title="Direct link to 2020-OCT-05">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              Authed users subscribed to the Websocket
+              <a href="/exchange/docs/websocket-channels#full-channel">
+               Full
+              </a>
+              or
+              <a href="/exchange/docs/websocket-channels#user-channel">
+               User
+              </a>
+              channel will now receive their order fee rates on match messages. Details can be found in documentation for the Full channel.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2020-oct-02">
+             2020-OCT-02
+             <a aria-label="Direct link to 2020-OCT-02" class="hash-link" href="#2020-oct-02" title="Direct link to 2020-OCT-02">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              Addition of cancel_code field on canceled withdrawals.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2020-sep-17">
+             2020-SEP-17
+             <a aria-label="Direct link to 2020-SEP-17" class="hash-link" href="#2020-sep-17" title="Direct link to 2020-SEP-17">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              Addition of an endpoint to provide estimates of network fees for crypto withdrawals.
+             </li>
+             <li>
+              Addition of a parameter for crypto withdrawals to specify if the network fee should be added / deducted from the requested amount.
+             </li>
+             <li>
+              'fee' and 'subtotal' fields added to responses for crypto withdrawals.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2020-sep-14">
+             2020-SEP-14
+             <a aria-label="Direct link to 2020-SEP-14" class="hash-link" href="#2020-sep-14" title="Direct link to 2020-SEP-14">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              The candles endpoint no longer has custom rate limits. It now shares the same rate limit with every other public endpoint.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2020-sep-03">
+             2020-SEP-03
+             <a aria-label="Direct link to 2020-SEP-03" class="hash-link" href="#2020-sep-03" title="Direct link to 2020-SEP-03">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              The maximum number of open orders (i.e. limit orders + stop orders) per product per profile will be 500. Profiles that exceed this threshold will be unable to place new orders on that product until the number of open orders is below 500.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2020-jun-18">
+             2020-JUN-18
+             <a aria-label="Direct link to 2020-JUN-18" class="hash-link" href="#2020-jun-18" title="Direct link to 2020-JUN-18">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              Users can retrieve historical
+              <a href="/exchange/reference/exchangerestapi_gettransfers">
+               deposits
+              </a>
+              and
+              <a href="/exchange/reference/exchangerestapi_gettransfers">
+               withdrawals
+              </a>
+              .
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2020-jun-17">
+             2020-JUN-17
+             <a aria-label="Direct link to 2020-JUN-17" class="hash-link" href="#2020-jun-17" title="Direct link to 2020-JUN-17">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              Generate an address for crypto deposits. See reference
+              <a href="/exchange/reference/exchangerestapi_postcoinbaseaccountaddresses">
+               here
+              </a>
+              .
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2020-jun-15">
+             2020-JUN-15
+             <a aria-label="Direct link to 2020-JUN-15" class="hash-link" href="#2020-jun-15" title="Direct link to 2020-JUN-15">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              Expose
+              <code>
+               min_market_funds
+              </code>
+              ,
+              <code>
+               max_market_funds
+              </code>
+              fields in the
+              <code>
+               /products
+              </code>
+              endpoint.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2020-jun-12">
+             2020-JUN-12
+             <a aria-label="Direct link to 2020-JUN-12" class="hash-link" href="#2020-jun-12" title="Direct link to 2020-JUN-12">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              Users can retrieve information regarding their transfer, buy, and sell limits at
+              <code>
+               /users/self/exchange-limits
+              </code>
+              . Refer to the
+              <a href="/exchange/reference/exchangerestapi_getuserexchangelimits">
+               Limits
+              </a>
+              API for more information.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2020-apr-27">
+             2020-APR-27
+             <a aria-label="Direct link to 2020-APR-27" class="hash-link" href="#2020-apr-27" title="Direct link to 2020-APR-27">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              Fill execution reports will show fee rates associated with the user's order. Please refer to the
+              <a href="#execution-report-8">
+               FIX ExecutionReport API
+              </a>
+              for details on format.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2020-feb-20">
+             2020-FEB-20
+             <a aria-label="Direct link to 2020-FEB-20" class="hash-link" href="#2020-feb-20" title="Direct link to 2020-FEB-20">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              Execution Reports from Order Status Requests will return
+              <code>
+               ClOrdID
+              </code>
+              , if it is supplied, even if the order isn't found.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2020-feb-10">
+             2020-FEB-10
+             <a aria-label="Direct link to 2020-FEB-10" class="hash-link" href="#2020-feb-10" title="Direct link to 2020-FEB-10">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              Activate messages on the Websocket feed will no longer expose
+              <code>
+               taker_fee_rate
+              </code>
+              .
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2019-dec-16">
+             2019-DEC-16
+             <a aria-label="Direct link to 2019-DEC-16" class="hash-link" href="#2019-dec-16" title="Direct link to 2019-DEC-16">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              Rate limiting changing from a per user basis to per profile basis.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2019-sep-30">
+             2019-SEP-30
+             <a aria-label="Direct link to 2019-SEP-30" class="hash-link" href="#2019-sep-30" title="Direct link to 2019-SEP-30">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              Order Status Request no longer allows the wildcard option.
+             </li>
+             <li>
+              Order Status Request returns pending and done orders when you use OrderID or ClOrdID.
+             </li>
+             <li>
+              Scheduled disconnects are on Mondays and Thursdays at 11 AM Pacific Time.
+             </li>
+            </ul>
+           </div>
+           <footer class="theme-doc-footer docusaurus-mt-lg">
+            <div class="theme-doc-footer-edit-meta-row row">
+             <div class="col">
+             </div>
+             <div class="col lastUpdated_vwxv">
+             </div>
+            </div>
+           </footer>
+           <div class="thumbnailRating_V63g hide-on-print">
+            <p>
+             Was this helpful?
+            </p>
+            <div class="buttonGroup_vjMq">
+             <style data-emotion="css 1wf493t">
+              .css-1wf493t{text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1wf493t:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1wf493t:hover{background-color:transparent;}}.css-1wf493t.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+             </style>
+             <style data-emotion="css 1yxmbwk">
+              .css-1yxmbwk{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1yxmbwk::-moz-focus-inner{border-style:none;}.css-1yxmbwk.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-1yxmbwk{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-1yxmbwk:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1yxmbwk:hover{background-color:transparent;}}.css-1yxmbwk.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+             </style>
+             <button aria-label="Helpful" class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1yxmbwk" tabindex="0" type="button">
+              <style data-emotion="css vubbuv">
+               .css-vubbuv{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
+              </style>
+              <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" data-testid="ThumbUpOffAltIcon" focusable="false" viewbox="0 0 24 24">
+               <path d="m13.11 5.72-.57 2.89c-.12.59.04 1.2.42 1.66.38.46.94.73 1.54.73H20v1.08L17.43 18H9.34c-.18 0-.34-.16-.34-.34V9.82l4.11-4.1M14 2 7.59 8.41C7.21 8.79 7 9.3 7 9.83v7.83C7 18.95 8.05 20 9.34 20h8.1c.71 0 1.36-.37 1.72-.97l2.67-6.15c.11-.25.17-.52.17-.8V11c0-1.1-.9-2-2-2h-5.5l.92-4.65c.05-.22.02-.46-.08-.66-.23-.45-.52-.86-.88-1.22L14 2zM4 9H2v11h2c.55 0 1-.45 1-1v-9c0-.55-.45-1-1-1z">
+               </path>
+              </svg>
+             </button>
+             <style data-emotion="css 1e2dcm1">
+              .css-1e2dcm1{z-index:1500;pointer-events:none;}
+             </style>
+             <style data-emotion="css okvapm">
+              .css-okvapm{z-index:1500;pointer-events:none;}
+             </style>
+             <style data-emotion="css 1wf493t">
+              .css-1wf493t{text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1wf493t:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1wf493t:hover{background-color:transparent;}}.css-1wf493t.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+             </style>
+             <style data-emotion="css 1yxmbwk">
+              .css-1yxmbwk{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1yxmbwk::-moz-focus-inner{border-style:none;}.css-1yxmbwk.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-1yxmbwk{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-1yxmbwk:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1yxmbwk:hover{background-color:transparent;}}.css-1yxmbwk.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+             </style>
+             <button aria-label="Not helpful" class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1yxmbwk" tabindex="0" type="button">
+              <style data-emotion="css vubbuv">
+               .css-vubbuv{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
+              </style>
+              <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" data-testid="ThumbDownOffAltIcon" focusable="false" viewbox="0 0 24 24">
+               <path d="m10.89 18.28.57-2.89c.12-.59-.04-1.2-.42-1.66-.38-.46-.94-.73-1.54-.73H4v-1.08L6.57 6h8.09c.18 0 .34.16.34.34v7.84l-4.11 4.1M10 22l6.41-6.41c.38-.38.59-.89.59-1.42V6.34C17 5.05 15.95 4 14.66 4h-8.1c-.71 0-1.36.37-1.72.97l-2.67 6.15c-.11.25-.17.52-.17.8V13c0 1.1.9 2 2 2h5.5l-.92 4.65c-.05.22-.02.46.08.66.23.45.52.86.88 1.22L10 22zm10-7h2V4h-2c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1z">
+               </path>
+              </svg>
+             </button>
+             <style data-emotion="css 1e2dcm1">
+              .css-1e2dcm1{z-index:1500;pointer-events:none;}
+             </style>
+             <style data-emotion="css okvapm">
+              .css-okvapm{z-index:1500;pointer-events:none;}
+             </style>
+            </div>
+           </div>
+           <style data-emotion="css 1k371a6">
+            @media print{.css-1k371a6{position:absolute!important;}}
+           </style>
+          </article>
+          <nav aria-label="Docs pages navigation" class="pagination-nav docusaurus-mt-lg">
+           <a class="pagination-nav__link pagination-nav__link--prev" href="/exchange/docs/upcoming-changes">
+            <div class="pagination-nav__sublabel">
+             Previous
+            </div>
+            <div class="pagination-nav__label">
+             Upcoming Changes
+            </div>
+           </a>
+          </nav>
+         </div>
+        </div>
+        <div class="col col--3">
+         <div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop">
+          <ul class="table-of-contents table-of-contents__left-border">
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2023-apr-24">
+             2023-APR-24
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2023-apr-19">
+             2023-APR-19
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2023-mar-29">
+             2023-MAR-29
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2023-mar-15">
+             2023-MAR-15
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2023-mar-02">
+             2023-MAR-02
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2023-mar-01">
+             2023-MAR-01
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2023-feb-23">
+             2023-FEB-23
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2023-jan-30">
+             2023-JAN-30
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2023-jan-26">
+             2023-JAN-26
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2023-jan-06">
+             2023-JAN-06
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-dec-09">
+             2022-DEC-09
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-nov-22">
+             2022-NOV-22
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-oct-26">
+             2022-OCT-26
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-oct-17">
+             2022-OCT-17
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-oct-04">
+             2022-OCT-04
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-sep-22">
+             2022-SEP-22
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-sep-19">
+             2022-SEP-19
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-aug-24">
+             2022-AUG-24
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-aug-16">
+             2022-AUG-16
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-jul-27">
+             2022-JUL-27
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-jul-25">
+             2022-JUL-25
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-jun-30">
+             2022-JUN-30
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-jun-27">
+             2022-JUN-27
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-jun-02">
+             2022-JUN-02
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-may-25">
+             2022-MAY-25
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-may-05">
+             2022-MAY-05
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-may-02">
+             2022-MAY-02
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-apr-14">
+             2022-APR-14
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-mar-21">
+             2022-MAR-21
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-mar-17">
+             2022-MAR-17
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-feb-22">
+             2022-FEB-22
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-jan-31">
+             2022-JAN-31
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-jan-25">
+             2022-JAN-25
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2021-oct-25">
+             2021-OCT-25
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2021-sep-21">
+             2021-SEP-21
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2021-sep-09">
+             2021-SEP-09
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2021-aug-23">
+             2021-AUG-23
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2021-aug-17">
+             2021-AUG-17
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2021-aug-12">
+             2021-AUG-12
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2021-aug-06">
+             2021-AUG-06
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2021-aug-01">
+             2021-AUG-01
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2021-jul-01">
+             2021-JUL-01
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2021-jun-22">
+             2021-JUN-22
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2021-jun-21">
+             2021-JUN-21
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2021-jun-14">
+             2021-JUN-14
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2021-jun-10">
+             2021-JUN-10
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2021-jun-03">
+             2021-JUN-03
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2021-may-27">
+             2021-MAY-27
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2021-may-20">
+             2021-MAY-20
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2021-may-14">
+             2021-MAY-14
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2021-apr-22">
+             2021-APR-22
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2021-apr-05">
+             2021-APR-05
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2021-feb-04">
+             2021-FEB-04
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2021-jan-15">
+             2021-JAN-15
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2020-dec-23">
+             2020-DEC-23
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2020-nov-16">
+             2020-NOV-16
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2020-oct-05">
+             2020-OCT-05
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2020-oct-02">
+             2020-OCT-02
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2020-sep-17">
+             2020-SEP-17
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2020-sep-14">
+             2020-SEP-14
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2020-sep-03">
+             2020-SEP-03
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2020-jun-18">
+             2020-JUN-18
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2020-jun-17">
+             2020-JUN-17
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2020-jun-15">
+             2020-JUN-15
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2020-jun-12">
+             2020-JUN-12
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2020-apr-27">
+             2020-APR-27
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2020-feb-20">
+             2020-FEB-20
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2020-feb-10">
+             2020-FEB-10
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2019-dec-16">
+             2019-DEC-16
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2019-sep-30">
+             2019-SEP-30
+            </a>
+           </li>
+          </ul>
+         </div>
+        </div>
+       </div>
+      </div>
+     </main>
+    </div>
+   </div>
+   <footer class="footer">
+    <div class="container container-fluid">
+     <ul>
+      <li>
+       <div class="footer__copyright">
+        © 2023 Coinbase
+       </div>
+      </li>
+      <li>
+       <a class="footer__link-item" href="https://www.coinbase.com/legal/privacy" rel="noopener noreferrer" target="_blank">
+        Privacy
+        <svg aria-hidden="true" class="iconExternalLink_nPIU" height="13.5" viewbox="0 0 24 24" width="13.5">
+         <path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z" fill="currentColor">
+         </path>
+        </svg>
+       </a>
+      </li>
+     </ul>
+    </div>
+   </footer>
+  </div>
+  <script src="/assets/js/runtime~main.91f0d63d.js">
+  </script>
+  <script src="/assets/js/main.440d9293.js">
+  </script>
+ </body>
+</html>

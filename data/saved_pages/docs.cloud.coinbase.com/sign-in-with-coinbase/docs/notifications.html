@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html class="docs-wrapper docs-doc-page docs-version-current plugin-docs plugin-id-sign-in-with-coinbase docs-doc-id-docs/notifications" dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="Docusaurus v2.3.1" name="generator"/>
+  <title data-rh="true">
+   Notifications | Coinbase Cloud
+  </title>
+  <meta content="width=device-width,initial-scale=1" data-rh="true" name="viewport"/>
+  <meta content="summary_large_image" data-rh="true" name="twitter:card"/>
+  <meta content="https://docs.cloud.coinbase.com/sign-in-with-coinbase/docs/notifications" data-rh="true" property="og:url"/>
+  <meta content="en" data-rh="true" name="docusaurus_locale"/>
+  <meta content="en" data-rh="true" name="docsearch:language"/>
+  <meta content="current" data-rh="true" name="docusaurus_version"/>
+  <meta content="docs-sign-in-with-coinbase-current" data-rh="true" name="docusaurus_tag"/>
+  <meta content="current" data-rh="true" name="docsearch:version"/>
+  <meta content="docs-sign-in-with-coinbase-current" data-rh="true" name="docsearch:docusaurus_tag"/>
+  <meta content="Notifications | Coinbase Cloud" data-rh="true" property="og:title"/>
+  <meta content="Notifications allow you to subscribe to updates for your OAuth application or API key. Notifications are sent as HTTP POST requests (webhooks) to a notification endpoint which you can set in your OAuth application or API key settings." data-rh="true" name="description"/>
+  <meta content="Notifications allow you to subscribe to updates for your OAuth application or API key. Notifications are sent as HTTP POST requests (webhooks) to a notification endpoint which you can set in your OAuth application or API key settings." data-rh="true" property="og:description"/>
+  <link data-rh="true" href="/img/favicon.png" rel="icon"/>
+  <link data-rh="true" href="https://docs.cloud.coinbase.com/sign-in-with-coinbase/docs/notifications" rel="canonical"/>
+  <link data-rh="true" href="https://docs.cloud.coinbase.com/sign-in-with-coinbase/docs/notifications" hreflang="en" rel="alternate"/>
+  <link data-rh="true" href="https://docs.cloud.coinbase.com/sign-in-with-coinbase/docs/notifications" hreflang="x-default" rel="alternate"/>
+  <link crossorigin="anonymous" data-rh="true" href="https://BPPU41WTIR-dsn.algolia.net" rel="preconnect"/>
+  <link href="https://www.google-analytics.com" rel="preconnect"/>
+  <link href="https://www.googletagmanager.com" rel="preconnect"/>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-1X60WF4D7F">
+  </script>
+  <script>
+   function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-1X60WF4D7F",{anonymize_ip:!0})
+  </script>
+  <link href="/opensearch.xml" rel="search" title="Coinbase Cloud" type="application/opensearchdescription+xml"/>
+  <link href="/assets/css/styles.22f44638.css" rel="stylesheet"/>
+  <link as="script" href="/assets/js/runtime~main.91f0d63d.js" rel="preload"/>
+  <link as="script" href="/assets/js/main.440d9293.js" rel="preload"/>
+ </head>
+ <body class="navigation-with-keyboard">
+  <script>
+   !function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}()
+  </script>
+  <div id="__docusaurus">
+   <div aria-label="Skip to main content" role="region">
+    <a class="skipToContent_fXgn" href="#docusaurus_skipToContent_fallback">
+     Skip to main content
+    </a>
+   </div>
+   <nav aria-label="Main" class="navbar navbar--fixed-top">
+    <div class="navbar__container_rqDs">
+     <div class="navbar__inner">
+      <div class="navbar__items">
+       <button aria-expanded="false" aria-label="Toggle navigation bar" class="navbar__toggle clean-btn" type="button">
+        <svg aria-hidden="true" height="30" viewbox="0 0 30 30" width="30">
+         <path d="M4 7h22M4 15h22M4 23h22" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2">
+         </path>
+        </svg>
+       </button>
+       <a class="navbar__brand" href="/">
+        <div class="navbar__logo">
+         <img alt="Coinbase Pay" class="themedImage_ToTc themedImage--light_HNdA" src="/img/logo.svg"/>
+         <img alt="Coinbase Pay" class="themedImage_ToTc themedImage--dark_i4oU" src="/img/logo.svg"/>
+        </div>
+       </a>
+       <a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/">
+        Documentation
+       </a>
+      </div>
+      <div class="navbar__items navbar__items--right">
+       <div class="searchBox_ZlJk">
+        <button aria-label="Search" class="DocSearch DocSearch-Button" type="button">
+         <span class="DocSearch-Button-Container">
+          <svg class="DocSearch-Search-Icon" height="20" viewbox="0 0 20 20" width="20">
+           <path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+           </path>
+          </svg>
+          <span class="DocSearch-Button-Placeholder">
+           Search
+          </span>
+         </span>
+         <span class="DocSearch-Button-Keys">
+         </span>
+        </button>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="menubar_iWH4">
+     <div class="menubar__inner_eCwJ">
+      <div class="navbar__item dropdown dropdown--hoverable">
+       <a aria-expanded="false" aria-haspopup="true" class="navbar__link" href="#" role="button">
+        Sign in with Coinbase
+       </a>
+       <ul class="dropdown__menu">
+        <li>
+         <a class="dropdown__link" href="/advanced-trade-api/docs/welcome">
+          Advanced Trade API
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/blockchain-infrastructure/docs/welcome">
+          Blockchain Infrastructure
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/pay-sdk/docs/intro">
+          Coinbase Pay
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/wallet-sdk/docs/welcome">
+          Coinbase Wallet
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/commerce/docs/welcome">
+          Commerce API
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/delegation/docs/about-cloud-staking">
+          Delegation Guides
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/exchange/docs/welcome">
+          Exchange/Pro
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/kyt/reference/introduction">
+          KYT
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/prime/docs/introduction">
+          Prime
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/rosetta/docs/welcome">
+          Rosetta
+         </a>
+        </li>
+        <li>
+         <a aria-current="page" class="dropdown__link dropdown__link--active" href="/sign-in-with-coinbase/docs/welcome">
+          Sign in with Coinbase
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/waas/docs/welcome">
+          Wallet as a Service
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="menubarItems_end_INfc">
+       <a class="menubarBtn_Xh25" href="https://forums.coinbasecloud.dev">
+        Discuss in the Forum
+       </a>
+       <a class="menubarBtn_Xh25" href="https://help.coinbase.com/en/contact-us?product=coinbase-cloud">
+        Need Support?
+       </a>
+       <button class="menubarBtn_Xh25">
+        <svg class="icon_HrvF" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+         <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z">
+         </path>
+        </svg>
+        Search
+       </button>
+       <div class="searchToggleShortcut_VFcV">
+        ⌘K
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="navbar-sidebar__backdrop" role="presentation">
+    </div>
+   </nav>
+   <div class="main-wrapper mainWrapper_z2l0 docsWrapper_BCFX" id="docusaurus_skipToContent_fallback">
+    <button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button">
+    </button>
+    <div class="docPage__5DB">
+     <aside class="theme-doc-sidebar-container docSidebarContainer_b6E3">
+      <div class="sidebarViewport_Xe31">
+       <div class="sidebar_njMd">
+        <nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG">
+         <ul class="theme-doc-sidebar-menu menu__list">
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Introduction
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/welcome" tabindex="0">
+              Welcome
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/getting-started" tabindex="0">
+              Getting started
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link menu__link--active">
+             API Architecture
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/status-codes" tabindex="0">
+              Status codes
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/making-requests" tabindex="0">
+              Making requests
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/cors" tabindex="0">
+              CORS
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/localization" tabindex="0">
+              Localization
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/fields" tabindex="0">
+              Fields
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/scopes" tabindex="0">
+              Scopes
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/pagination" tabindex="0">
+              Pagination
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed">
+             <div class="menu__list-item-collapsible">
+              <a aria-expanded="false" class="menu__link menu__link--sublist menu__link--sublist-caret" href="/sign-in-with-coinbase/docs/error-response" tabindex="0">
+               Errors
+              </a>
+             </div>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/versioning" tabindex="0">
+              Versioning
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/rate-limiting" tabindex="0">
+              Rate limiting
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/expanding-resources" tabindex="0">
+              Expanding resources
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a aria-current="page" class="menu__link menu__link--active" href="/sign-in-with-coinbase/docs/notifications" tabindex="0">
+              Notifications
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Authorization and Authentication
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed">
+             <div class="menu__list-item-collapsible">
+              <a aria-expanded="false" class="menu__link menu__link--sublist" href="/sign-in-with-coinbase/docs/sign-in-with-coinbase" tabindex="0">
+               OAuth2
+              </a>
+              <button aria-label="Toggle the collapsible sidebar category 'OAuth2'" class="clean-btn menu__caret" type="button">
+              </button>
+             </div>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/api-key-authentication" tabindex="0">
+              API Key Authentication
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Client Libraries
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/client-libraries" tabindex="0">
+              Client libraries
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Notifications Endpoint
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/api-notifications" tabindex="0">
+              Notifications
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Wallet API Endpoints
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/api-users" tabindex="0">
+              Users
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/api-accounts" tabindex="0">
+              Accounts
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/api-addresses" tabindex="0">
+              Addresses
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/api-transactions" tabindex="0">
+              Transactions
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/api-buys" tabindex="0">
+              Buys
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/api-sells" tabindex="0">
+              Sells
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/api-deposits" tabindex="0">
+              Deposits
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/api-withdrawals" tabindex="0">
+              Withdrawals
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/api-payment-methods" tabindex="0">
+              Payment Methods
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Data API Endpoints
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/api-currencies" tabindex="0">
+              Currencies
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/api-exchange-rates" tabindex="0">
+              Exchange Rates
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/api-prices" tabindex="0">
+              Prices
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/api-time" tabindex="0">
+              Time
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Support
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link menuExternalLink_NmtK" href="https://forums.coinbasecloud.dev/" rel="noopener noreferrer" tabindex="0" target="_blank">
+              Coinbase Cloud Forum
+              <svg aria-hidden="true" class="iconExternalLink_nPIU" height="13.5" viewbox="0 0 24 24" width="13.5">
+               <path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z" fill="currentColor">
+               </path>
+              </svg>
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link menuExternalLink_NmtK" href="https://help.coinbase.com/en/contact-us?product=coinbase-cloud" rel="noopener noreferrer" tabindex="0" target="_blank">
+              Coinbase Cloud Help Center
+              <svg aria-hidden="true" class="iconExternalLink_nPIU" height="13.5" viewbox="0 0 24 24" width="13.5">
+               <path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z" fill="currentColor">
+               </path>
+              </svg>
+             </a>
+            </li>
+           </ul>
+          </li>
+         </ul>
+        </nav>
+       </div>
+      </div>
+     </aside>
+     <main class="docMainContainer_gTbr">
+      <div class="container padding-top--md padding-bottom--lg">
+       <div class="row">
+        <div class="col docItemCol_z5aJ">
+         <div class="docItemContainer_c0TR">
+          <article>
+           <nav aria-label="Breadcrumbs" class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl">
+            <ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+             <li class="breadcrumbs__item">
+              <a aria-label="Home page" class="breadcrumbs__link" href="/">
+               <svg class="breadcrumbHomeIcon_YNFT" viewbox="0 0 24 24">
+                <path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor">
+                </path>
+               </svg>
+              </a>
+             </li>
+             <li class="breadcrumbs__item">
+              <span class="breadcrumbs__link">
+               API Architecture
+              </span>
+              <meta content="1" itemprop="position"/>
+             </li>
+             <li class="breadcrumbs__item breadcrumbs__item--active" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+              <span class="breadcrumbs__link" itemprop="name">
+               Notifications
+              </span>
+              <meta content="2" itemprop="position"/>
+             </li>
+            </ul>
+           </nav>
+           <div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo">
+            <button class="clean-btn tocCollapsibleButton_TO0P" type="button">
+             On this page
+            </button>
+           </div>
+           <div class="theme-doc-markdown markdown">
+            <header>
+             <h1>
+              Notifications
+             </h1>
+            </header>
+            <p>
+             Notifications allow you to subscribe to updates for your OAuth application or API key. Notifications are sent as HTTP POST requests (webhooks) to a notification endpoint which you can set in your OAuth application or API key settings.
+            </p>
+            <p>
+             Once you have configured your notification endpoint you'll receive notifications instantly as events are created for your account. You might use notifications to:
+            </p>
+            <ul>
+             <li>
+              Get notified when your buy or sell is completed, or when a withdraw or deposit is created
+             </li>
+             <li>
+              Initiate actions when a cryptocurrency address receives a new transaction
+             </li>
+            </ul>
+            <p>
+             <a href="/sign-in-with-coinbase/docs/api-notifications">
+              <strong>
+               See full list of notifications and corresponding payload information
+              </strong>
+             </a>
+            </p>
+            <p>
+             New notification types will be added over time.
+            </p>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="setting-up-notifications">
+             Setting up notifications
+             <a aria-label="Direct link to Setting up notifications" class="hash-link" href="#setting-up-notifications" title="Direct link to Setting up notifications">
+              ​
+             </a>
+            </h2>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="api-key">
+             API key
+             <a aria-label="Direct link to API key" class="hash-link" href="#api-key" title="Direct link to API key">
+              ​
+             </a>
+            </h3>
+            <p>
+             You can set up a notification endpoint for your API Key in your
+             <a href="https://www.coinbase.com/settings/api" rel="noopener noreferrer" target="_blank">
+              API key settings
+             </a>
+             . These notifications affect only your own account and you need to remember to set up necessary read permissions to receive notifications. A full list is available in the
+             <a href="/sign-in-with-coinbase/docs/api-notifications">
+              API reference
+             </a>
+             .
+            </p>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="sign-in-with-coinbase-oauth2">
+             Sign in with Coinbase (OAuth2)
+             <a aria-label="Direct link to Sign in with Coinbase (OAuth2)" class="hash-link" href="#sign-in-with-coinbase-oauth2" title="Direct link to Sign in with Coinbase (OAuth2)">
+              ​
+             </a>
+            </h3>
+            <p>
+             <a href="/sign-in-with-coinbase/docs/sign-in-with-coinbase">
+              Sign in with Coinbase
+             </a>
+             applications can also subscribe to notifications. Unlike API keys, notifications for Coinbase Connect applications are initialized for application users who have an active access token. The same restrictions apply, so you'll need to have the necessary read permissions, and notifications will only be fired for accounts (wallets) for which the application has permissions.
+            </p>
+            <p>
+             As notifications from multiple users of your applications are posted to a single notification endpoint, you'll need to use
+             <code>
+              user
+             </code>
+             and
+             <code>
+              account
+             </code>
+             fields to map them to specific users of your application.
+            </p>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="accessing-notifications-api">
+             Accessing Notifications API
+             <a aria-label="Direct link to Accessing Notifications API" class="hash-link" href="#accessing-notifications-api" title="Direct link to Accessing Notifications API">
+              ​
+             </a>
+            </h2>
+            <p>
+             Notifications are stored for future access via the API. Querying them via the API can be useful if you need to access notifications at a later date or when you're testing your implementation.
+            </p>
+            <p>
+             **The notifications API does not display past events. Notification events begin the moment the Notification URL is set up on your API Key or OAuth app.
+            </p>
+            <p>
+             <a href="/sign-in-with-coinbase/docs/api-notifications">
+              Read more about Notifications API
+             </a>
+            </p>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="notification-retry-schedule">
+             Notification Retry Schedule
+             <a aria-label="Direct link to Notification Retry Schedule" class="hash-link" href="#notification-retry-schedule" title="Direct link to Notification Retry Schedule">
+              ​
+             </a>
+            </h2>
+            <p>
+             When posting notifications, Coinbase expects to receive a
+             <code>
+              200
+             </code>
+             response code from your website. If the response code is not
+             <code>
+              200
+             </code>
+             , we will retry the notification hourly for up to three days.
+            </p>
+            <p>
+             This ensures that if your site experiences downtime or there is a problem with your integration, updates will not be lost. Most of the time your website will respond on the very first callback so subsequent callbacks will never need to be run.
+            </p>
+            <p>
+             You can always access notifications via our API using the
+             <a href="/sign-in-with-coinbase/docs/api-notifications">
+              list notifications
+             </a>
+             endpoint.
+            </p>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="versioning">
+             Versioning
+             <a aria-label="Direct link to Versioning" class="hash-link" href="#versioning" title="Direct link to Versioning">
+              ​
+             </a>
+            </h2>
+            <p>
+             As notifications are delivered via webhooks, they don't have access to
+             <code>
+              CB-VERSION
+             </code>
+             header which is used to define the version for API requests. Instead a version defined in
+             <a href="https://www.coinbase.com/settings/api" rel="noopener noreferrer" target="_blank">
+              user's API settings
+             </a>
+             is used. Before upgrading your service, ensure that your application is ready to accept the latest notification version.
+            </p>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="testing-notifications">
+             Testing notifications
+             <a aria-label="Direct link to Testing notifications" class="hash-link" href="#testing-notifications" title="Direct link to Testing notifications">
+              ​
+             </a>
+            </h2>
+            <p>
+             Since notifications must always be available in a publicly accessible URL, you might run into issues while starting to build your application in a local environment. The easiest way to get started testing notifications is to use a tool like
+             <a href="https://requestbin.com/" rel="noopener noreferrer" target="_blank">
+              RequestBin
+             </a>
+             . Once you have created a temporary webhook, you can set it to your application settings. It's important to use this only for development, as you should never leak notification data to public.
+            </p>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="securing-callbacks">
+             Securing Callbacks
+             <a aria-label="Direct link to Securing Callbacks" class="hash-link" href="#securing-callbacks" title="Direct link to Securing Callbacks">
+              ​
+             </a>
+            </h2>
+            <p>
+             Order callbacks originating from Coinbase will be signed using our callback signing RSA private key. The corresponding public key for verification can be downloaded
+             <a href="https://www.coinbase.com/coinbase.pub" rel="noopener noreferrer" target="_blank">
+              here
+             </a>
+             .
+            </p>
+            <p>
+             If you are using the latest version of an official Coinbase API library, check your library's documentation for verifying callbacks.
+            </p>
+            <p>
+             If you would like to verify callbacks manually in the language of your choice, the message digest used is SHA256, the message that is signed is the POST body, the padding scheme is PKCS1_v1_5, and the signature to be verified is present in the 'CB-SIGNATURE' HTTP Header encoded as base64.
+            </p>
+            <p>
+             To assist you in testing, the following is an example POST body with associated valid signature:
+            </p>
+            <div class="language-ruby codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-ruby codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">  body </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token string-literal string" style="color:#e3116c">'{"order":{"id":null,"created_at":null,"status":"completed","event":null,"total_btc":{"cents":100000000,"currency_iso":"BTC"},"total_native":{"cents":1000,"currency_iso":"USD"},"total_payout":{"cents":1000,"currency_iso":"USD"},"custom":"123456789","receive_address":"mzVoQenSY6RTBgBUcpSBTBAvUMNgGWxgJn","button":{"type":"buy_now","name":"Test Item","description":null,"id":null},"transaction":{"id":"53bdfe4d091c0d74a7000003","hash":"4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b","confirmations":0}}}'</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  signature </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token string-literal string" style="color:#e3116c">"6yQRl17CNj5YSHSpF+tLjb0vVsNVEv021Tyy1bTVEQ69SWlmhwmJYuMc7jiDyeW9TLy4vRqSh4g4YEyN8eoQIM57pMoNw6Lw6Oudubqwp+E3cKtLFxW0l18db3Z/vhxn5BScAutHWwT/XrmkCNaHyCsvOOGMekwrNO7mxX9QIx21FBaEejJeviSYrF8bG6MbmFEs2VGKSybf9YrElR8BxxNe/uNfCXN3P5tO8MgR5wlL3Kr4yq8e6i4WWJgD08IVTnrSnoZR6v8JkPA+fn7I0M6cy0Xzw3BRMJAvdQB97wkobu97gFqJFKsOH2u/JR1S/UNP26vL0mzuAVuKAUwlRn0SUhWEAgcM3X0UCtWLYfCIb5QqrSHwlp7lwOkVnFt329Mrpjy+jAfYYSRqzIsw4ZsRRVauy/v3CvmjPI9sUKiJ5l1FSgkpK2lkjhFgKB3WaYZWy9ZfIAI9bDyG8vSTT7IDurlUhyTweDqVNlYUsO6jaUa4KmSpg1o9eIeHxm0XBQ2c0Lv/T39KNc/VOAi1LBfPiQYMXD1e/8VuPPBTDGgzOMD3i334ppSr36+8YtApAn3D36Hr9jqAfFrugM7uPecjCGuleWsHFyNnJErT0/amIt24Nh1GoiESEq42o7Co4wZieKZ+/yeAlIUErJzK41ACVGmTnGoDUwEBXxADOdA="</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <p>
+             Your callback url should also use the
+             <code>
+              https
+             </code>
+             protocol for greater security. This allows us to ensure we are sending callbacks to the correct server and prevents any parameters from being read as they travel over the internet. Additionally, the developer should reject all callbacks that do not originate from Coinbase's network:
+            </p>
+            <p>
+             54.175.255.192/27
+            </p>
+            <p>
+             Previous versions of this documentation recommended adding a secret query parameter to your callback url. This method is no longer supported and all clients should verify the cryptographic signature as described above instead.
+            </p>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="confirmations">
+             Confirmations
+             <a aria-label="Direct link to Confirmations" class="hash-link" href="#confirmations" title="Direct link to Confirmations">
+              ​
+             </a>
+            </h2>
+            <p>
+             Cryptocurrency transactions arrive usually within a few seconds, but can take anywhere from 10 minutes to 1 hour to become 100% confirmed in the blockchain. Typically, Coinbase sends the notification within 1-2 seconds of the Cryptocurrency transaction arriving. If we feel the transaction is at a higher risk for being double spent, we may delay sending the callback until we can be sure the transaction will be confirmed.
+            </p>
+           </div>
+           <footer class="theme-doc-footer docusaurus-mt-lg">
+            <div class="theme-doc-footer-edit-meta-row row">
+             <div class="col">
+             </div>
+             <div class="col lastUpdated_vwxv">
+             </div>
+            </div>
+           </footer>
+           <div class="thumbnailRating_V63g hide-on-print">
+            <p>
+             Was this helpful?
+            </p>
+            <div class="buttonGroup_vjMq">
+             <style data-emotion="css 1wf493t">
+              .css-1wf493t{text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1wf493t:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1wf493t:hover{background-color:transparent;}}.css-1wf493t.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+             </style>
+             <style data-emotion="css 1yxmbwk">
+              .css-1yxmbwk{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1yxmbwk::-moz-focus-inner{border-style:none;}.css-1yxmbwk.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-1yxmbwk{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-1yxmbwk:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1yxmbwk:hover{background-color:transparent;}}.css-1yxmbwk.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+             </style>
+             <button aria-label="Helpful" class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1yxmbwk" tabindex="0" type="button">
+              <style data-emotion="css vubbuv">
+               .css-vubbuv{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
+              </style>
+              <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" data-testid="ThumbUpOffAltIcon" focusable="false" viewbox="0 0 24 24">
+               <path d="m13.11 5.72-.57 2.89c-.12.59.04 1.2.42 1.66.38.46.94.73 1.54.73H20v1.08L17.43 18H9.34c-.18 0-.34-.16-.34-.34V9.82l4.11-4.1M14 2 7.59 8.41C7.21 8.79 7 9.3 7 9.83v7.83C7 18.95 8.05 20 9.34 20h8.1c.71 0 1.36-.37 1.72-.97l2.67-6.15c.11-.25.17-.52.17-.8V11c0-1.1-.9-2-2-2h-5.5l.92-4.65c.05-.22.02-.46-.08-.66-.23-.45-.52-.86-.88-1.22L14 2zM4 9H2v11h2c.55 0 1-.45 1-1v-9c0-.55-.45-1-1-1z">
+               </path>
+              </svg>
+             </button>
+             <style data-emotion="css 1e2dcm1">
+              .css-1e2dcm1{z-index:1500;pointer-events:none;}
+             </style>
+             <style data-emotion="css okvapm">
+              .css-okvapm{z-index:1500;pointer-events:none;}
+             </style>
+             <style data-emotion="css 1wf493t">
+              .css-1wf493t{text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1wf493t:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1wf493t:hover{background-color:transparent;}}.css-1wf493t.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+             </style>
+             <style data-emotion="css 1yxmbwk">
+              .css-1yxmbwk{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1yxmbwk::-moz-focus-inner{border-style:none;}.css-1yxmbwk.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-1yxmbwk{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-1yxmbwk:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1yxmbwk:hover{background-color:transparent;}}.css-1yxmbwk.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+             </style>
+             <button aria-label="Not helpful" class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1yxmbwk" tabindex="0" type="button">
+              <style data-emotion="css vubbuv">
+               .css-vubbuv{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
+              </style>
+              <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" data-testid="ThumbDownOffAltIcon" focusable="false" viewbox="0 0 24 24">
+               <path d="m10.89 18.28.57-2.89c.12-.59-.04-1.2-.42-1.66-.38-.46-.94-.73-1.54-.73H4v-1.08L6.57 6h8.09c.18 0 .34.16.34.34v7.84l-4.11 4.1M10 22l6.41-6.41c.38-.38.59-.89.59-1.42V6.34C17 5.05 15.95 4 14.66 4h-8.1c-.71 0-1.36.37-1.72.97l-2.67 6.15c-.11.25-.17.52-.17.8V13c0 1.1.9 2 2 2h5.5l-.92 4.65c-.05.22-.02.46.08.66.23.45.52.86.88 1.22L10 22zm10-7h2V4h-2c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1z">
+               </path>
+              </svg>
+             </button>
+             <style data-emotion="css 1e2dcm1">
+              .css-1e2dcm1{z-index:1500;pointer-events:none;}
+             </style>
+             <style data-emotion="css okvapm">
+              .css-okvapm{z-index:1500;pointer-events:none;}
+             </style>
+            </div>
+           </div>
+           <style data-emotion="css 1k371a6">
+            @media print{.css-1k371a6{position:absolute!important;}}
+           </style>
+          </article>
+          <nav aria-label="Docs pages navigation" class="pagination-nav docusaurus-mt-lg">
+           <a class="pagination-nav__link pagination-nav__link--prev" href="/sign-in-with-coinbase/docs/expanding-resources">
+            <div class="pagination-nav__sublabel">
+             Previous
+            </div>
+            <div class="pagination-nav__label">
+             Expanding resources
+            </div>
+           </a>
+           <a class="pagination-nav__link pagination-nav__link--next" href="/sign-in-with-coinbase/docs/sign-in-with-coinbase">
+            <div class="pagination-nav__sublabel">
+             Next
+            </div>
+            <div class="pagination-nav__label">
+             OAuth2
+            </div>
+           </a>
+          </nav>
+         </div>
+        </div>
+        <div class="col col--3">
+         <div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop">
+          <ul class="table-of-contents table-of-contents__left-border">
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#setting-up-notifications">
+             Setting up notifications
+            </a>
+            <ul>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#api-key">
+               API key
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#sign-in-with-coinbase-oauth2">
+               Sign in with Coinbase (OAuth2)
+              </a>
+             </li>
+            </ul>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#accessing-notifications-api">
+             Accessing Notifications API
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#notification-retry-schedule">
+             Notification Retry Schedule
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#versioning">
+             Versioning
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#testing-notifications">
+             Testing notifications
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#securing-callbacks">
+             Securing Callbacks
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#confirmations">
+             Confirmations
+            </a>
+           </li>
+          </ul>
+         </div>
+        </div>
+       </div>
+      </div>
+     </main>
+    </div>
+   </div>
+   <footer class="footer">
+    <div class="container container-fluid">
+     <ul>
+      <li>
+       <div class="footer__copyright">
+        © 2023 Coinbase
+       </div>
+      </li>
+      <li>
+       <a class="footer__link-item" href="https://www.coinbase.com/legal/privacy" rel="noopener noreferrer" target="_blank">
+        Privacy
+        <svg aria-hidden="true" class="iconExternalLink_nPIU" height="13.5" viewbox="0 0 24 24" width="13.5">
+         <path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z" fill="currentColor">
+         </path>
+        </svg>
+       </a>
+      </li>
+     </ul>
+    </div>
+   </footer>
+  </div>
+  <script src="/assets/js/runtime~main.91f0d63d.js">
+  </script>
+  <script src="/assets/js/main.440d9293.js">
+  </script>
+ </body>
+</html>

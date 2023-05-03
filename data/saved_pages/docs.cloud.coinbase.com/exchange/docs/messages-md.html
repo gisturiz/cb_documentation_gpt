@@ -1,0 +1,2182 @@
+<!DOCTYPE html>
+<html class="docs-wrapper docs-doc-page docs-version-current plugin-docs plugin-id-exchange docs-doc-id-docs/fix-messages-md" dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="Docusaurus v2.3.1" name="generator"/>
+  <title data-rh="true">
+   Market Data Messages | Coinbase Cloud
+  </title>
+  <meta content="width=device-width,initial-scale=1" data-rh="true" name="viewport"/>
+  <meta content="summary_large_image" data-rh="true" name="twitter:card"/>
+  <meta content="https://docs.cloud.coinbase.com/exchange/docs/messages-md" data-rh="true" property="og:url"/>
+  <meta content="en" data-rh="true" name="docusaurus_locale"/>
+  <meta content="en" data-rh="true" name="docsearch:language"/>
+  <meta content="current" data-rh="true" name="docusaurus_version"/>
+  <meta content="docs-exchange-current" data-rh="true" name="docusaurus_tag"/>
+  <meta content="current" data-rh="true" name="docsearch:version"/>
+  <meta content="docs-exchange-current" data-rh="true" name="docsearch:docusaurus_tag"/>
+  <meta content="Market Data Messages | Coinbase Cloud" data-rh="true" property="og:title"/>
+  <meta content="The FIX market data API provides an L3 feed only with direct, low-latency, deterministic access. It is based on the FIX 5.0 SP2 specification." data-rh="true" name="description"/>
+  <meta content="The FIX market data API provides an L3 feed only with direct, low-latency, deterministic access. It is based on the FIX 5.0 SP2 specification." data-rh="true" property="og:description"/>
+  <link data-rh="true" href="/img/favicon.png" rel="icon"/>
+  <link data-rh="true" href="https://docs.cloud.coinbase.com/exchange/docs/messages-md" rel="canonical"/>
+  <link data-rh="true" href="https://docs.cloud.coinbase.com/exchange/docs/messages-md" hreflang="en" rel="alternate"/>
+  <link data-rh="true" href="https://docs.cloud.coinbase.com/exchange/docs/messages-md" hreflang="x-default" rel="alternate"/>
+  <link crossorigin="anonymous" data-rh="true" href="https://BPPU41WTIR-dsn.algolia.net" rel="preconnect"/>
+  <link href="https://www.google-analytics.com" rel="preconnect"/>
+  <link href="https://www.googletagmanager.com" rel="preconnect"/>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-1X60WF4D7F">
+  </script>
+  <script>
+   function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-1X60WF4D7F",{anonymize_ip:!0})
+  </script>
+  <link href="/opensearch.xml" rel="search" title="Coinbase Cloud" type="application/opensearchdescription+xml"/>
+  <link href="/assets/css/styles.22f44638.css" rel="stylesheet"/>
+  <link as="script" href="/assets/js/runtime~main.91f0d63d.js" rel="preload"/>
+  <link as="script" href="/assets/js/main.440d9293.js" rel="preload"/>
+ </head>
+ <body class="navigation-with-keyboard">
+  <script>
+   !function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}()
+  </script>
+  <div id="__docusaurus">
+   <div aria-label="Skip to main content" role="region">
+    <a class="skipToContent_fXgn" href="#docusaurus_skipToContent_fallback">
+     Skip to main content
+    </a>
+   </div>
+   <nav aria-label="Main" class="navbar navbar--fixed-top">
+    <div class="navbar__container_rqDs">
+     <div class="navbar__inner">
+      <div class="navbar__items">
+       <button aria-expanded="false" aria-label="Toggle navigation bar" class="navbar__toggle clean-btn" type="button">
+        <svg aria-hidden="true" height="30" viewbox="0 0 30 30" width="30">
+         <path d="M4 7h22M4 15h22M4 23h22" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2">
+         </path>
+        </svg>
+       </button>
+       <a class="navbar__brand" href="/">
+        <div class="navbar__logo">
+         <img alt="Coinbase Pay" class="themedImage_ToTc themedImage--light_HNdA" src="/img/logo.svg"/>
+         <img alt="Coinbase Pay" class="themedImage_ToTc themedImage--dark_i4oU" src="/img/logo.svg"/>
+        </div>
+       </a>
+       <a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/">
+        Documentation
+       </a>
+      </div>
+      <div class="navbar__items navbar__items--right">
+       <div class="searchBox_ZlJk">
+        <button aria-label="Search" class="DocSearch DocSearch-Button" type="button">
+         <span class="DocSearch-Button-Container">
+          <svg class="DocSearch-Search-Icon" height="20" viewbox="0 0 20 20" width="20">
+           <path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+           </path>
+          </svg>
+          <span class="DocSearch-Button-Placeholder">
+           Search
+          </span>
+         </span>
+         <span class="DocSearch-Button-Keys">
+         </span>
+        </button>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="menubar_iWH4">
+     <div class="menubar__inner_eCwJ">
+      <div class="navbar__item dropdown dropdown--hoverable">
+       <a aria-expanded="false" aria-haspopup="true" class="navbar__link" href="#" role="button">
+        Exchange/Pro
+       </a>
+       <ul class="dropdown__menu">
+        <li>
+         <a class="dropdown__link" href="/advanced-trade-api/docs/welcome">
+          Advanced Trade API
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/blockchain-infrastructure/docs/welcome">
+          Blockchain Infrastructure
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/pay-sdk/docs/intro">
+          Coinbase Pay
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/wallet-sdk/docs/welcome">
+          Coinbase Wallet
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/commerce/docs/welcome">
+          Commerce API
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/delegation/docs/about-cloud-staking">
+          Delegation Guides
+         </a>
+        </li>
+        <li>
+         <a aria-current="page" class="dropdown__link dropdown__link--active" href="/exchange/docs/welcome">
+          Exchange/Pro
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/kyt/reference/introduction">
+          KYT
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/prime/docs/introduction">
+          Prime
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/rosetta/docs/welcome">
+          Rosetta
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/sign-in-with-coinbase/docs/welcome">
+          Sign in with Coinbase
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/waas/docs/welcome">
+          Wallet as a Service
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="navbar__item dropdown dropdown--hoverable">
+       <a aria-expanded="false" aria-haspopup="true" class="navbar__link" href="#" role="button">
+        Guides
+       </a>
+       <ul class="dropdown__menu">
+        <li>
+         <a aria-current="page" class="dropdown__link dropdown__link--active" href="/exchange/docs/welcome">
+          Guides
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/exchange/reference">
+          API Reference
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="menubarItems_end_INfc">
+       <a class="menubarBtn_Xh25" href="https://forums.coinbasecloud.dev">
+        Discuss in the Forum
+       </a>
+       <a class="menubarBtn_Xh25" href="https://help.coinbase.com/en/contact-us?product=coinbase-cloud">
+        Need Support?
+       </a>
+       <button class="menubarBtn_Xh25">
+        <svg class="icon_HrvF" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+         <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z">
+         </path>
+        </svg>
+        Search
+       </button>
+       <div class="searchToggleShortcut_VFcV">
+        ⌘K
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="navbar-sidebar__backdrop" role="presentation">
+    </div>
+   </nav>
+   <div class="main-wrapper mainWrapper_z2l0 docsWrapper_BCFX" id="docusaurus_skipToContent_fallback">
+    <button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button">
+    </button>
+    <div class="docPage__5DB">
+     <aside class="theme-doc-sidebar-container docSidebarContainer_b6E3">
+      <div class="sidebarViewport_Xe31">
+       <div class="sidebar_njMd">
+        <nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG">
+         <ul class="theme-doc-sidebar-menu menu__list">
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Introduction
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/welcome" tabindex="0">
+              Welcome
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/getting-started" tabindex="0">
+              Getting Started
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/matching-engine" tabindex="0">
+              Matching Engine
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/rate-limits" tabindex="0">
+              Rate Limits Overview
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/data-centers" tabindex="0">
+              Data Centers
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/sandbox" tabindex="0">
+              Sandbox
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Rest API
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/requests" tabindex="0">
+              Requests
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/authorization-and-authentication" tabindex="0">
+              Authorization and Authentication
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/rest-rate-limits" tabindex="0">
+              Rate Limits
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/types" tabindex="0">
+              Types
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/profiles" tabindex="0">
+              Profiles
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/pagination" tabindex="0">
+              Pagination
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link menu__link--active">
+             Fix API
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/connectivity" tabindex="0">
+              Connectivity
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/ssl-tunnels" tabindex="0">
+              SSL Tunnels
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/messages" tabindex="0">
+              Order Entry Messages
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a aria-current="page" class="menu__link menu__link--active" href="/exchange/docs/messages-md" tabindex="0">
+              Market Data Messages
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/fix-rate-limits" tabindex="0">
+              Rate Limits
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/dictionaries" tabindex="0">
+              Dictionaries
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/fix-best-practices" tabindex="0">
+              Best Practices
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Websocket Feed
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/websocket-overview" tabindex="0">
+              Overview
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/websocket-auth" tabindex="0">
+              Authentication
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/websocket-channels" tabindex="0">
+              Channels
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/websocket-rate-limits" tabindex="0">
+              Rate Limits
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/websocket-errors" tabindex="0">
+              Errors
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/websocket-best-practices" tabindex="0">
+              Best Practices
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Changes
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/upcoming-changes" tabindex="0">
+              Upcoming Changes
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/exchange/docs/changelog" tabindex="0">
+              Changelog
+             </a>
+            </li>
+           </ul>
+          </li>
+         </ul>
+        </nav>
+       </div>
+      </div>
+     </aside>
+     <main class="docMainContainer_gTbr">
+      <div class="container padding-top--md padding-bottom--lg">
+       <div class="row">
+        <div class="col docItemCol_z5aJ">
+         <div class="docItemContainer_c0TR">
+          <article>
+           <nav aria-label="Breadcrumbs" class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl">
+            <ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+             <li class="breadcrumbs__item">
+              <a aria-label="Home page" class="breadcrumbs__link" href="/">
+               <svg class="breadcrumbHomeIcon_YNFT" viewbox="0 0 24 24">
+                <path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor">
+                </path>
+               </svg>
+              </a>
+             </li>
+             <li class="breadcrumbs__item">
+              <span class="breadcrumbs__link">
+               Fix API
+              </span>
+              <meta content="1" itemprop="position"/>
+             </li>
+             <li class="breadcrumbs__item breadcrumbs__item--active" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+              <span class="breadcrumbs__link" itemprop="name">
+               Market Data Messages
+              </span>
+              <meta content="2" itemprop="position"/>
+             </li>
+            </ul>
+           </nav>
+           <div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo">
+            <button class="clean-btn tocCollapsibleButton_TO0P" type="button">
+             On this page
+            </button>
+           </div>
+           <div class="theme-doc-markdown markdown">
+            <header>
+             <h1>
+              Market Data Messages
+             </h1>
+            </header>
+            <p>
+             The FIX market data API provides an L3 feed only with direct, low-latency, deterministic access. It is based on the
+             <a href="https://www.onixs.biz/fix-dictionary/5.0.sp2/index.html" rel="noopener noreferrer" target="_blank">
+              FIX 5.0 SP2 specification
+             </a>
+             .
+            </p>
+            <p>
+             You can connect with the same authentication as our existing FIX order entry system. Connectivity is limited to a single connection per API key -- order entry
+             <a href="/exchange/docs/fix-rate-limits">
+              rate limits
+             </a>
+             do not apply (connections, rps, burst rps).
+            </p>
+            <div class="theme-admonition theme-admonition-info alert alert--info admonition_WoCw">
+             <div class="admonitionHeading_TMsN">
+              <span class="admonitionIcon_Ibzs">
+               <svg viewbox="0 0 14 16">
+                <path d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z" fill-rule="evenodd">
+                </path>
+               </svg>
+              </span>
+              info
+             </div>
+             <div class="admonitionContent_vXIg">
+              <ul>
+               <li>
+                Sandbox URL:
+                <code>
+                 tcp+ssl//fix-md.sandbox.exchange.coinbase.com:6121
+                </code>
+               </li>
+               <li>
+                Production URL:
+                <code>
+                 tcp+ssl//fix-md.exchange.coinbase.com:6121
+                </code>
+               </li>
+              </ul>
+             </div>
+            </div>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="header">
+             Header
+             <a aria-label="Direct link to Header" class="hash-link" href="#header" title="Direct link to Header">
+              ​
+             </a>
+            </h2>
+            <p>
+             A standard header must be present at the start of every message in both directions.
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                Tag
+               </th>
+               <th align="left">
+                FieldName
+               </th>
+               <th align="left">
+                Type
+               </th>
+               <th align="left">
+                Required
+               </th>
+               <th align="left">
+                Notes
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                8
+               </td>
+               <td align="left">
+                BeginString
+               </td>
+               <td align="left">
+                String
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                Must be
+                <code>
+                 FIXT.1.1
+                </code>
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                49
+               </td>
+               <td align="left">
+                SenderCompID
+               </td>
+               <td align="left">
+                String
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                Client API key (on messages from the client)
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                56
+               </td>
+               <td align="left">
+                TargetCompID
+               </td>
+               <td align="left">
+                String
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                Must be
+                <code>
+                 Coinbase
+                </code>
+                (on messages from client)
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="logon-35a">
+             Logon (35=A)
+             <a aria-label="Direct link to Logon (35=A)" class="hash-link" href="#logon-35a" title="Direct link to Logon (35=A)">
+              ​
+             </a>
+            </h2>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                Tag
+               </th>
+               <th align="left">
+                FieldName
+               </th>
+               <th align="left">
+                Type
+               </th>
+               <th align="left">
+                Required
+               </th>
+               <th align="left">
+                Notes
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                34
+               </td>
+               <td align="left">
+                MsgSeqNum
+               </td>
+               <td align="left">
+                Int
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                Must be
+                <code>
+                 1
+                </code>
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                98
+               </td>
+               <td align="left">
+                EncryptMethod
+               </td>
+               <td align="left">
+                Int
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                Must be
+                <code>
+                 0
+                </code>
+                (None)
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                108
+               </td>
+               <td align="left">
+                HeartBtInt
+               </td>
+               <td align="left">
+                Int
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                Heartbeat interval is capped at 300s, defaults to 10s
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                553
+               </td>
+               <td align="left">
+                Username
+               </td>
+               <td align="left">
+                String
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                Any string is accepted
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                554
+               </td>
+               <td align="left">
+                Password
+               </td>
+               <td align="left">
+                String
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                Client API passphrase
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                95
+               </td>
+               <td align="left">
+                RawDataLength
+               </td>
+               <td align="left">
+                Int
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                Number of bytes in RawData field
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                96
+               </td>
+               <td align="left">
+                RawData
+               </td>
+               <td align="left">
+                String
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                <a href="https://docs.cloud.coinbase.com/exchange/docs/authorization-and-authentication#signing-a-message" rel="noopener noreferrer" target="_blank">
+                 Client message signature
+                </a>
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                1137
+               </td>
+               <td align="left">
+                DefaultApplVerID
+               </td>
+               <td align="left">
+                String
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                Must be
+                <code>
+                 9
+                </code>
+                (FIX 5.0 SP2)
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="market-data-request-35v">
+             Market Data Request (35=V)
+             <a aria-label="Direct link to Market Data Request (35=V)" class="hash-link" href="#market-data-request-35v" title="Direct link to Market Data Request (35=V)">
+              ​
+             </a>
+            </h2>
+            <p>
+             Clients should use this message to subscribe to or unsubscribe from market data for one or more symbols.
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                Tag
+               </th>
+               <th align="left">
+                FieldName
+               </th>
+               <th align="left">
+                Type
+               </th>
+               <th align="left">
+                Required
+               </th>
+               <th align="left">
+                Notes
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                262
+               </td>
+               <td align="left">
+                MDReqID
+               </td>
+               <td align="left">
+                String
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                Client identifier for the market data request
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                263
+               </td>
+               <td align="left">
+                SubscriptionRequestType
+               </td>
+               <td align="left">
+                Int
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                1=Subscribe
+                <br/>
+                2=Unsubscribe
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                146
+               </td>
+               <td align="left">
+                NoRelatedSym
+               </td>
+               <td align="left">
+                Int
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                How many symbols are in the request
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                =&gt;55
+               </td>
+               <td align="left">
+                Symbol
+               </td>
+               <td align="left">
+                String
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                Repeating group of symbols for which the client requests market data
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <h4 class="anchor anchorWithStickyNavbar_LWe7" id="market-data-request-reject-35y">
+             Market Data Request Reject (35=Y)
+             <a aria-label="Direct link to Market Data Request Reject (35=Y)" class="hash-link" href="#market-data-request-reject-35y" title="Direct link to Market Data Request Reject (35=Y)">
+              ​
+             </a>
+            </h4>
+            <p>
+             This message is sent to clients to reject an invalid market data request.
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                Tag
+               </th>
+               <th align="left">
+                FieldName
+               </th>
+               <th align="left">
+                Type
+               </th>
+               <th align="left">
+                Required
+               </th>
+               <th align="left">
+                Notes
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                262
+               </td>
+               <td align="left">
+                MDReqID
+               </td>
+               <td align="left">
+                String
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                Client identifier for the market data request
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                281
+               </td>
+               <td align="left">
+                MDReqRejReason
+               </td>
+               <td align="left">
+                Char
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                0=Unknown symbol
+                <br/>
+                1=Duplicate MDReqID
+                <br/>
+                7=Other
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                58
+               </td>
+               <td align="left">
+                Text
+               </td>
+               <td align="left">
+                String
+               </td>
+               <td align="left">
+                N
+               </td>
+               <td align="left">
+                Error description
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="security-status-35f">
+             Security Status (35=f)
+             <a aria-label="Direct link to Security Status (35=f)" class="hash-link" href="#security-status-35f" title="Direct link to Security Status (35=f)">
+              ​
+             </a>
+            </h2>
+            <p>
+             This message is streamed to clients together with the incremental updates for subscribed symbols and reflects changes in the trading status, tick size, or other attributes of an instrument.
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                Tag
+               </th>
+               <th align="left">
+                FieldName
+               </th>
+               <th align="left">
+                Type
+               </th>
+               <th align="left">
+                Required
+               </th>
+               <th align="left">
+                Notes
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                262
+               </td>
+               <td align="left">
+                MDReqID
+               </td>
+               <td align="left">
+                String
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                Client identifier for the market data request
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                83
+               </td>
+               <td align="left">
+                RptSeq
+               </td>
+               <td align="left">
+                Long
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                Public sequence number by symbol
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                55
+               </td>
+               <td align="left">
+                Symbol
+               </td>
+               <td align="left">
+                String
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                Repeating group of symbols for which the client requests market data
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                1682
+               </td>
+               <td align="left">
+                MDSecurityTradingStatus
+               </td>
+               <td align="left">
+                String
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                <code>
+                 trading_disabled
+                </code>
+                <br/>
+                <code>
+                 cancel_only
+                </code>
+                <br/>
+                <code>
+                 post_only
+                </code>
+                <br/>
+                <code>
+                 limit_only
+                </code>
+                <br/>
+                <code>
+                 full_trading
+                </code>
+                <br/>
+                <code>
+                 auction_mode
+                </code>
+                <br/>
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                969
+               </td>
+               <td align="left">
+                MinPriceIncrement
+               </td>
+               <td align="left">
+                Decimal
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                Minimum increment for quote currency (e.g., 0.01 USD for BTC-USD)
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                29003
+               </td>
+               <td align="left">
+                MinSizeIncrement
+               </td>
+               <td align="left">
+                Decimal
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                Minimum increment for base currency (e.g., 0.00000001 BTC for BTC-USD)
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="market-data-incremental-refresh-35x">
+             Market Data Incremental Refresh (35=X)
+             <a aria-label="Direct link to Market Data Incremental Refresh (35=X)" class="hash-link" href="#market-data-incremental-refresh-35x" title="Direct link to Market Data Incremental Refresh (35=X)">
+              ​
+             </a>
+            </h2>
+            <p>
+             Coinbase Exchange not only sends out L3 order-by-order updates to allow clients to build a full book of all open orders, but also sends out acknowledgements of orders by the matching engine with the order’s client order ID prior to matching. This helps clients immediately identify which orders and trades in the book (both aggressive and passive) are theirs, as well gain advance knowledge of orders that are pending processing by the matching engine. These acks correspond to the
+             <code>
+              Received
+             </code>
+             message in the web-socket feed.
+            </p>
+            <ul>
+             <li>
+              When
+              <code>
+               MDEntryID
+              </code>
+              is present, the message should be used for book-building.
+             </li>
+             <li>
+              When
+              <code>
+               MDEntryID
+              </code>
+              isn’t present, the message is the acknowledgement of an order prior to matching.
+             </li>
+            </ul>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                Tag
+               </th>
+               <th align="left">
+                FieldName
+               </th>
+               <th align="left">
+                Type
+               </th>
+               <th align="left">
+                Required
+               </th>
+               <th align="left">
+                Notes
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                262
+               </td>
+               <td align="left">
+                MDReqID
+               </td>
+               <td align="left">
+                String
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                Client identifier for the market data request
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                268
+               </td>
+               <td align="left">
+                NoMDEntries
+               </td>
+               <td align="left">
+                Int
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                Always
+                <code>
+                 1
+                </code>
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                =&gt;279
+               </td>
+               <td align="left">
+                MDUpdateAction
+               </td>
+               <td align="left">
+                Char
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                0=New
+                <br/>
+                1=Change
+                <br/>
+                2=Delete
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                =&gt;269
+               </td>
+               <td align="left">
+                MDEntryType
+               </td>
+               <td align="left">
+                Char
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                0=Bid
+                <br/>
+                1=Offer
+                <br/>
+                2=Trade
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                =&gt;278
+               </td>
+               <td align="left">
+                MDEntryID
+               </td>
+               <td align="left">
+                String
+               </td>
+               <td align="left">
+                N
+               </td>
+               <td align="left">
+                If present, this ID is the order ID that should be used for book-building
+                <br/>
+                If not present, this message is the initial ack and should not be used to build the book
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                =&gt;83
+               </td>
+               <td align="left">
+                RptSeq
+               </td>
+               <td align="left">
+                Long
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                Public sequence number by symbol
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                =&gt;55
+               </td>
+               <td align="left">
+                Symbol
+               </td>
+               <td align="left">
+                String
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                Repeating group of symbols for which the client requests market data
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                =&gt;270
+               </td>
+               <td align="left">
+                MDEntryPx
+               </td>
+               <td align="left">
+                Decimal
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                The price of the order
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                =&gt;271
+               </td>
+               <td align="left">
+                MDEntrySize
+               </td>
+               <td align="left">
+                Decimal
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                The quantity remaining of the order
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                =&gt;60
+               </td>
+               <td align="left">
+                TransactTime
+               </td>
+               <td align="left">
+                UTCTimestamp
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                The engine timestamp of the order in microseconds
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                =&gt;40
+               </td>
+               <td align="left">
+                OrdType
+               </td>
+               <td align="left">
+                Char
+               </td>
+               <td align="left">
+                N
+               </td>
+               <td align="left">
+                Sent only if the message represents the initial ack of an order:
+                <br/>
+                1=Market
+                <br/>
+                2=Limit
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                =&gt;11
+               </td>
+               <td align="left">
+                ClOrdID
+               </td>
+               <td align="left">
+                String
+               </td>
+               <td align="left">
+                N
+               </td>
+               <td align="left">
+                The client order ID on the initial ack of an order
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                =&gt;37
+               </td>
+               <td align="left">
+                OrderID
+               </td>
+               <td align="left">
+                String
+               </td>
+               <td align="left">
+                N
+               </td>
+               <td align="left">
+                The exchange order ID on the initial ack of an order
+                <br/>
+                OR
+                <br/>
+                If MDEntryType=2, then this is the aggressive Order ID
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                =&gt;58
+               </td>
+               <td align="left">
+                Text
+               </td>
+               <td align="left">
+                String
+               </td>
+               <td align="left">
+                N
+               </td>
+               <td align="left">
+                If MDEntryType=1, then the possible values are:
+                <br/>
+                <code>
+                 CHANGE_REASON_STP
+                </code>
+                <br/>
+                <code>
+                 CHANGE_REASON_MODIFY_ORDER
+                </code>
+                <br/>
+                <code>
+                 CHANGE_REASON_REMAINDER_AFTER_MODIFICATION
+                </code>
+                <br/>
+                If MDEntryType=2, then the possible values are:
+                <br/>
+                <code>
+                 CANCELED
+                </code>
+                <br/>
+                <code>
+                 FILLED
+                </code>
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                =&gt;5797
+               </td>
+               <td align="left">
+                AggressorSide
+               </td>
+               <td align="left">
+                Int
+               </td>
+               <td align="left">
+                N
+               </td>
+               <td align="left">
+                Sent only on trades MDEntryType=2
+                <br/>
+                1=Buy
+                <br/>
+                2=Sell
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                =&gt;29004
+               </td>
+               <td align="left">
+                Funds
+               </td>
+               <td align="left">
+                Decimal
+               </td>
+               <td align="left">
+                N
+               </td>
+               <td align="left">
+                Market orders may have an optional funds field which indicates how much quote currency is used to buy or sell
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="market-data-snapshot-full-refresh-35w">
+             Market Data Snapshot Full Refresh (35=W)
+             <a aria-label="Direct link to Market Data Snapshot Full Refresh (35=W)" class="hash-link" href="#market-data-snapshot-full-refresh-35w" title="Direct link to Market Data Snapshot Full Refresh (35=W)">
+              ​
+             </a>
+            </h2>
+            <p>
+             This message provides a full snapshot of all orders in the order book, including those placed before the client subscribed to incremental market data.
+            </p>
+            <p>
+             A snapshot is requested automatically when a successful Market Data Request from the client is processed for a given symbol. Clients should queue up incremental updates and process only the incremental updates with sequence number RptSeq greater than the RptSeq in the initial MD Snapshot Full Refresh snapshot message.
+            </p>
+            <p>
+             If clients are already subscribed to a symbol and send another Market Data Request to subscribe, they will not receive a new snapshot for that symbol. Clients must unsubscribe and subscribe to the market data again for a given symbol to receive a new snapshot.
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                Tag
+               </th>
+               <th align="left">
+                FieldName
+               </th>
+               <th align="left">
+                Type
+               </th>
+               <th align="left">
+                Required
+               </th>
+               <th align="left">
+                Notes
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                262
+               </td>
+               <td align="left">
+                MDReqID
+               </td>
+               <td align="left">
+                String
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                Client identifier for the market data request
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                83
+               </td>
+               <td align="left">
+                RptSeq
+               </td>
+               <td align="left">
+                Long
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                Public sequence number for the final update in the snapshot by symbol
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                893
+               </td>
+               <td align="left">
+                LastFragment
+               </td>
+               <td align="left">
+                Char
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                Is this the last message in the snapshot for a given symbol
+                <br/>
+                Y=Yes
+                <br/>
+                N=No
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                55
+               </td>
+               <td align="left">
+                Symbol
+               </td>
+               <td align="left">
+                String
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                Repeating group of symbols for which the client requests market data
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                268
+               </td>
+               <td align="left">
+                NoMDEntries
+               </td>
+               <td align="left">
+                Int
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                Number of orders to be added to the book in this snapshot message
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                1682
+               </td>
+               <td align="left">
+                MDSecurityTradingStatus
+               </td>
+               <td align="left">
+                String
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                <code>
+                 trading_disabled
+                </code>
+                <br/>
+                <code>
+                 cancel_only
+                </code>
+                <br/>
+                <code>
+                 post_only
+                </code>
+                <br/>
+                <code>
+                 limit_only
+                </code>
+                <br/>
+                <code>
+                 full_trading
+                </code>
+                <br/>
+                <code>
+                 auction_mode
+                </code>
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                =&gt;269
+               </td>
+               <td align="left">
+                MDEntryType
+               </td>
+               <td align="left">
+                Char
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                0=Bid
+                <br/>
+                1=Offer
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                =&gt;278
+               </td>
+               <td align="left">
+                MDEntryID
+               </td>
+               <td align="left">
+                String
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                The order ID that should be added to the book
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                =&gt;270
+               </td>
+               <td align="left">
+                MDEntryPx
+               </td>
+               <td align="left">
+                Decimal
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                The price of the order
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                =&gt;271
+               </td>
+               <td align="left">
+                MDEntrySize
+               </td>
+               <td align="left">
+                Decimal
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                The quantity remaining of the order
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="security-list-request-35x">
+             Security List Request (35=x)
+             <a aria-label="Direct link to Security List Request (35=x)" class="hash-link" href="#security-list-request-35x" title="Direct link to Security List Request (35=x)">
+              ​
+             </a>
+            </h2>
+            <p>
+             This message is sent by clients to request a full list of instruments that Coinbase Exchange supports together with each instrument’s trading status, tick size, minimum order quantity, and any other descriptive fields.
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                Tag
+               </th>
+               <th align="left">
+                FieldName
+               </th>
+               <th align="left">
+                Type
+               </th>
+               <th align="left">
+                Required
+               </th>
+               <th align="left">
+                Notes
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                320
+               </td>
+               <td align="left">
+                SecurityReqID
+               </td>
+               <td align="left">
+                String
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                Client identifier for the request
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                559
+               </td>
+               <td align="left">
+                SecurityListRequestType
+               </td>
+               <td align="left">
+                Int
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                Always 4=All Securities
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="security-list-35y">
+             Security List (35=y)
+             <a aria-label="Direct link to Security List (35=y)" class="hash-link" href="#security-list-35y" title="Direct link to Security List (35=y)">
+              ​
+             </a>
+            </h2>
+            <p>
+             Instrument definition messages are returned in response to a client’s Security List Request.
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                Tag
+               </th>
+               <th align="left">
+                FieldName
+               </th>
+               <th align="left">
+                Type
+               </th>
+               <th align="left">
+                Required
+               </th>
+               <th align="left">
+                Notes
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                320
+               </td>
+               <td align="left">
+                SecurityReqID
+               </td>
+               <td align="left">
+                String
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                Client identifier for the request
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                322
+               </td>
+               <td align="left">
+                SecurityResponseID
+               </td>
+               <td align="left">
+                String
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                Response ID for the Security List Request
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                560
+               </td>
+               <td align="left">
+                SecurityRequestResult
+               </td>
+               <td align="left">
+                Int
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                0=Valid Request
+                <br/>
+                1=Invalid Request
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                893
+               </td>
+               <td align="left">
+                LastFragment
+               </td>
+               <td align="left">
+                Char
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                Is this the last instrument definition message in response to the original request
+                <br/>
+                Y=Yes
+                <br/>
+                N=No
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                393
+               </td>
+               <td align="left">
+                TotNoRelatedSym
+               </td>
+               <td align="left">
+                Int
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                Total number of symbols that will be sent cumulatively
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                146
+               </td>
+               <td align="left">
+                NoRelatedSym
+               </td>
+               <td align="left">
+                Int
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                How many symbols are in this FIX message
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                1682
+               </td>
+               <td align="left">
+                MDSecurityTradingStatus
+               </td>
+               <td align="left">
+                String
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                <code>
+                 trading_disabled
+                </code>
+                <br/>
+                <code>
+                 cancel_only
+                </code>
+                <br/>
+                <code>
+                 post_only
+                </code>
+                <br/>
+                <code>
+                 limit_only
+                </code>
+                <br/>
+                <code>
+                 full_trading
+                </code>
+                <br/>
+                <code>
+                 auction_mode
+                </code>
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                =&gt;55
+               </td>
+               <td align="left">
+                Symbol
+               </td>
+               <td align="left">
+                String
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                Repeating group of symbols for which the client requests market data
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                =&gt;15
+               </td>
+               <td align="left">
+                Currency
+               </td>
+               <td align="left">
+                String
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                The quote currency for the symbol (e.g., USD if 55=BTC-USD)
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                =&gt;562
+               </td>
+               <td align="left">
+                MinTradeVol
+               </td>
+               <td align="left">
+                Decimal
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                The minimum notional amount in quote currency terms for an order
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                =&gt;969
+               </td>
+               <td align="left">
+                MinPriceIncrement
+               </td>
+               <td align="left">
+                Decimal
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                Minimum increment for quote currency (e.g., 0.01 USD for BTC-USD)
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                =&gt;29003
+               </td>
+               <td align="left">
+                MinSizeIncrement
+               </td>
+               <td align="left">
+                Decimal
+               </td>
+               <td align="left">
+                Y
+               </td>
+               <td align="left">
+                Minimum increment for base currency (e.g., 0.00000001 BTC for BTC-USD)
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </div>
+           <footer class="theme-doc-footer docusaurus-mt-lg">
+            <div class="theme-doc-footer-edit-meta-row row">
+             <div class="col">
+             </div>
+             <div class="col lastUpdated_vwxv">
+             </div>
+            </div>
+           </footer>
+           <div class="thumbnailRating_V63g hide-on-print">
+            <p>
+             Was this helpful?
+            </p>
+            <div class="buttonGroup_vjMq">
+             <style data-emotion="css 1wf493t">
+              .css-1wf493t{text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1wf493t:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1wf493t:hover{background-color:transparent;}}.css-1wf493t.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+             </style>
+             <style data-emotion="css 1yxmbwk">
+              .css-1yxmbwk{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1yxmbwk::-moz-focus-inner{border-style:none;}.css-1yxmbwk.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-1yxmbwk{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-1yxmbwk:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1yxmbwk:hover{background-color:transparent;}}.css-1yxmbwk.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+             </style>
+             <button aria-label="Helpful" class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1yxmbwk" tabindex="0" type="button">
+              <style data-emotion="css vubbuv">
+               .css-vubbuv{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
+              </style>
+              <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" data-testid="ThumbUpOffAltIcon" focusable="false" viewbox="0 0 24 24">
+               <path d="m13.11 5.72-.57 2.89c-.12.59.04 1.2.42 1.66.38.46.94.73 1.54.73H20v1.08L17.43 18H9.34c-.18 0-.34-.16-.34-.34V9.82l4.11-4.1M14 2 7.59 8.41C7.21 8.79 7 9.3 7 9.83v7.83C7 18.95 8.05 20 9.34 20h8.1c.71 0 1.36-.37 1.72-.97l2.67-6.15c.11-.25.17-.52.17-.8V11c0-1.1-.9-2-2-2h-5.5l.92-4.65c.05-.22.02-.46-.08-.66-.23-.45-.52-.86-.88-1.22L14 2zM4 9H2v11h2c.55 0 1-.45 1-1v-9c0-.55-.45-1-1-1z">
+               </path>
+              </svg>
+             </button>
+             <style data-emotion="css 1e2dcm1">
+              .css-1e2dcm1{z-index:1500;pointer-events:none;}
+             </style>
+             <style data-emotion="css okvapm">
+              .css-okvapm{z-index:1500;pointer-events:none;}
+             </style>
+             <style data-emotion="css 1wf493t">
+              .css-1wf493t{text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1wf493t:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1wf493t:hover{background-color:transparent;}}.css-1wf493t.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+             </style>
+             <style data-emotion="css 1yxmbwk">
+              .css-1yxmbwk{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1yxmbwk::-moz-focus-inner{border-style:none;}.css-1yxmbwk.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-1yxmbwk{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-1yxmbwk:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1yxmbwk:hover{background-color:transparent;}}.css-1yxmbwk.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+             </style>
+             <button aria-label="Not helpful" class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1yxmbwk" tabindex="0" type="button">
+              <style data-emotion="css vubbuv">
+               .css-vubbuv{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
+              </style>
+              <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" data-testid="ThumbDownOffAltIcon" focusable="false" viewbox="0 0 24 24">
+               <path d="m10.89 18.28.57-2.89c.12-.59-.04-1.2-.42-1.66-.38-.46-.94-.73-1.54-.73H4v-1.08L6.57 6h8.09c.18 0 .34.16.34.34v7.84l-4.11 4.1M10 22l6.41-6.41c.38-.38.59-.89.59-1.42V6.34C17 5.05 15.95 4 14.66 4h-8.1c-.71 0-1.36.37-1.72.97l-2.67 6.15c-.11.25-.17.52-.17.8V13c0 1.1.9 2 2 2h5.5l-.92 4.65c-.05.22-.02.46.08.66.23.45.52.86.88 1.22L10 22zm10-7h2V4h-2c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1z">
+               </path>
+              </svg>
+             </button>
+             <style data-emotion="css 1e2dcm1">
+              .css-1e2dcm1{z-index:1500;pointer-events:none;}
+             </style>
+             <style data-emotion="css okvapm">
+              .css-okvapm{z-index:1500;pointer-events:none;}
+             </style>
+            </div>
+           </div>
+           <style data-emotion="css 1k371a6">
+            @media print{.css-1k371a6{position:absolute!important;}}
+           </style>
+          </article>
+          <nav aria-label="Docs pages navigation" class="pagination-nav docusaurus-mt-lg">
+           <a class="pagination-nav__link pagination-nav__link--prev" href="/exchange/docs/messages">
+            <div class="pagination-nav__sublabel">
+             Previous
+            </div>
+            <div class="pagination-nav__label">
+             Order Entry Messages
+            </div>
+           </a>
+           <a class="pagination-nav__link pagination-nav__link--next" href="/exchange/docs/fix-rate-limits">
+            <div class="pagination-nav__sublabel">
+             Next
+            </div>
+            <div class="pagination-nav__label">
+             Rate Limits
+            </div>
+           </a>
+          </nav>
+         </div>
+        </div>
+        <div class="col col--3">
+         <div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop">
+          <ul class="table-of-contents table-of-contents__left-border">
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#header">
+             Header
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#logon-35a">
+             Logon (35=A)
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#market-data-request-35v">
+             Market Data Request (35=V)
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#security-status-35f">
+             Security Status (35=f)
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#market-data-incremental-refresh-35x">
+             Market Data Incremental Refresh (35=X)
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#market-data-snapshot-full-refresh-35w">
+             Market Data Snapshot Full Refresh (35=W)
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#security-list-request-35x">
+             Security List Request (35=x)
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#security-list-35y">
+             Security List (35=y)
+            </a>
+           </li>
+          </ul>
+         </div>
+        </div>
+       </div>
+      </div>
+     </main>
+    </div>
+   </div>
+   <footer class="footer">
+    <div class="container container-fluid">
+     <ul>
+      <li>
+       <div class="footer__copyright">
+        © 2023 Coinbase
+       </div>
+      </li>
+      <li>
+       <a class="footer__link-item" href="https://www.coinbase.com/legal/privacy" rel="noopener noreferrer" target="_blank">
+        Privacy
+        <svg aria-hidden="true" class="iconExternalLink_nPIU" height="13.5" viewbox="0 0 24 24" width="13.5">
+         <path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z" fill="currentColor">
+         </path>
+        </svg>
+       </a>
+      </li>
+     </ul>
+    </div>
+   </footer>
+  </div>
+  <script src="/assets/js/runtime~main.91f0d63d.js">
+  </script>
+  <script src="/assets/js/main.440d9293.js">
+  </script>
+ </body>
+</html>

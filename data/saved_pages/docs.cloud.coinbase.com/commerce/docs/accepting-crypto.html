@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html class="docs-wrapper docs-doc-page docs-version-current plugin-docs plugin-id-commerce docs-doc-id-docs/build-accepting-crypto" dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="Docusaurus v2.3.1" name="generator"/>
+  <title data-rh="true">
+   Accepting Crypto Payments | Coinbase Cloud
+  </title>
+  <meta content="width=device-width,initial-scale=1" data-rh="true" name="viewport"/>
+  <meta content="summary_large_image" data-rh="true" name="twitter:card"/>
+  <meta content="https://docs.cloud.coinbase.com/commerce/docs/accepting-crypto" data-rh="true" property="og:url"/>
+  <meta content="en" data-rh="true" name="docusaurus_locale"/>
+  <meta content="en" data-rh="true" name="docsearch:language"/>
+  <meta content="current" data-rh="true" name="docusaurus_version"/>
+  <meta content="docs-commerce-current" data-rh="true" name="docusaurus_tag"/>
+  <meta content="current" data-rh="true" name="docsearch:version"/>
+  <meta content="docs-commerce-current" data-rh="true" name="docsearch:docusaurus_tag"/>
+  <meta content="Accepting Crypto Payments | Coinbase Cloud" data-rh="true" property="og:title"/>
+  <meta content="To start accepting cryptocurrency payments you need to create a request for payment, also known as a charge." data-rh="true" name="description"/>
+  <meta content="To start accepting cryptocurrency payments you need to create a request for payment, also known as a charge." data-rh="true" property="og:description"/>
+  <link data-rh="true" href="/img/favicon.png" rel="icon"/>
+  <link data-rh="true" href="https://docs.cloud.coinbase.com/commerce/docs/accepting-crypto" rel="canonical"/>
+  <link data-rh="true" href="https://docs.cloud.coinbase.com/commerce/docs/accepting-crypto" hreflang="en" rel="alternate"/>
+  <link data-rh="true" href="https://docs.cloud.coinbase.com/commerce/docs/accepting-crypto" hreflang="x-default" rel="alternate"/>
+  <link crossorigin="anonymous" data-rh="true" href="https://BPPU41WTIR-dsn.algolia.net" rel="preconnect"/>
+  <link href="https://www.google-analytics.com" rel="preconnect"/>
+  <link href="https://www.googletagmanager.com" rel="preconnect"/>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-1X60WF4D7F">
+  </script>
+  <script>
+   function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-1X60WF4D7F",{anonymize_ip:!0})
+  </script>
+  <link href="/opensearch.xml" rel="search" title="Coinbase Cloud" type="application/opensearchdescription+xml"/>
+  <link href="/assets/css/styles.22f44638.css" rel="stylesheet"/>
+  <link as="script" href="/assets/js/runtime~main.91f0d63d.js" rel="preload"/>
+  <link as="script" href="/assets/js/main.440d9293.js" rel="preload"/>
+ </head>
+ <body class="navigation-with-keyboard">
+  <script>
+   !function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}()
+  </script>
+  <div id="__docusaurus">
+   <div aria-label="Skip to main content" role="region">
+    <a class="skipToContent_fXgn" href="#docusaurus_skipToContent_fallback">
+     Skip to main content
+    </a>
+   </div>
+   <nav aria-label="Main" class="navbar navbar--fixed-top">
+    <div class="navbar__container_rqDs">
+     <div class="navbar__inner">
+      <div class="navbar__items">
+       <button aria-expanded="false" aria-label="Toggle navigation bar" class="navbar__toggle clean-btn" type="button">
+        <svg aria-hidden="true" height="30" viewbox="0 0 30 30" width="30">
+         <path d="M4 7h22M4 15h22M4 23h22" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2">
+         </path>
+        </svg>
+       </button>
+       <a class="navbar__brand" href="/">
+        <div class="navbar__logo">
+         <img alt="Coinbase Pay" class="themedImage_ToTc themedImage--light_HNdA" src="/img/logo.svg"/>
+         <img alt="Coinbase Pay" class="themedImage_ToTc themedImage--dark_i4oU" src="/img/logo.svg"/>
+        </div>
+       </a>
+       <a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/">
+        Documentation
+       </a>
+      </div>
+      <div class="navbar__items navbar__items--right">
+       <div class="searchBox_ZlJk">
+        <button aria-label="Search" class="DocSearch DocSearch-Button" type="button">
+         <span class="DocSearch-Button-Container">
+          <svg class="DocSearch-Search-Icon" height="20" viewbox="0 0 20 20" width="20">
+           <path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+           </path>
+          </svg>
+          <span class="DocSearch-Button-Placeholder">
+           Search
+          </span>
+         </span>
+         <span class="DocSearch-Button-Keys">
+         </span>
+        </button>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="menubar_iWH4">
+     <div class="menubar__inner_eCwJ">
+      <div class="navbar__item dropdown dropdown--hoverable">
+       <a aria-expanded="false" aria-haspopup="true" class="navbar__link" href="#" role="button">
+        Commerce API
+       </a>
+       <ul class="dropdown__menu">
+        <li>
+         <a class="dropdown__link" href="/advanced-trade-api/docs/welcome">
+          Advanced Trade API
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/blockchain-infrastructure/docs/welcome">
+          Blockchain Infrastructure
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/pay-sdk/docs/intro">
+          Coinbase Pay
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/wallet-sdk/docs/welcome">
+          Coinbase Wallet
+         </a>
+        </li>
+        <li>
+         <a aria-current="page" class="dropdown__link dropdown__link--active" href="/commerce/docs/welcome">
+          Commerce API
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/delegation/docs/about-cloud-staking">
+          Delegation Guides
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/exchange/docs/welcome">
+          Exchange/Pro
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/kyt/reference/introduction">
+          KYT
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/prime/docs/introduction">
+          Prime
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/rosetta/docs/welcome">
+          Rosetta
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/sign-in-with-coinbase/docs/welcome">
+          Sign in with Coinbase
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/waas/docs/welcome">
+          Wallet as a Service
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="navbar__item dropdown dropdown--hoverable">
+       <a aria-expanded="false" aria-haspopup="true" class="navbar__link" href="#" role="button">
+        Guides
+       </a>
+       <ul class="dropdown__menu">
+        <li>
+         <a aria-current="page" class="dropdown__link dropdown__link--active" href="/commerce/docs/welcome">
+          Guides
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/commerce/reference">
+          API Reference
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="menubarItems_end_INfc">
+       <a class="menubarBtn_Xh25" href="https://forums.coinbasecloud.dev">
+        Discuss in the Forum
+       </a>
+       <a class="menubarBtn_Xh25" href="https://help.coinbase.com/en/contact-us?product=coinbase-cloud">
+        Need Support?
+       </a>
+       <button class="menubarBtn_Xh25">
+        <svg class="icon_HrvF" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+         <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z">
+         </path>
+        </svg>
+        Search
+       </button>
+       <div class="searchToggleShortcut_VFcV">
+        ⌘K
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="navbar-sidebar__backdrop" role="presentation">
+    </div>
+   </nav>
+   <div class="main-wrapper mainWrapper_z2l0 docsWrapper_BCFX" id="docusaurus_skipToContent_fallback">
+    <button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button">
+    </button>
+    <div class="docPage__5DB">
+     <aside class="theme-doc-sidebar-container docSidebarContainer_b6E3">
+      <div class="sidebarViewport_Xe31">
+       <div class="sidebar_njMd">
+        <nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG">
+         <ul class="theme-doc-sidebar-menu menu__list">
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Introduction
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/commerce/docs/welcome" tabindex="0">
+              Welcome
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/commerce/docs/crypto-payments" tabindex="0">
+              Crypto Payments
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/commerce/docs/payment-status" tabindex="0">
+              Payment Status
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/commerce/docs/non-developer" tabindex="0">
+              Not a Developer?
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link menu__link--active">
+             Accepting Payment
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/commerce/docs/getting-started" tabindex="0">
+              Getting Started
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/commerce/docs/creating-api-key" tabindex="0">
+              Creating an API Key
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a aria-current="page" class="menu__link menu__link--active" href="/commerce/docs/accepting-crypto" tabindex="0">
+              Accepting Crypto Payments
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed">
+             <div class="menu__list-item-collapsible">
+              <a aria-expanded="false" class="menu__link menu__link--sublist" href="/commerce/docs/pay-button-adding" tabindex="0">
+               Adding a Payment Button
+              </a>
+              <button aria-label="Toggle the collapsible sidebar category 'Adding a Payment Button'" class="clean-btn menu__caret" type="button">
+              </button>
+             </div>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             API Architecture
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/commerce/docs/versioning" tabindex="0">
+              Versioning
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/commerce/docs/pagination" tabindex="0">
+              Pagination
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/commerce/docs/errors" tabindex="0">
+              Errors
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/commerce/docs/rate-limiting" tabindex="0">
+              Rate limiting
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed">
+             <div class="menu__list-item-collapsible">
+              <a aria-expanded="false" class="menu__link menu__link--sublist" href="/commerce/docs/webhooks" tabindex="0">
+               Using Webhooks
+              </a>
+              <button aria-label="Toggle the collapsible sidebar category 'Using Webhooks'" class="clean-btn menu__caret" type="button">
+              </button>
+             </div>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/commerce/docs/client-libs" tabindex="0">
+              Client Libraries
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Integrations
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/commerce/docs/shopify" tabindex="0">
+              Integrating with Shopify
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/commerce/docs/woocommerce" tabindex="0">
+              Integrating with WooCommerce
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Support
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link menuExternalLink_NmtK" href="https://forums.coinbasecloud.dev/" rel="noopener noreferrer" tabindex="0" target="_blank">
+              Coinbase Cloud Forum
+              <svg aria-hidden="true" class="iconExternalLink_nPIU" height="13.5" viewbox="0 0 24 24" width="13.5">
+               <path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z" fill="currentColor">
+               </path>
+              </svg>
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link menuExternalLink_NmtK" href="https://help.coinbase.com/en/contact-us?product=coinbase-cloud" rel="noopener noreferrer" tabindex="0" target="_blank">
+              Coinbase Cloud Help Center
+              <svg aria-hidden="true" class="iconExternalLink_nPIU" height="13.5" viewbox="0 0 24 24" width="13.5">
+               <path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z" fill="currentColor">
+               </path>
+              </svg>
+             </a>
+            </li>
+           </ul>
+          </li>
+         </ul>
+        </nav>
+       </div>
+      </div>
+     </aside>
+     <main class="docMainContainer_gTbr">
+      <div class="container padding-top--md padding-bottom--lg">
+       <div class="row">
+        <div class="col docItemCol_z5aJ">
+         <div class="docItemContainer_c0TR">
+          <article>
+           <nav aria-label="Breadcrumbs" class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl">
+            <ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+             <li class="breadcrumbs__item">
+              <a aria-label="Home page" class="breadcrumbs__link" href="/">
+               <svg class="breadcrumbHomeIcon_YNFT" viewbox="0 0 24 24">
+                <path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor">
+                </path>
+               </svg>
+              </a>
+             </li>
+             <li class="breadcrumbs__item">
+              <span class="breadcrumbs__link">
+               Accepting Payment
+              </span>
+              <meta content="1" itemprop="position"/>
+             </li>
+             <li class="breadcrumbs__item breadcrumbs__item--active" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+              <span class="breadcrumbs__link" itemprop="name">
+               Accepting Crypto Payments
+              </span>
+              <meta content="2" itemprop="position"/>
+             </li>
+            </ul>
+           </nav>
+           <div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo">
+            <button class="clean-btn tocCollapsibleButton_TO0P" type="button">
+             On this page
+            </button>
+           </div>
+           <div class="theme-doc-markdown markdown">
+            <header>
+             <h1>
+              Accepting Crypto Payments
+             </h1>
+            </header>
+            <p>
+             To start accepting cryptocurrency payments you need to create a request for payment, also known as a
+             <a href="/commerce/docs/crypto-payments">
+              charge
+             </a>
+             .
+            </p>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="creating-a-charge">
+             Creating a Charge
+             <a aria-label="Direct link to Creating a Charge" class="hash-link" href="#creating-a-charge" title="Direct link to Creating a Charge">
+              ​
+             </a>
+            </h2>
+            <p>
+             When you create a charge, we generate payment addresses on your behalf for each cryptocurrency that’s enabled. We provide you with a hosted page that you can send to customers to complete the payment.
+            </p>
+            <p>
+             Here’s an example of dynamically creating a charge:
+            </p>
+            <div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-shell codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token function" style="color:#d73a49">curl</span><span class="token plain"> -X POST https://api.commerce.coinbase.com/charges/ </span><span class="token punctuation" style="color:#393A34">\</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">-H </span><span class="token string" style="color:#e3116c">"Content-Type: application/json"</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">\</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">-H </span><span class="token string" style="color:#e3116c">"X-CC-Api-Key: YOUR_API_KEY"</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">\</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">-H </span><span class="token string" style="color:#e3116c">"X-CC-Version: 2018-03-22"</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">\</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">-d </span><span class="token string" style="color:#e3116c">"@data.json"</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <p>
+             Where
+             <code>
+              data.json
+             </code>
+             is simply a JSON object:
+            </p>
+            <div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-shell codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token string" style="color:#e3116c">"name"</span><span class="token builtin class-name">:</span><span class="token string" style="color:#e3116c">"The Human Fund"</span><span class="token plain">,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token string" style="color:#e3116c">"description"</span><span class="token builtin class-name">:</span><span class="token string" style="color:#e3116c">"Money For People"</span><span class="token plain">,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token string" style="color:#e3116c">"pricing_type"</span><span class="token builtin class-name">:</span><span class="token string" style="color:#e3116c">"no_price"</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <p>
+             A
+             <code>
+              charge
+             </code>
+             object is returned with payment addresses for each currency plus a URL to a hosted page where a customer can complete their payment.
+            </p>
+            <div class="theme-admonition theme-admonition-info alert alert--info admonition_WoCw">
+             <div class="admonitionHeading_TMsN">
+              <span class="admonitionIcon_Ibzs">
+               <svg viewbox="0 0 14 16">
+                <path d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z" fill-rule="evenodd">
+                </path>
+               </svg>
+              </span>
+              info
+             </div>
+             <div class="admonitionContent_vXIg">
+              <p>
+               When you don't specify a price, as in this example, the customer can send any amount.
+              </p>
+             </div>
+            </div>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="accepting-a-payment">
+             Accepting a Payment
+             <a aria-label="Direct link to Accepting a Payment" class="hash-link" href="#accepting-a-payment" title="Direct link to Accepting a Payment">
+              ​
+             </a>
+            </h2>
+            <p>
+             Unlike credit cards where merchants must obtain payment credentials in order to charge a customer, cryptocurrencies are more like digital cash and rely on the customer explicitly sending money to the merchant.
+            </p>
+            <p>
+             After creating a charge, Coinbase Commerce continuously monitors each blockchain network for a payment. As cryptocurrencies are
+             <a href="/commerce/docs/crypto-payments">
+              push payments
+             </a>
+             , we set an expiration time for the charge, which is currently 1 hour after the creation date. If the customer does not make a payment within that timeframe, we consider the charge to be expired.
+            </p>
+            <p>
+             Once a payment has been sent, we update your Dashboard with the payment information. To get more information about the payment, simply retrieve the charge by supplying the unique charge code that was returned when the charge was created.
+            </p>
+            <p>
+             Here’s an example of retrieving a charge:
+            </p>
+            <div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-shell codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token function" style="color:#d73a49">curl</span><span class="token plain"> https://api.commerce.coinbase.com/charges/2E8YCQWQ </span><span class="token punctuation" style="color:#393A34">\</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">-H </span><span class="token string" style="color:#e3116c">"X-CC-Version: 2018-03-22"</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <p>
+             A
+             <code>
+              charge
+             </code>
+             object is returned with specific information about the payment including, but not limited to, the transaction hash and the number of confirmations that have been received.
+             <a href="/commerce/reference">
+              Learn more
+             </a>
+             .
+            </p>
+            <p>
+             <strong>
+              See Also:
+             </strong>
+            </p>
+            <ul>
+             <li>
+              <a href="/commerce/docs/creating-api-key">
+               Creating an API Key
+              </a>
+             </li>
+             <li>
+              <a href="/commerce/docs/crypto-payments">
+               Crypto Payments
+              </a>
+             </li>
+             <li>
+              <a href="/commerce/docs/payment-status">
+               Payment Status
+              </a>
+             </li>
+            </ul>
+           </div>
+           <footer class="theme-doc-footer docusaurus-mt-lg">
+            <div class="theme-doc-footer-edit-meta-row row">
+             <div class="col">
+             </div>
+             <div class="col lastUpdated_vwxv">
+             </div>
+            </div>
+           </footer>
+           <div class="thumbnailRating_V63g hide-on-print">
+            <p>
+             Was this helpful?
+            </p>
+            <div class="buttonGroup_vjMq">
+             <style data-emotion="css 1wf493t">
+              .css-1wf493t{text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1wf493t:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1wf493t:hover{background-color:transparent;}}.css-1wf493t.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+             </style>
+             <style data-emotion="css 1yxmbwk">
+              .css-1yxmbwk{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1yxmbwk::-moz-focus-inner{border-style:none;}.css-1yxmbwk.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-1yxmbwk{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-1yxmbwk:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1yxmbwk:hover{background-color:transparent;}}.css-1yxmbwk.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+             </style>
+             <button aria-label="Helpful" class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1yxmbwk" tabindex="0" type="button">
+              <style data-emotion="css vubbuv">
+               .css-vubbuv{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
+              </style>
+              <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" data-testid="ThumbUpOffAltIcon" focusable="false" viewbox="0 0 24 24">
+               <path d="m13.11 5.72-.57 2.89c-.12.59.04 1.2.42 1.66.38.46.94.73 1.54.73H20v1.08L17.43 18H9.34c-.18 0-.34-.16-.34-.34V9.82l4.11-4.1M14 2 7.59 8.41C7.21 8.79 7 9.3 7 9.83v7.83C7 18.95 8.05 20 9.34 20h8.1c.71 0 1.36-.37 1.72-.97l2.67-6.15c.11-.25.17-.52.17-.8V11c0-1.1-.9-2-2-2h-5.5l.92-4.65c.05-.22.02-.46-.08-.66-.23-.45-.52-.86-.88-1.22L14 2zM4 9H2v11h2c.55 0 1-.45 1-1v-9c0-.55-.45-1-1-1z">
+               </path>
+              </svg>
+             </button>
+             <style data-emotion="css 1e2dcm1">
+              .css-1e2dcm1{z-index:1500;pointer-events:none;}
+             </style>
+             <style data-emotion="css okvapm">
+              .css-okvapm{z-index:1500;pointer-events:none;}
+             </style>
+             <style data-emotion="css 1wf493t">
+              .css-1wf493t{text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1wf493t:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1wf493t:hover{background-color:transparent;}}.css-1wf493t.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+             </style>
+             <style data-emotion="css 1yxmbwk">
+              .css-1yxmbwk{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1yxmbwk::-moz-focus-inner{border-style:none;}.css-1yxmbwk.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-1yxmbwk{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-1yxmbwk:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1yxmbwk:hover{background-color:transparent;}}.css-1yxmbwk.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+             </style>
+             <button aria-label="Not helpful" class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1yxmbwk" tabindex="0" type="button">
+              <style data-emotion="css vubbuv">
+               .css-vubbuv{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
+              </style>
+              <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" data-testid="ThumbDownOffAltIcon" focusable="false" viewbox="0 0 24 24">
+               <path d="m10.89 18.28.57-2.89c.12-.59-.04-1.2-.42-1.66-.38-.46-.94-.73-1.54-.73H4v-1.08L6.57 6h8.09c.18 0 .34.16.34.34v7.84l-4.11 4.1M10 22l6.41-6.41c.38-.38.59-.89.59-1.42V6.34C17 5.05 15.95 4 14.66 4h-8.1c-.71 0-1.36.37-1.72.97l-2.67 6.15c-.11.25-.17.52-.17.8V13c0 1.1.9 2 2 2h5.5l-.92 4.65c-.05.22-.02.46.08.66.23.45.52.86.88 1.22L10 22zm10-7h2V4h-2c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1z">
+               </path>
+              </svg>
+             </button>
+             <style data-emotion="css 1e2dcm1">
+              .css-1e2dcm1{z-index:1500;pointer-events:none;}
+             </style>
+             <style data-emotion="css okvapm">
+              .css-okvapm{z-index:1500;pointer-events:none;}
+             </style>
+            </div>
+           </div>
+           <style data-emotion="css 1k371a6">
+            @media print{.css-1k371a6{position:absolute!important;}}
+           </style>
+          </article>
+          <nav aria-label="Docs pages navigation" class="pagination-nav docusaurus-mt-lg">
+           <a class="pagination-nav__link pagination-nav__link--prev" href="/commerce/docs/creating-api-key">
+            <div class="pagination-nav__sublabel">
+             Previous
+            </div>
+            <div class="pagination-nav__label">
+             Creating an API Key
+            </div>
+           </a>
+           <a class="pagination-nav__link pagination-nav__link--next" href="/commerce/docs/pay-button-adding">
+            <div class="pagination-nav__sublabel">
+             Next
+            </div>
+            <div class="pagination-nav__label">
+             Adding a Payment Button
+            </div>
+           </a>
+          </nav>
+         </div>
+        </div>
+        <div class="col col--3">
+         <div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop">
+          <ul class="table-of-contents table-of-contents__left-border">
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#creating-a-charge">
+             Creating a Charge
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#accepting-a-payment">
+             Accepting a Payment
+            </a>
+           </li>
+          </ul>
+         </div>
+        </div>
+       </div>
+      </div>
+     </main>
+    </div>
+   </div>
+   <footer class="footer">
+    <div class="container container-fluid">
+     <ul>
+      <li>
+       <div class="footer__copyright">
+        © 2023 Coinbase
+       </div>
+      </li>
+      <li>
+       <a class="footer__link-item" href="https://www.coinbase.com/legal/privacy" rel="noopener noreferrer" target="_blank">
+        Privacy
+        <svg aria-hidden="true" class="iconExternalLink_nPIU" height="13.5" viewbox="0 0 24 24" width="13.5">
+         <path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z" fill="currentColor">
+         </path>
+        </svg>
+       </a>
+      </li>
+     </ul>
+    </div>
+   </footer>
+  </div>
+  <script src="/assets/js/runtime~main.91f0d63d.js">
+  </script>
+  <script src="/assets/js/main.440d9293.js">
+  </script>
+ </body>
+</html>

@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html class="docs-wrapper docs-doc-page docs-version-current plugin-docs plugin-id-rosetta docs-doc-id-docs/destination_tag_support" dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="Docusaurus v2.3.1" name="generator"/>
+  <title data-rh="true">
+   Destination Tag Examples | Coinbase Cloud
+  </title>
+  <meta content="width=device-width,initial-scale=1" data-rh="true" name="viewport"/>
+  <meta content="summary_large_image" data-rh="true" name="twitter:card"/>
+  <meta content="https://docs.cloud.coinbase.com/rosetta/docs/destination-tag-support" data-rh="true" property="og:url"/>
+  <meta content="en" data-rh="true" name="docusaurus_locale"/>
+  <meta content="en" data-rh="true" name="docsearch:language"/>
+  <meta content="current" data-rh="true" name="docusaurus_version"/>
+  <meta content="docs-rosetta-current" data-rh="true" name="docusaurus_tag"/>
+  <meta content="current" data-rh="true" name="docsearch:version"/>
+  <meta content="docs-rosetta-current" data-rh="true" name="docsearch:docusaurus_tag"/>
+  <meta content="Destination Tag Examples | Coinbase Cloud" data-rh="true" property="og:title"/>
+  <meta content="Some Rosetta implementations require support for destination tags or memos. You can add this support to the Data API and Construction API implementations for your blockchain. Use the memo field under the metadata object in the Data API or Construction API endpoints shown below to add the information. Enter a destination tag or memo value for the memo field." data-rh="true" name="description"/>
+  <meta content="Some Rosetta implementations require support for destination tags or memos. You can add this support to the Data API and Construction API implementations for your blockchain. Use the memo field under the metadata object in the Data API or Construction API endpoints shown below to add the information. Enter a destination tag or memo value for the memo field." data-rh="true" property="og:description"/>
+  <link data-rh="true" href="/img/favicon.png" rel="icon"/>
+  <link data-rh="true" href="https://docs.cloud.coinbase.com/rosetta/docs/destination-tag-support" rel="canonical"/>
+  <link data-rh="true" href="https://docs.cloud.coinbase.com/rosetta/docs/destination-tag-support" hreflang="en" rel="alternate"/>
+  <link data-rh="true" href="https://docs.cloud.coinbase.com/rosetta/docs/destination-tag-support" hreflang="x-default" rel="alternate"/>
+  <link crossorigin="anonymous" data-rh="true" href="https://BPPU41WTIR-dsn.algolia.net" rel="preconnect"/>
+  <link href="https://www.google-analytics.com" rel="preconnect"/>
+  <link href="https://www.googletagmanager.com" rel="preconnect"/>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-1X60WF4D7F">
+  </script>
+  <script>
+   function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-1X60WF4D7F",{anonymize_ip:!0})
+  </script>
+  <link href="/opensearch.xml" rel="search" title="Coinbase Cloud" type="application/opensearchdescription+xml"/>
+  <link href="/assets/css/styles.22f44638.css" rel="stylesheet"/>
+  <link as="script" href="/assets/js/runtime~main.91f0d63d.js" rel="preload"/>
+  <link as="script" href="/assets/js/main.440d9293.js" rel="preload"/>
+ </head>
+ <body class="navigation-with-keyboard">
+  <script>
+   !function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}()
+  </script>
+  <div id="__docusaurus">
+   <div aria-label="Skip to main content" role="region">
+    <a class="skipToContent_fXgn" href="#docusaurus_skipToContent_fallback">
+     Skip to main content
+    </a>
+   </div>
+   <nav aria-label="Main" class="navbar navbar--fixed-top">
+    <div class="navbar__container_rqDs">
+     <div class="navbar__inner">
+      <div class="navbar__items">
+       <button aria-expanded="false" aria-label="Toggle navigation bar" class="navbar__toggle clean-btn" type="button">
+        <svg aria-hidden="true" height="30" viewbox="0 0 30 30" width="30">
+         <path d="M4 7h22M4 15h22M4 23h22" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2">
+         </path>
+        </svg>
+       </button>
+       <a class="navbar__brand" href="/">
+        <div class="navbar__logo">
+         <img alt="Coinbase Pay" class="themedImage_ToTc themedImage--light_HNdA" src="/img/logo.svg"/>
+         <img alt="Coinbase Pay" class="themedImage_ToTc themedImage--dark_i4oU" src="/img/logo.svg"/>
+        </div>
+       </a>
+       <a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/">
+        Documentation
+       </a>
+      </div>
+      <div class="navbar__items navbar__items--right">
+       <div class="searchBox_ZlJk">
+        <button aria-label="Search" class="DocSearch DocSearch-Button" type="button">
+         <span class="DocSearch-Button-Container">
+          <svg class="DocSearch-Search-Icon" height="20" viewbox="0 0 20 20" width="20">
+           <path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+           </path>
+          </svg>
+          <span class="DocSearch-Button-Placeholder">
+           Search
+          </span>
+         </span>
+         <span class="DocSearch-Button-Keys">
+         </span>
+        </button>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="menubar_iWH4">
+     <div class="menubar__inner_eCwJ">
+      <div class="navbar__item dropdown dropdown--hoverable">
+       <a aria-expanded="false" aria-haspopup="true" class="navbar__link" href="#" role="button">
+        Rosetta
+       </a>
+       <ul class="dropdown__menu">
+        <li>
+         <a class="dropdown__link" href="/advanced-trade-api/docs/welcome">
+          Advanced Trade API
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/blockchain-infrastructure/docs/welcome">
+          Blockchain Infrastructure
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/pay-sdk/docs/intro">
+          Coinbase Pay
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/wallet-sdk/docs/welcome">
+          Coinbase Wallet
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/commerce/docs/welcome">
+          Commerce API
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/delegation/docs/about-cloud-staking">
+          Delegation Guides
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/exchange/docs/welcome">
+          Exchange/Pro
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/kyt/reference/introduction">
+          KYT
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/prime/docs/introduction">
+          Prime
+         </a>
+        </li>
+        <li>
+         <a aria-current="page" class="dropdown__link dropdown__link--active" href="/rosetta/docs/welcome">
+          Rosetta
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/sign-in-with-coinbase/docs/welcome">
+          Sign in with Coinbase
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/waas/docs/welcome">
+          Wallet as a Service
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="navbar__item dropdown dropdown--hoverable">
+       <a aria-expanded="false" aria-haspopup="true" class="navbar__link" href="#" role="button">
+        Guides
+       </a>
+       <ul class="dropdown__menu">
+        <li>
+         <a aria-current="page" class="dropdown__link dropdown__link--active" href="/rosetta/docs/welcome">
+          Guides
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/rosetta/reference">
+          API Reference
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="menubarItems_end_INfc">
+       <a class="menubarBtn_Xh25" href="https://forums.coinbasecloud.dev">
+        Discuss in the Forum
+       </a>
+       <a class="menubarBtn_Xh25" href="https://help.coinbase.com/en/contact-us?product=coinbase-cloud">
+        Need Support?
+       </a>
+       <button class="menubarBtn_Xh25">
+        <svg class="icon_HrvF" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+         <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z">
+         </path>
+        </svg>
+        Search
+       </button>
+       <div class="searchToggleShortcut_VFcV">
+        ⌘K
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="navbar-sidebar__backdrop" role="presentation">
+    </div>
+   </nav>
+   <div class="main-wrapper mainWrapper_z2l0 docsWrapper_BCFX" id="docusaurus_skipToContent_fallback">
+    <button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button">
+    </button>
+    <div class="docPage__5DB">
+     <aside class="theme-doc-sidebar-container docSidebarContainer_b6E3">
+      <div class="sidebarViewport_Xe31">
+       <div class="sidebar_njMd">
+        <nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG">
+         <ul class="theme-doc-sidebar-menu menu__list">
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Product Overview
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/welcome" tabindex="0">
+              Welcome
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/flow-of-operations" tabindex="0">
+              Flow of operations
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/contributing" tabindex="0">
+              Contributing
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/principles" tabindex="0">
+              Principles
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/automated-deployment-and-testing" tabindex="0">
+              Automated deployment and testing
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/versioning" tabindex="0">
+              Versioning
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Getting Started
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/getting-started" tabindex="0">
+              Getting Started
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/configuration-file" tabindex="0">
+              How to Write a Configuration File for rosetta-cli Testing
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Rosetta API Spec
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/full-reference" tabindex="0">
+              Full Reference
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed">
+             <div class="menu__list-item-collapsible">
+              <a aria-expanded="false" class="menu__link menu__link--sublist menu__link--sublist-caret" href="/rosetta/docs/identifiers" tabindex="0">
+               Models
+              </a>
+             </div>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/data-api-overview" tabindex="0">
+              Data API Overview
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/construction-api-overview" tabindex="0">
+              Construction API Overview
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/indexers" tabindex="0">
+              Indexers
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Coinbase Listing Integrations
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/faqs" tabindex="0">
+              Frequently Asked Questions
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link menu__link--active">
+             Samples
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/implementation-samples" tabindex="0">
+              Implementation Samples
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/code-samples" tabindex="0">
+              Code Samples for the Rosetta API Configuration File
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a aria-current="page" class="menu__link menu__link--active" href="/rosetta/docs/destination-tag-support" tabindex="0">
+              Destination Tag Examples
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/erc20-token-support" tabindex="0">
+              ERC20 Token Support Example
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Testing
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/rosetta-cli" tabindex="0">
+              The rosetta-cli Tool
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/rosetta-test" tabindex="0">
+              How to Test your Rosetta Implementation
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/rosetta-dsl" tabindex="0">
+              How to Write a Rosetta DSL file
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/complex-checks" tabindex="0">
+              How to Disable Complex Checks
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Best Practices
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/docker-deployment" tabindex="0">
+              Docker Deployment
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/standard-storage-location" tabindex="0">
+              Standard storage location
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/storage-pruning" tabindex="0">
+              Storage pruning
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/implement-all-endpoints" tabindex="0">
+              Implement all endpoints
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/balance-changing-operation-support" tabindex="0">
+              Balance-changing operation support
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/fetchable-balances-for-accounts-and-currencies" tabindex="0">
+              Fetchable balances for accounts and currencies
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/continuously-validate-correctness" tabindex="0">
+              Continuously validate correctness
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/common-mistakes" tabindex="0">
+              Common mistakes
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Repositories
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/rosetta-specifications" tabindex="0">
+              rosetta-specifications
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/rosetta-sdk-go" tabindex="0">
+              rosetta-sdk-go
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Support
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link menuExternalLink_NmtK" href="https://forums.coinbasecloud.dev/" rel="noopener noreferrer" tabindex="0" target="_blank">
+              Coinbase Cloud Forum
+              <svg aria-hidden="true" class="iconExternalLink_nPIU" height="13.5" viewbox="0 0 24 24" width="13.5">
+               <path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z" fill="currentColor">
+               </path>
+              </svg>
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link menuExternalLink_NmtK" href="https://help.coinbase.com/en/contact-us?product=coinbase-cloud" rel="noopener noreferrer" tabindex="0" target="_blank">
+              Coinbase Cloud Help Center
+              <svg aria-hidden="true" class="iconExternalLink_nPIU" height="13.5" viewbox="0 0 24 24" width="13.5">
+               <path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z" fill="currentColor">
+               </path>
+              </svg>
+             </a>
+            </li>
+           </ul>
+          </li>
+         </ul>
+        </nav>
+       </div>
+      </div>
+     </aside>
+     <main class="docMainContainer_gTbr">
+      <div class="container padding-top--md padding-bottom--lg">
+       <div class="row">
+        <div class="col docItemCol_z5aJ">
+         <div class="docItemContainer_c0TR">
+          <article>
+           <nav aria-label="Breadcrumbs" class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl">
+            <ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+             <li class="breadcrumbs__item">
+              <a aria-label="Home page" class="breadcrumbs__link" href="/">
+               <svg class="breadcrumbHomeIcon_YNFT" viewbox="0 0 24 24">
+                <path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor">
+                </path>
+               </svg>
+              </a>
+             </li>
+             <li class="breadcrumbs__item">
+              <span class="breadcrumbs__link">
+               Samples
+              </span>
+              <meta content="1" itemprop="position"/>
+             </li>
+             <li class="breadcrumbs__item breadcrumbs__item--active" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+              <span class="breadcrumbs__link" itemprop="name">
+               Destination Tag Examples
+              </span>
+              <meta content="2" itemprop="position"/>
+             </li>
+            </ul>
+           </nav>
+           <div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo">
+            <button class="clean-btn tocCollapsibleButton_TO0P" type="button">
+             On this page
+            </button>
+           </div>
+           <div class="theme-doc-markdown markdown">
+            <header>
+             <h1>
+              Destination Tag Examples
+             </h1>
+            </header>
+            <p>
+             Some Rosetta implementations require support for destination tags or memos. You can add this support to the Data API and Construction API implementations for your blockchain. Use the
+             <code>
+              memo
+             </code>
+             field under the
+             <code>
+              metadata
+             </code>
+             object in the Data API or Construction API endpoints shown below to add the information. Enter a destination tag or memo value for the
+             <code>
+              memo
+             </code>
+             field.
+            </p>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="constructionpreprocessrequest">
+             ConstructionPreprocessRequest
+             <a aria-label="Direct link to ConstructionPreprocessRequest" class="hash-link" href="#constructionpreprocessrequest" title="Direct link to ConstructionPreprocessRequest">
+              ​
+             </a>
+            </h2>
+            <p>
+             Read the
+             <a href="/rosetta/docs/identifiers#constructionpreprocessrequest">
+              ConstructionPreprocessRequest
+             </a>
+             documentation for properties information.
+            </p>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="constructionpreprocess-request-schema">
+             /construction/preprocess Request Schema
+             <a aria-label="Direct link to /construction/preprocess Request Schema" class="hash-link" href="#constructionpreprocess-request-schema" title="Direct link to /construction/preprocess Request Schema">
+              ​
+             </a>
+            </h3>
+            <div class="language-JSON codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-JSON codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "network_identifier":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      //...</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "intent":[</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      //...</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   ],</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "metadata":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      //...</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "memo":"SAMPLE MEMO"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      //...</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="constructionpreprocess-request-example">
+             /construction/preprocess Request Example
+             <a aria-label="Direct link to /construction/preprocess Request Example" class="hash-link" href="#constructionpreprocess-request-example" title="Direct link to /construction/preprocess Request Example">
+              ​
+             </a>
+            </h3>
+            <div class="language-JSON codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-JSON codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "network_identifier":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "blockchain":"stacks",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "network":"testnet"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "intent":[</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "operation_identifier":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "index":0</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "type":"fee",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "account":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "address":"ST11NJTTKGVT6D1HY4NJRVQWMQM7TVAR091EJ8P2Y"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "amount":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "value":"-180",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "currency":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">               "symbol":"STX",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">               "decimals":6</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "operation_identifier":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "index":1</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "type":"token_transfer",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "account":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "address":"ST11NJTTKGVT6D1HY4NJRVQWMQM7TVAR091EJ8P2Y"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "amount":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "value":"-50",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "currency":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">               "symbol":"STX",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">               "decimals":6</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "operation_identifier":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "index":2</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "type":"token_transfer",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "account":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "address":"STB44HYPYAT2BB2QE513NSP81HTMYWBJP02HPGK6"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "amount":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "value":"50",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "currency":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">               "symbol":"STX",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">               "decimals":6</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   ],</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "metadata":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "memo":"testing"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="constructionpreprocessresponse">
+             ConstructionPreprocessResponse
+             <a aria-label="Direct link to ConstructionPreprocessResponse" class="hash-link" href="#constructionpreprocessresponse" title="Direct link to ConstructionPreprocessResponse">
+              ​
+             </a>
+            </h2>
+            <p>
+             Read the
+             <a href="/rosetta/docs/identifiers#constructionpreprocessresponse">
+              ConstructionPreprocessResponse
+             </a>
+             documentation for properties information.
+            </p>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="constructionpreprocess-response-schema">
+             /construction/preprocess Response Schema
+             <a aria-label="Direct link to /construction/preprocess Response Schema" class="hash-link" href="#constructionpreprocess-response-schema" title="Direct link to /construction/preprocess Response Schema">
+              ​
+             </a>
+            </h3>
+            <div class="language-JSON codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-JSON codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "options": {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      //…</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "memo": "SAMPLE MEMO"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      //…</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "required_public_keys": [</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      //…</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   ]</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="constructionpreprocess-response-example">
+             /construction/preprocess Response Example
+             <a aria-label="Direct link to /construction/preprocess Response Example" class="hash-link" href="#constructionpreprocess-response-example" title="Direct link to /construction/preprocess Response Example">
+              ​
+             </a>
+            </h3>
+            <div class="language-JSON codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-JSON codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "options":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "amount":"50",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "decimals":6,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "fee":"-180",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "memo":"testing",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "sender_address":"ST11NJTTKGVT6D1HY4NJRVQWMQM7TVAR091EJ8P2Y",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "size":180,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "symbol":"STX",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "token_transfer_recipient_address":"STB44HYPYAT2BB2QE513NSP81HTMYWBJP02HPGK6",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "type":"token_transfer"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "required_public_keys":[</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "address":"ST11NJTTKGVT6D1HY4NJRVQWMQM7TVAR091EJ8P2Y"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   ]</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="constructionmetadatarequest">
+             ConstructionMetadataRequest
+             <a aria-label="Direct link to ConstructionMetadataRequest" class="hash-link" href="#constructionmetadatarequest" title="Direct link to ConstructionMetadataRequest">
+              ​
+             </a>
+            </h2>
+            <p>
+             Read the
+             <a href="/rosetta/docs/identifiers#constructionmetadatarequest">
+              ConstructionMetadataRequest
+             </a>
+             documentation for properties information.
+            </p>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="constructionmetadata-request-schema">
+             /construction/metadata Request Schema
+             <a aria-label="Direct link to /construction/metadata Request Schema" class="hash-link" href="#constructionmetadata-request-schema" title="Direct link to /construction/metadata Request Schema">
+              ​
+             </a>
+            </h3>
+            <div class="language-JSON codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-JSON codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "network_identifier": {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      //…</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "metadata": {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      //…</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "memo": "SAMPLE MEMO"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      //…</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "public_keys": [</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      //…</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   ]</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="constructionmetadata-request-example">
+             /construction/metadata Request Example
+             <a aria-label="Direct link to /construction/metadata Request Example" class="hash-link" href="#constructionmetadata-request-example" title="Direct link to /construction/metadata Request Example">
+              ​
+             </a>
+            </h3>
+            <div class="language-JSON codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-JSON codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "network_identifier":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "blockchain":"stacks",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "network":"testnet"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "metadata":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "amount":"50",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "decimals":6,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "fee":"-180",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "memo":"testing",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "sender_address":"ST11NJTTKGVT6D1HY4NJRVQWMQM7TVAR091EJ8P2Y",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "size":180,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "symbol":"STX",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "token_transfer_recipient_address":"STB44HYPYAT2BB2QE513NSP81HTMYWBJP02HPGK6",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "type":"token_transfer"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "public_keys":[</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "hex_bytes":"02b087ca52f40fdfdf4b16a0bbf7e91e4db2e183ac5c6491a5f60a5450e25de7d0",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "curve_type":"secp256k1"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   ]</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="constructionmetadataresponse">
+             ConstructionMetadataResponse
+             <a aria-label="Direct link to ConstructionMetadataResponse" class="hash-link" href="#constructionmetadataresponse" title="Direct link to ConstructionMetadataResponse">
+              ​
+             </a>
+            </h2>
+            <p>
+             Read the
+             <a href="/rosetta/docs/identifiers#constructionmetadataresponse">
+              ConstructionMetadataResponse
+             </a>
+             documentation for properties information.
+            </p>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="constructionmetadata-response-schema">
+             /construction/metadata Response Schema
+             <a aria-label="Direct link to /construction/metadata Response Schema" class="hash-link" href="#constructionmetadata-response-schema" title="Direct link to /construction/metadata Response Schema">
+              ​
+             </a>
+            </h3>
+            <div class="language-JSON codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-JSON codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "metadata": {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      //…</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "memo": "SAMPLE MEMO"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      //…</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "suggested_fee": [</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      //…</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   ]</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="constructionmetadata-response-example">
+             /construction/metadata Response Example
+             <a aria-label="Direct link to /construction/metadata Response Example" class="hash-link" href="#constructionmetadata-response-example" title="Direct link to /construction/metadata Response Example">
+              ​
+             </a>
+            </h3>
+            <div class="language-JSON codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-JSON codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "metadata":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "account_sequence":8,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "amount":"50",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "decimals":6,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "fee":"-180",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "memo":"testing",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "recent_block_hash":"0x4f4a5ccf2a85e42951dbc039e4aab4f71be710957cc278135c68818a38645adb",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "sender_address":"ST11NJTTKGVT6D1HY4NJRVQWMQM7TVAR091EJ8P2Y",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "size":180,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "symbol":"STX",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "token_transfer_recipient_address":"STB44HYPYAT2BB2QE513NSP81HTMYWBJP02HPGK6",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "type":"token_transfer"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "suggested_fee":[</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "value":"180",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "currency":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "symbol":"STX",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "decimals":6</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   ]</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="constructionpayloadsrequest">
+             ConstructionPayloadsRequest
+             <a aria-label="Direct link to ConstructionPayloadsRequest" class="hash-link" href="#constructionpayloadsrequest" title="Direct link to ConstructionPayloadsRequest">
+              ​
+             </a>
+            </h2>
+            <p>
+             Read the
+             <a href="/rosetta/docs/identifiers#constructionpayloadsrequest">
+              ConstructionPayloadsRequest
+             </a>
+             documentation for properties information.
+            </p>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="constructionpayloads-request-schema">
+             /construction/payloads Request Schema
+             <a aria-label="Direct link to /construction/payloads Request Schema" class="hash-link" href="#constructionpayloads-request-schema" title="Direct link to /construction/payloads Request Schema">
+              ​
+             </a>
+            </h3>
+            <div class="language-JSON codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-JSON codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "network_identifier": {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      //…</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "intent": [</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      //…</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   ],</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "metadata": {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      //…</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "memo": "SAMPLE MEMO"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      //…</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "public_keys": [</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      //…</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   ]</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="constructionpayloads-request-example">
+             /construction/payloads Request Example
+             <a aria-label="Direct link to /construction/payloads Request Example" class="hash-link" href="#constructionpayloads-request-example" title="Direct link to /construction/payloads Request Example">
+              ​
+             </a>
+            </h3>
+            <div class="language-JSON codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-JSON codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "network_identifier":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "blockchain":"stacks",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "network":"testnet"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "intent":[</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "operation_identifier":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "index":0</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "type":"fee",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "account":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "address":"ST11NJTTKGVT6D1HY4NJRVQWMQM7TVAR091EJ8P2Y"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "amount":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "value":"-180",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "currency":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">               "symbol":"STX",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">               "decimals":6</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "operation_identifier":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "index":1</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "type":"token_transfer",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "account":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "address":"ST11NJTTKGVT6D1HY4NJRVQWMQM7TVAR091EJ8P2Y"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "amount":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "value":"-50",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "currency":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">               "symbol":"STX",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">               "decimals":6</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "operation_identifier":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "index":2</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "type":"token_transfer",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "account":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "address":"STB44HYPYAT2BB2QE513NSP81HTMYWBJP02HPGK6"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "amount":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "value":"50",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "currency":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">               "symbol":"STX",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">               "decimals":6</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   ],</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "metadata":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "account_sequence":8,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "amount":"50",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "decimals":6,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "fee":"-180",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "memo":"testing",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "recent_block_hash":"0x4f4a5ccf2a85e42951dbc039e4aab4f71be710957cc278135c68818a38645adb",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "sender_address":"ST11NJTTKGVT6D1HY4NJRVQWMQM7TVAR091EJ8P2Y",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "size":180,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "symbol":"STX",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "token_transfer_recipient_address":"STB44HYPYAT2BB2QE513NSP81HTMYWBJP02HPGK6",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "type":"token_transfer"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "public_keys":[</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "hex_bytes":"02b087ca52f40fdfdf4b16a0bbf7e91e4db2e183ac5c6491a5f60a5450e25de7d0",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "curve_type":"secp256k1"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   ]</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="constructionpayloadsresponse">
+             ConstructionPayloadsResponse
+             <a aria-label="Direct link to ConstructionPayloadsResponse" class="hash-link" href="#constructionpayloadsresponse" title="Direct link to ConstructionPayloadsResponse">
+              ​
+             </a>
+            </h2>
+            <p>
+             Read the
+             <a href="/rosetta/docs/identifiers#constructionpayloadsresponse">
+              ConstructionPayloadsResponse
+             </a>
+             documentation for properties information.
+            </p>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="constructionpayloads-response-schema">
+             /construction/payloads Response Schema
+             <a aria-label="Direct link to /construction/payloads Response Schema" class="hash-link" href="#constructionpayloads-response-schema" title="Direct link to /construction/payloads Response Schema">
+              ​
+             </a>
+            </h3>
+            <p>
+             The
+             <code>
+              unsigned_transaction
+             </code>
+             field (type: string) includes the destination tag or memo value in the
+             <code>
+              unsigned_transaction
+             </code>
+             hash.
+            </p>
+            <div class="language-JSON codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-JSON codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "unsigned_transaction":"abcdef1234",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "payloads":[</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         //..</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   ]</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="constructionpayloads-response-example">
+             /construction/payloads Response Example
+             <a aria-label="Direct link to /construction/payloads Response Example" class="hash-link" href="#constructionpayloads-response-example" title="Direct link to /construction/payloads Response Example">
+              ​
+             </a>
+            </h3>
+            <div class="language-JSON codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-JSON codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "unsigned_transaction":"0x8080000000040043596b5386f466863e25658ddf94bd0fadab0048000000000000000800000000000000b400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003020000000000051a164247d6f2b425ac5771423ae6c80c754f7172b0000000000000003274657374696e67000000000000000000000000000000000000000000000000000000",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "payloads":[</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "address":"ST11NJTTKGVT6D1HY4NJRVQWMQM7TVAR091EJ8P2Y",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "hex_bytes":"a29c75ebde36ebb6aa8ef3e54b1195b53ec840f8f71babbae820e9f4f3ab82ff",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "account_identifier":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "address":"ST11NJTTKGVT6D1HY4NJRVQWMQM7TVAR091EJ8P2Y"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "signature_type":"ecdsa_recovery"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   ]</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="constructionparserequest">
+             ConstructionParseRequest
+             <a aria-label="Direct link to ConstructionParseRequest" class="hash-link" href="#constructionparserequest" title="Direct link to ConstructionParseRequest">
+              ​
+             </a>
+            </h2>
+            <p>
+             Read the
+             <a href="/rosetta/docs/identifiers#constructionparserequest">
+              ConstructionParseRequest
+             </a>
+             documentation for properties information.
+            </p>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="constructionparse-request-schema">
+             /construction/parse Request Schema
+             <a aria-label="Direct link to /construction/parse Request Schema" class="hash-link" href="#constructionparse-request-schema" title="Direct link to /construction/parse Request Schema">
+              ​
+             </a>
+            </h3>
+            <p>
+             The
+             <code>
+              transaction
+             </code>
+             field (type:string) includes the destination tag or memo value in the unsigned (since
+             <code>
+              signed
+             </code>
+             is false)
+             <code>
+              transaction
+             </code>
+             hash.
+            </p>
+            <div class="language-JSON codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-JSON codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "network_identifier": {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "blockchain": "stacks",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "network": "testnet",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "sub_network_identifier": {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "network": "shard 1",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "metadata": {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                "producer": "0x52bc44d5378309ee2abf1539bf71de1b7d7be3b5"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "signed": false,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "transaction": "abcdef1234"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="constructionparse-request-example">
+             /construction/parse Request Example
+             <a aria-label="Direct link to /construction/parse Request Example" class="hash-link" href="#constructionparse-request-example" title="Direct link to /construction/parse Request Example">
+              ​
+             </a>
+            </h3>
+            <div class="language-JSON codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-JSON codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "network_identifier":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "blockchain":"stacks",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "network":"testnet"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "signed":false,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "transaction":"0x8080000000040043596b5386f466863e25658ddf94bd0fadab0048000000000000000800000000000000b400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003020000000000051a164247d6f2b425ac5771423ae6c80c754f7172b0000000000000003274657374696e67000000000000000000000000000000000000000000000000000000"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="constructionparseresponse">
+             ConstructionParseResponse
+             <a aria-label="Direct link to ConstructionParseResponse" class="hash-link" href="#constructionparseresponse" title="Direct link to ConstructionParseResponse">
+              ​
+             </a>
+            </h2>
+            <p>
+             Read the
+             <a href="/rosetta/docs/identifiers#constructionparseresponse">
+              ConstructionParseaResponse
+             </a>
+             documentation for properties information.
+            </p>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="constructionparse-response-schema">
+             /construction/parse Response Schema
+             <a aria-label="Direct link to /construction/parse Response Schema" class="hash-link" href="#constructionparse-response-schema" title="Direct link to /construction/parse Response Schema">
+              ​
+             </a>
+            </h3>
+            <div class="language-JSON codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-JSON codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "operations": [</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   ],</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "signers": null,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "metadata": {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      //…</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "memo": "SAMPLE MEMO"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      //…</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="constructionparse-response-example">
+             /construction/parse Response Example
+             <a aria-label="Direct link to /construction/parse Response Example" class="hash-link" href="#constructionparse-response-example" title="Direct link to /construction/parse Response Example">
+              ​
+             </a>
+            </h3>
+            <div class="language-JSON codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-JSON codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "operations":[</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "operation_identifier":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "index":0</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "type":"fee",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "status":"",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "account":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "address":"ST11NJTTKGVT6D1HY4NJRVQWMQM7TVAR091EJ8P2Y"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "amount":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "value":"-180",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "currency":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">               "symbol":"STX",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">               "decimals":6</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "operation_identifier":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "index":1</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "type":"token_transfer",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "status":"",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "account":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "address":"ST11NJTTKGVT6D1HY4NJRVQWMQM7TVAR091EJ8P2Y"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "amount":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "value":"-50",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "currency":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">               "symbol":"STX",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">               "decimals":6</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "coin_change":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "coin_identifier":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">               "identifier":"0x7601dd2c00b4da4394c6568111ad722a9d35f675f987690bcee1086ea34ade92:1"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "coin_action":"coin_spent"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "operation_identifier":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "index":2</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "related_operations":[</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">               "index":1</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         ],</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "type":"token_transfer",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "status":"",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "account":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "address":"STB44HYPYAT2BB2QE513NSP81HTMYWBJP02HPGK6"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "amount":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "value":"50",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "currency":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">               "symbol":"STX",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">               "decimals":6</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "coin_change":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "coin_identifier":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">               "identifier":"0x7601dd2c00b4da4394c6568111ad722a9d35f675f987690bcee1086ea34ade92:2"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "coin_action":"coin_created"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   ],</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "signers":null,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "metadata":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "memo":"testing"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="block">
+             Block
+             <a aria-label="Direct link to Block" class="hash-link" href="#block" title="Direct link to Block">
+              ​
+             </a>
+            </h2>
+            <p>
+             Read the
+             <a href="/rosetta/docs/identifiers#block">
+              Block
+             </a>
+             documentation for properties information.
+            </p>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="block-response-schema">
+             /block Response Schema
+             <a aria-label="Direct link to /block Response Schema" class="hash-link" href="#block-response-schema" title="Direct link to /block Response Schema">
+              ​
+             </a>
+            </h3>
+            <div class="language-JSON codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-JSON codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "block":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "block_identifier":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         //...</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "parent_block_identifier":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         //...</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "timestamp":"time",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "transactions":[</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "transaction_identifier":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">               //...</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "operations":[</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">               //...</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            ],</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "metadata":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">               "memo":"SAMPLE MEMO"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      ]</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="block-response-example">
+             /block Response Example
+             <a aria-label="Direct link to /block Response Example" class="hash-link" href="#block-response-example" title="Direct link to /block Response Example">
+              ​
+             </a>
+            </h3>
+            <div class="language-JSON codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-JSON codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   "block":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "block_identifier":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "index":16359,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "hash":"0x0dc231285c2ddc74c4c9e93e9ce754aed04368306069d15b47938308049c473c"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "parent_block_identifier":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "index":16358,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         "hash":"0x49048b0c1eceb626012c911b61f5250ff6073f44ef8c9bf5800ee76aa270d96d"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "timestamp":1634820076000,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "transactions":[</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "transaction_identifier":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">               "hash":"0x5b4146351bf941ffb12b66ea0f14dc8b21f4b119d2adbaf8bdf6e8bc3582c0e0"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "operations":[</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">               {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                  "operation_identifier":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                     "index":0</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                  },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                  "type":"fee",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                  "status":"success",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                  "account":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                     "address":"ST2QKZ4FKHAH1NQKYKYAYZPY440FEPK7GZ1R5HBP2"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                  },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                  "amount":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                     "value":"-180",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                     "currency":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                        "decimals":6,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                        "symbol":"STX"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                     }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                  }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">               },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">               {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                  "operation_identifier":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                     "index":1</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                  },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                  "type":"token_transfer",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                  "status":"success",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                  "account":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                     "address":"ST2QKZ4FKHAH1NQKYKYAYZPY440FEPK7GZ1R5HBP2"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                  },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                  "amount":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                     "value":"-500000000",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                     "currency":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                        "decimals":6,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                        "symbol":"STX"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                     }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                  },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                  "coin_change":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                     "coin_action":"coin_spent",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                     "coin_identifier":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                        "identifier":"0x5b4146351bf941ffb12b66ea0f14dc8b21f4b119d2adbaf8bdf6e8bc3582c0e0:1"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                     }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                  }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">               },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">               {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                  "operation_identifier":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                     "index":2</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                  },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                  "related_operations":[</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                     {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                        "index":1</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                     }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                  ],</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                  "type":"token_transfer",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                  "status":"success",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                  "account":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                     "address":"ST11NJTTKGVT6D1HY4NJRVQWMQM7TVAR091EJ8P2Y"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                  },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                  "amount":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                     "value":"500000000",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                     "currency":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                        "decimals":6,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                        "symbol":"STX"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                     }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                  },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                  "coin_change":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                     "coin_action":"coin_created",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                     "coin_identifier":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                        "identifier":"0x5b4146351bf941ffb12b66ea0f14dc8b21f4b119d2adbaf8bdf6e8bc3582c0e0:2"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                     }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                  }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">               }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            ],</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "metadata":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">               "memo":"Faucet"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      ]</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">   }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+           </div>
+           <footer class="theme-doc-footer docusaurus-mt-lg">
+            <div class="theme-doc-footer-edit-meta-row row">
+             <div class="col">
+             </div>
+             <div class="col lastUpdated_vwxv">
+             </div>
+            </div>
+           </footer>
+           <div class="thumbnailRating_V63g hide-on-print">
+            <p>
+             Was this helpful?
+            </p>
+            <div class="buttonGroup_vjMq">
+             <style data-emotion="css 1wf493t">
+              .css-1wf493t{text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1wf493t:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1wf493t:hover{background-color:transparent;}}.css-1wf493t.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+             </style>
+             <style data-emotion="css 1yxmbwk">
+              .css-1yxmbwk{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1yxmbwk::-moz-focus-inner{border-style:none;}.css-1yxmbwk.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-1yxmbwk{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-1yxmbwk:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1yxmbwk:hover{background-color:transparent;}}.css-1yxmbwk.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+             </style>
+             <button aria-label="Helpful" class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1yxmbwk" tabindex="0" type="button">
+              <style data-emotion="css vubbuv">
+               .css-vubbuv{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
+              </style>
+              <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" data-testid="ThumbUpOffAltIcon" focusable="false" viewbox="0 0 24 24">
+               <path d="m13.11 5.72-.57 2.89c-.12.59.04 1.2.42 1.66.38.46.94.73 1.54.73H20v1.08L17.43 18H9.34c-.18 0-.34-.16-.34-.34V9.82l4.11-4.1M14 2 7.59 8.41C7.21 8.79 7 9.3 7 9.83v7.83C7 18.95 8.05 20 9.34 20h8.1c.71 0 1.36-.37 1.72-.97l2.67-6.15c.11-.25.17-.52.17-.8V11c0-1.1-.9-2-2-2h-5.5l.92-4.65c.05-.22.02-.46-.08-.66-.23-.45-.52-.86-.88-1.22L14 2zM4 9H2v11h2c.55 0 1-.45 1-1v-9c0-.55-.45-1-1-1z">
+               </path>
+              </svg>
+             </button>
+             <style data-emotion="css 1e2dcm1">
+              .css-1e2dcm1{z-index:1500;pointer-events:none;}
+             </style>
+             <style data-emotion="css okvapm">
+              .css-okvapm{z-index:1500;pointer-events:none;}
+             </style>
+             <style data-emotion="css 1wf493t">
+              .css-1wf493t{text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1wf493t:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1wf493t:hover{background-color:transparent;}}.css-1wf493t.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+             </style>
+             <style data-emotion="css 1yxmbwk">
+              .css-1yxmbwk{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1yxmbwk::-moz-focus-inner{border-style:none;}.css-1yxmbwk.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-1yxmbwk{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-1yxmbwk:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1yxmbwk:hover{background-color:transparent;}}.css-1yxmbwk.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+             </style>
+             <button aria-label="Not helpful" class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1yxmbwk" tabindex="0" type="button">
+              <style data-emotion="css vubbuv">
+               .css-vubbuv{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
+              </style>
+              <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" data-testid="ThumbDownOffAltIcon" focusable="false" viewbox="0 0 24 24">
+               <path d="m10.89 18.28.57-2.89c.12-.59-.04-1.2-.42-1.66-.38-.46-.94-.73-1.54-.73H4v-1.08L6.57 6h8.09c.18 0 .34.16.34.34v7.84l-4.11 4.1M10 22l6.41-6.41c.38-.38.59-.89.59-1.42V6.34C17 5.05 15.95 4 14.66 4h-8.1c-.71 0-1.36.37-1.72.97l-2.67 6.15c-.11.25-.17.52-.17.8V13c0 1.1.9 2 2 2h5.5l-.92 4.65c-.05.22-.02.46.08.66.23.45.52.86.88 1.22L10 22zm10-7h2V4h-2c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1z">
+               </path>
+              </svg>
+             </button>
+             <style data-emotion="css 1e2dcm1">
+              .css-1e2dcm1{z-index:1500;pointer-events:none;}
+             </style>
+             <style data-emotion="css okvapm">
+              .css-okvapm{z-index:1500;pointer-events:none;}
+             </style>
+            </div>
+           </div>
+           <style data-emotion="css 1k371a6">
+            @media print{.css-1k371a6{position:absolute!important;}}
+           </style>
+          </article>
+          <nav aria-label="Docs pages navigation" class="pagination-nav docusaurus-mt-lg">
+           <a class="pagination-nav__link pagination-nav__link--prev" href="/rosetta/docs/code-samples">
+            <div class="pagination-nav__sublabel">
+             Previous
+            </div>
+            <div class="pagination-nav__label">
+             Code Samples for the Rosetta API Configuration File
+            </div>
+           </a>
+           <a class="pagination-nav__link pagination-nav__link--next" href="/rosetta/docs/erc20-token-support">
+            <div class="pagination-nav__sublabel">
+             Next
+            </div>
+            <div class="pagination-nav__label">
+             ERC20 Token Support Example
+            </div>
+           </a>
+          </nav>
+         </div>
+        </div>
+        <div class="col col--3">
+         <div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop">
+          <ul class="table-of-contents table-of-contents__left-border">
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#constructionpreprocessrequest">
+             ConstructionPreprocessRequest
+            </a>
+            <ul>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#constructionpreprocess-request-schema">
+               /construction/preprocess Request Schema
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#constructionpreprocess-request-example">
+               /construction/preprocess Request Example
+              </a>
+             </li>
+            </ul>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#constructionpreprocessresponse">
+             ConstructionPreprocessResponse
+            </a>
+            <ul>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#constructionpreprocess-response-schema">
+               /construction/preprocess Response Schema
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#constructionpreprocess-response-example">
+               /construction/preprocess Response Example
+              </a>
+             </li>
+            </ul>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#constructionmetadatarequest">
+             ConstructionMetadataRequest
+            </a>
+            <ul>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#constructionmetadata-request-schema">
+               /construction/metadata Request Schema
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#constructionmetadata-request-example">
+               /construction/metadata Request Example
+              </a>
+             </li>
+            </ul>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#constructionmetadataresponse">
+             ConstructionMetadataResponse
+            </a>
+            <ul>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#constructionmetadata-response-schema">
+               /construction/metadata Response Schema
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#constructionmetadata-response-example">
+               /construction/metadata Response Example
+              </a>
+             </li>
+            </ul>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#constructionpayloadsrequest">
+             ConstructionPayloadsRequest
+            </a>
+            <ul>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#constructionpayloads-request-schema">
+               /construction/payloads Request Schema
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#constructionpayloads-request-example">
+               /construction/payloads Request Example
+              </a>
+             </li>
+            </ul>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#constructionpayloadsresponse">
+             ConstructionPayloadsResponse
+            </a>
+            <ul>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#constructionpayloads-response-schema">
+               /construction/payloads Response Schema
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#constructionpayloads-response-example">
+               /construction/payloads Response Example
+              </a>
+             </li>
+            </ul>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#constructionparserequest">
+             ConstructionParseRequest
+            </a>
+            <ul>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#constructionparse-request-schema">
+               /construction/parse Request Schema
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#constructionparse-request-example">
+               /construction/parse Request Example
+              </a>
+             </li>
+            </ul>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#constructionparseresponse">
+             ConstructionParseResponse
+            </a>
+            <ul>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#constructionparse-response-schema">
+               /construction/parse Response Schema
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#constructionparse-response-example">
+               /construction/parse Response Example
+              </a>
+             </li>
+            </ul>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#block">
+             Block
+            </a>
+            <ul>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#block-response-schema">
+               /block Response Schema
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#block-response-example">
+               /block Response Example
+              </a>
+             </li>
+            </ul>
+           </li>
+          </ul>
+         </div>
+        </div>
+       </div>
+      </div>
+     </main>
+    </div>
+   </div>
+   <footer class="footer">
+    <div class="container container-fluid">
+     <ul>
+      <li>
+       <div class="footer__copyright">
+        © 2023 Coinbase
+       </div>
+      </li>
+      <li>
+       <a class="footer__link-item" href="https://www.coinbase.com/legal/privacy" rel="noopener noreferrer" target="_blank">
+        Privacy
+        <svg aria-hidden="true" class="iconExternalLink_nPIU" height="13.5" viewbox="0 0 24 24" width="13.5">
+         <path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z" fill="currentColor">
+         </path>
+        </svg>
+       </a>
+      </li>
+     </ul>
+    </div>
+   </footer>
+  </div>
+  <script src="/assets/js/runtime~main.91f0d63d.js">
+  </script>
+  <script src="/assets/js/main.440d9293.js">
+  </script>
+ </body>
+</html>

@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html class="docs-wrapper docs-doc-page docs-version-current plugin-docs plugin-id-sign-in-with-coinbase docs-doc-id-docs/api-addresses" dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="Docusaurus v2.3.1" name="generator"/>
+  <title data-rh="true">
+   Addresses | Coinbase Cloud
+  </title>
+  <meta content="width=device-width,initial-scale=1" data-rh="true" name="viewport"/>
+  <meta content="summary_large_image" data-rh="true" name="twitter:card"/>
+  <meta content="https://docs.cloud.coinbase.com/sign-in-with-coinbase/docs/api-addresses" data-rh="true" property="og:url"/>
+  <meta content="en" data-rh="true" name="docusaurus_locale"/>
+  <meta content="en" data-rh="true" name="docsearch:language"/>
+  <meta content="current" data-rh="true" name="docusaurus_version"/>
+  <meta content="docs-sign-in-with-coinbase-current" data-rh="true" name="docusaurus_tag"/>
+  <meta content="current" data-rh="true" name="docsearch:version"/>
+  <meta content="docs-sign-in-with-coinbase-current" data-rh="true" name="docsearch:docusaurus_tag"/>
+  <meta content="Addresses | Coinbase Cloud" data-rh="true" property="og:title"/>
+  <meta content="Address Resource" data-rh="true" name="description"/>
+  <meta content="Address Resource" data-rh="true" property="og:description"/>
+  <link data-rh="true" href="/img/favicon.png" rel="icon"/>
+  <link data-rh="true" href="https://docs.cloud.coinbase.com/sign-in-with-coinbase/docs/api-addresses" rel="canonical"/>
+  <link data-rh="true" href="https://docs.cloud.coinbase.com/sign-in-with-coinbase/docs/api-addresses" hreflang="en" rel="alternate"/>
+  <link data-rh="true" href="https://docs.cloud.coinbase.com/sign-in-with-coinbase/docs/api-addresses" hreflang="x-default" rel="alternate"/>
+  <link crossorigin="anonymous" data-rh="true" href="https://BPPU41WTIR-dsn.algolia.net" rel="preconnect"/>
+  <link href="https://www.google-analytics.com" rel="preconnect"/>
+  <link href="https://www.googletagmanager.com" rel="preconnect"/>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-1X60WF4D7F">
+  </script>
+  <script>
+   function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-1X60WF4D7F",{anonymize_ip:!0})
+  </script>
+  <link href="/opensearch.xml" rel="search" title="Coinbase Cloud" type="application/opensearchdescription+xml"/>
+  <link href="/assets/css/styles.22f44638.css" rel="stylesheet"/>
+  <link as="script" href="/assets/js/runtime~main.91f0d63d.js" rel="preload"/>
+  <link as="script" href="/assets/js/main.440d9293.js" rel="preload"/>
+ </head>
+ <body class="navigation-with-keyboard">
+  <script>
+   !function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}()
+  </script>
+  <div id="__docusaurus">
+   <div aria-label="Skip to main content" role="region">
+    <a class="skipToContent_fXgn" href="#docusaurus_skipToContent_fallback">
+     Skip to main content
+    </a>
+   </div>
+   <nav aria-label="Main" class="navbar navbar--fixed-top">
+    <div class="navbar__container_rqDs">
+     <div class="navbar__inner">
+      <div class="navbar__items">
+       <button aria-expanded="false" aria-label="Toggle navigation bar" class="navbar__toggle clean-btn" type="button">
+        <svg aria-hidden="true" height="30" viewbox="0 0 30 30" width="30">
+         <path d="M4 7h22M4 15h22M4 23h22" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2">
+         </path>
+        </svg>
+       </button>
+       <a class="navbar__brand" href="/">
+        <div class="navbar__logo">
+         <img alt="Coinbase Pay" class="themedImage_ToTc themedImage--light_HNdA" src="/img/logo.svg"/>
+         <img alt="Coinbase Pay" class="themedImage_ToTc themedImage--dark_i4oU" src="/img/logo.svg"/>
+        </div>
+       </a>
+       <a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/">
+        Documentation
+       </a>
+      </div>
+      <div class="navbar__items navbar__items--right">
+       <div class="searchBox_ZlJk">
+        <button aria-label="Search" class="DocSearch DocSearch-Button" type="button">
+         <span class="DocSearch-Button-Container">
+          <svg class="DocSearch-Search-Icon" height="20" viewbox="0 0 20 20" width="20">
+           <path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+           </path>
+          </svg>
+          <span class="DocSearch-Button-Placeholder">
+           Search
+          </span>
+         </span>
+         <span class="DocSearch-Button-Keys">
+         </span>
+        </button>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="menubar_iWH4">
+     <div class="menubar__inner_eCwJ">
+      <div class="navbar__item dropdown dropdown--hoverable">
+       <a aria-expanded="false" aria-haspopup="true" class="navbar__link" href="#" role="button">
+        Sign in with Coinbase
+       </a>
+       <ul class="dropdown__menu">
+        <li>
+         <a class="dropdown__link" href="/advanced-trade-api/docs/welcome">
+          Advanced Trade API
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/blockchain-infrastructure/docs/welcome">
+          Blockchain Infrastructure
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/pay-sdk/docs/intro">
+          Coinbase Pay
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/wallet-sdk/docs/welcome">
+          Coinbase Wallet
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/commerce/docs/welcome">
+          Commerce API
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/delegation/docs/about-cloud-staking">
+          Delegation Guides
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/exchange/docs/welcome">
+          Exchange/Pro
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/kyt/reference/introduction">
+          KYT
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/prime/docs/introduction">
+          Prime
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/rosetta/docs/welcome">
+          Rosetta
+         </a>
+        </li>
+        <li>
+         <a aria-current="page" class="dropdown__link dropdown__link--active" href="/sign-in-with-coinbase/docs/welcome">
+          Sign in with Coinbase
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/waas/docs/welcome">
+          Wallet as a Service
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="menubarItems_end_INfc">
+       <a class="menubarBtn_Xh25" href="https://forums.coinbasecloud.dev">
+        Discuss in the Forum
+       </a>
+       <a class="menubarBtn_Xh25" href="https://help.coinbase.com/en/contact-us?product=coinbase-cloud">
+        Need Support?
+       </a>
+       <button class="menubarBtn_Xh25">
+        <svg class="icon_HrvF" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+         <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z">
+         </path>
+        </svg>
+        Search
+       </button>
+       <div class="searchToggleShortcut_VFcV">
+        ⌘K
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="navbar-sidebar__backdrop" role="presentation">
+    </div>
+   </nav>
+   <div class="main-wrapper mainWrapper_z2l0 docsWrapper_BCFX" id="docusaurus_skipToContent_fallback">
+    <button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button">
+    </button>
+    <div class="docPage__5DB">
+     <aside class="theme-doc-sidebar-container docSidebarContainer_b6E3">
+      <div class="sidebarViewport_Xe31">
+       <div class="sidebar_njMd">
+        <nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG">
+         <ul class="theme-doc-sidebar-menu menu__list">
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Introduction
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/welcome" tabindex="0">
+              Welcome
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/getting-started" tabindex="0">
+              Getting started
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             API Architecture
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/status-codes" tabindex="0">
+              Status codes
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/making-requests" tabindex="0">
+              Making requests
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/cors" tabindex="0">
+              CORS
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/localization" tabindex="0">
+              Localization
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/fields" tabindex="0">
+              Fields
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/scopes" tabindex="0">
+              Scopes
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/pagination" tabindex="0">
+              Pagination
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed">
+             <div class="menu__list-item-collapsible">
+              <a aria-expanded="false" class="menu__link menu__link--sublist menu__link--sublist-caret" href="/sign-in-with-coinbase/docs/error-response" tabindex="0">
+               Errors
+              </a>
+             </div>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/versioning" tabindex="0">
+              Versioning
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/rate-limiting" tabindex="0">
+              Rate limiting
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/expanding-resources" tabindex="0">
+              Expanding resources
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/notifications" tabindex="0">
+              Notifications
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Authorization and Authentication
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed">
+             <div class="menu__list-item-collapsible">
+              <a aria-expanded="false" class="menu__link menu__link--sublist" href="/sign-in-with-coinbase/docs/sign-in-with-coinbase" tabindex="0">
+               OAuth2
+              </a>
+              <button aria-label="Toggle the collapsible sidebar category 'OAuth2'" class="clean-btn menu__caret" type="button">
+              </button>
+             </div>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/api-key-authentication" tabindex="0">
+              API Key Authentication
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Client Libraries
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/client-libraries" tabindex="0">
+              Client libraries
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Notifications Endpoint
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/api-notifications" tabindex="0">
+              Notifications
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link menu__link--active">
+             Wallet API Endpoints
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/api-users" tabindex="0">
+              Users
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/api-accounts" tabindex="0">
+              Accounts
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a aria-current="page" class="menu__link menu__link--active" href="/sign-in-with-coinbase/docs/api-addresses" tabindex="0">
+              Addresses
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/api-transactions" tabindex="0">
+              Transactions
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/api-buys" tabindex="0">
+              Buys
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/api-sells" tabindex="0">
+              Sells
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/api-deposits" tabindex="0">
+              Deposits
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/api-withdrawals" tabindex="0">
+              Withdrawals
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/api-payment-methods" tabindex="0">
+              Payment Methods
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Data API Endpoints
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/api-currencies" tabindex="0">
+              Currencies
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/api-exchange-rates" tabindex="0">
+              Exchange Rates
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/api-prices" tabindex="0">
+              Prices
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/sign-in-with-coinbase/docs/api-time" tabindex="0">
+              Time
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Support
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link menuExternalLink_NmtK" href="https://forums.coinbasecloud.dev/" rel="noopener noreferrer" tabindex="0" target="_blank">
+              Coinbase Cloud Forum
+              <svg aria-hidden="true" class="iconExternalLink_nPIU" height="13.5" viewbox="0 0 24 24" width="13.5">
+               <path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z" fill="currentColor">
+               </path>
+              </svg>
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link menuExternalLink_NmtK" href="https://help.coinbase.com/en/contact-us?product=coinbase-cloud" rel="noopener noreferrer" tabindex="0" target="_blank">
+              Coinbase Cloud Help Center
+              <svg aria-hidden="true" class="iconExternalLink_nPIU" height="13.5" viewbox="0 0 24 24" width="13.5">
+               <path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z" fill="currentColor">
+               </path>
+              </svg>
+             </a>
+            </li>
+           </ul>
+          </li>
+         </ul>
+        </nav>
+       </div>
+      </div>
+     </aside>
+     <main class="docMainContainer_gTbr">
+      <div class="container padding-top--md padding-bottom--lg">
+       <div class="row">
+        <div class="col docItemCol_z5aJ">
+         <div class="docItemContainer_c0TR">
+          <article>
+           <nav aria-label="Breadcrumbs" class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl">
+            <ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+             <li class="breadcrumbs__item">
+              <a aria-label="Home page" class="breadcrumbs__link" href="/">
+               <svg class="breadcrumbHomeIcon_YNFT" viewbox="0 0 24 24">
+                <path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor">
+                </path>
+               </svg>
+              </a>
+             </li>
+             <li class="breadcrumbs__item">
+              <span class="breadcrumbs__link">
+               Wallet API Endpoints
+              </span>
+              <meta content="1" itemprop="position"/>
+             </li>
+             <li class="breadcrumbs__item breadcrumbs__item--active" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+              <span class="breadcrumbs__link" itemprop="name">
+               Addresses
+              </span>
+              <meta content="2" itemprop="position"/>
+             </li>
+            </ul>
+           </nav>
+           <div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo">
+            <button class="clean-btn tocCollapsibleButton_TO0P" type="button">
+             On this page
+            </button>
+           </div>
+           <div class="theme-doc-markdown markdown">
+            <header>
+             <h1>
+              Addresses
+             </h1>
+            </header>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="address-resource">
+             Address Resource
+             <a aria-label="Direct link to Address Resource" class="hash-link" href="#address-resource" title="Direct link to Address Resource">
+              ​
+             </a>
+            </h2>
+            <p>
+             The Address resource represents an address for any
+             <a href="https://help.coinbase.com/en/coinbase/supported-crypto" rel="noopener noreferrer" target="_blank">
+              Coinbase supported asset
+             </a>
+             . An account can have more than one address, but an address can only be associated with one account.
+            </p>
+            <p>
+             To be notified when an address receives a new transactions, you can
+             <a href="/sign-in-with-coinbase/docs/api-notifications">
+              set up an API notification
+             </a>
+             .
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                Parameter
+               </th>
+               <th align="left">
+                Description
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                <code>
+                 id
+                </code>
+                <em>
+                 string
+                </em>
+               </td>
+               <td align="left">
+                Resource ID
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                <code>
+                 address
+                </code>
+                <em>
+                 string
+                </em>
+               </td>
+               <td align="left">
+                Address for any
+                <a href="https://help.coinbase.com/en/coinbase/supported-crypto" rel="noopener noreferrer" target="_blank">
+                 Coinbase supported asset
+                </a>
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                <code>
+                 name
+                </code>
+                <em>
+                 string, optional
+                </em>
+               </td>
+               <td align="left">
+                User defined label for the address
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                <code>
+                 network
+                </code>
+                <em>
+                 string
+                </em>
+               </td>
+               <td align="left">
+                Name of blockchain
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                <code>
+                 created_at
+                </code>
+                <em>
+                 timestamp
+                </em>
+               </td>
+               <td align="left">
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                <code>
+                 updated_at
+                </code>
+                <em>
+                 timestamp
+                </em>
+               </td>
+               <td align="left">
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                <code>
+                 resource
+                </code>
+                <em>
+                 string, constant
+                 <strong>
+                  address
+                 </strong>
+                </em>
+               </td>
+               <td align="left">
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                <code>
+                 resource_path
+                </code>
+                <em>
+                 string
+                </em>
+               </td>
+               <td align="left">
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <blockquote>
+             <p>
+              Example address resource
+             </p>
+            </blockquote>
+            <div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-json codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"id"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"dd3183eb-af1d-5f5d-a90d-cbff946435ff"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"address"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"mswUGcPHp1YnkLCgF1TtoryqSc5E9Q8xFa"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"name"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"One off payment"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"created_at"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"2015-01-31T20:49:02Z"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"updated_at"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"2015-03-31T17:25:29-07:00"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"network"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"bitcoin"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"resource"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"address"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"resource_path"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"/v2/accounts/2bbf394c-193b-5b2a-9155-3b4732659ede/addresses/dd3183eb-af1d-5f5d-a90d-cbff946435ff"</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="list-addresses">
+             List Addresses
+             <a aria-label="Direct link to List Addresses" class="hash-link" href="#list-addresses" title="Direct link to List Addresses">
+              ​
+             </a>
+            </h2>
+            <p>
+             Lists addresses for an account.
+            </p>
+            <div class="theme-admonition theme-admonition-caution alert alert--warning admonition_WoCw">
+             <div class="admonitionHeading_TMsN">
+              <span class="admonitionIcon_Ibzs">
+               <svg viewbox="0 0 16 16">
+                <path d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z" fill-rule="evenodd">
+                </path>
+               </svg>
+              </span>
+              caution
+             </div>
+             <div class="admonitionContent_vXIg">
+              <p>
+               An address can only be associated with one account. See
+               <a href="#create-address">
+                Create Address
+               </a>
+               to create new addresses.
+              </p>
+             </div>
+            </div>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="http-request">
+             HTTP Request
+             <a aria-label="Direct link to HTTP Request" class="hash-link" href="#http-request" title="Direct link to HTTP Request">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              GET https://api.coinbase.com/v2/accounts/:account_id/addresses
+             </code>
+            </p>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="scopes">
+             Scopes
+             <a aria-label="Direct link to Scopes" class="hash-link" href="#scopes" title="Direct link to Scopes">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              <code>
+               wallet:addresses:read
+              </code>
+             </li>
+            </ul>
+            <blockquote>
+             <p>
+              Example request
+             </p>
+            </blockquote>
+            <div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-shell codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token function" style="color:#d73a49">curl</span><span class="token plain"> https://api.coinbase.com/v2/accounts/2bbf394c-193b-5b2a-9155-3b4732659ede/addresses </span><span class="token punctuation" style="color:#393A34">\</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  -H </span><span class="token string" style="color:#e3116c">'Authorization: Bearer abd90df5f27a7b170cd775abf89d632b350b7c1c9d53e08b340cd9832ce52c2c'</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <div class="language-ruby codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-ruby codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">require</span><span class="token plain"> </span><span class="token string-literal string" style="color:#e3116c">'coinbase/wallet'</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">client </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> Coinbase</span><span class="token double-colon punctuation" style="color:#393A34">::</span><span class="token plain">Wallet</span><span class="token double-colon punctuation" style="color:#393A34">::</span><span class="token class-name">Client</span><span class="token punctuation" style="color:#393A34">.</span><span class="token keyword" style="color:#00009f">new</span><span class="token punctuation" style="color:#393A34">(</span><span class="token symbol" style="color:#36acaa">api_key</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain">api key</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token symbol" style="color:#36acaa">api_secret</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain">api secret</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">addresses </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> client</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">addresses</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string-literal string" style="color:#e3116c">'2bbf394c-193b-5b2a-9155-3b4732659ede'</span><span class="token punctuation" style="color:#393A34">)</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-python codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">from</span><span class="token plain"> coinbase</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">wallet</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">client </span><span class="token keyword" style="color:#00009f">import</span><span class="token plain"> Client</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">client </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> Client</span><span class="token punctuation" style="color:#393A34">(</span><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain">api_key</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain">api_secret</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">addresses </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> client</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">get_addresses</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">'2bbf394c-193b-5b2a-9155-3b4732659ede'</span><span class="token punctuation" style="color:#393A34">)</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <div class="language-javascript codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-javascript codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">var</span><span class="token plain"> </span><span class="token maybe-class-name">Client</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">require</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">'coinbase'</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">.</span><span class="token property-access maybe-class-name">Client</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">var</span><span class="token plain"> client </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">new</span><span class="token plain"> </span><span class="token class-name">Client</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">{</span><span class="token string-property property" style="color:#36acaa">'apiKey'</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'API KEY'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                         </span><span class="token string-property property" style="color:#36acaa">'apiSecret'</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'API SECRET'</span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">client</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">getAccount</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">'82de7fcd-db72-5085-8ceb-bee19303080b'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">function</span><span class="token punctuation" style="color:#393A34">(</span><span class="token parameter">err</span><span class="token parameter punctuation" style="color:#393A34">,</span><span class="token parameter"> account</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  account</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">getAddresses</span><span class="token punctuation" style="color:#393A34">(</span><span class="token keyword" style="color:#00009f">function</span><span class="token punctuation" style="color:#393A34">(</span><span class="token parameter">err</span><span class="token parameter punctuation" style="color:#393A34">,</span><span class="token parameter"> addresses</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token console class-name">console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">log</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">addresses</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <blockquote>
+             <p>
+              Example response
+             </p>
+            </blockquote>
+            <div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-json codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"pagination"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"ending_before"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token null keyword" style="color:#00009f">null</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"starting_after"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token null keyword" style="color:#00009f">null</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"limit"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">25</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"order"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"desc"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"previous_uri"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token null keyword" style="color:#00009f">null</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"next_uri"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token null keyword" style="color:#00009f">null</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"data"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">[</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token property" style="color:#36acaa">"id"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"dd3183eb-af1d-5f5d-a90d-cbff946435ff"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token property" style="color:#36acaa">"address"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"mswUGcPHp1YnkLCgF1TtoryqSc5E9Q8xFa"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token property" style="color:#36acaa">"name"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token null keyword" style="color:#00009f">null</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token property" style="color:#36acaa">"created_at"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"2015-01-31T20:49:02Z"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token property" style="color:#36acaa">"updated_at"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"2015-03-31T17:25:29-07:00"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token property" style="color:#36acaa">"network"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"bitcoin"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token property" style="color:#36acaa">"resource"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"address"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token property" style="color:#36acaa">"resource_path"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"/v2/accounts/2bbf394c-193b-5b2a-9155-3b4732659ede/addresses/dd3183eb-af1d-5f5d-a90d-cbff946435ff"</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token property" style="color:#36acaa">"id"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"ac5c5f15-0b1d-54f5-8912-fecbf66c2a64"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token property" style="color:#36acaa">"address"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"mgSvu1z1amUFAPkB4cUg8ujaDxKAfZBt5Q"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token property" style="color:#36acaa">"name"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token null keyword" style="color:#00009f">null</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token property" style="color:#36acaa">"created_at"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"2015-03-31T17:23:52-07:00"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token property" style="color:#36acaa">"updated_at"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"2015-01-31T20:49:02Z"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token property" style="color:#36acaa">"network"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"bitcoin"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token property" style="color:#36acaa">"resource"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"address"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token property" style="color:#36acaa">"resource_path"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"/v2/accounts/2bbf394c-193b-5b2a-9155-3b4732659ede/addresses/ac5c5f15-0b1d-54f5-8912-fecbf66c2a64"</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">]</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="show-address">
+             Show Address
+             <a aria-label="Direct link to Show Address" class="hash-link" href="#show-address" title="Direct link to Show Address">
+              ​
+             </a>
+            </h2>
+            <p>
+             Get an single address for an account. A regular cryptocurrency address can be used in place of
+             <code>
+              address_id
+             </code>
+             but the address must be associated with the correct account.
+            </p>
+            <div class="theme-admonition theme-admonition-caution alert alert--warning admonition_WoCw">
+             <div class="admonitionHeading_TMsN">
+              <span class="admonitionIcon_Ibzs">
+               <svg viewbox="0 0 16 16">
+                <path d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z" fill-rule="evenodd">
+                </path>
+               </svg>
+              </span>
+              caution
+             </div>
+             <div class="admonitionContent_vXIg">
+              <p>
+               An address can only be associated with one account. See
+               <a href="#create-address">
+                Create Address
+               </a>
+               to create new addresses.
+              </p>
+             </div>
+            </div>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="http-request-1">
+             HTTP Request
+             <a aria-label="Direct link to HTTP Request" class="hash-link" href="#http-request-1" title="Direct link to HTTP Request">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              GET https://api.coinbase.com/v2/accounts/:account_id/addresses/:address_id
+             </code>
+            </p>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="scopes-1">
+             Scopes
+             <a aria-label="Direct link to Scopes" class="hash-link" href="#scopes-1" title="Direct link to Scopes">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              <code>
+               wallet:addresses:read
+              </code>
+             </li>
+            </ul>
+            <blockquote>
+             <p>
+              Example request
+             </p>
+            </blockquote>
+            <div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-shell codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token function" style="color:#d73a49">curl</span><span class="token plain"> https://api.coinbase.com/v2/accounts/2bbf394c-193b-5b2a-9155-3b4732659ede/addresses/dd3183eb-af1d-5f5d-a90d-cbff946435ff </span><span class="token punctuation" style="color:#393A34">\</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  -H </span><span class="token string" style="color:#e3116c">'Authorization: Bearer abd90df5f27a7b170cd775abf89d632b350b7c1c9d53e08b340cd9832ce52c2c'</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <div class="language-ruby codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-ruby codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">require</span><span class="token plain"> </span><span class="token string-literal string" style="color:#e3116c">'coinbase/wallet'</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">client </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> Coinbase</span><span class="token double-colon punctuation" style="color:#393A34">::</span><span class="token plain">Wallet</span><span class="token double-colon punctuation" style="color:#393A34">::</span><span class="token class-name">Client</span><span class="token punctuation" style="color:#393A34">.</span><span class="token keyword" style="color:#00009f">new</span><span class="token punctuation" style="color:#393A34">(</span><span class="token symbol" style="color:#36acaa">api_key</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain">api key</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token symbol" style="color:#36acaa">api_secret</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain">api secret</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">address </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> client</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">address</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string-literal string" style="color:#e3116c">'2bbf394c-193b-5b2a-9155-3b4732659ede'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string-literal string" style="color:#e3116c">'dd3183eb-af1d-5f5d-a90d-cbff946435ff'</span><span class="token punctuation" style="color:#393A34">)</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-python codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">from</span><span class="token plain"> coinbase</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">wallet</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">client </span><span class="token keyword" style="color:#00009f">import</span><span class="token plain"> Client</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">client </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> Client</span><span class="token punctuation" style="color:#393A34">(</span><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain">api_key</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain">api_secret</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">address </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> client</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">get_address</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">'2bbf394c-193b-5b2a-9155-3b4732659ede'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'dd3183eb-af1d-5f5d-a90d-cbff946435ff'</span><span class="token punctuation" style="color:#393A34">)</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <div class="language-javascript codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-javascript codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">var</span><span class="token plain"> </span><span class="token maybe-class-name">Client</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">require</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">'coinbase'</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">.</span><span class="token property-access maybe-class-name">Client</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">var</span><span class="token plain"> client </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">new</span><span class="token plain"> </span><span class="token class-name">Client</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">{</span><span class="token string-property property" style="color:#36acaa">'apiKey'</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'API KEY'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                         </span><span class="token string-property property" style="color:#36acaa">'apiSecret'</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'API SECRET'</span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">client</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">getAccount</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">'82de7fcd-db72-5085-8ceb-bee19303080b'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">function</span><span class="token punctuation" style="color:#393A34">(</span><span class="token parameter">err</span><span class="token parameter punctuation" style="color:#393A34">,</span><span class="token parameter"> account</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  account</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">getAddress</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">'dd3183eb-af1d-5f5d-a90d-cbff946435ff'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">function</span><span class="token punctuation" style="color:#393A34">(</span><span class="token parameter">err</span><span class="token parameter punctuation" style="color:#393A34">,</span><span class="token parameter"> address</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token console class-name">console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">log</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">address</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <blockquote>
+             <p>
+              Example response
+             </p>
+            </blockquote>
+            <div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-json codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"data"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"id"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"dd3183eb-af1d-5f5d-a90d-cbff946435ff"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"address"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"mswUGcPHp1YnkLCgF1TtoryqSc5E9Q8xFa"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"name"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token null keyword" style="color:#00009f">null</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"callback_url"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token null keyword" style="color:#00009f">null</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"created_at"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"2015-01-31T20:49:02Z"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"updated_at"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"2015-03-31T17:25:29-07:00"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"network"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"bitcoin"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"resource"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"address"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"resource_path"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"/v2/accounts/2bbf394c-193b-5b2a-9155-3b4732659ede/addresses/dd3183eb-af1d-5f5d-a90d-cbff946435ff/"</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="list-transactions">
+             List Transactions
+             <a aria-label="Direct link to List Transactions" class="hash-link" href="#list-transactions" title="Direct link to List Transactions">
+              ​
+             </a>
+            </h2>
+            <p>
+             List transactions that have been sent to a specific address. A regular cryptocurrency address can be used in place of
+             <code>
+              address_id
+             </code>
+             but the address must be associated with the correct account.
+            </p>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="http-request-2">
+             HTTP Request
+             <a aria-label="Direct link to HTTP Request" class="hash-link" href="#http-request-2" title="Direct link to HTTP Request">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              GET https://api.coinbase.com/v2/accounts/:account_id/addresses/:address_id/transactions
+             </code>
+            </p>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="scopes-2">
+             Scopes
+             <a aria-label="Direct link to Scopes" class="hash-link" href="#scopes-2" title="Direct link to Scopes">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              <code>
+               wallet:transactions:read
+              </code>
+             </li>
+            </ul>
+            <blockquote>
+             <p>
+              Example request
+             </p>
+            </blockquote>
+            <div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-shell codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token function" style="color:#d73a49">curl</span><span class="token plain"> https://api.coinbase.com/v2/accounts/2bbf394c-193b-5b2a-9155-3b4732659ede/addresses/dd3183eb-af1d-5f5d-a90d-cbff946435ff/transactions </span><span class="token punctuation" style="color:#393A34">\</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  -H </span><span class="token string" style="color:#e3116c">'Authorization: Bearer abd90df5f27a7b170cd775abf89d632b350b7c1c9d53e08b340cd9832ce52c2c'</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <div class="language-ruby codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-ruby codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">require</span><span class="token plain"> </span><span class="token string-literal string" style="color:#e3116c">'coinbase/wallet'</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">client </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> Coinbase</span><span class="token double-colon punctuation" style="color:#393A34">::</span><span class="token plain">Wallet</span><span class="token double-colon punctuation" style="color:#393A34">::</span><span class="token class-name">Client</span><span class="token punctuation" style="color:#393A34">.</span><span class="token keyword" style="color:#00009f">new</span><span class="token punctuation" style="color:#393A34">(</span><span class="token symbol" style="color:#36acaa">api_key</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain">api key</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token symbol" style="color:#36acaa">api_secret</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain">api secret</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">txs </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> client</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">address_transactions</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string-literal string" style="color:#e3116c">'2bbf394c-193b-5b2a-9155-3b4732659ede'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string-literal string" style="color:#e3116c">'dd3183eb-af1d-5f5d-a90d-cbff946435ff'</span><span class="token punctuation" style="color:#393A34">)</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-python codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">from</span><span class="token plain"> coinbase</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">wallet</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">client </span><span class="token keyword" style="color:#00009f">import</span><span class="token plain"> Client</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">client </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> Client</span><span class="token punctuation" style="color:#393A34">(</span><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain">api_key</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain">api_secret</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">txs </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> client</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">get_address_transactions</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">'2bbf394c-193b-5b2a-9155-3b4732659ede'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'dd3183eb-af1d-5f5d-a90d-cbff946435ff'</span><span class="token punctuation" style="color:#393A34">)</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <div class="language-javascript codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-javascript codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">var</span><span class="token plain"> </span><span class="token maybe-class-name">Client</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">require</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">'coinbase'</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">.</span><span class="token property-access maybe-class-name">Client</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">var</span><span class="token plain"> client </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">new</span><span class="token plain"> </span><span class="token class-name">Client</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">{</span><span class="token string-property property" style="color:#36acaa">'apiKey'</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'API KEY'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                         </span><span class="token string-property property" style="color:#36acaa">'apiSecret'</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'API SECRET'</span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">client</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">getAccount</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">'82de7fcd-db72-5085-8ceb-bee19303080b'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">function</span><span class="token punctuation" style="color:#393A34">(</span><span class="token parameter">err</span><span class="token parameter punctuation" style="color:#393A34">,</span><span class="token parameter"> account</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  account</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">getAddress</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">'dd3183eb-af1d-5f5d-a90d-cbff946435ff'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">function</span><span class="token punctuation" style="color:#393A34">(</span><span class="token parameter">err</span><span class="token parameter punctuation" style="color:#393A34">,</span><span class="token parameter"> address</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token console class-name">console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">log</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">address</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    address</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">getTransactions</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">{</span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">function</span><span class="token punctuation" style="color:#393A34">(</span><span class="token parameter">err</span><span class="token parameter punctuation" style="color:#393A34">,</span><span class="token parameter"> txs</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token console class-name">console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">log</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">txs</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <blockquote>
+             <p>
+              Example response
+             </p>
+            </blockquote>
+            <div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-json codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"pagination"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"ending_before"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token null keyword" style="color:#00009f">null</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"starting_after"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token null keyword" style="color:#00009f">null</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"limit"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">25</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"order"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"desc"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"previous_uri"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token null keyword" style="color:#00009f">null</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"next_uri"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token null keyword" style="color:#00009f">null</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"data"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">[</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token property" style="color:#36acaa">"id"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"57ffb4ae-0c59-5430-bcd3-3f98f797a66c"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token property" style="color:#36acaa">"type"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"send"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token property" style="color:#36acaa">"status"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"completed"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token property" style="color:#36acaa">"amount"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token property" style="color:#36acaa">"amount"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"0.00100000"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token property" style="color:#36acaa">"currency"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"BTC"</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token property" style="color:#36acaa">"native_amount"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token property" style="color:#36acaa">"amount"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"0.01"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token property" style="color:#36acaa">"currency"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"USD"</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token property" style="color:#36acaa">"description"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token null keyword" style="color:#00009f">null</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token property" style="color:#36acaa">"created_at"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"2015-03-11T13:13:35-07:00"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token property" style="color:#36acaa">"updated_at"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"2015-03-26T15:55:43-07:00"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token property" style="color:#36acaa">"resource"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"transaction"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token property" style="color:#36acaa">"resource_path"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"/v2/accounts/2bbf394c-193b-5b2a-9155-3b4732659ede/transactions/57ffb4ae-0c59-5430-bcd3-3f98f797a66c"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token property" style="color:#36acaa">"network"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token property" style="color:#36acaa">"status"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"off_blockchain"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token property" style="color:#36acaa">"name"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"bitcoin"</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token property" style="color:#36acaa">"from"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token property" style="color:#36acaa">"id"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"a6b4c2df-a62c-5d68-822a-dd4e2102e703"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token property" style="color:#36acaa">"resource"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"user"</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">]</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="create-address">
+             Create Address
+             <a aria-label="Direct link to Create Address" class="hash-link" href="#create-address" title="Direct link to Create Address">
+              ​
+             </a>
+            </h2>
+            <p>
+             Creates a new address for an account. Addresses can be created for wallet account types.
+            </p>
+            <div class="theme-admonition theme-admonition-tip alert alert--success admonition_WoCw">
+             <div class="admonitionHeading_TMsN">
+              <span class="admonitionIcon_Ibzs">
+               <svg viewbox="0 0 12 16">
+                <path d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z" fill-rule="evenodd">
+                </path>
+               </svg>
+              </span>
+              tip
+             </div>
+             <div class="admonitionContent_vXIg">
+              <p>
+               You can create an address with an empty
+               <code>
+                POST
+               </code>
+               request as all arguments are optional. This is handy if you need to create new receive addresses for an account on-demand.
+              </p>
+             </div>
+            </div>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="http-request-3">
+             HTTP Request
+             <a aria-label="Direct link to HTTP Request" class="hash-link" href="#http-request-3" title="Direct link to HTTP Request">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              POST https://api.coinbase.com/v2/accounts/:account_id/addresses
+             </code>
+            </p>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="scopes-3">
+             Scopes
+             <a aria-label="Direct link to Scopes" class="hash-link" href="#scopes-3" title="Direct link to Scopes">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              <code>
+               wallet:addresses:create
+              </code>
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="arguments">
+             Arguments
+             <a aria-label="Direct link to Arguments" class="hash-link" href="#arguments" title="Direct link to Arguments">
+              ​
+             </a>
+            </h3>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                Parameter
+               </th>
+               <th align="left">
+                Type
+               </th>
+               <th align="left">
+                Required
+               </th>
+               <th align="left">
+                Description
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                name
+               </td>
+               <td align="left">
+                string
+               </td>
+               <td align="left">
+                Optional
+               </td>
+               <td align="left">
+                Address label
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <blockquote>
+             <p>
+              Example request
+             </p>
+            </blockquote>
+            <div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-shell codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token function" style="color:#d73a49">curl</span><span class="token plain"> https://api.coinbase.com/v2/accounts/82de7fcd-db72-5085-8ceb-bee19303080b/addresses </span><span class="token punctuation" style="color:#393A34">\</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  -X POST </span><span class="token punctuation" style="color:#393A34">\</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  -H </span><span class="token string" style="color:#e3116c">'Content-Type: application/json'</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">\</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  -H </span><span class="token string" style="color:#e3116c">'Authorization: Bearer abd90df5f27a7b170cd775abf89d632b350b7c1c9d53e08b340cd9832ce52c2c'</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">\</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  -d </span><span class="token string" style="color:#e3116c">'{"name": "New receive address"}'</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <div class="language-ruby codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-ruby codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">require</span><span class="token plain"> </span><span class="token string-literal string" style="color:#e3116c">'coinbase/wallet'</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">client </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> Coinbase</span><span class="token double-colon punctuation" style="color:#393A34">::</span><span class="token plain">Wallet</span><span class="token double-colon punctuation" style="color:#393A34">::</span><span class="token class-name">Client</span><span class="token punctuation" style="color:#393A34">.</span><span class="token keyword" style="color:#00009f">new</span><span class="token punctuation" style="color:#393A34">(</span><span class="token symbol" style="color:#36acaa">api_key</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain">api key</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token symbol" style="color:#36acaa">api_secret</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain">api secret</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">address </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> client</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">create_address</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string-literal string" style="color:#e3116c">'2bbf394c-193b-5b2a-9155-3b4732659ede'</span><span class="token punctuation" style="color:#393A34">)</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-python codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">from</span><span class="token plain"> coinbase</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">wallet</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">client </span><span class="token keyword" style="color:#00009f">import</span><span class="token plain"> Client</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">client </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> Client</span><span class="token punctuation" style="color:#393A34">(</span><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain">api_key</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain">api_secret</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">address </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> client</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">create_address</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">'2bbf394c-193b-5b2a-9155-3b4732659ede'</span><span class="token punctuation" style="color:#393A34">)</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <div class="language-javascript codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-javascript codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">var</span><span class="token plain"> </span><span class="token maybe-class-name">Client</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">require</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">'coinbase'</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">.</span><span class="token property-access maybe-class-name">Client</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">var</span><span class="token plain"> client </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">new</span><span class="token plain"> </span><span class="token class-name">Client</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">{</span><span class="token string-property property" style="color:#36acaa">'apiKey'</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'API KEY'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                         </span><span class="token string-property property" style="color:#36acaa">'apiSecret'</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'API SECRET'</span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">client</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">getAccount</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">'82de7fcd-db72-5085-8ceb-bee19303080b'</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">function</span><span class="token punctuation" style="color:#393A34">(</span><span class="token parameter">err</span><span class="token parameter punctuation" style="color:#393A34">,</span><span class="token parameter"> account</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  account</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">createAddress</span><span class="token punctuation" style="color:#393A34">(</span><span class="token keyword null nil" style="color:#00009f">null</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">function</span><span class="token punctuation" style="color:#393A34">(</span><span class="token parameter">err</span><span class="token parameter punctuation" style="color:#393A34">,</span><span class="token parameter"> address</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token console class-name">console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">log</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">address</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <blockquote>
+             <p>
+              Response (201)
+             </p>
+            </blockquote>
+            <div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-json codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"data"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"id"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"dd3183eb-af1d-5f5d-a90d-cbff946435ff"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"address"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"mswUGcPHp1YnkLCgF1TtoryqSc5E9Q8xFa"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"name"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"New receive address"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"created_at"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"2015-01-31T20:49:02Z"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"updated_at"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"2015-03-31T17:25:29-07:00"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"network"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"bitcoin"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"resource"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"address"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">"resource_path"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"/v2/accounts/2bbf394c-193b-5b2a-9155-3b4732659ede/addresses/dd3183eb-af1d-5f5d-a90d-cbff946435ff"</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+           </div>
+           <footer class="theme-doc-footer docusaurus-mt-lg">
+            <div class="theme-doc-footer-edit-meta-row row">
+             <div class="col">
+             </div>
+             <div class="col lastUpdated_vwxv">
+             </div>
+            </div>
+           </footer>
+           <div class="thumbnailRating_V63g hide-on-print">
+            <p>
+             Was this helpful?
+            </p>
+            <div class="buttonGroup_vjMq">
+             <style data-emotion="css 1wf493t">
+              .css-1wf493t{text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1wf493t:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1wf493t:hover{background-color:transparent;}}.css-1wf493t.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+             </style>
+             <style data-emotion="css 1yxmbwk">
+              .css-1yxmbwk{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1yxmbwk::-moz-focus-inner{border-style:none;}.css-1yxmbwk.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-1yxmbwk{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-1yxmbwk:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1yxmbwk:hover{background-color:transparent;}}.css-1yxmbwk.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+             </style>
+             <button aria-label="Helpful" class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1yxmbwk" tabindex="0" type="button">
+              <style data-emotion="css vubbuv">
+               .css-vubbuv{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
+              </style>
+              <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" data-testid="ThumbUpOffAltIcon" focusable="false" viewbox="0 0 24 24">
+               <path d="m13.11 5.72-.57 2.89c-.12.59.04 1.2.42 1.66.38.46.94.73 1.54.73H20v1.08L17.43 18H9.34c-.18 0-.34-.16-.34-.34V9.82l4.11-4.1M14 2 7.59 8.41C7.21 8.79 7 9.3 7 9.83v7.83C7 18.95 8.05 20 9.34 20h8.1c.71 0 1.36-.37 1.72-.97l2.67-6.15c.11-.25.17-.52.17-.8V11c0-1.1-.9-2-2-2h-5.5l.92-4.65c.05-.22.02-.46-.08-.66-.23-.45-.52-.86-.88-1.22L14 2zM4 9H2v11h2c.55 0 1-.45 1-1v-9c0-.55-.45-1-1-1z">
+               </path>
+              </svg>
+             </button>
+             <style data-emotion="css 1e2dcm1">
+              .css-1e2dcm1{z-index:1500;pointer-events:none;}
+             </style>
+             <style data-emotion="css okvapm">
+              .css-okvapm{z-index:1500;pointer-events:none;}
+             </style>
+             <style data-emotion="css 1wf493t">
+              .css-1wf493t{text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1wf493t:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1wf493t:hover{background-color:transparent;}}.css-1wf493t.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+             </style>
+             <style data-emotion="css 1yxmbwk">
+              .css-1yxmbwk{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1yxmbwk::-moz-focus-inner{border-style:none;}.css-1yxmbwk.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-1yxmbwk{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-1yxmbwk:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1yxmbwk:hover{background-color:transparent;}}.css-1yxmbwk.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+             </style>
+             <button aria-label="Not helpful" class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1yxmbwk" tabindex="0" type="button">
+              <style data-emotion="css vubbuv">
+               .css-vubbuv{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
+              </style>
+              <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" data-testid="ThumbDownOffAltIcon" focusable="false" viewbox="0 0 24 24">
+               <path d="m10.89 18.28.57-2.89c.12-.59-.04-1.2-.42-1.66-.38-.46-.94-.73-1.54-.73H4v-1.08L6.57 6h8.09c.18 0 .34.16.34.34v7.84l-4.11 4.1M10 22l6.41-6.41c.38-.38.59-.89.59-1.42V6.34C17 5.05 15.95 4 14.66 4h-8.1c-.71 0-1.36.37-1.72.97l-2.67 6.15c-.11.25-.17.52-.17.8V13c0 1.1.9 2 2 2h5.5l-.92 4.65c-.05.22-.02.46.08.66.23.45.52.86.88 1.22L10 22zm10-7h2V4h-2c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1z">
+               </path>
+              </svg>
+             </button>
+             <style data-emotion="css 1e2dcm1">
+              .css-1e2dcm1{z-index:1500;pointer-events:none;}
+             </style>
+             <style data-emotion="css okvapm">
+              .css-okvapm{z-index:1500;pointer-events:none;}
+             </style>
+            </div>
+           </div>
+           <style data-emotion="css 1k371a6">
+            @media print{.css-1k371a6{position:absolute!important;}}
+           </style>
+          </article>
+          <nav aria-label="Docs pages navigation" class="pagination-nav docusaurus-mt-lg">
+           <a class="pagination-nav__link pagination-nav__link--prev" href="/sign-in-with-coinbase/docs/api-accounts">
+            <div class="pagination-nav__sublabel">
+             Previous
+            </div>
+            <div class="pagination-nav__label">
+             Accounts
+            </div>
+           </a>
+           <a class="pagination-nav__link pagination-nav__link--next" href="/sign-in-with-coinbase/docs/api-transactions">
+            <div class="pagination-nav__sublabel">
+             Next
+            </div>
+            <div class="pagination-nav__label">
+             Transactions
+            </div>
+           </a>
+          </nav>
+         </div>
+        </div>
+        <div class="col col--3">
+         <div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop">
+          <ul class="table-of-contents table-of-contents__left-border">
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#address-resource">
+             Address Resource
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#list-addresses">
+             List Addresses
+            </a>
+            <ul>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#http-request">
+               HTTP Request
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#scopes">
+               Scopes
+              </a>
+             </li>
+            </ul>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#show-address">
+             Show Address
+            </a>
+            <ul>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#http-request-1">
+               HTTP Request
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#scopes-1">
+               Scopes
+              </a>
+             </li>
+            </ul>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#list-transactions">
+             List Transactions
+            </a>
+            <ul>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#http-request-2">
+               HTTP Request
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#scopes-2">
+               Scopes
+              </a>
+             </li>
+            </ul>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#create-address">
+             Create Address
+            </a>
+            <ul>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#http-request-3">
+               HTTP Request
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#scopes-3">
+               Scopes
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#arguments">
+               Arguments
+              </a>
+             </li>
+            </ul>
+           </li>
+          </ul>
+         </div>
+        </div>
+       </div>
+      </div>
+     </main>
+    </div>
+   </div>
+   <footer class="footer">
+    <div class="container container-fluid">
+     <ul>
+      <li>
+       <div class="footer__copyright">
+        © 2023 Coinbase
+       </div>
+      </li>
+      <li>
+       <a class="footer__link-item" href="https://www.coinbase.com/legal/privacy" rel="noopener noreferrer" target="_blank">
+        Privacy
+        <svg aria-hidden="true" class="iconExternalLink_nPIU" height="13.5" viewbox="0 0 24 24" width="13.5">
+         <path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z" fill="currentColor">
+         </path>
+        </svg>
+       </a>
+      </li>
+     </ul>
+    </div>
+   </footer>
+  </div>
+  <script src="/assets/js/runtime~main.91f0d63d.js">
+  </script>
+  <script src="/assets/js/main.440d9293.js">
+  </script>
+ </body>
+</html>

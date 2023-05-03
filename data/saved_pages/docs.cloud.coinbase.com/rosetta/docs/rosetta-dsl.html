@@ -1,0 +1,1676 @@
+<!DOCTYPE html>
+<html class="docs-wrapper docs-doc-page docs-version-current plugin-docs plugin-id-rosetta docs-doc-id-docs/rosetta-dsl-file" dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="Docusaurus v2.3.1" name="generator"/>
+  <title data-rh="true">
+   How to Write a Rosetta DSL file | Coinbase Cloud
+  </title>
+  <meta content="width=device-width,initial-scale=1" data-rh="true" name="viewport"/>
+  <meta content="summary_large_image" data-rh="true" name="twitter:card"/>
+  <meta content="https://docs.cloud.coinbase.com/rosetta/docs/rosetta-dsl" data-rh="true" property="og:url"/>
+  <meta content="en" data-rh="true" name="docusaurus_locale"/>
+  <meta content="en" data-rh="true" name="docsearch:language"/>
+  <meta content="current" data-rh="true" name="docusaurus_version"/>
+  <meta content="docs-rosetta-current" data-rh="true" name="docusaurus_tag"/>
+  <meta content="current" data-rh="true" name="docsearch:version"/>
+  <meta content="docs-rosetta-current" data-rh="true" name="docsearch:docusaurus_tag"/>
+  <meta content="How to Write a Rosetta DSL file | Coinbase Cloud" data-rh="true" property="og:title"/>
+  <meta content="Overview" data-rh="true" name="description"/>
+  <meta content="Overview" data-rh="true" property="og:description"/>
+  <link data-rh="true" href="/img/favicon.png" rel="icon"/>
+  <link data-rh="true" href="https://docs.cloud.coinbase.com/rosetta/docs/rosetta-dsl" rel="canonical"/>
+  <link data-rh="true" href="https://docs.cloud.coinbase.com/rosetta/docs/rosetta-dsl" hreflang="en" rel="alternate"/>
+  <link data-rh="true" href="https://docs.cloud.coinbase.com/rosetta/docs/rosetta-dsl" hreflang="x-default" rel="alternate"/>
+  <link crossorigin="anonymous" data-rh="true" href="https://BPPU41WTIR-dsn.algolia.net" rel="preconnect"/>
+  <link href="https://www.google-analytics.com" rel="preconnect"/>
+  <link href="https://www.googletagmanager.com" rel="preconnect"/>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-1X60WF4D7F">
+  </script>
+  <script>
+   function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-1X60WF4D7F",{anonymize_ip:!0})
+  </script>
+  <link href="/opensearch.xml" rel="search" title="Coinbase Cloud" type="application/opensearchdescription+xml"/>
+  <link href="/assets/css/styles.22f44638.css" rel="stylesheet"/>
+  <link as="script" href="/assets/js/runtime~main.91f0d63d.js" rel="preload"/>
+  <link as="script" href="/assets/js/main.440d9293.js" rel="preload"/>
+ </head>
+ <body class="navigation-with-keyboard">
+  <script>
+   !function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}()
+  </script>
+  <div id="__docusaurus">
+   <div aria-label="Skip to main content" role="region">
+    <a class="skipToContent_fXgn" href="#docusaurus_skipToContent_fallback">
+     Skip to main content
+    </a>
+   </div>
+   <nav aria-label="Main" class="navbar navbar--fixed-top">
+    <div class="navbar__container_rqDs">
+     <div class="navbar__inner">
+      <div class="navbar__items">
+       <button aria-expanded="false" aria-label="Toggle navigation bar" class="navbar__toggle clean-btn" type="button">
+        <svg aria-hidden="true" height="30" viewbox="0 0 30 30" width="30">
+         <path d="M4 7h22M4 15h22M4 23h22" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2">
+         </path>
+        </svg>
+       </button>
+       <a class="navbar__brand" href="/">
+        <div class="navbar__logo">
+         <img alt="Coinbase Pay" class="themedImage_ToTc themedImage--light_HNdA" src="/img/logo.svg"/>
+         <img alt="Coinbase Pay" class="themedImage_ToTc themedImage--dark_i4oU" src="/img/logo.svg"/>
+        </div>
+       </a>
+       <a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/">
+        Documentation
+       </a>
+      </div>
+      <div class="navbar__items navbar__items--right">
+       <div class="searchBox_ZlJk">
+        <button aria-label="Search" class="DocSearch DocSearch-Button" type="button">
+         <span class="DocSearch-Button-Container">
+          <svg class="DocSearch-Search-Icon" height="20" viewbox="0 0 20 20" width="20">
+           <path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+           </path>
+          </svg>
+          <span class="DocSearch-Button-Placeholder">
+           Search
+          </span>
+         </span>
+         <span class="DocSearch-Button-Keys">
+         </span>
+        </button>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="menubar_iWH4">
+     <div class="menubar__inner_eCwJ">
+      <div class="navbar__item dropdown dropdown--hoverable">
+       <a aria-expanded="false" aria-haspopup="true" class="navbar__link" href="#" role="button">
+        Rosetta
+       </a>
+       <ul class="dropdown__menu">
+        <li>
+         <a class="dropdown__link" href="/advanced-trade-api/docs/welcome">
+          Advanced Trade API
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/blockchain-infrastructure/docs/welcome">
+          Blockchain Infrastructure
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/pay-sdk/docs/intro">
+          Coinbase Pay
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/wallet-sdk/docs/welcome">
+          Coinbase Wallet
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/commerce/docs/welcome">
+          Commerce API
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/delegation/docs/about-cloud-staking">
+          Delegation Guides
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/exchange/docs/welcome">
+          Exchange/Pro
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/kyt/reference/introduction">
+          KYT
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/prime/docs/introduction">
+          Prime
+         </a>
+        </li>
+        <li>
+         <a aria-current="page" class="dropdown__link dropdown__link--active" href="/rosetta/docs/welcome">
+          Rosetta
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/sign-in-with-coinbase/docs/welcome">
+          Sign in with Coinbase
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/waas/docs/welcome">
+          Wallet as a Service
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="navbar__item dropdown dropdown--hoverable">
+       <a aria-expanded="false" aria-haspopup="true" class="navbar__link" href="#" role="button">
+        Guides
+       </a>
+       <ul class="dropdown__menu">
+        <li>
+         <a aria-current="page" class="dropdown__link dropdown__link--active" href="/rosetta/docs/welcome">
+          Guides
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/rosetta/reference">
+          API Reference
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="menubarItems_end_INfc">
+       <a class="menubarBtn_Xh25" href="https://forums.coinbasecloud.dev">
+        Discuss in the Forum
+       </a>
+       <a class="menubarBtn_Xh25" href="https://help.coinbase.com/en/contact-us?product=coinbase-cloud">
+        Need Support?
+       </a>
+       <button class="menubarBtn_Xh25">
+        <svg class="icon_HrvF" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+         <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z">
+         </path>
+        </svg>
+        Search
+       </button>
+       <div class="searchToggleShortcut_VFcV">
+        ⌘K
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="navbar-sidebar__backdrop" role="presentation">
+    </div>
+   </nav>
+   <div class="main-wrapper mainWrapper_z2l0 docsWrapper_BCFX" id="docusaurus_skipToContent_fallback">
+    <button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button">
+    </button>
+    <div class="docPage__5DB">
+     <aside class="theme-doc-sidebar-container docSidebarContainer_b6E3">
+      <div class="sidebarViewport_Xe31">
+       <div class="sidebar_njMd">
+        <nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG">
+         <ul class="theme-doc-sidebar-menu menu__list">
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Product Overview
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/welcome" tabindex="0">
+              Welcome
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/flow-of-operations" tabindex="0">
+              Flow of operations
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/contributing" tabindex="0">
+              Contributing
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/principles" tabindex="0">
+              Principles
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/automated-deployment-and-testing" tabindex="0">
+              Automated deployment and testing
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/versioning" tabindex="0">
+              Versioning
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Getting Started
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/getting-started" tabindex="0">
+              Getting Started
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/configuration-file" tabindex="0">
+              How to Write a Configuration File for rosetta-cli Testing
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Rosetta API Spec
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/full-reference" tabindex="0">
+              Full Reference
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed">
+             <div class="menu__list-item-collapsible">
+              <a aria-expanded="false" class="menu__link menu__link--sublist menu__link--sublist-caret" href="/rosetta/docs/identifiers" tabindex="0">
+               Models
+              </a>
+             </div>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/data-api-overview" tabindex="0">
+              Data API Overview
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/construction-api-overview" tabindex="0">
+              Construction API Overview
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/indexers" tabindex="0">
+              Indexers
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Coinbase Listing Integrations
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/faqs" tabindex="0">
+              Frequently Asked Questions
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Samples
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/implementation-samples" tabindex="0">
+              Implementation Samples
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/code-samples" tabindex="0">
+              Code Samples for the Rosetta API Configuration File
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/destination-tag-support" tabindex="0">
+              Destination Tag Examples
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/erc20-token-support" tabindex="0">
+              ERC20 Token Support Example
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link menu__link--active">
+             Testing
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/rosetta-cli" tabindex="0">
+              The rosetta-cli Tool
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/rosetta-test" tabindex="0">
+              How to Test your Rosetta Implementation
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a aria-current="page" class="menu__link menu__link--active" href="/rosetta/docs/rosetta-dsl" tabindex="0">
+              How to Write a Rosetta DSL file
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/complex-checks" tabindex="0">
+              How to Disable Complex Checks
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Best Practices
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/docker-deployment" tabindex="0">
+              Docker Deployment
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/standard-storage-location" tabindex="0">
+              Standard storage location
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/storage-pruning" tabindex="0">
+              Storage pruning
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/implement-all-endpoints" tabindex="0">
+              Implement all endpoints
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/balance-changing-operation-support" tabindex="0">
+              Balance-changing operation support
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/fetchable-balances-for-accounts-and-currencies" tabindex="0">
+              Fetchable balances for accounts and currencies
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/continuously-validate-correctness" tabindex="0">
+              Continuously validate correctness
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/common-mistakes" tabindex="0">
+              Common mistakes
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Repositories
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/rosetta-specifications" tabindex="0">
+              rosetta-specifications
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/rosetta-sdk-go" tabindex="0">
+              rosetta-sdk-go
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Support
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link menuExternalLink_NmtK" href="https://forums.coinbasecloud.dev/" rel="noopener noreferrer" tabindex="0" target="_blank">
+              Coinbase Cloud Forum
+              <svg aria-hidden="true" class="iconExternalLink_nPIU" height="13.5" viewbox="0 0 24 24" width="13.5">
+               <path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z" fill="currentColor">
+               </path>
+              </svg>
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link menuExternalLink_NmtK" href="https://help.coinbase.com/en/contact-us?product=coinbase-cloud" rel="noopener noreferrer" tabindex="0" target="_blank">
+              Coinbase Cloud Help Center
+              <svg aria-hidden="true" class="iconExternalLink_nPIU" height="13.5" viewbox="0 0 24 24" width="13.5">
+               <path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z" fill="currentColor">
+               </path>
+              </svg>
+             </a>
+            </li>
+           </ul>
+          </li>
+         </ul>
+        </nav>
+       </div>
+      </div>
+     </aside>
+     <main class="docMainContainer_gTbr">
+      <div class="container padding-top--md padding-bottom--lg">
+       <div class="row">
+        <div class="col docItemCol_z5aJ">
+         <div class="docItemContainer_c0TR">
+          <article>
+           <nav aria-label="Breadcrumbs" class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl">
+            <ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+             <li class="breadcrumbs__item">
+              <a aria-label="Home page" class="breadcrumbs__link" href="/">
+               <svg class="breadcrumbHomeIcon_YNFT" viewbox="0 0 24 24">
+                <path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor">
+                </path>
+               </svg>
+              </a>
+             </li>
+             <li class="breadcrumbs__item">
+              <span class="breadcrumbs__link">
+               Testing
+              </span>
+              <meta content="1" itemprop="position"/>
+             </li>
+             <li class="breadcrumbs__item breadcrumbs__item--active" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+              <span class="breadcrumbs__link" itemprop="name">
+               How to Write a Rosetta DSL file
+              </span>
+              <meta content="2" itemprop="position"/>
+             </li>
+            </ul>
+           </nav>
+           <div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo">
+            <button class="clean-btn tocCollapsibleButton_TO0P" type="button">
+             On this page
+            </button>
+           </div>
+           <div class="theme-doc-markdown markdown">
+            <header>
+             <h1>
+              How to Write a Rosetta DSL file
+             </h1>
+            </header>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="overview">
+             Overview
+             <a aria-label="Direct link to Overview" class="hash-link" href="#overview" title="Direct link to Overview">
+              ​
+             </a>
+            </h2>
+            <p>
+             When writing
+             <code>
+              check:construction
+             </code>
+             tests to test with
+             <a href="/rosetta/docs/rosetta-cli">
+              the
+              <code>
+               rosetta-cli
+              </code>
+              tool
+             </a>
+             , it’s best to write them in the Rosetta Constructor Domain-Specific Language (DSL).
+            </p>
+            <p>
+             The Rosetta DSL allows you to to write Workflows for the
+             <a href="https://github.com/coinbase/rosetta-sdk-go/tree/master/constructor" rel="noopener noreferrer" target="_blank">
+              <code>
+               constructor
+              </code>
+              package
+             </a>
+             .
+            </p>
+            <p>
+             This DSL is most commonly used for writing
+             <code>
+              check:construction
+             </code>
+             tests for the
+             <code>
+              rosetta-cli
+             </code>
+             tool. The Rosetta DSL filename's extension is
+             <code>
+              .ros
+             </code>
+             .
+            </p>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="prerequisites">
+             Prerequisites
+             <a aria-label="Direct link to Prerequisites" class="hash-link" href="#prerequisites" title="Direct link to Prerequisites">
+              ​
+             </a>
+            </h2>
+            <ul>
+             <li>
+              The Rosetta DSL file is a prerequisite to write a configuration file for
+              <a href="/rosetta/docs/rosetta-cli">
+               the
+               <code>
+                rosetta-cli
+               </code>
+               tool
+              </a>
+              ’s
+              <code>
+               check:construction
+              </code>
+              test. For more information, read our
+              <a href="/rosetta/docs/configuration-file">
+               How to Write a Configuration File for rosetta-cli Testing
+              </a>
+              documentation.
+             </li>
+             <li>
+              We recommend that you write your Rosetta DSL file as you write your Rosetta API configuration file.
+             </li>
+             <li>
+              Use Rosetta-supported
+              <a href="/rosetta/docs/identifiers#curvetype">
+               curve types
+              </a>
+              . The
+              <code>
+               create_account
+              </code>
+              and
+              <code>
+               transfer
+              </code>
+              workflows include this value. Using any other curve types will cause test failures with the
+              <code>
+               rosetta-cli
+              </code>
+              tool.
+             </li>
+             <li>
+              The
+              <a href="#request-funds">
+               <code>
+                request_funds
+               </code>
+              </a>
+              workflow requires the use of an account with test funds. You can provide that with a pre-funded account or with a URL to an account with test funds. See the
+              <a href="#account-funding">
+               Account Funding
+              </a>
+              section for more information.
+             </li>
+            </ul>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="terminology">
+             Terminology
+             <a aria-label="Direct link to Terminology" class="hash-link" href="#terminology" title="Direct link to Terminology">
+              ​
+             </a>
+            </h2>
+            <p>
+             The
+             <code>
+              rosetta-cli
+             </code>
+             tool's
+             <code>
+              check:construction
+             </code>
+             test uses the following hierarchy of concerns:
+            </p>
+            <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-text codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Workflows -&gt; Jobs</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  Scenarios</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    Actions</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <p>
+             Workflows contain collections of Scenarios to execute. Scenarios are executed atomically in database transactions (rolled back if execution fails) and culminate in an optional broadcast. This means that a single Workflow could contain multiple broadcasts (which can be useful for orchestrating staking-related transactions that affect a single account).
+            </p>
+            <p>
+             To perform a Workflow, you create a Job. The Job has a unique identifier and stores the state for all Scenarios in the Workflow. The state is shared across an entire Job so that Actions in a Scenario can access the output of Actions in other Scenarios. The syntax for accessing this shared state is called
+             <a href="https://github.com/tidwall/gjson/blob/master/SYNTAX.md" rel="noopener noreferrer" target="_blank">
+              GJSON Path
+             </a>
+             .
+            </p>
+            <p>
+             Actions are discrete operations that can be performed in the context of a Scenario. You can find a full list of all the Actions that can be performed in the Rosetta SDK's
+             <a href="https://pkg.go.dev/github.com/coinbase/rosetta-sdk-go/constructor/job#ActionType" rel="noopener noreferrer" target="_blank">
+              ActionType
+             </a>
+             package.
+            </p>
+            <p>
+             If you have suggestions to add more actions, you can
+             <a href="https://github.com/coinbase/rosetta-sdk-go/issues" rel="noopener noreferrer" target="_blank">
+              open an issue
+             </a>
+             in the
+             <code>
+              rosetta-sdk-go
+             </code>
+             repository.
+            </p>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="syntax">
+             Syntax
+             <a aria-label="Direct link to Syntax" class="hash-link" href="#syntax" title="Direct link to Syntax">
+              ​
+             </a>
+            </h2>
+            <p>
+             When broken down into simple elements, the Rosetta DSL syntax looks like the following example:
+            </p>
+            <div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-text codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">// line comment</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">&lt;workflow name&gt;(&lt;concurrency&gt;){</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  &lt;scenario 1 name&gt;{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;output path&gt; = &lt;action type&gt;(&lt;input&gt;); // another comment</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  &lt;scenario 2 name&gt;{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;output path 2&gt; = &lt;action type&gt;(&lt;input&gt;);</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  }                    </span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="elements">
+             Elements
+             <a aria-label="Direct link to Elements" class="hash-link" href="#elements" title="Direct link to Elements">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              <code>
+               line comment
+              </code>
+              - Follows the JavaScript single-line comment notation of two slashes (
+              <code>
+               //
+              </code>
+              ) at the start of a line or at the end of a line of code.
+             </li>
+             <li>
+              <code>
+               workflow name
+              </code>
+              - Your name for the workflow. For example,
+              <code>
+               create_account
+              </code>
+              .
+              <ul>
+               <li>
+                Each workflow must have a unique name; no two workflows can have the same name.
+               </li>
+              </ul>
+             </li>
+             <li>
+              <code>
+               concurrency
+              </code>
+              - The order in which you want the workflow to run. You must provide a
+              <code>
+               concurrency
+              </code>
+              value when you define a workflow.
+             </li>
+             <li>
+              <code>
+               scenario name
+              </code>
+              - Your name for the scenarios you’d like to add to the workflow.
+              <ul>
+               <li>
+                You can add one or more scenarios to a workflow. They must be separated by a comma.
+               </li>
+               <li>
+                You must define the scenarios within a workflow.
+               </li>
+               <li>
+                As with the workflow name, each scenario name must be unique. No two scenarios inside the same workflow can have the same name.
+               </li>
+              </ul>
+             </li>
+             <li>
+              <code>
+               output path
+              </code>
+              - This variable stores the results of a scenario for later use.
+             </li>
+             <li>
+              <code>
+               action type
+              </code>
+              - The reason why you want to run this scenario.
+             </li>
+             <li>
+              <code>
+               input
+              </code>
+              - The input for all functions is a JSON blob that will be evaluated by the
+              <code>
+               Worker
+              </code>
+              .
+              <ul>
+               <li>
+                It is possible to reference other variables in an input using the syntax
+                <code>
+                 {{var}}
+                </code>
+                where
+                <code>
+                 var
+                </code>
+                must follow the
+                <a href="https://github.com/tidwall/gjson/blob/master/SYNTAX.md" rel="noopener noreferrer" target="_blank">
+                 GJSON syntax
+                </a>
+                . The Rosetta DSL compiler will automatically check that referenced variables are previously defined.
+               </li>
+              </ul>
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="account-funding">
+             Account Funding
+             <a aria-label="Direct link to Account Funding" class="hash-link" href="#account-funding" title="Direct link to Account Funding">
+              ​
+             </a>
+            </h3>
+            <p>
+             If you plan to run the
+             <code>
+              check:construction
+             </code>
+             test in continuous integration (CI), we recommend that you provide a value for
+             <a href="https://pkg.go.dev/github.com/coinbase/rosetta-cli/configuration#ConstructionConfiguration" rel="noopener noreferrer" target="_blank">
+              <code>
+               prefunded accounts
+              </code>
+             </a>
+             when running the test. Otherwise, you would need to manually fund generated accounts.
+            </p>
+            <p>
+             Optionally, you can also provide a
+             <code>
+              return_funds
+             </code>
+             workflow that will be invoked when exiting
+             <code>
+              check:construction
+             </code>
+             . This can be useful in CI when you want to return all funds to a single account or faucet (instead of black-holing them in all the addresses created during testing).
+            </p>
+            <p>
+             To use the
+             <code>
+              check:construction
+             </code>
+             test without prefunded accounts, you must implement two
+             <strong>
+              required
+             </strong>
+             Workflows:
+            </p>
+            <ul>
+             <li>
+              <a href="#create-an-account">
+               <code>
+                create_account
+               </code>
+              </a>
+             </li>
+             <li>
+              <a href="#request-funds">
+               <code>
+                request_funds
+               </code>
+              </a>
+             </li>
+            </ul>
+            <blockquote>
+             <ul>
+              <li>
+               If you don't implement these Workflows, processing could stall.
+              </li>
+              <li>
+               Please note that
+               <code>
+                create_account
+               </code>
+               can contain a transaction broadcast if on-chain origination is required for new accounts on your blockchain.
+              </li>
+             </ul>
+            </blockquote>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="broadcast-invocation">
+             Broadcast Invocation
+             <a aria-label="Direct link to Broadcast Invocation" class="hash-link" href="#broadcast-invocation" title="Direct link to Broadcast Invocation">
+              ​
+             </a>
+            </h3>
+            <p>
+             If you'd like to broadcast a transaction at the end of a Scenario, you must populate the following fields:
+            </p>
+            <ul>
+             <li>
+              <code>
+               &lt;scenario&gt;.network
+              </code>
+             </li>
+             <li>
+              <code>
+               &lt;scenario&gt;.operations
+              </code>
+             </li>
+             <li>
+              <code>
+               &lt;scenario&gt;.confirmation_depth
+              </code>
+              (allows for stake-related transactions to complete before marking as a success)
+             </li>
+            </ul>
+            <p>
+             Optionally, you can populate the
+             <code>
+              &lt;scenario&gt;.preprocess_metadata
+             </code>
+             field.
+            </p>
+            <p>
+             Once a transaction is confirmed on-chain (after the provided
+             <code>
+              &lt;scenario&gt;.confirmation_depth
+             </code>
+             ),
+             <code>
+              check:construction
+             </code>
+             stores it at
+             <code>
+              &lt;scenario&gt;.transaction
+             </code>
+             for access by other Scenarios in the same Job.
+            </p>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="dry-runs">
+             Dry Runs
+             <a aria-label="Direct link to Dry Runs" class="hash-link" href="#dry-runs" title="Direct link to Dry Runs">
+              ​
+             </a>
+            </h3>
+            <p>
+             In UTXO-based blockchains, it may be necessary to amend the
+             <code>
+              operations
+             </code>
+             stored in
+             <code>
+              &lt;scenario&gt;.operations
+             </code>
+             based on the
+             <code>
+              suggested_fee
+             </code>
+             returned in
+             <code>
+              /construction/metadata
+             </code>
+             . The
+             <code>
+              check:construction
+             </code>
+             test supports running a dry run of a transaction broadcast if you set the
+             <code>
+              &lt;scenario&gt;.dry_run
+             </code>
+             field to
+             <code>
+              true
+             </code>
+             . The suggested fee will then be stored as
+             <code>
+              &lt;scenario&gt;.suggested_fee
+             </code>
+             for use by other Scenarios in the same Job. You can find an example of this in the Bitcoin
+             <a href="https://github.com/coinbase/rosetta-cli/blob/v0.4.0/examples/configuration/bitcoin.json" rel="noopener noreferrer" target="_blank">
+              config
+             </a>
+             ).
+            </p>
+            <blockquote>
+             <p>
+              If you do not populate this field or set it to
+              <code>
+               false
+              </code>
+              , the transaction will be constructed, signed, and broadcast.
+             </p>
+            </blockquote>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="functions">
+             Functions
+             <a aria-label="Direct link to Functions" class="hash-link" href="#functions" title="Direct link to Functions">
+              ​
+             </a>
+            </h3>
+            <p>
+             In the Rosetta DSL, it is possible to invoke functions, where the function name is written as an action type (
+             <code>
+              Action.Type
+             </code>
+             ).
+            </p>
+            <ul>
+             <li>
+              The Rosetta DSL provides optional "native invocation" support for the
+              <code>
+               math
+              </code>
+              and
+              <code>
+               set_variable
+              </code>
+              action types. Read the
+              <a href="#native-invocation">
+               Native Invocation
+              </a>
+              section below for details.
+             </li>
+             <li>
+              Function invocations can span multiple lines (if you "pretty print" the JSON blob). However, each function call line must end with a semicolon (
+              <code>
+               ;
+              </code>
+              ).
+             </li>
+             <li>
+              Currently, it is not possible to define your own functions. The
+              <code>
+               types.go
+              </code>
+              file lists all the available functions.
+             </li>
+            </ul>
+            <h4 class="anchor anchorWithStickyNavbar_LWe7" id="recursive-calls">
+             Recursive Calls
+             <a aria-label="Direct link to Recursive Calls" class="hash-link" href="#recursive-calls" title="Direct link to Recursive Calls">
+              ​
+             </a>
+            </h4>
+            <p>
+             It is not possible to invoke a function from the input of another function. There MUST be exactly one function call per line. For example, this syntax is not allowed:
+            </p>
+            <div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-text codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">a = 1 + load_env("value");</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <p>
+             Adding this incorrect syntax to your code will produce errors.
+            </p>
+            <h4 class="anchor anchorWithStickyNavbar_LWe7" id="native-invocation">
+             Native Invocation
+             <a aria-label="Direct link to Native Invocation" class="hash-link" href="#native-invocation" title="Direct link to Native Invocation">
+              ​
+             </a>
+            </h4>
+            <p>
+             The Rosetta DSL provides optional "native invocation" support for the
+             <code>
+              math
+             </code>
+             and
+             <code>
+              set_variable
+             </code>
+             action types. "Native invocation" in this case means that the caller does not need to invoke the action type in the normal format:
+            </p>
+            <div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-text codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">&lt;output path&gt; = &lt;function name&gt;(&lt;input&gt;);</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h5 class="anchor anchorWithStickyNavbar_LWe7" id="math">
+             math
+             <a aria-label="Direct link to math" class="hash-link" href="#math" title="Direct link to math">
+              ​
+             </a>
+            </h5>
+            <p>
+             You can invoke
+             <code>
+              math
+             </code>
+             with the following syntax:
+            </p>
+            <div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-text codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">&lt;output path&gt; = &lt;left side&gt; &lt;operator&gt; &lt;right side&gt;;</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <p>
+             A native invocation of a simple addition would look like the following code:
+            </p>
+            <div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-text codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">a = 10 + {{fee}};</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <p>
+             The normal invocation would look like the following code:
+            </p>
+            <div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-text codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">a = math({"operation":"addition","left_side":"10","right_side":{{fee}}});</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h5 class="anchor anchorWithStickyNavbar_LWe7" id="set_variable">
+             set_variable
+             <a aria-label="Direct link to set_variable" class="hash-link" href="#set_variable" title="Direct link to set_variable">
+              ​
+             </a>
+            </h5>
+            <p>
+             You can invoke
+             <code>
+              set_variable
+             </code>
+             with the following syntax:
+            </p>
+            <div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-text codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">&lt;output path&gt; = &lt;input&gt;</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <p>
+             A native invocation of the set_variable code would look like:
+            </p>
+            <div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-text codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">a = {"message": "hello"};</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <p>
+             The normal invocation would look like the following code:
+            </p>
+            <div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-text codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">a = set_variable({"message": "hello"});</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="testing">
+             Testing
+             <a aria-label="Direct link to Testing" class="hash-link" href="#testing" title="Direct link to Testing">
+              ​
+             </a>
+            </h2>
+            <p>
+             Workflows are part of a Rosetta API implementation, which
+             <a href="/rosetta/docs/rosetta-test">
+              you can test
+             </a>
+             with
+             <a href="/rosetta/docs/rosetta-cli">
+              the
+              <code>
+               rosetta.cli
+              </code>
+              tool
+             </a>
+             .
+            </p>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="example-workflows">
+             Example Workflows
+             <a aria-label="Direct link to Example Workflows" class="hash-link" href="#example-workflows" title="Direct link to Example Workflows">
+              ​
+             </a>
+            </h2>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="create-an-account">
+             Create an Account
+             <a aria-label="Direct link to Create an Account" class="hash-link" href="#create-an-account" title="Direct link to Create an Account">
+              ​
+             </a>
+            </h3>
+            <blockquote>
+             <p>
+              This Workflow is
+              <strong>
+               required
+              </strong>
+              if you are testing
+              <em>
+               without
+              </em>
+              prefunded accounts.
+             </p>
+            </blockquote>
+            <p>
+             The following example is for a Workflow to create an account. It includes the
+             <code>
+              create_account
+             </code>
+             scenario and the
+             <code>
+              save_account
+             </code>
+             scenario. For more information, read the
+             <a href="https://github.com/coinbase/rosetta-bitcoin/blob/29588ec84cdc8e1e61cff89f0f2e6b6a6479f8bb/rosetta-cli-conf/testnet/bitcoin.ros#L28" rel="noopener noreferrer" target="_blank">
+              source file
+             </a>
+             .
+            </p>
+            <div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-text codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">create_account(1){</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  create_account{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    network = {"network":"Testnet3", "blockchain":"Bitcoin"};</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    key = generate_key({"curve_type":"secp256k1"});</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    account = derive({</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "network_identifier": {{network}},</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "public_key": {{key.public_key}}</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    });</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    save_account({</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "account_identifier": {{account.account_identifier}},</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "keypair": {{key}}</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    });</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="request-funds">
+             Request Funds
+             <a aria-label="Direct link to Request Funds" class="hash-link" href="#request-funds" title="Direct link to Request Funds">
+              ​
+             </a>
+            </h3>
+            <blockquote>
+             <p>
+              This Workflow is
+              <strong>
+               required
+              </strong>
+              if you are testing
+              <em>
+               without
+              </em>
+              prefunded accounts.
+             </p>
+            </blockquote>
+            <p>
+             The following example is for a Workflow to request funds. It includes the
+             <code>
+              find_account
+             </code>
+             scenario and the
+             <code>
+              request
+             </code>
+             scenario. For more information, read the
+             <a href="https://github.com/coinbase/rosetta-bitcoin/blob/29588ec84cdc8e1e61cff89f0f2e6b6a6479f8bb/rosetta-cli-conf/testnet/bitcoin.ros#L1" rel="noopener noreferrer" target="_blank">
+              source file
+             </a>
+             .
+            </p>
+            <div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-text codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">request_funds(1){</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  find_account{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    currency = {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "symbol":"tBTC",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "decimals":8</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    };</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    random_account = find_balance({</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "minimum_balance":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "value": "0",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "currency": {{currency}}</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "create_limit":1</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    });</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  request{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    min_balance = load_env("MIN_BALANCE");</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    adjusted_min = {{min_balance}} + 600;</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    loaded_account = find_balance({</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "account_identifier": {{random_account.account_identifier}},</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "minimum_balance":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "value": {{adjusted_min}},</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "currency": {{currency}}</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    });</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="transfer">
+             Transfer
+             <a aria-label="Direct link to Transfer" class="hash-link" href="#transfer" title="Direct link to Transfer">
+              ​
+             </a>
+            </h3>
+            <p>
+             The following example is for a Workflow to transfer funds. It includes the
+             <code>
+              transfer
+             </code>
+             scenario. For more information, read the
+             <a href="https://github.com/icon-project/rosetta-icon/blob/a621e1e5a92a6e5e2e5a49b56b466371665ea4c4/rosetta-cli-conf/testnet.ros#L44" rel="noopener noreferrer" target="_blank">
+              source file
+             </a>
+             .
+            </p>
+            <div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-text codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">transfer(10){</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  transfer{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    transfer.network = {"network":"Testnet", "blockchain":"ICON"};</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    currency = {"symbol":"ICX", "decimals":18};</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    sender = find_balance({</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "minimum_balance":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "value": "10000000000000000",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "currency": {{currency}}</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    });</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    // Set the recipient_amount as some value &lt;= sender.balance-max_fee</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    max_fee = "10000000000000000";</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    available_amount = {{sender.balance.value}} - {{max_fee}};</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    recipient_amount = random_number({"minimum": "1", "maximum": {{available_amount}}});</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    print_message({"recipient_amount":{{recipient_amount}}});</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    // Find recipient and construct operations</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    sender_amount = 0 - {{recipient_amount}};</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    recipient = find_balance({</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "not_account_identifier":[{{sender.account_identifier}}],</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "minimum_balance":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "value": "0",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "currency": {{currency}}</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "create_limit": 100,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "create_probability": 50</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    });</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    transfer.confirmation_depth = "1";</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    transfer.operations = [</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "operation_identifier":{"index":0},</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "type":"TRANSFER",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "account":{{sender.account_identifier}},</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "amount":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">          "value":{{sender_amount}},</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">          "currency":{{currency}}</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "operation_identifier":{"index":1},</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "type":"TRANSFER",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "account":{{recipient.account_identifier}},</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "amount":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">          "value":{{recipient_amount}},</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">          "currency":{{currency}}</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    ];</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="example-dsl-file">
+             Example DSL File
+             <a aria-label="Direct link to Example DSL File" class="hash-link" href="#example-dsl-file" title="Direct link to Example DSL File">
+              ​
+             </a>
+            </h2>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="destination-tag-support">
+             Destination Tag Support
+             <a aria-label="Direct link to Destination Tag Support" class="hash-link" href="#destination-tag-support" title="Direct link to Destination Tag Support">
+              ​
+             </a>
+            </h3>
+            <p>
+             The following example is for a DSL file to test whether the Rosetta implementation supports destination tags. It includes the
+             <code>
+              request_funds
+             </code>
+             ,
+             <code>
+              create_account
+             </code>
+             , and
+             <code>
+              transfer
+             </code>
+             workflows. For more information, read the
+             <a href="/rosetta/docs/rosetta-test#testing-destination-tag-blockchains">
+              Testing Destination Tag Blockchains
+             </a>
+             section in the
+             <a href="/rosetta/docs/rosetta-test">
+              How to Test your Rosetta Implementation
+             </a>
+             document.
+            </p>
+            <div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-text codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">request_funds(1){</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  find_account{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    currency = {"symbol":"STX", "decimals":6};</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    random_account = find_balance({</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "minimum_balance":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "value": "0",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "currency": {{currency}}</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "create_limit":1</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    });</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  // Create a separate scenario to request funds so that</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  // the address we are using to request funds does not</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  // get rolled back if funds do not yet exist.</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  request{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    loaded_account = find_balance({</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "account_identifier": {{random_account.account_identifier}},</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "minimum_balance":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "value": "1000000000",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "currency": {{currency}}</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    });</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">create_account(1){</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  create{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    network = {"network":"testnet", "blockchain":"stacks"};</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    key = generate_key({"curve_type": "secp256k1"});</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    account = derive({</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "network_identifier": {{network}},</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "public_key": {{key.public_key}}</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    });</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    // If the account is not saved, the key will be lost!</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    save_account({</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "account_identifier": {{account.account_identifier}},</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      "keypair": {{key}}</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    });</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">       print_message({"--- created": {{key}}});</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">transfer(1){</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  transfer{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    transfer.network = {"network":"testnet", "blockchain":"stacks"};</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    currency = {"symbol":"STX", "decimals":6};</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    recipient_amount = "50";</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    sender_amount = 0 - {{recipient_amount}};</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    print_message({"recipient_amount":{{recipient_amount}}});</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    print_message({"sender_amount":{{sender_amount}}});</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    sender_account = {"address":"ST11NJTTKGVT6D1HY4NJRVQWMQM7TVAR091EJ8P2Y"};</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    recipient_account = {"address":"STB44HYPYAT2BB2QE513NSP81HTMYWBJP02HPGK6"};</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    transfer.confirmation_depth = "1";</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    transfer.operations = [</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">         {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "operation_identifier":{"index":0},</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "type":"fee",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "account":{{sender_account}},</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "amount":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">          "value":"-180",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">          "currency":{{currency}}</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "operation_identifier":{"index":1},</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "type":"token_transfer",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "account":{{sender_account}},</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "amount":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">          "value":{{sender_amount}},</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">          "currency":{{currency}}</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      {</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "operation_identifier":{"index":2},</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "type":"token_transfer",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "account":{{recipient_account}},</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "amount":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">          "value":{{recipient_amount}},</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">          "currency":{{currency}}</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">      }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    ];</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    transfer.preprocess_metadata = {"memo":"testing"};</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">  }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+           </div>
+           <footer class="theme-doc-footer docusaurus-mt-lg">
+            <div class="theme-doc-footer-edit-meta-row row">
+             <div class="col">
+             </div>
+             <div class="col lastUpdated_vwxv">
+             </div>
+            </div>
+           </footer>
+           <div class="thumbnailRating_V63g hide-on-print">
+            <p>
+             Was this helpful?
+            </p>
+            <div class="buttonGroup_vjMq">
+             <style data-emotion="css 1wf493t">
+              .css-1wf493t{text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1wf493t:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1wf493t:hover{background-color:transparent;}}.css-1wf493t.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+             </style>
+             <style data-emotion="css 1yxmbwk">
+              .css-1yxmbwk{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1yxmbwk::-moz-focus-inner{border-style:none;}.css-1yxmbwk.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-1yxmbwk{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-1yxmbwk:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1yxmbwk:hover{background-color:transparent;}}.css-1yxmbwk.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+             </style>
+             <button aria-label="Helpful" class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1yxmbwk" tabindex="0" type="button">
+              <style data-emotion="css vubbuv">
+               .css-vubbuv{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
+              </style>
+              <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" data-testid="ThumbUpOffAltIcon" focusable="false" viewbox="0 0 24 24">
+               <path d="m13.11 5.72-.57 2.89c-.12.59.04 1.2.42 1.66.38.46.94.73 1.54.73H20v1.08L17.43 18H9.34c-.18 0-.34-.16-.34-.34V9.82l4.11-4.1M14 2 7.59 8.41C7.21 8.79 7 9.3 7 9.83v7.83C7 18.95 8.05 20 9.34 20h8.1c.71 0 1.36-.37 1.72-.97l2.67-6.15c.11-.25.17-.52.17-.8V11c0-1.1-.9-2-2-2h-5.5l.92-4.65c.05-.22.02-.46-.08-.66-.23-.45-.52-.86-.88-1.22L14 2zM4 9H2v11h2c.55 0 1-.45 1-1v-9c0-.55-.45-1-1-1z">
+               </path>
+              </svg>
+             </button>
+             <style data-emotion="css 1e2dcm1">
+              .css-1e2dcm1{z-index:1500;pointer-events:none;}
+             </style>
+             <style data-emotion="css okvapm">
+              .css-okvapm{z-index:1500;pointer-events:none;}
+             </style>
+             <style data-emotion="css 1wf493t">
+              .css-1wf493t{text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1wf493t:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1wf493t:hover{background-color:transparent;}}.css-1wf493t.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+             </style>
+             <style data-emotion="css 1yxmbwk">
+              .css-1yxmbwk{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1yxmbwk::-moz-focus-inner{border-style:none;}.css-1yxmbwk.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-1yxmbwk{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-1yxmbwk:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1yxmbwk:hover{background-color:transparent;}}.css-1yxmbwk.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+             </style>
+             <button aria-label="Not helpful" class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1yxmbwk" tabindex="0" type="button">
+              <style data-emotion="css vubbuv">
+               .css-vubbuv{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
+              </style>
+              <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" data-testid="ThumbDownOffAltIcon" focusable="false" viewbox="0 0 24 24">
+               <path d="m10.89 18.28.57-2.89c.12-.59-.04-1.2-.42-1.66-.38-.46-.94-.73-1.54-.73H4v-1.08L6.57 6h8.09c.18 0 .34.16.34.34v7.84l-4.11 4.1M10 22l6.41-6.41c.38-.38.59-.89.59-1.42V6.34C17 5.05 15.95 4 14.66 4h-8.1c-.71 0-1.36.37-1.72.97l-2.67 6.15c-.11.25-.17.52-.17.8V13c0 1.1.9 2 2 2h5.5l-.92 4.65c-.05.22-.02.46.08.66.23.45.52.86.88 1.22L10 22zm10-7h2V4h-2c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1z">
+               </path>
+              </svg>
+             </button>
+             <style data-emotion="css 1e2dcm1">
+              .css-1e2dcm1{z-index:1500;pointer-events:none;}
+             </style>
+             <style data-emotion="css okvapm">
+              .css-okvapm{z-index:1500;pointer-events:none;}
+             </style>
+            </div>
+           </div>
+           <style data-emotion="css 1k371a6">
+            @media print{.css-1k371a6{position:absolute!important;}}
+           </style>
+          </article>
+          <nav aria-label="Docs pages navigation" class="pagination-nav docusaurus-mt-lg">
+           <a class="pagination-nav__link pagination-nav__link--prev" href="/rosetta/docs/rosetta-test">
+            <div class="pagination-nav__sublabel">
+             Previous
+            </div>
+            <div class="pagination-nav__label">
+             How to Test your Rosetta Implementation
+            </div>
+           </a>
+           <a class="pagination-nav__link pagination-nav__link--next" href="/rosetta/docs/complex-checks">
+            <div class="pagination-nav__sublabel">
+             Next
+            </div>
+            <div class="pagination-nav__label">
+             How to Disable Complex Checks
+            </div>
+           </a>
+          </nav>
+         </div>
+        </div>
+        <div class="col col--3">
+         <div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop">
+          <ul class="table-of-contents table-of-contents__left-border">
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#overview">
+             Overview
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#prerequisites">
+             Prerequisites
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#terminology">
+             Terminology
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#syntax">
+             Syntax
+            </a>
+            <ul>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#elements">
+               Elements
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#account-funding">
+               Account Funding
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#broadcast-invocation">
+               Broadcast Invocation
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#dry-runs">
+               Dry Runs
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#functions">
+               Functions
+              </a>
+             </li>
+            </ul>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#testing">
+             Testing
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#example-workflows">
+             Example Workflows
+            </a>
+            <ul>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#create-an-account">
+               Create an Account
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#request-funds">
+               Request Funds
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#transfer">
+               Transfer
+              </a>
+             </li>
+            </ul>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#example-dsl-file">
+             Example DSL File
+            </a>
+            <ul>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#destination-tag-support">
+               Destination Tag Support
+              </a>
+             </li>
+            </ul>
+           </li>
+          </ul>
+         </div>
+        </div>
+       </div>
+      </div>
+     </main>
+    </div>
+   </div>
+   <footer class="footer">
+    <div class="container container-fluid">
+     <ul>
+      <li>
+       <div class="footer__copyright">
+        © 2023 Coinbase
+       </div>
+      </li>
+      <li>
+       <a class="footer__link-item" href="https://www.coinbase.com/legal/privacy" rel="noopener noreferrer" target="_blank">
+        Privacy
+        <svg aria-hidden="true" class="iconExternalLink_nPIU" height="13.5" viewbox="0 0 24 24" width="13.5">
+         <path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z" fill="currentColor">
+         </path>
+        </svg>
+       </a>
+      </li>
+     </ul>
+    </div>
+   </footer>
+  </div>
+  <script src="/assets/js/runtime~main.91f0d63d.js">
+  </script>
+  <script src="/assets/js/main.440d9293.js">
+  </script>
+ </body>
+</html>

@@ -1,0 +1,3807 @@
+<!DOCTYPE html>
+<html class="docs-wrapper docs-doc-page docs-version-current plugin-docs plugin-id-rosetta docs-doc-id-docs/rosetta-configuration-file" dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="Docusaurus v2.3.1" name="generator"/>
+  <title data-rh="true">
+   How to Write a Configuration File for rosetta-cli Testing | Coinbase Cloud
+  </title>
+  <meta content="width=device-width,initial-scale=1" data-rh="true" name="viewport"/>
+  <meta content="summary_large_image" data-rh="true" name="twitter:card"/>
+  <meta content="https://docs.cloud.coinbase.com/rosetta/docs/configuration-file" data-rh="true" property="og:url"/>
+  <meta content="en" data-rh="true" name="docusaurus_locale"/>
+  <meta content="en" data-rh="true" name="docsearch:language"/>
+  <meta content="current" data-rh="true" name="docusaurus_version"/>
+  <meta content="docs-rosetta-current" data-rh="true" name="docusaurus_tag"/>
+  <meta content="current" data-rh="true" name="docsearch:version"/>
+  <meta content="docs-rosetta-current" data-rh="true" name="docsearch:docusaurus_tag"/>
+  <meta content="How to Write a Configuration File for rosetta-cli Testing | Coinbase Cloud" data-rh="true" property="og:title"/>
+  <meta content="Prerequisites" data-rh="true" name="description"/>
+  <meta content="Prerequisites" data-rh="true" property="og:description"/>
+  <link data-rh="true" href="/img/favicon.png" rel="icon"/>
+  <link data-rh="true" href="https://docs.cloud.coinbase.com/rosetta/docs/configuration-file" rel="canonical"/>
+  <link data-rh="true" href="https://docs.cloud.coinbase.com/rosetta/docs/configuration-file" hreflang="en" rel="alternate"/>
+  <link data-rh="true" href="https://docs.cloud.coinbase.com/rosetta/docs/configuration-file" hreflang="x-default" rel="alternate"/>
+  <link crossorigin="anonymous" data-rh="true" href="https://BPPU41WTIR-dsn.algolia.net" rel="preconnect"/>
+  <link href="https://www.google-analytics.com" rel="preconnect"/>
+  <link href="https://www.googletagmanager.com" rel="preconnect"/>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-1X60WF4D7F">
+  </script>
+  <script>
+   function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-1X60WF4D7F",{anonymize_ip:!0})
+  </script>
+  <link href="/opensearch.xml" rel="search" title="Coinbase Cloud" type="application/opensearchdescription+xml"/>
+  <link href="/assets/css/styles.22f44638.css" rel="stylesheet"/>
+  <link as="script" href="/assets/js/runtime~main.91f0d63d.js" rel="preload"/>
+  <link as="script" href="/assets/js/main.440d9293.js" rel="preload"/>
+ </head>
+ <body class="navigation-with-keyboard">
+  <script>
+   !function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}()
+  </script>
+  <div id="__docusaurus">
+   <div aria-label="Skip to main content" role="region">
+    <a class="skipToContent_fXgn" href="#docusaurus_skipToContent_fallback">
+     Skip to main content
+    </a>
+   </div>
+   <nav aria-label="Main" class="navbar navbar--fixed-top">
+    <div class="navbar__container_rqDs">
+     <div class="navbar__inner">
+      <div class="navbar__items">
+       <button aria-expanded="false" aria-label="Toggle navigation bar" class="navbar__toggle clean-btn" type="button">
+        <svg aria-hidden="true" height="30" viewbox="0 0 30 30" width="30">
+         <path d="M4 7h22M4 15h22M4 23h22" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2">
+         </path>
+        </svg>
+       </button>
+       <a class="navbar__brand" href="/">
+        <div class="navbar__logo">
+         <img alt="Coinbase Pay" class="themedImage_ToTc themedImage--light_HNdA" src="/img/logo.svg"/>
+         <img alt="Coinbase Pay" class="themedImage_ToTc themedImage--dark_i4oU" src="/img/logo.svg"/>
+        </div>
+       </a>
+       <a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/">
+        Documentation
+       </a>
+      </div>
+      <div class="navbar__items navbar__items--right">
+       <div class="searchBox_ZlJk">
+        <button aria-label="Search" class="DocSearch DocSearch-Button" type="button">
+         <span class="DocSearch-Button-Container">
+          <svg class="DocSearch-Search-Icon" height="20" viewbox="0 0 20 20" width="20">
+           <path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+           </path>
+          </svg>
+          <span class="DocSearch-Button-Placeholder">
+           Search
+          </span>
+         </span>
+         <span class="DocSearch-Button-Keys">
+         </span>
+        </button>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="menubar_iWH4">
+     <div class="menubar__inner_eCwJ">
+      <div class="navbar__item dropdown dropdown--hoverable">
+       <a aria-expanded="false" aria-haspopup="true" class="navbar__link" href="#" role="button">
+        Rosetta
+       </a>
+       <ul class="dropdown__menu">
+        <li>
+         <a class="dropdown__link" href="/advanced-trade-api/docs/welcome">
+          Advanced Trade API
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/blockchain-infrastructure/docs/welcome">
+          Blockchain Infrastructure
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/pay-sdk/docs/intro">
+          Coinbase Pay
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/wallet-sdk/docs/welcome">
+          Coinbase Wallet
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/commerce/docs/welcome">
+          Commerce API
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/delegation/docs/about-cloud-staking">
+          Delegation Guides
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/exchange/docs/welcome">
+          Exchange/Pro
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/kyt/reference/introduction">
+          KYT
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/prime/docs/introduction">
+          Prime
+         </a>
+        </li>
+        <li>
+         <a aria-current="page" class="dropdown__link dropdown__link--active" href="/rosetta/docs/welcome">
+          Rosetta
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/sign-in-with-coinbase/docs/welcome">
+          Sign in with Coinbase
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/waas/docs/welcome">
+          Wallet as a Service
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="navbar__item dropdown dropdown--hoverable">
+       <a aria-expanded="false" aria-haspopup="true" class="navbar__link" href="#" role="button">
+        Guides
+       </a>
+       <ul class="dropdown__menu">
+        <li>
+         <a aria-current="page" class="dropdown__link dropdown__link--active" href="/rosetta/docs/welcome">
+          Guides
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/rosetta/reference">
+          API Reference
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="menubarItems_end_INfc">
+       <a class="menubarBtn_Xh25" href="https://forums.coinbasecloud.dev">
+        Discuss in the Forum
+       </a>
+       <a class="menubarBtn_Xh25" href="https://help.coinbase.com/en/contact-us?product=coinbase-cloud">
+        Need Support?
+       </a>
+       <button class="menubarBtn_Xh25">
+        <svg class="icon_HrvF" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+         <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z">
+         </path>
+        </svg>
+        Search
+       </button>
+       <div class="searchToggleShortcut_VFcV">
+        ⌘K
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="navbar-sidebar__backdrop" role="presentation">
+    </div>
+   </nav>
+   <div class="main-wrapper mainWrapper_z2l0 docsWrapper_BCFX" id="docusaurus_skipToContent_fallback">
+    <button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button">
+    </button>
+    <div class="docPage__5DB">
+     <aside class="theme-doc-sidebar-container docSidebarContainer_b6E3">
+      <div class="sidebarViewport_Xe31">
+       <div class="sidebar_njMd">
+        <nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG">
+         <ul class="theme-doc-sidebar-menu menu__list">
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Product Overview
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/welcome" tabindex="0">
+              Welcome
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/flow-of-operations" tabindex="0">
+              Flow of operations
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/contributing" tabindex="0">
+              Contributing
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/principles" tabindex="0">
+              Principles
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/automated-deployment-and-testing" tabindex="0">
+              Automated deployment and testing
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/versioning" tabindex="0">
+              Versioning
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link menu__link--active">
+             Getting Started
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/getting-started" tabindex="0">
+              Getting Started
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a aria-current="page" class="menu__link menu__link--active" href="/rosetta/docs/configuration-file" tabindex="0">
+              How to Write a Configuration File for rosetta-cli Testing
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Rosetta API Spec
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/full-reference" tabindex="0">
+              Full Reference
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed">
+             <div class="menu__list-item-collapsible">
+              <a aria-expanded="false" class="menu__link menu__link--sublist menu__link--sublist-caret" href="/rosetta/docs/identifiers" tabindex="0">
+               Models
+              </a>
+             </div>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/data-api-overview" tabindex="0">
+              Data API Overview
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/construction-api-overview" tabindex="0">
+              Construction API Overview
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/indexers" tabindex="0">
+              Indexers
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Coinbase Listing Integrations
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/faqs" tabindex="0">
+              Frequently Asked Questions
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Samples
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/implementation-samples" tabindex="0">
+              Implementation Samples
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/code-samples" tabindex="0">
+              Code Samples for the Rosetta API Configuration File
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/destination-tag-support" tabindex="0">
+              Destination Tag Examples
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/erc20-token-support" tabindex="0">
+              ERC20 Token Support Example
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Testing
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/rosetta-cli" tabindex="0">
+              The rosetta-cli Tool
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/rosetta-test" tabindex="0">
+              How to Test your Rosetta Implementation
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/rosetta-dsl" tabindex="0">
+              How to Write a Rosetta DSL file
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/complex-checks" tabindex="0">
+              How to Disable Complex Checks
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Best Practices
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/docker-deployment" tabindex="0">
+              Docker Deployment
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/standard-storage-location" tabindex="0">
+              Standard storage location
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/storage-pruning" tabindex="0">
+              Storage pruning
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/implement-all-endpoints" tabindex="0">
+              Implement all endpoints
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/balance-changing-operation-support" tabindex="0">
+              Balance-changing operation support
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/fetchable-balances-for-accounts-and-currencies" tabindex="0">
+              Fetchable balances for accounts and currencies
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/continuously-validate-correctness" tabindex="0">
+              Continuously validate correctness
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/common-mistakes" tabindex="0">
+              Common mistakes
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Repositories
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/rosetta-specifications" tabindex="0">
+              rosetta-specifications
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/rosetta/docs/rosetta-sdk-go" tabindex="0">
+              rosetta-sdk-go
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Support
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link menuExternalLink_NmtK" href="https://forums.coinbasecloud.dev/" rel="noopener noreferrer" tabindex="0" target="_blank">
+              Coinbase Cloud Forum
+              <svg aria-hidden="true" class="iconExternalLink_nPIU" height="13.5" viewbox="0 0 24 24" width="13.5">
+               <path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z" fill="currentColor">
+               </path>
+              </svg>
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link menuExternalLink_NmtK" href="https://help.coinbase.com/en/contact-us?product=coinbase-cloud" rel="noopener noreferrer" tabindex="0" target="_blank">
+              Coinbase Cloud Help Center
+              <svg aria-hidden="true" class="iconExternalLink_nPIU" height="13.5" viewbox="0 0 24 24" width="13.5">
+               <path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z" fill="currentColor">
+               </path>
+              </svg>
+             </a>
+            </li>
+           </ul>
+          </li>
+         </ul>
+        </nav>
+       </div>
+      </div>
+     </aside>
+     <main class="docMainContainer_gTbr">
+      <div class="container padding-top--md padding-bottom--lg">
+       <div class="row">
+        <div class="col docItemCol_z5aJ">
+         <div class="docItemContainer_c0TR">
+          <article>
+           <nav aria-label="Breadcrumbs" class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl">
+            <ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+             <li class="breadcrumbs__item">
+              <a aria-label="Home page" class="breadcrumbs__link" href="/">
+               <svg class="breadcrumbHomeIcon_YNFT" viewbox="0 0 24 24">
+                <path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor">
+                </path>
+               </svg>
+              </a>
+             </li>
+             <li class="breadcrumbs__item">
+              <span class="breadcrumbs__link">
+               Getting Started
+              </span>
+              <meta content="1" itemprop="position"/>
+             </li>
+             <li class="breadcrumbs__item breadcrumbs__item--active" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+              <span class="breadcrumbs__link" itemprop="name">
+               How to Write a Configuration File for rosetta-cli Testing
+              </span>
+              <meta content="2" itemprop="position"/>
+             </li>
+            </ul>
+           </nav>
+           <div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo">
+            <button class="clean-btn tocCollapsibleButton_TO0P" type="button">
+             On this page
+            </button>
+           </div>
+           <div class="theme-doc-markdown markdown">
+            <header>
+             <h1>
+              How to Write a Configuration File for rosetta-cli Testing
+             </h1>
+            </header>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="prerequisites">
+             Prerequisites
+             <a aria-label="Direct link to Prerequisites" class="hash-link" href="#prerequisites" title="Direct link to Prerequisites">
+              ​
+             </a>
+            </h2>
+            <ul>
+             <li>
+              For the
+              <code>
+               check:construction
+              </code>
+              test, a
+              <a href="/rosetta/docs/rosetta-dsl">
+               Rosetta DSL
+              </a>
+              (
+              <code>
+               *.ros
+              </code>
+              ) file.
+             </li>
+             <li>
+              For the
+              <code>
+               check:data
+              </code>
+              test, a way to measure account balances.
+              <ul>
+               <li>
+                If your blockchain supports historical balance lookup, you'll need to set the
+                <code>
+                 historical_balance_disabled
+                </code>
+                value to
+                <code>
+                 false
+                </code>
+                .
+               </li>
+               <li>
+                If your blockchain does not support historical balance lookup, you'll need to complete the following actions:
+                <ul>
+                 <li>
+                  Set the
+                  <code>
+                   historical_balance_disabled
+                  </code>
+                  value to
+                  <code>
+                   true
+                  </code>
+                  .
+                 </li>
+                 <li>
+                  Provide a
+                  <code>
+                   bootstrap_balances.json
+                  </code>
+                  file for the
+                  <code>
+                   bootstrap_balances
+                  </code>
+                  value.
+                 </li>
+                </ul>
+               </li>
+              </ul>
+             </li>
+            </ul>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="write-the-configuration-file">
+             Write the Configuration File
+             <a aria-label="Direct link to Write the Configuration File" class="hash-link" href="#write-the-configuration-file" title="Direct link to Write the Configuration File">
+              ​
+             </a>
+            </h2>
+            <ol>
+             <li>
+              From the command line, create a
+              <code>
+               config.json
+              </code>
+              file in the directory of your choice.
+              <ul>
+               <li>
+                For example, you can create the
+                <code>
+                 rosetta-cli-conf/testnet
+                </code>
+                directory to test your configuration with testnet.
+               </li>
+              </ul>
+             </li>
+             <li>
+              Edit the
+              <code>
+               config.json
+              </code>
+              file and add
+              <a href="#list-of-fields-and-objects-for-the-configuration-file">
+               the fields and objects, with their corresponding values
+              </a>
+              necessary for your implementation. For more information on these values, see the
+              <a href="https://pkg.go.dev/github.com/coinbase/rosetta-cli/configuration" rel="noopener noreferrer" target="_blank">
+               Rosetta-CLI Configuration
+              </a>
+              documentation and the
+              <a href="/rosetta/docs/rosetta-cli#end-conditions">
+               End Conditions
+              </a>
+              documentation.
+             </li>
+             <li>
+              Save the file.
+             </li>
+             <li>
+              <a href="/rosetta/docs/rosetta-test">
+               Run the
+               <code>
+                rosetta-cli
+               </code>
+               tool for testing
+              </a>
+              .
+             </li>
+            </ol>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="list-of-fields-and-objects-for-the-configuration-file">
+             List of Fields and Objects for the Configuration File
+             <a aria-label="Direct link to List of Fields and Objects for the Configuration File" class="hash-link" href="#list-of-fields-and-objects-for-the-configuration-file" title="Direct link to List of Fields and Objects for the Configuration File">
+              ​
+             </a>
+            </h2>
+            <p>
+             The configuration file must be written in
+             <a href="https://en.wikipedia.org/wiki/JSON#Syntax" rel="noopener noreferrer" target="_blank">
+              JSON format
+             </a>
+             . Do not add optional fields with empty or null values to the configuration file.
+            </p>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="fields">
+             Fields
+             <a aria-label="Direct link to Fields" class="hash-link" href="#fields" title="Direct link to Fields">
+              ​
+             </a>
+            </h3>
+            <p>
+             The fields below are part of the JSON file object.
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th>
+                Fields
+               </th>
+               <th>
+                Type
+               </th>
+               <th>
+                Description
+               </th>
+               <th>
+                Possible Values
+               </th>
+               <th>
+                Example
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td>
+                <code>
+                 online_url
+                </code>
+               </td>
+               <td>
+                string
+               </td>
+               <td>
+                The URL of a Rosetta API implementation in “online” mode.
+               </td>
+               <td>
+                A valid url.
+               </td>
+               <td>
+                <code>
+                 http://localhost:8080
+                </code>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <code>
+                 data_directory
+                </code>
+               </td>
+               <td>
+                string
+               </td>
+               <td>
+                A folder used to store logs and any validation data.
+               </td>
+               <td>
+                An absolute or relative path to where the
+                <code>
+                 rosetta-cli
+                </code>
+                binary is being executed.
+               </td>
+               <td>
+                <code>
+                 cli-data
+                </code>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <code>
+                 http_timeout
+                </code>
+               </td>
+               <td>
+                number
+               </td>
+               <td>
+                The timeout for an HTTP request, in seconds.
+               </td>
+               <td>
+                A positive integer.
+               </td>
+               <td>
+                <code>
+                 300
+                </code>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <code>
+                 max_retries
+                </code>
+               </td>
+               <td>
+                number
+               </td>
+               <td>
+                The number of tries that the
+                <code>
+                 rosetta-cli
+                </code>
+                tool will retry an HTTP request.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                If the
+                <code>
+                 retry_elapsed_time
+                </code>
+                field is also populated, the
+                <code>
+                 rosetta-cli
+                </code>
+                tool may stop attempting retries early.
+               </td>
+               <td>
+                A positive integer.
+               </td>
+               <td>
+                <code>
+                 15
+                </code>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <code>
+                 retry_elapsed_time
+                </code>
+               </td>
+               <td>
+                number
+               </td>
+               <td>
+                The total time to spend retrying an HTTP request, in seconds.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                If the
+                <code>
+                 max_retries
+                </code>
+                field is also populated, the
+                <code>
+                 rosetta-cli
+                </code>
+                tool may stop attempting retries early.
+               </td>
+               <td>
+                A positive integer.
+               </td>
+               <td>
+                <code>
+                 0
+                </code>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <code>
+                 max_online_connections
+                </code>
+               </td>
+               <td>
+                number
+               </td>
+               <td>
+                The maximum number of open connections that the online fetcher will open.
+               </td>
+               <td>
+                A positive integer.
+               </td>
+               <td>
+                <code>
+                 500
+                </code>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <code>
+                 force_retry
+                </code>
+               </td>
+               <td>
+                Boolean
+               </td>
+               <td>
+                Whether to override the default retry handling to retry on all error (non-
+                <code>
+                 200
+                </code>
+                ) responses.
+               </td>
+               <td>
+                <ul>
+                 <li>
+                  <code>
+                   true
+                  </code>
+                 </li>
+                 <li>
+                  <code>
+                   false
+                  </code>
+                 </li>
+                </ul>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                Omit if empty.
+               </td>
+               <td>
+                <code>
+                 true
+                </code>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <code>
+                 max_sync_concurrency
+                </code>
+               </td>
+               <td>
+                number
+               </td>
+               <td>
+                The maximum sync concurrency to use while syncing blocks. Sync concurrency is managed automatically by the
+                <code>
+                 syncer
+                </code>
+                package.
+               </td>
+               <td>
+                A positive integer.
+               </td>
+               <td>
+                <code>
+                 64
+                </code>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <code>
+                 tip_delay
+                </code>
+               </td>
+               <td>
+                number
+               </td>
+               <td>
+                Dictates how many seconds behind the current time is considered the tip. If the
+                <code>
+                 rosetta-cli
+                </code>
+                tool is less than the number of
+                <code>
+                 tip_delay
+                </code>
+                seconds from the last processed block, then it is considered to be “behind tip”.
+               </td>
+               <td>
+                A positive integer.
+               </td>
+               <td>
+                <code>
+                 120
+                </code>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <code>
+                 max_reorg_depth
+                </code>
+               </td>
+               <td>
+                number
+               </td>
+               <td>
+                Specifies the maximum possible reorganization depth of the blockchain being synced. This value is used to determine how aggressively to prune old block data.
+               </td>
+               <td>
+                A positive integer.
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                Omit if empty.
+               </td>
+               <td>
+                <code>
+                 100
+                </code>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <code>
+                 log_configuration
+                </code>
+               </td>
+               <td>
+                Boolean
+               </td>
+               <td>
+                Determines whether the configuration settings should be printed to the console when a file is loaded.
+               </td>
+               <td>
+                <ul>
+                 <li>
+                  <code>
+                   true
+                  </code>
+                 </li>
+                 <li>
+                  <code>
+                   false
+                  </code>
+                 </li>
+                </ul>
+               </td>
+               <td>
+                <code>
+                 false
+                </code>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <code>
+                 compression_disabled
+                </code>
+               </td>
+               <td>
+                Boolean
+               </td>
+               <td>
+                Whether to configure the storage layer to not perform data compression before writing to disk.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                This leads to significantly more on-disk storage usage but can lead to performance gains.
+               </td>
+               <td>
+                <ul>
+                 <li>
+                  <code>
+                   true
+                  </code>
+                 </li>
+                 <li>
+                  <code>
+                   false
+                  </code>
+                 </li>
+                </ul>
+               </td>
+               <td>
+                <code>
+                 true
+                </code>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <code>
+                 memory_limit_disabled
+                </code>
+               </td>
+               <td>
+                Boolean
+               </td>
+               <td>
+                Whether to configure storage to increase memory usage. Enabling this value massively increases performance, but can use tens of GBs of RAM, even with pruning enabled.
+               </td>
+               <td>
+                <ul>
+                 <li>
+                  <code>
+                   true
+                  </code>
+                 </li>
+                 <li>
+                  <code>
+                   false
+                  </code>
+                 </li>
+                </ul>
+               </td>
+               <td>
+                <code>
+                 true
+                </code>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <code>
+                 seen_block_workers
+                </code>
+               </td>
+               <td>
+                number
+               </td>
+               <td>
+                The number of goroutines spawned to store seen blocks in storage before we attempt to sequence.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                This value defaults to the
+                <code>
+                 runtime.NumCPU()
+                </code>
+                value.
+               </td>
+               <td>
+                <ul>
+                 <li>
+                  A positive integer.
+                 </li>
+                 <li>
+                  Default - the
+                  <code>
+                   runtime.NumCPU()
+                  </code>
+                  value.
+                 </li>
+                </ul>
+               </td>
+               <td>
+                <em>
+                 empty
+                </em>
+                (uses the default value)
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <code>
+                 serial_block_workers
+                </code>
+               </td>
+               <td>
+                number
+               </td>
+               <td>
+                The number of goroutines spawned to help with block sequencing (i.e., updating balances, updating coins, etc).
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                This value defaults to the
+                <code>
+                 runtime.NumCPU()
+                </code>
+                value.
+               </td>
+               <td>
+                <ul>
+                 <li>
+                  A positive integer.
+                 </li>
+                 <li>
+                  Default - the
+                  <code>
+                   runtime.NumCPU()
+                  </code>
+                  value.
+                 </li>
+                </ul>
+               </td>
+               <td>
+                <em>
+                 empty
+                </em>
+                (uses the default value)
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <code>
+                 validation_file
+                </code>
+               </td>
+               <td>
+                string
+               </td>
+               <td>
+                The field used for asset-specific validation.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                This value defaults to an empty string, which means that no asset-specific validation will be done.
+               </td>
+               <td>
+                <ul>
+                 <li>
+                  A string
+                 </li>
+                 <li>
+                  null
+                 </li>
+                </ul>
+               </td>
+               <td>
+                <em>
+                 empty
+                </em>
+                (uses the default value)
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="objects">
+             Objects
+             <a aria-label="Direct link to Objects" class="hash-link" href="#objects" title="Direct link to Objects">
+              ​
+             </a>
+            </h3>
+            <p>
+             The following objects are part of the JSON file object:
+             <code>
+              network
+             </code>
+             ,
+             <code>
+              construction
+             </code>
+             , and
+             <code>
+              data
+             </code>
+             . Objects that are part of the
+             <code>
+              construction
+             </code>
+             , and
+             <code>
+              data
+             </code>
+             objects are listed under those headings.
+            </p>
+            <h4 class="anchor anchorWithStickyNavbar_LWe7" id="network">
+             network
+             <a aria-label="Direct link to network" class="hash-link" href="#network" title="Direct link to network">
+              ​
+             </a>
+            </h4>
+            <p>
+             Read the
+             <a href="/rosetta/docs/identifiers#network-identifier">
+              NetworkIdentifier
+             </a>
+             documentation for more information.
+            </p>
+            <h4 class="anchor anchorWithStickyNavbar_LWe7" id="construction">
+             construction
+             <a aria-label="Direct link to construction" class="hash-link" href="#construction" title="Direct link to construction">
+              ​
+             </a>
+            </h4>
+            <p>
+             The configuration values needed to run the
+             <code>
+              check:construction
+             </code>
+             test in the
+             <code>
+              rosetta-cli
+             </code>
+             tool.
+            </p>
+            <p>
+             <a href="/rosetta/docs/code-samples#construction">
+              <em>
+               Code Sample
+              </em>
+             </a>
+            </p>
+            <p>
+             Contains the following fields and objects:
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th>
+                Fields
+               </th>
+               <th>
+                Type
+               </th>
+               <th>
+                Description
+               </th>
+               <th>
+                Possible Values
+               </th>
+               <th>
+                Example
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td>
+                <code>
+                 offline_url
+                </code>
+               </td>
+               <td>
+                string
+               </td>
+               <td>
+                The URL of a Rosetta API implementation in “offline mode”.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                This field is part of the
+                <code>
+                 construction
+                </code>
+                object.
+               </td>
+               <td>
+                A valid URL.
+               </td>
+               <td>
+                <code>
+                 http://example.com
+                </code>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <code>
+                 max_offline_connections
+                </code>
+               </td>
+               <td>
+                number
+               </td>
+               <td>
+                The maximum number of open connections that the offline fetcher will open.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                This field is part of the
+                <code>
+                 construction
+                </code>
+                object.
+               </td>
+               <td>
+                A positive number.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <code>
+                 force_retry
+                </code>
+               </td>
+               <td>
+                Boolean
+               </td>
+               <td>
+                Whether to override the default retry handling to retry on all error (non-200) responses.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                This field is part of the
+                <code>
+                 construction
+                </code>
+                object.
+               </td>
+               <td>
+                <ul>
+                 <li>
+                  <code>
+                   true
+                  </code>
+                 </li>
+                 <li>
+                  <code>
+                   false
+                  </code>
+                 </li>
+                </ul>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                Omit if empty.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <code>
+                 stale_depth
+                </code>
+               </td>
+               <td>
+                number
+               </td>
+               <td>
+                The number of blocks to wait before attempting to rebroadcast after not finding a transaction on-chain.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                This field is part of the
+                <code>
+                 construction
+                </code>
+                object.
+               </td>
+               <td>
+                A positive integer.
+               </td>
+               <td>
+                <code>
+                 3
+                </code>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <code>
+                 broadcast_limit
+                </code>
+               </td>
+               <td>
+                number
+               </td>
+               <td>
+                The number of times to attempt re-broadcast before giving up on a transaction broadcast.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                This field is part of the
+                <code>
+                 construction
+                </code>
+                object.
+               </td>
+               <td>
+                A positive integer.
+               </td>
+               <td>
+                <code>
+                 5
+                </code>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <code>
+                 ignore_broadcast_failures
+                </code>
+               </td>
+               <td>
+                Boolean
+               </td>
+               <td>
+                Whether the tool should exit when there are broadcast failures that surpass the
+                <code>
+                 broadcast_limit
+                </code>
+                value.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                This field is part of the
+                <code>
+                 construction
+                </code>
+                object.
+               </td>
+               <td>
+                <ul>
+                 <li>
+                  <code>
+                   true
+                  </code>
+                 </li>
+                 <li>
+                  <code>
+                   false
+                  </code>
+                 </li>
+                </ul>
+               </td>
+               <td>
+                <code>
+                 false
+                </code>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <code>
+                 clear_broadcasts
+                </code>
+               </td>
+               <td>
+                Boolean
+               </td>
+               <td>
+                Whether all pending broadcasts should be removed from the stored broadcast file on restart.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                This field is part of the
+                <code>
+                 construction
+                </code>
+                object.
+               </td>
+               <td>
+                <ul>
+                 <li>
+                  <code>
+                   true
+                  </code>
+                 </li>
+                 <li>
+                  <code>
+                   false
+                  </code>
+                 </li>
+                </ul>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <code>
+                 broadcast_behind_tip
+                </code>
+               </td>
+               <td>
+                Boolean
+               </td>
+               <td>
+                Whether the tool should broadcast transactions when it is behind tip (as defined in the
+                <code>
+                 tip_delay
+                </code>
+                value).
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                This field is part of the
+                <code>
+                 construction
+                </code>
+                object.
+               </td>
+               <td>
+                <ul>
+                 <li>
+                  <code>
+                   true
+                  </code>
+                 </li>
+                 <li>
+                  <code>
+                   false
+                  </code>
+                 </li>
+                </ul>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <code>
+                 block_broadcast_limit
+                </code>
+               </td>
+               <td>
+                number
+               </td>
+               <td>
+                The number of transactions to attempt to broadcast in a single block. When there are many pending broadcasts, it may make sense to limit the number of broadcasts.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                This field is part of the
+                <code>
+                 construction
+                </code>
+                object.
+               </td>
+               <td>
+                A positive integer.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <code>
+                 rebroadcast_all
+                </code>
+               </td>
+               <td>
+                Boolean
+               </td>
+               <td>
+                Whether all pending broadcasts should be rebroadcast from the stored broadcast file on restart.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                This field is part of the
+                <code>
+                 construction
+                </code>
+                object.
+               </td>
+               <td>
+                <ul>
+                 <li>
+                  <code>
+                   true
+                  </code>
+                 </li>
+                 <li>
+                  <code>
+                   false
+                  </code>
+                 </li>
+                </ul>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <code>
+                 output_path
+                </code>
+               </td>
+               <td>
+                string
+               </td>
+               <td>
+                The path to the directory where you would like to store the output files that rosetta-cli creates.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <p>
+             The default value for this field is
+             <code>
+              /cli-data
+             </code>
+             .
+This field is part of the
+             <code>
+              construction
+             </code>
+             object. | A valid relative path. |
+             <code>
+              cli-data
+             </code>
+             |
+|
+             <code>
+              constructor_dsl_file
+             </code>
+             | string | The DSL (
+             <code>
+              *.ros
+             </code>
+             ) file for the
+             <code>
+              check:construction
+             </code>
+             test.
+This field is part of the
+             <code>
+              construction
+             </code>
+             object. | A
+             <code>
+              .ros
+             </code>
+             filename. |
+             <code>
+              ethereum.ros
+             </code>
+             |
+|
+             <code>
+              status_port
+             </code>
+             | number | The port where you can query a running
+             <code>
+              check:construction
+             </code>
+             test to get progress statistics.
+This process can be used instead of parsing logs to populate a status dashboard.
+This field is part of the
+             <code>
+              construction
+             </code>
+             object. | A positive integer.
+Omit if empty. |  |
+|
+             <code>
+              results_output_file
+             </code>
+             | string | The absolute file path where the
+             <code>
+              rosetta-cli
+             </code>
+             tool will save the results of a
+             <code>
+              check:construction
+             </code>
+             test run.
+This field is part of the
+             <code>
+              construction
+             </code>
+             object. | A valid filepath.
+Omit if empty. |
+             <code>
+              /directory/construction_test_results
+             </code>
+             |
+|
+             <code>
+              quiet
+             </code>
+             | Boolean | Whether to silence all request and response logging.
+This field is part of the
+             <code>
+              construction
+             </code>
+             object. |
+            </p>
+            <ul>
+             <li>
+              <code>
+               true
+              </code>
+             </li>
+             <li>
+              <code>
+               false
+              </code>
+             </li>
+            </ul>
+            Omit if empty. |  |
+|
+            <code>
+             initial_balance_fetch_disabled
+            </code>
+            | Boolean | Configures the
+            <code>
+             rosetta-cli
+            </code>
+            tool to not look up the balance of newly seen accounts at the genesis block before applying operations.
+Disabling this field is a good idea only if you create multiple new accounts each block and don’t fund any accounts before starting the
+            <code>
+             check:construction
+            </code>
+            test.
+This is a separate configuration value from the
+            <code>
+             initial_balance_fetch_disabled
+            </code>
+            value under the data object. The
+            <code>
+             construction
+            </code>
+            object value is usually set to
+            <code>
+             false
+            </code>
+            , whereas the
+            <code>
+             data
+            </code>
+            object value is usually set to
+            <code>
+             true
+            </code>
+            .
+This field is part of the
+            <code>
+             construction
+            </code>
+            object. |
+            <ul>
+             <li>
+              <code>
+               true
+              </code>
+             </li>
+             <li>
+              <code>
+               false
+              </code>
+             </li>
+            </ul>
+            |  |
+|
+            <a href="#prefunded_accounts">
+             <code>
+              prefunded_accounts
+             </code>
+            </a>
+            | object | Loads prefunded addresses into field storage.
+This object is part of the
+            <code>
+             construction
+            </code>
+            object. | Contains the
+            <code>
+             privkey
+            </code>
+            field and the
+            <code>
+             account_identifier
+            </code>
+            ,
+            <code>
+             curve_type
+            </code>
+            , and
+            <code>
+             currency
+            </code>
+            objects.
+Omit if empty. |  |
+|
+            <a href="#end_conditions-construction">
+             <code>
+              end_conditions
+             </code>
+            </a>
+            | object | The conditions that need to be fulfilled to successfully end the
+            <code>
+             check:construction
+            </code>
+            test.
+            <p>
+            </p>
+            <p>
+             This object is part of the
+             <code>
+              construction
+             </code>
+             object. | Contains the
+             <code>
+              create_account
+             </code>
+             and
+             <code>
+              transfer
+             </code>
+             fields. |  |
+            </p>
+            <h5 class="anchor anchorWithStickyNavbar_LWe7" id="end_conditions-construction">
+             end_conditions (construction)
+             <a aria-label="Direct link to end_conditions (construction)" class="hash-link" href="#end_conditions-construction" title="Direct link to end_conditions (construction)">
+              ​
+             </a>
+            </h5>
+            <p>
+             This object is part of the
+             <a href="#construction">
+              <code>
+               construction
+              </code>
+             </a>
+             object.
+The conditions that need to be fulfilled to successfully end the
+             <code>
+              check:construction
+             </code>
+             test.
+Contains the
+             <code>
+              create_account
+             </code>
+             and
+             <code>
+              transfer
+             </code>
+             fields.
+            </p>
+            <p>
+             <a href="/rosetta/docs/code-samples#end_conditions-construction">
+              <em>
+               Code Sample
+              </em>
+             </a>
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th>
+                Fields
+               </th>
+               <th>
+                Type
+               </th>
+               <th>
+                Description
+               </th>
+               <th>
+                Possible Values
+               </th>
+               <th>
+                Example
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td>
+                <code>
+                 create_account
+                </code>
+               </td>
+               <td>
+                number
+               </td>
+               <td>
+                The number of accounts for the test to create.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                This field is part of the
+                <code>
+                 end_conditions
+                </code>
+                object.
+               </td>
+               <td>
+                A positive integer.
+               </td>
+               <td>
+                <code>
+                 10
+                </code>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <code>
+                 transfer
+                </code>
+               </td>
+               <td>
+                number
+               </td>
+               <td>
+                The number of transfers for the test to complete.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                This field is part of the
+                <code>
+                 end_conditions
+                </code>
+                object.
+               </td>
+               <td>
+                A positive integer.
+               </td>
+               <td>
+                <code>
+                 20
+                </code>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <h5 class="anchor anchorWithStickyNavbar_LWe7" id="prefunded_accounts">
+             prefunded_accounts
+             <a aria-label="Direct link to prefunded_accounts" class="hash-link" href="#prefunded_accounts" title="Direct link to prefunded_accounts">
+              ​
+             </a>
+            </h5>
+            <p>
+             This object is part of the
+             <a href="#construction">
+              <code>
+               construction
+              </code>
+             </a>
+             object.
+Loads prefunded addresses into field storage.
+Contains the
+             <code>
+              privkey
+             </code>
+             and
+             <code>
+              curve_type
+             </code>
+             fields and the
+             <a href="#account_identifier">
+              <code>
+               account_identifier
+              </code>
+             </a>
+             and
+             <a href="#currency">
+              <code>
+               currency
+              </code>
+             </a>
+             objects. If you have no values for the
+             <code>
+              prefunded_account
+             </code>
+             object, you can omit it from the
+             <code>
+              construction
+             </code>
+             object.
+            </p>
+            <p>
+             <a href="/rosetta/docs/code-samples#prefunded_accounts">
+              <em>
+               Code Sample
+              </em>
+             </a>
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th>
+                Fields
+               </th>
+               <th>
+                Type
+               </th>
+               <th>
+                Description
+               </th>
+               <th>
+                Possible Values
+               </th>
+               <th>
+                Example
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td>
+                <code>
+                 privkey
+                </code>
+               </td>
+               <td>
+                string
+               </td>
+               <td>
+                A private key.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                This field is part of the
+                <code>
+                 prefunded_accounts
+                </code>
+                object.
+               </td>
+               <td>
+                A valid private key.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <a href="#account_identifier">
+                 <code>
+                  account_identifier
+                 </code>
+                </a>
+               </td>
+               <td>
+                object
+               </td>
+               <td>
+                Read the
+                <a href="/rosetta/docs/identifiers#network-identifier">
+                 AccountIdentifier
+                </a>
+                documentation for more information.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <a href="#curve_type">
+                 <code>
+                  curve_type
+                 </code>
+                </a>
+               </td>
+               <td>
+                string
+               </td>
+               <td>
+                Read the
+                <a href="/rosetta/docs/identifiers#network-identifier">
+                 CurveType
+                </a>
+                documentation for more information.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <a href="#currency">
+                 <code>
+                  currency
+                 </code>
+                </a>
+               </td>
+               <td>
+                object
+               </td>
+               <td>
+                Read the
+                <a href="/rosetta/docs/identifiers#network-identifier">
+                 Currency
+                </a>
+                documentation for more information.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <h4 class="anchor anchorWithStickyNavbar_LWe7" id="data">
+             data
+             <a aria-label="Direct link to data" class="hash-link" href="#data" title="Direct link to data">
+              ​
+             </a>
+            </h4>
+            <p>
+             Contains all the configurations needed to run the
+             <code>
+              check:data
+             </code>
+             test.
+            </p>
+            <p>
+             <a href="/rosetta/docs/code-samples#data">
+              <em>
+               Code Sample
+              </em>
+             </a>
+            </p>
+            <p>
+             Contains the following fields and objects:
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th>
+                Fields
+               </th>
+               <th>
+                Type
+               </th>
+               <th>
+                Description
+               </th>
+               <th>
+                Possible Values
+               </th>
+               <th>
+                Example
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td>
+                <code>
+                 active_reconciliation_concurrency
+                </code>
+               </td>
+               <td>
+                number
+               </td>
+               <td>
+                The concurrency to use while fetching accounts during active reconciliation.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                This field is part of the
+                <code>
+                 data
+                </code>
+                object.
+               </td>
+               <td>
+                A positive integer.
+               </td>
+               <td>
+                <code>
+                 32
+                </code>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <code>
+                 inactive_reconciliation_concurrency
+                </code>
+               </td>
+               <td>
+                number
+               </td>
+               <td>
+                The concurrency to use while fetching accounts during inactive reconciliation.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                This field is part of the
+                <code>
+                 data
+                </code>
+                object.
+               </td>
+               <td>
+                A positive integer.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <code>
+                 inactive_reconciliation_frequency
+                </code>
+               </td>
+               <td>
+                number
+               </td>
+               <td>
+                The number of blocks to wait between inactive reconciliations on each account.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                This field is part of the
+                <code>
+                 data
+                </code>
+                object.
+               </td>
+               <td>
+                A positive integer.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <code>
+                 log_blocks
+                </code>
+               </td>
+               <td>
+                Boolean
+               </td>
+               <td>
+                Whether to log processed blocks.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                This field is part of the
+                <code>
+                 data
+                </code>
+                object.
+               </td>
+               <td>
+                <ul>
+                 <li>
+                  <code>
+                   true
+                  </code>
+                 </li>
+                 <li>
+                  <code>
+                   false
+                  </code>
+                 </li>
+                </ul>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <code>
+                 log_transactions
+                </code>
+               </td>
+               <td>
+                Boolean
+               </td>
+               <td>
+                Whether to log processed transactions.
+               </td>
+               <td>
+                <ul>
+                 <li>
+                  <code>
+                   true
+                  </code>
+                 </li>
+                 <li>
+                  <code>
+                   false
+                  </code>
+                 </li>
+                </ul>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <code>
+                 log_balance_changes
+                </code>
+               </td>
+               <td>
+                Boolean
+               </td>
+               <td>
+                Whether to log all balance changes.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                This field is part of the
+                <code>
+                 data
+                </code>
+                object.
+               </td>
+               <td>
+                <ul>
+                 <li>
+                  <code>
+                   true
+                  </code>
+                 </li>
+                 <li>
+                  <code>
+                   false
+                  </code>
+                 </li>
+                </ul>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <code>
+                 log_reconciliations
+                </code>
+               </td>
+               <td>
+                Boolean
+               </td>
+               <td>
+                Whether to log all reconciliations.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                This field is part of the
+                <code>
+                 data
+                </code>
+                object.
+               </td>
+               <td>
+                <ul>
+                 <li>
+                  <code>
+                   true
+                  </code>
+                 </li>
+                 <li>
+                  <code>
+                   false
+                  </code>
+                 </li>
+                </ul>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <code>
+                 ignore_reconciliation_error
+                </code>
+               </td>
+               <td>
+                Boolean
+               </td>
+               <td>
+                Whether block processing should halt on a reconciliation error.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <p>
+             You can either collect all reconciliation errors, or silence reconciliation errors during development.
+This field is part of the
+             <code>
+              data
+             </code>
+             object. |
+            </p>
+            <ul>
+             <li>
+              <code>
+               true
+              </code>
+             </li>
+             <li>
+              <code>
+               false
+              </code>
+             </li>
+            </ul>
+            |  |
+|
+            <code>
+             exempt_accounts
+            </code>
+            | string | The JSON file that lists all accounts exempt from balance tracking and reconciliation.
+You can find an example of this file in
+            <a href="https://github.com/coinbase/rosetta-cli/tree/master/examples" rel="noopener noreferrer" target="_blank">
+             the
+             <code>
+              rosetta-cli/examples
+             </code>
+             directory in GitHub
+            </a>
+            .
+This field is part of the
+            <code>
+             data
+            </code>
+            object. | A valid path and filename, relative to the location of this configuration file. |
+            <code>
+             exempt_accounts.json
+            </code>
+            |
+|
+            <code>
+             bootstrap_balances
+            </code>
+            | string | The JSON file that contains the initial asset or token balance.
+You can find an example of this file in
+            <a href="https://github.com/coinbase/rosetta-cli/tree/master/examples" rel="noopener noreferrer" target="_blank">
+             the
+             <code>
+              rosetta-cli/examples
+             </code>
+             directory in GitHub
+            </a>
+            .
+            <strong>
+             Note:
+            </strong>
+            If you populate this value after syncing begins, the test will ignore it.
+This field is part of the
+            <code>
+             data
+            </code>
+            object. | A valid path and filename, relative to the location of this configuration file. |
+            <code>
+             bootstrap_balances.json
+            </code>
+            |
+|
+            <code>
+             historical_balance_disabled
+            </code>
+            | Boolean | Whether to look up a balance at the block where a balance change occurred, instead of at the current block.
+            <strong>
+             Note:
+            </strong>
+            Blockchains that do not support historical balance lookup should set this value to
+            <code>
+             true
+            </code>
+            and include a
+            <code>
+             bootstrap_balances.json
+            </code>
+            file for the
+            <code>
+             bootstrap_balances
+            </code>
+            value.
+If this value is true or omitted, the
+            <code>
+             check:data
+            </code>
+            test will ignore the
+            <code>
+             inactive_discrepancy_search_disabled
+            </code>
+            field.
+This field is part of the
+            <code>
+             data
+            </code>
+            object. |
+            <ul>
+             <li>
+              <code>
+               true
+              </code>
+             </li>
+             <li>
+              <code>
+               false
+              </code>
+             </li>
+            </ul>
+            Omit if empty. |  |
+|
+            <code>
+             interesting_accounts
+            </code>
+            | string | The JSON file that contains all of the accounts to check on each block.
+You can find an example of this file in
+            <a href="https://github.com/coinbase/rosetta-cli/tree/master/examples" rel="noopener noreferrer" target="_blank">
+             the
+             <code>
+              rosetta-cli/examples
+             </code>
+             directory in GitHub
+            </a>
+            .
+This field is part of the
+            <code>
+             data
+            </code>
+            object. | A valid path and filename, relative to the location of this configuration file. |
+            <code>
+             interesting_accounts.json
+            </code>
+            |
+|
+            <code>
+             reconciliation_disabled
+            </code>
+            | Boolean | Whether or not to attempt reconciliation.
+To confirm that syncing is working as expected, we recommend that you disable some of the more advanced checks when first testing an implementation.
+This field is part of the
+            <code>
+             data
+            </code>
+            object. |
+            <ul>
+             <li>
+              <code>
+               true
+              </code>
+             </li>
+             <li>
+              <code>
+               false
+              </code>
+             </li>
+            </ul>
+            |  |
+|
+            <code>
+             reconciliation_drain_disabled
+            </code>
+            | Boolean | If reconciliation is enabled, whether the
+            <code>
+             rosetta-cli
+            </code>
+            tool should exit the
+            <code>
+             check:data
+            </code>
+            test before the entire active reconciliation queue has been drained.
+This field is part of the
+            <code>
+             data
+            </code>
+            object. |
+            <ul>
+             <li>
+              <code>
+               true
+              </code>
+             </li>
+             <li>
+              <code>
+               false
+              </code>
+             </li>
+            </ul>
+            |  |
+|
+            <code>
+             inactive_discrepancy_search_disabled
+            </code>
+            | Boolean | Whether the
+            <code>
+             check:data
+            </code>
+            test should perform a search to find any inactive reconciliation discrepancies.
+            <strong>
+             Note:
+            </strong>
+            If the
+            <code>
+             historical_balance_disabled
+            </code>
+            value is true or omitted, the
+            <code>
+             check:data
+            </code>
+            test will ignore this field.
+This field is part of the
+            <code>
+             data
+            </code>
+            object. |
+            <ul>
+             <li>
+              <code>
+               true
+              </code>
+             </li>
+             <li>
+              <code>
+               false
+              </code>
+             </li>
+            </ul>
+            |  |
+|
+            <code>
+             balance_tracking_disabled
+            </code>
+            | Boolean | Whether to attempt a balance calculation.
+We recommend that you try to fetch all blocks before checking for balance consistency when first testing an implementation.
+This field is part of the
+            <code>
+             data
+            </code>
+            object. |
+            <ul>
+             <li>
+              <code>
+               true
+              </code>
+             </li>
+             <li>
+              <code>
+               false
+              </code>
+             </li>
+            </ul>
+            |  |
+|
+            <code>
+             coin_tracking_disabled
+            </code>
+            | Boolean | Whether to attempt coin or UTX0 tracking.
+We recommend that you try to fetch all blocks before checking for coin consistency when first testing an implementation.
+This field is part of the
+            <code>
+             data
+            </code>
+            object. |
+            <ul>
+             <li>
+              <code>
+               true
+              </code>
+             </li>
+             <li>
+              <code>
+               false
+              </code>
+             </li>
+            </ul>
+            |  |
+|
+            <code>
+             start_index
+            </code>
+            | number | The block height from where the
+            <code>
+             check:data
+            </code>
+            test should start syncing.
+            <strong>
+             Note:
+            </strong>
+            If you do not provide a value for this field, syncing will start from the last saved block.
+If no blocks have been synced previously, then syncing will start from the genesis block.
+This field is part of the
+            <code>
+             data
+            </code>
+            object. | A positive integer.
+Omit if empty. |  |
+|
+            <code>
+             status_port
+            </code>
+            | number | The port where you can query a running
+            <code>
+             check:data
+            </code>
+            test to get progress statistics.
+This process can be used instead of parsing logs to populate a status dashboard.
+This field is part of the
+            <code>
+             data
+            </code>
+            object. | A positive integer.
+Omit if empty. |  |
+|
+            <code>
+             results_output_file
+            </code>
+            | string | The absolute file path where the
+            <code>
+             rosetta-cli
+            </code>
+            tool will save the results of a
+            <code>
+             check:data
+            </code>
+            run.
+This field is part of the
+            <code>
+             data
+            </code>
+            object. | A valid filepath. | /
+            <code>
+             directory/data_test_results
+            </code>
+            |
+|
+            <code>
+             pruning_disabled
+            </code>
+            | Boolean | Whether to not attempt storage pruning.
+            <strong>
+             Note:
+            </strong>
+            You should only set this value to true if you wish to use the
+            <code>
+             start_index
+            </code>
+            field at a later point to restart the
+            <code>
+             check:data
+            </code>
+            test from a previously synced block.
+This field is part of the
+            <code>
+             data
+            </code>
+            object. |
+            <ul>
+             <li>
+              <code>
+               true
+              </code>
+             </li>
+             <li>
+              <code>
+               false
+              </code>
+             </li>
+            </ul>
+            |  |
+|
+            <code>
+             pruning_frequency
+            </code>
+            | number | The frequency, in seconds, that the
+            <code>
+             check:data
+            </code>
+            test attempts to prune blocks.
+The default value for this field is the
+            <code>
+             statefulsyncer
+            </code>
+            package’s value.
+This field is part of the
+            <code>
+             data
+            </code>
+            object. | A positive integer.
+Omit if empty. |  |
+|
+            <code>
+             initial_balance_fetch_disabled
+            </code>
+            | Boolean | Configures the
+            <code>
+             rosetta-cli
+            </code>
+            tool to not look up the balance of newly seen accounts at the genesis block before applying operations.
+            <strong>
+             Note:
+            </strong>
+            Disabling this field can speed up performance without impacting validation accuracy, as long as the
+            <code>
+             boostrap_balances
+            </code>
+            file provides all the genesis accounts syncing begins from genesis.
+This is a separate configuration value from the
+            <code>
+             initial_balance_fetch_disabled
+            </code>
+            value under the construction object. The
+            <code>
+             data
+            </code>
+            object’s value is usually set to
+            <code>
+             true
+            </code>
+            , whereas the
+            <code>
+             construction
+            </code>
+            object’s value is usually set to
+            <code>
+             false
+            </code>
+            .  |
+            <ul>
+             <li>
+              <code>
+               true
+              </code>
+             </li>
+             <li>
+              <code>
+               false
+              </code>
+             </li>
+            </ul>
+            |
+            <code>
+             true
+            </code>
+            |
+|
+            <code>
+             reconciler_active_backlog
+            </code>
+            | number | The maximum number of pending changes to store in the active reconciliation backlog before skipping reconciliation on new changes.
+This field is part of the
+            <code>
+             data
+            </code>
+            object. | A positive integer.
+Omit if empty. |  |
+|
+            <a href="#end_conditions-data">
+             <code>
+              end_conditions
+             </code>
+            </a>
+            | object |
+            <strong>
+             Required.
+            </strong>
+            The conditions that need to be fulfilled to successfully end the
+            <code>
+             check:data
+            </code>
+            test.
+This object is part of the data object. | Contains the
+            <code>
+             index
+            </code>
+            ,
+            <code>
+             tip
+            </code>
+            , and
+            <code>
+             duration
+            </code>
+            fields, and the
+            <code>
+             reconciliation_coverage
+            </code>
+            object. |  |
+            <p>
+            </p>
+            <h5 class="anchor anchorWithStickyNavbar_LWe7" id="end_conditions-data">
+             end_conditions (data)
+             <a aria-label="Direct link to end_conditions (data)" class="hash-link" href="#end_conditions-data" title="Direct link to end_conditions (data)">
+              ​
+             </a>
+            </h5>
+            <p>
+             This object is part of the
+             <a href="#data">
+              <code>
+               data
+              </code>
+             </a>
+             object.
+The conditions that need to be fulfilled to successfully end the
+             <code>
+              check:data
+             </code>
+             test.
+Contains the
+             <code>
+              index
+             </code>
+             ,
+             <code>
+              tip
+             </code>
+             , and
+             <code>
+              duration
+             </code>
+             fields, and the
+             <a href="#reconciliation-coverage">
+              <code>
+               reconciliation_coverage
+              </code>
+             </a>
+             object.
+            </p>
+            <p>
+             <a href="/rosetta/docs/code-samples#end_conditions-data">
+              <em>
+               Code Sample
+              </em>
+             </a>
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th>
+                Fields
+               </th>
+               <th>
+                Type
+               </th>
+               <th>
+                Description
+               </th>
+               <th>
+                Possible Values
+               </th>
+               <th>
+                Example
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td>
+                <code>
+                 index
+                </code>
+               </td>
+               <td>
+                number
+               </td>
+               <td>
+                Configures the syncer to stop once it reaches a particular block height.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                This field is part of the
+                <code>
+                 end_conditions
+                </code>
+                object.
+               </td>
+               <td>
+                A positive integer.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                Omit if empty.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <code>
+                 tip
+                </code>
+               </td>
+               <td>
+                Boolean
+               </td>
+               <td>
+                Configures the syncer to stop once it reaches the tip of the blockchain.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <p>
+             You must also configure the
+             <code>
+              tip_delay
+             </code>
+             value if you set the tip value to
+             <code>
+              true
+             </code>
+             .
+This field is part of the
+             <code>
+              end_conditions
+             </code>
+             object. |
+            </p>
+            <ul>
+             <li>
+              <code>
+               true
+              </code>
+             </li>
+             <li>
+              <code>
+               false
+              </code>
+             </li>
+            </ul>
+            Omit if empty. |  |
+|
+            <code>
+             duration
+            </code>
+            | number | The number of seconds the syncer must run before it stops.
+This field is part of the
+            <code>
+             end_conditions
+            </code>
+            object. | A positive integer.
+Omit if empty. |  |
+|
+            <a href="#reconciliation_coverage">
+             <code>
+              reconciliation_coverage
+             </code>
+            </a>
+            | object | Configures the syncer to stop once it reaches the reconciliation coverage set in this object.
+This object is part of the
+            <code>
+             end_conditions
+            </code>
+            object. | Contains the
+            <code>
+             coverage
+            </code>
+            ,
+            <code>
+             from_tip
+            </code>
+            ,
+            <code>
+             tip
+            </code>
+            ,
+            <code>
+             index
+            </code>
+            , and
+            <code>
+             account_count
+            </code>
+            fields. |  |
+            <p>
+            </p>
+            <h6 class="anchor anchorWithStickyNavbar_LWe7" id="reconciliation_coverage">
+             reconciliation_coverage
+             <a aria-label="Direct link to reconciliation_coverage" class="hash-link" href="#reconciliation_coverage" title="Direct link to reconciliation_coverage">
+              ​
+             </a>
+            </h6>
+            <p>
+             This object is part of the data object's
+             <a href="#end_conditions_data">
+              <code>
+               end_conditions
+              </code>
+             </a>
+             object.
+Configures the syncer to stop once it reaches the reconciliation coverage set in this object.
+Contains the
+             <code>
+              coverage
+             </code>
+             ,
+             <code>
+              from_tip
+             </code>
+             ,
+             <code>
+              tip
+             </code>
+             ,
+             <code>
+              index
+             </code>
+             , and
+             <code>
+              account_count
+             </code>
+             fields.
+            </p>
+            <p>
+             <a href="/rosetta/docs/code-samples#reconciliation_coverage">
+              <em>
+               Code Sample
+              </em>
+             </a>
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th>
+                Fields
+               </th>
+               <th>
+                Type
+               </th>
+               <th>
+                Description
+               </th>
+               <th>
+                Possible Values
+               </th>
+               <th>
+                Example
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td>
+                <code>
+                 coverage
+                </code>
+               </td>
+               <td>
+                number
+               </td>
+               <td>
+                A value that represents the percentage of reconciled accounts.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                This field is part of the
+                <code>
+                 reconciliation_coverage
+                </code>
+                object.
+               </td>
+               <td>
+                A positive decimal that’s between 0.0 and 1.0.
+               </td>
+               <td>
+                <code>
+                 0.95
+                </code>
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <code>
+                 from_tip
+                </code>
+               </td>
+               <td>
+                Boolean
+               </td>
+               <td>
+                Whether the reconciliation coverage should be measured from the tip of the blockchain.
+               </td>
+               <td>
+               </td>
+               <td>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <p>
+             This field is part of the
+             <code>
+              reconciliation_coverage
+             </code>
+             object.
+Omit if empty. |
+            </p>
+            <ul>
+             <li>
+              <code>
+               true
+              </code>
+             </li>
+             <li>
+              <code>
+               false
+              </code>
+             </li>
+            </ul>
+            | true |
+|
+            <code>
+             tip
+            </code>
+            | Boolean | Whether the tip must be reached before reconciliation coverage is considered valid.
+This field is part of the
+            <code>
+             reconciliation_coverage
+            </code>
+            object. |
+            <ul>
+             <li>
+              <code>
+               true
+              </code>
+             </li>
+             <li>
+              <code>
+               false
+              </code>
+             </li>
+            </ul>
+            Omit if empty. |  |
+|
+            <code>
+             index
+            </code>
+            | number | The height that must be reached before reconciliation coverage is considered valid.
+This field is part of the
+            <code>
+             reconciliation_coverage
+            </code>
+            object.
+Omit if empty. | A positive integer. |  |
+|
+            <code>
+             account_count
+            </code>
+            | number | The number of accounts that must be observed before reconciliation coverage is considered valid.
+This field is part of the
+            <code>
+             reconciliation_coverage
+            </code>
+            object.
+Omit if empty. | A positive integer. |  |
+            <p>
+            </p>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="sample-configuration-files">
+             Sample Configuration files
+             <a aria-label="Direct link to Sample Configuration files" class="hash-link" href="#sample-configuration-files" title="Direct link to Sample Configuration files">
+              ​
+             </a>
+            </h2>
+            <p>
+             The following are sample configuration files for default, ethereum, and bitcoin.
+            </p>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="sample-defaultjson-file">
+             Sample default.json file
+             <a aria-label="Direct link to Sample default.json file" class="hash-link" href="#sample-defaultjson-file" title="Direct link to Sample default.json file">
+              ​
+             </a>
+            </h3>
+            <div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-text codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "network":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "blockchain":"MyBlockchain",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "network":"testnet"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "online_url":"http://localhost:8080",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "data_directory":"",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "http_timeout":10,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "max_retries":5,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "retry_elapsed_time":0,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "max_online_connections":120,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "max_sync_concurrency":64,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "tip_delay":300,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "max_reorg_depth":100,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "log_configuration":false,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "compression_disabled":false,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "memory_limit_disabled":false,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "construction":null,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "data":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "active_reconciliation_concurrency":16,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "inactive_reconciliation_concurrency":4,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "inactive_reconciliation_frequency":250,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "log_blocks":false,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "log_transactions":false,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "log_balance_changes":false,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "log_reconciliations":false,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "ignore_reconciliation_error":false,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "exempt_accounts":"",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "bootstrap_balances":"",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "interesting_accounts":"",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "reconciliation_disabled":false,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "reconciliation_drain_disabled":false,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "inactive_discrepancy_search_disabled":false,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "balance_tracking_disabled":false,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "coin_tracking_disabled":false,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "status_port":9090,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "results_output_file":"",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "pruning_disabled":false,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "initial_balance_fetch_disabled":false</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="sample-configjson-file-for-ethereum">
+             Sample config.json file for Ethereum
+             <a aria-label="Direct link to Sample config.json file for Ethereum" class="hash-link" href="#sample-configjson-file-for-ethereum" title="Direct link to Sample config.json file for Ethereum">
+              ​
+             </a>
+            </h3>
+            <div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-text codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "network":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "blockchain":"Ethereum",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "network":"Ropsten"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "data_directory":"cli-data",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "http_timeout":300,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "max_retries":15,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "max_online_connections":500,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "max_sync_concurrency":64,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "tip_delay":120,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "compression_disabled":true,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "memory_limit_disabled":true,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "construction":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "stale_depth":3,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "broadcast_limit":5,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "constructor_dsl_file":"ethereum.ros",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "end_conditions":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "create_account":10,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "transfer":20</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "data":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "initial_balance_fetch_disabled":true,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "active_reconciliation_concurrency":32,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "bootstrap_balances":"bootstrap_balances.json",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "end_conditions":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "reconciliation_coverage":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                "coverage":0.95,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                "from_tip":true</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="sample-configjson-file-for-bitcoin">
+             Sample config.json file for Bitcoin
+             <a aria-label="Direct link to Sample config.json file for Bitcoin" class="hash-link" href="#sample-configjson-file-for-bitcoin" title="Direct link to Sample config.json file for Bitcoin">
+              ​
+             </a>
+            </h3>
+            <div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-text codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "network":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "blockchain":"Bitcoin",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "network":"Testnet3"</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "data_directory":"cli-data",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "http_timeout":300,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "max_retries":5,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "max_online_connections":1000,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "tip_delay":1800,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "memory_limit_disabled":true,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "compression_disabled":true,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "construction":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "constructor_dsl_file":"bitcoin.ros",</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "end_conditions":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "create_account":10,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "transfer":10</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    },</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    "data":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "initial_balance_fetch_disabled":true,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        "end_conditions":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            "reconciliation_coverage":{</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                "coverage":0.95,</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">                "from_tip":true</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">            }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">        }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">    }</span><br/></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+           </div>
+           <footer class="theme-doc-footer docusaurus-mt-lg">
+            <div class="theme-doc-footer-edit-meta-row row">
+             <div class="col">
+             </div>
+             <div class="col lastUpdated_vwxv">
+             </div>
+            </div>
+           </footer>
+           <div class="thumbnailRating_V63g hide-on-print">
+            <p>
+             Was this helpful?
+            </p>
+            <div class="buttonGroup_vjMq">
+             <style data-emotion="css 1wf493t">
+              .css-1wf493t{text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1wf493t:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1wf493t:hover{background-color:transparent;}}.css-1wf493t.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+             </style>
+             <style data-emotion="css 1yxmbwk">
+              .css-1yxmbwk{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1yxmbwk::-moz-focus-inner{border-style:none;}.css-1yxmbwk.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-1yxmbwk{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-1yxmbwk:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1yxmbwk:hover{background-color:transparent;}}.css-1yxmbwk.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+             </style>
+             <button aria-label="Helpful" class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1yxmbwk" tabindex="0" type="button">
+              <style data-emotion="css vubbuv">
+               .css-vubbuv{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
+              </style>
+              <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" data-testid="ThumbUpOffAltIcon" focusable="false" viewbox="0 0 24 24">
+               <path d="m13.11 5.72-.57 2.89c-.12.59.04 1.2.42 1.66.38.46.94.73 1.54.73H20v1.08L17.43 18H9.34c-.18 0-.34-.16-.34-.34V9.82l4.11-4.1M14 2 7.59 8.41C7.21 8.79 7 9.3 7 9.83v7.83C7 18.95 8.05 20 9.34 20h8.1c.71 0 1.36-.37 1.72-.97l2.67-6.15c.11-.25.17-.52.17-.8V11c0-1.1-.9-2-2-2h-5.5l.92-4.65c.05-.22.02-.46-.08-.66-.23-.45-.52-.86-.88-1.22L14 2zM4 9H2v11h2c.55 0 1-.45 1-1v-9c0-.55-.45-1-1-1z">
+               </path>
+              </svg>
+             </button>
+             <style data-emotion="css 1e2dcm1">
+              .css-1e2dcm1{z-index:1500;pointer-events:none;}
+             </style>
+             <style data-emotion="css okvapm">
+              .css-okvapm{z-index:1500;pointer-events:none;}
+             </style>
+             <style data-emotion="css 1wf493t">
+              .css-1wf493t{text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1wf493t:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1wf493t:hover{background-color:transparent;}}.css-1wf493t.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+             </style>
+             <style data-emotion="css 1yxmbwk">
+              .css-1yxmbwk{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1yxmbwk::-moz-focus-inner{border-style:none;}.css-1yxmbwk.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-1yxmbwk{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-1yxmbwk:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1yxmbwk:hover{background-color:transparent;}}.css-1yxmbwk.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+             </style>
+             <button aria-label="Not helpful" class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1yxmbwk" tabindex="0" type="button">
+              <style data-emotion="css vubbuv">
+               .css-vubbuv{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
+              </style>
+              <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" data-testid="ThumbDownOffAltIcon" focusable="false" viewbox="0 0 24 24">
+               <path d="m10.89 18.28.57-2.89c.12-.59-.04-1.2-.42-1.66-.38-.46-.94-.73-1.54-.73H4v-1.08L6.57 6h8.09c.18 0 .34.16.34.34v7.84l-4.11 4.1M10 22l6.41-6.41c.38-.38.59-.89.59-1.42V6.34C17 5.05 15.95 4 14.66 4h-8.1c-.71 0-1.36.37-1.72.97l-2.67 6.15c-.11.25-.17.52-.17.8V13c0 1.1.9 2 2 2h5.5l-.92 4.65c-.05.22-.02.46.08.66.23.45.52.86.88 1.22L10 22zm10-7h2V4h-2c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1z">
+               </path>
+              </svg>
+             </button>
+             <style data-emotion="css 1e2dcm1">
+              .css-1e2dcm1{z-index:1500;pointer-events:none;}
+             </style>
+             <style data-emotion="css okvapm">
+              .css-okvapm{z-index:1500;pointer-events:none;}
+             </style>
+            </div>
+           </div>
+           <style data-emotion="css 1k371a6">
+            @media print{.css-1k371a6{position:absolute!important;}}
+           </style>
+          </article>
+          <nav aria-label="Docs pages navigation" class="pagination-nav docusaurus-mt-lg">
+           <a class="pagination-nav__link pagination-nav__link--prev" href="/rosetta/docs/getting-started">
+            <div class="pagination-nav__sublabel">
+             Previous
+            </div>
+            <div class="pagination-nav__label">
+             Getting Started
+            </div>
+           </a>
+           <a class="pagination-nav__link pagination-nav__link--next" href="/rosetta/docs/full-reference">
+            <div class="pagination-nav__sublabel">
+             Next
+            </div>
+            <div class="pagination-nav__label">
+             Full Reference
+            </div>
+           </a>
+          </nav>
+         </div>
+        </div>
+        <div class="col col--3">
+         <div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop">
+          <ul class="table-of-contents table-of-contents__left-border">
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#prerequisites">
+             Prerequisites
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#write-the-configuration-file">
+             Write the Configuration File
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#list-of-fields-and-objects-for-the-configuration-file">
+             List of Fields and Objects for the Configuration File
+            </a>
+            <ul>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#fields">
+               Fields
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#objects">
+               Objects
+              </a>
+             </li>
+            </ul>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#sample-configuration-files">
+             Sample Configuration files
+            </a>
+            <ul>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#sample-defaultjson-file">
+               Sample default.json file
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#sample-configjson-file-for-ethereum">
+               Sample config.json file for Ethereum
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#sample-configjson-file-for-bitcoin">
+               Sample config.json file for Bitcoin
+              </a>
+             </li>
+            </ul>
+           </li>
+          </ul>
+         </div>
+        </div>
+       </div>
+      </div>
+     </main>
+    </div>
+   </div>
+   <footer class="footer">
+    <div class="container container-fluid">
+     <ul>
+      <li>
+       <div class="footer__copyright">
+        © 2023 Coinbase
+       </div>
+      </li>
+      <li>
+       <a class="footer__link-item" href="https://www.coinbase.com/legal/privacy" rel="noopener noreferrer" target="_blank">
+        Privacy
+        <svg aria-hidden="true" class="iconExternalLink_nPIU" height="13.5" viewbox="0 0 24 24" width="13.5">
+         <path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z" fill="currentColor">
+         </path>
+        </svg>
+       </a>
+      </li>
+     </ul>
+    </div>
+   </footer>
+  </div>
+  <script src="/assets/js/runtime~main.91f0d63d.js">
+  </script>
+  <script src="/assets/js/main.440d9293.js">
+  </script>
+ </body>
+</html>

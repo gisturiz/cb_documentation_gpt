@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html class="docs-wrapper docs-doc-page docs-version-current plugin-docs plugin-id-prime-broker docs-doc-id-docs/rest-changelog" dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="Docusaurus v2.3.1" name="generator"/>
+  <title data-rh="true">
+   REST API Changelog | Coinbase Cloud
+  </title>
+  <meta content="width=device-width,initial-scale=1" data-rh="true" name="viewport"/>
+  <meta content="summary_large_image" data-rh="true" name="twitter:card"/>
+  <meta content="https://docs.cloud.coinbase.com/prime/docs/rest-changelog" data-rh="true" property="og:url"/>
+  <meta content="en" data-rh="true" name="docusaurus_locale"/>
+  <meta content="en" data-rh="true" name="docsearch:language"/>
+  <meta content="current" data-rh="true" name="docusaurus_version"/>
+  <meta content="docs-prime-broker-current" data-rh="true" name="docusaurus_tag"/>
+  <meta content="current" data-rh="true" name="docsearch:version"/>
+  <meta content="docs-prime-broker-current" data-rh="true" name="docsearch:docusaurus_tag"/>
+  <meta content="REST API Changelog | Coinbase Cloud" data-rh="true" property="og:title"/>
+  <meta content="2023-MAR-17" data-rh="true" name="description"/>
+  <meta content="2023-MAR-17" data-rh="true" property="og:description"/>
+  <link data-rh="true" href="/img/favicon.png" rel="icon"/>
+  <link data-rh="true" href="https://docs.cloud.coinbase.com/prime/docs/rest-changelog" rel="canonical"/>
+  <link data-rh="true" href="https://docs.cloud.coinbase.com/prime/docs/rest-changelog" hreflang="en" rel="alternate"/>
+  <link data-rh="true" href="https://docs.cloud.coinbase.com/prime/docs/rest-changelog" hreflang="x-default" rel="alternate"/>
+  <link crossorigin="anonymous" data-rh="true" href="https://BPPU41WTIR-dsn.algolia.net" rel="preconnect"/>
+  <link href="https://www.google-analytics.com" rel="preconnect"/>
+  <link href="https://www.googletagmanager.com" rel="preconnect"/>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-1X60WF4D7F">
+  </script>
+  <script>
+   function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-1X60WF4D7F",{anonymize_ip:!0})
+  </script>
+  <link href="/opensearch.xml" rel="search" title="Coinbase Cloud" type="application/opensearchdescription+xml"/>
+  <link href="/assets/css/styles.22f44638.css" rel="stylesheet"/>
+  <link as="script" href="/assets/js/runtime~main.91f0d63d.js" rel="preload"/>
+  <link as="script" href="/assets/js/main.440d9293.js" rel="preload"/>
+ </head>
+ <body class="navigation-with-keyboard">
+  <script>
+   !function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}()
+  </script>
+  <div id="__docusaurus">
+   <div aria-label="Skip to main content" role="region">
+    <a class="skipToContent_fXgn" href="#docusaurus_skipToContent_fallback">
+     Skip to main content
+    </a>
+   </div>
+   <nav aria-label="Main" class="navbar navbar--fixed-top">
+    <div class="navbar__container_rqDs">
+     <div class="navbar__inner">
+      <div class="navbar__items">
+       <button aria-expanded="false" aria-label="Toggle navigation bar" class="navbar__toggle clean-btn" type="button">
+        <svg aria-hidden="true" height="30" viewbox="0 0 30 30" width="30">
+         <path d="M4 7h22M4 15h22M4 23h22" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2">
+         </path>
+        </svg>
+       </button>
+       <a class="navbar__brand" href="/">
+        <div class="navbar__logo">
+         <img alt="Coinbase Pay" class="themedImage_ToTc themedImage--light_HNdA" src="/img/logo.svg"/>
+         <img alt="Coinbase Pay" class="themedImage_ToTc themedImage--dark_i4oU" src="/img/logo.svg"/>
+        </div>
+       </a>
+       <a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/">
+        Documentation
+       </a>
+      </div>
+      <div class="navbar__items navbar__items--right">
+       <div class="searchBox_ZlJk">
+        <button aria-label="Search" class="DocSearch DocSearch-Button" type="button">
+         <span class="DocSearch-Button-Container">
+          <svg class="DocSearch-Search-Icon" height="20" viewbox="0 0 20 20" width="20">
+           <path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+           </path>
+          </svg>
+          <span class="DocSearch-Button-Placeholder">
+           Search
+          </span>
+         </span>
+         <span class="DocSearch-Button-Keys">
+         </span>
+        </button>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="menubar_iWH4">
+     <div class="menubar__inner_eCwJ">
+      <div class="navbar__item dropdown dropdown--hoverable">
+       <a aria-expanded="false" aria-haspopup="true" class="navbar__link" href="#" role="button">
+        Prime
+       </a>
+       <ul class="dropdown__menu">
+        <li>
+         <a class="dropdown__link" href="/advanced-trade-api/docs/welcome">
+          Advanced Trade API
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/blockchain-infrastructure/docs/welcome">
+          Blockchain Infrastructure
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/pay-sdk/docs/intro">
+          Coinbase Pay
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/wallet-sdk/docs/welcome">
+          Coinbase Wallet
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/commerce/docs/welcome">
+          Commerce API
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/delegation/docs/about-cloud-staking">
+          Delegation Guides
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/exchange/docs/welcome">
+          Exchange/Pro
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/kyt/reference/introduction">
+          KYT
+         </a>
+        </li>
+        <li>
+         <a aria-current="page" class="dropdown__link dropdown__link--active" href="/prime/docs/introduction">
+          Prime
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/rosetta/docs/welcome">
+          Rosetta
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/sign-in-with-coinbase/docs/welcome">
+          Sign in with Coinbase
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/waas/docs/welcome">
+          Wallet as a Service
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="navbar__item dropdown dropdown--hoverable">
+       <a aria-expanded="false" aria-haspopup="true" class="navbar__link" href="#" role="button">
+        Guides
+       </a>
+       <ul class="dropdown__menu">
+        <li>
+         <a aria-current="page" class="dropdown__link dropdown__link--active" href="/prime/docs/introduction">
+          Guides
+         </a>
+        </li>
+        <li>
+         <a class="dropdown__link" href="/prime/reference">
+          API Reference
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="menubarItems_end_INfc">
+       <a class="menubarBtn_Xh25" href="https://forums.coinbasecloud.dev">
+        Discuss in the Forum
+       </a>
+       <a class="menubarBtn_Xh25" href="https://help.coinbase.com/en/contact-us?product=coinbase-cloud">
+        Need Support?
+       </a>
+       <button class="menubarBtn_Xh25">
+        <svg class="icon_HrvF" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+         <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z">
+         </path>
+        </svg>
+        Search
+       </button>
+       <div class="searchToggleShortcut_VFcV">
+        ⌘K
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="navbar-sidebar__backdrop" role="presentation">
+    </div>
+   </nav>
+   <div class="main-wrapper mainWrapper_z2l0 docsWrapper_BCFX" id="docusaurus_skipToContent_fallback">
+    <button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button">
+    </button>
+    <div class="docPage__5DB">
+     <aside class="theme-doc-sidebar-container docSidebarContainer_b6E3">
+      <div class="sidebarViewport_Xe31">
+       <div class="sidebar_njMd">
+        <nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG">
+         <ul class="theme-doc-sidebar-menu menu__list">
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Introduction
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/prime/docs/introduction" tabindex="0">
+              Introduction to Prime APIs
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link menu__link--active">
+             Rest API
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/prime/docs/rest-requests" tabindex="0">
+              Requests
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/prime/docs/rest-rate-limits" tabindex="0">
+              Rate Limits
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/prime/docs/rest-authentication" tabindex="0">
+              Authenticating Messages
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/prime/docs/rest-pagination" tabindex="0">
+              Pagination
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a aria-current="page" class="menu__link menu__link--active" href="/prime/docs/rest-changelog" tabindex="0">
+              REST API Changelog
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Fix API
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/prime/docs/fix-connectivity" tabindex="0">
+              Connectivity
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/prime/docs/fix-messages" tabindex="0">
+              Messages
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/prime/docs/fix-changelog" tabindex="0">
+              FIX API Changelog
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a class="menu__link">
+             Websocket Feed
+            </a>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/prime/docs/websocket-feed" tabindex="0">
+              Overview
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/prime/docs/websocket-channels" tabindex="0">
+              Channels
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/prime/docs/websocket-changelog" tabindex="0">
+              Feed Changelog
+             </a>
+            </li>
+           </ul>
+          </li>
+         </ul>
+        </nav>
+       </div>
+      </div>
+     </aside>
+     <main class="docMainContainer_gTbr">
+      <div class="container padding-top--md padding-bottom--lg">
+       <div class="row">
+        <div class="col docItemCol_z5aJ">
+         <div class="docItemContainer_c0TR">
+          <article>
+           <nav aria-label="Breadcrumbs" class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl">
+            <ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+             <li class="breadcrumbs__item">
+              <a aria-label="Home page" class="breadcrumbs__link" href="/">
+               <svg class="breadcrumbHomeIcon_YNFT" viewbox="0 0 24 24">
+                <path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor">
+                </path>
+               </svg>
+              </a>
+             </li>
+             <li class="breadcrumbs__item">
+              <span class="breadcrumbs__link">
+               Rest API
+              </span>
+              <meta content="1" itemprop="position"/>
+             </li>
+             <li class="breadcrumbs__item breadcrumbs__item--active" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+              <span class="breadcrumbs__link" itemprop="name">
+               REST API Changelog
+              </span>
+              <meta content="2" itemprop="position"/>
+             </li>
+            </ul>
+           </nav>
+           <div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo">
+            <button class="clean-btn tocCollapsibleButton_TO0P" type="button">
+             On this page
+            </button>
+           </div>
+           <div class="theme-doc-markdown markdown">
+            <header>
+             <h1>
+              REST API Changelog
+             </h1>
+            </header>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2023-mar-17">
+             2023-MAR-17
+             <a aria-label="Direct link to 2023-MAR-17" class="hash-link" href="#2023-mar-17" title="Direct link to 2023-MAR-17">
+              ​
+             </a>
+            </h3>
+            <p>
+             <strong>
+              Additions
+             </strong>
+            </p>
+            <p>
+             Added 2 new response properties to
+             <a href="/prime/reference/primerestapi_getposttradecredit">
+              Get Portfolio credit Information
+             </a>
+             :
+            </p>
+            <ul>
+             <li>
+              <code>
+               adjusted_credit_utilized
+              </code>
+             </li>
+             <li>
+              <code>
+               adjusted_portfolio_equity
+              </code>
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-sep-2">
+             2022-SEP-2
+             <a aria-label="Direct link to 2022-SEP-2" class="hash-link" href="#2022-sep-2" title="Direct link to 2022-SEP-2">
+              ​
+             </a>
+            </h3>
+            <p>
+             <strong>
+              Additions
+             </strong>
+            </p>
+            <p>
+             Added 3 new response properties to
+             <a href="/prime/reference/primerestapi_getportfolioallocations">
+              Get Portfolio Allocations
+             </a>
+             :
+            </p>
+            <ul>
+             <li>
+              <code>
+               allocation_completed_at
+              </code>
+             </li>
+             <li>
+              <code>
+               order_ids
+              </code>
+             </li>
+             <li>
+              <code>
+               fees_allocated_leg
+              </code>
+              of destination level
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-aug-12">
+             2022-AUG-12
+             <a aria-label="Direct link to 2022-AUG-12" class="hash-link" href="#2022-aug-12" title="Direct link to 2022-AUG-12">
+              ​
+             </a>
+            </h3>
+            <p>
+             <strong>
+              Additions
+             </strong>
+            </p>
+            <p>
+             Added new endpoint
+             <a href="/prime/reference/primerestapi_getportfolioallocations">
+              Get Portfolio Allocations
+             </a>
+             returns a list of allocations.
+            </p>
+            <div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa">
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-text codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">GET /v1/portfolios/{portfolio_id}/allocations</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-aug-10">
+             2022-AUG-10
+             <a aria-label="Direct link to 2022-AUG-10" class="hash-link" href="#2022-aug-10" title="Direct link to 2022-AUG-10">
+              ​
+             </a>
+            </h3>
+            <p>
+             <strong>
+              Additions
+             </strong>
+            </p>
+            <p>
+             <a href="/prime/reference/primerestapi_getopenorders">
+              List Open Orders
+             </a>
+             ,
+             <a href="/prime/reference/primerestapi_getorders">
+              List Portfolio Orders
+             </a>
+             :
+            </p>
+            <ul>
+             <li>
+              Users can now filter by a new
+              <code>
+               order_type
+              </code>
+              called:
+              <code>
+               BLOCK
+              </code>
+             </li>
+             <li>
+              Added a new possible value
+              <code>
+               BLOCK
+              </code>
+              to the field
+              <code>
+               type
+              </code>
+              , which refers to a block trade
+             </li>
+            </ul>
+            <p>
+             <a href="/prime/reference/primerestapi_getorder">
+              Get Order by Order ID
+             </a>
+             :
+            </p>
+            <ul>
+             <li>
+              Added a new possible value
+              <code>
+               BLOCK
+              </code>
+              to the field
+              <code>
+               type
+              </code>
+              , which refers to a block trade
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-jul-27">
+             2022-JUL-27
+             <a aria-label="Direct link to 2022-JUL-27" class="hash-link" href="#2022-jul-27" title="Direct link to 2022-JUL-27">
+              ​
+             </a>
+            </h3>
+            <p>
+             <strong>
+              Additions
+             </strong>
+            </p>
+            <p>
+             <a href="/prime/reference/primerestapi_getopenorders">
+              List Open Orders
+             </a>
+             ,
+             <a href="/prime/reference/primerestapi_getorder">
+              Get Order by Order ID
+             </a>
+             ,
+             <a href="/prime/reference/primerestapi_getorders">
+              List Portfolio Orders
+             </a>
+             :
+            </p>
+            <ul>
+             <li>
+              Users can now see a field
+              <code>
+               exchange_fee
+              </code>
+              , populated when the order was placed with a
+              <code>
+               COST_PLUS
+              </code>
+              commission configuration.
+             </li>
+            </ul>
+            <p>
+             <a href="/prime/reference/primerestapi_getportfoliobalances">
+              List Portfolio Balances
+             </a>
+             ,
+             <a href="/prime/reference/primerestapi_getwalletbalance">
+              Get Wallet Balance
+             </a>
+             :
+            </p>
+            <ul>
+             <li>
+              Added a new field
+              <code>
+               bonded_amount
+              </code>
+              , which refers to the amount currently locked due to bonding/staking, potentially subject to an unbonding period, in whole units
+             </li>
+             <li>
+              Added a new field
+              <code>
+               reserved_amount
+              </code>
+              , which refers to the amount that must remain in the wallet due to the protocol, in whole units
+             </li>
+             <li>
+              Added a new field
+              <code>
+               unbonding_amount
+              </code>
+              , which refers to the amount that is in the process of unbonding, in whole units
+             </li>
+             <li>
+              Added a new field
+              <code>
+               unvested_amount
+              </code>
+              , which refers to the unrealized amount subject to a vesting schedule, in whole units
+             </li>
+             <li>
+              Added a new field
+              <code>
+               pending_rewards_amount
+              </code>
+              , which refers to the pending bonding/staking rewards that have not yet been realized, in whole units
+             </li>
+             <li>
+              Added a new field
+              <code>
+               past_rewards_amount
+              </code>
+              , which refers to the previously realized bonding/staking rewards, in whole units
+             </li>
+             <li>
+              Added a new field
+              <code>
+               bondable_amount
+              </code>
+              , which refers to the amount available for bonding/staking, in whole units
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-jul-01">
+             2022-JUL-01
+             <a aria-label="Direct link to 2022-JUL-01" class="hash-link" href="#2022-jul-01" title="Direct link to 2022-JUL-01">
+              ​
+             </a>
+            </h3>
+            <p>
+             <strong>
+              Additions
+             </strong>
+            </p>
+            <ul>
+             <li>
+              <code>
+               POST /v1/portfolios/{portfolio_id}/wallets/{wallet_id}/conversion
+              </code>
+              endpoint is now available to perform conversions between USD and USDC.
+             </li>
+            </ul>
+            <p>
+             <a href="/prime/reference/primerestapi_getportfolioactivities">
+              List Activities
+             </a>
+             :
+            </p>
+            <ul>
+             <li>
+              Users can now filter by a new type of activity called:
+              <code>
+               ACTIVITY_TYPE_CONVERSION
+              </code>
+              .
+             </li>
+            </ul>
+            <p>
+             <a href="/prime/reference/primerestapi_getwallettransactions">
+              List Wallet Transactions
+             </a>
+             :
+            </p>
+            <ul>
+             <li>
+              Users can now filter by a new type of transaction called:
+              <code>
+               CONVERSION
+              </code>
+              .
+             </li>
+             <li>
+              Added a new field
+              <code>
+               destination_symbol
+              </code>
+              , which will contain the destination symbol of the conversion.
+             </li>
+            </ul>
+            <p>
+             <a href="/prime/reference/primerestapi_getportfoliotransactions">
+              List Portfolio Transactions
+             </a>
+             :
+            </p>
+            <ul>
+             <li>
+              Users can now filter by a new type of transaction called:
+              <code>
+               CONVERSION
+              </code>
+              .
+             </li>
+             <li>
+              Added a new field
+              <code>
+               destination_symbol
+              </code>
+              , which will contain the destination symbol of the conversion.
+             </li>
+            </ul>
+            <p>
+             <a href="/prime/reference/primerestapi_gettransaction">
+              Get Transaction by Transaction ID
+             </a>
+             :
+            </p>
+            <ul>
+             <li>
+              Added a new field
+              <code>
+               destination_symbol
+              </code>
+              , which will contain the destination symbol of the conversion.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-jun-08">
+             2022-JUN-08
+             <a aria-label="Direct link to 2022-JUN-08" class="hash-link" href="#2022-jun-08" title="Direct link to 2022-JUN-08">
+              ​
+             </a>
+            </h3>
+            <p>
+             <strong>
+              Additions
+             </strong>
+            </p>
+            <ul>
+             <li>
+              <p>
+               <code>
+                GET /v1/portfolios/{portfolio_id}/address_book
+               </code>
+               endpoint is now available to get a list of address book addresses.
+              </p>
+             </li>
+             <li>
+              <p>
+               <code>
+                POST /v1/portfolios/{portfolio_id}/address_book
+               </code>
+               endpoint is now available to create an entry for a portfolio's trusted addresses.
+              </p>
+             </li>
+            </ul>
+            <p>
+             <a href="/prime/reference/primerestapi_getportfolioactivities">
+              List Activities
+             </a>
+             :
+            </p>
+            <ul>
+             <li>
+              Users can now filter by a new type of activity called an allocation:
+              <code>
+               ACTIVITY_CATEGORY_ALLOCATION
+              </code>
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-apr-22">
+             2022-APR-22
+             <a aria-label="Direct link to 2022-APR-22" class="hash-link" href="#2022-apr-22" title="Direct link to 2022-APR-22">
+              ​
+             </a>
+            </h3>
+            <p>
+             <a href="/prime/reference/primerestapi_getorders">
+              List Portfolio Orders
+             </a>
+             :
+            </p>
+            <ul>
+             <li>
+              The
+              <code>
+               product_ids
+              </code>
+              parameter is no longer required. If not specified you get all products.
+             </li>
+             <li>
+              The 31 day limit has been removed so you can now request orders for any time period using
+              <code>
+               start_date
+              </code>
+              and
+              <code>
+               end_date
+              </code>
+              . The
+              <code>
+               end_date
+              </code>
+              parameter is still optional, but if not specified you get orders from
+              <code>
+               start_date
+              </code>
+              to the end of time. Previously, it returned
+              <code>
+               start_date
+              </code>
+              to
+              <code>
+               start_date
+              </code>
+              + 31 days.
+             </li>
+            </ul>
+            <p>
+             <a href="/prime/reference/primerestapi_getopenorders">
+              List Open Orders
+             </a>
+             :
+            </p>
+            <ul>
+             <li>
+              The
+              <code>
+               product_ids
+              </code>
+              parameter is no longer required. If not specified you get all products.
+             </li>
+             <li>
+              All other query params are currently non-functional and result in an error if used. This includes:
+              <code>
+               order_type
+              </code>
+              ,
+              <code>
+               cursor
+              </code>
+              ,
+              <code>
+               limit
+              </code>
+              ,
+              <code>
+               sort_direction
+              </code>
+              ,
+              <code>
+               start_date
+              </code>
+              ,
+              <code>
+               order_side
+              </code>
+              , and
+              <code>
+               end_date
+              </code>
+              .
+             </li>
+             <li>
+              The maximum number of orders returned is 1000. If a client has more than 1000 open orders, an error is returned prompting the user to use Websocket API, or FIX API to stream open orders.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-apr-07">
+             2022-APR-07
+             <a aria-label="Direct link to 2022-APR-07" class="hash-link" href="#2022-apr-07" title="Direct link to 2022-APR-07">
+              ​
+             </a>
+            </h3>
+            <p>
+             <strong>
+              Additions
+             </strong>
+            </p>
+            <ul>
+             <li>
+              The
+              <code>
+               has_next
+              </code>
+              boolean field has been added to the
+              <code>
+               pagination
+              </code>
+              field in the response body. The
+              <code>
+               has_next
+              </code>
+              field indicates if there is more data available to paginate through.
+             </li>
+            </ul>
+            <p>
+             <strong>
+              Removals
+             </strong>
+            </p>
+            <ul>
+             <li>
+              The
+              <code>
+               total_result_count
+              </code>
+              field has been removed from the
+              <code>
+               pagination
+              </code>
+              field in the response body.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-mar-24">
+             2022-MAR-24
+             <a aria-label="Direct link to 2022-MAR-24" class="hash-link" href="#2022-mar-24" title="Direct link to 2022-MAR-24">
+              ​
+             </a>
+            </h3>
+            <p>
+             <strong>
+              Additions
+             </strong>
+            </p>
+            <ul>
+             <li>
+              <code>
+               POST /v1/portfolios/:id/wallets/:wallet_id/withdrawals
+              </code>
+              endpoint is now available to request new withdrawal transactions from a portfolio wallet.
+             </li>
+             <li>
+              <code>
+               POST /v1/portfolios/:id/wallets/:wallet_id/transfers
+              </code>
+              endpoint is now available to request new transfers between portfolio wallets.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-mar-19">
+             2022-MAR-19
+             <a aria-label="Direct link to 2022-MAR-19" class="hash-link" href="#2022-mar-19" title="Direct link to 2022-MAR-19">
+              ​
+             </a>
+            </h3>
+            <p>
+             <strong>
+              Additions
+             </strong>
+            </p>
+            <ul>
+             <li>
+              <code>
+               GET /v1/entities/:id/payment-method/:payment_method_id
+              </code>
+              endpoint is now available to retrieve payment method information related to investment vehicles.
+             </li>
+             <li>
+              <code>
+               POST /v1/portfolios/:id/wallets
+              </code>
+              endpoint is now available to request new wallets for a portfolio.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-mar-07">
+             2022-MAR-07
+             <a aria-label="Direct link to 2022-MAR-07" class="hash-link" href="#2022-mar-07" title="Direct link to 2022-MAR-07">
+              ​
+             </a>
+            </h3>
+            <p>
+             <strong>
+              Additions
+             </strong>
+            </p>
+            <ul>
+             <li>
+              <code>
+               GET /v1/portfolios/:id/activities
+              </code>
+              endpoint is now available to retrieve a list of activities related to a given portfolio.
+             </li>
+             <li>
+              <code>
+               GET /v1/portfolios/:id/activities/:activity_id
+              </code>
+              endpoint is now available to retrieve a specific activity.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-feb-15">
+             2022-FEB-15
+             <a aria-label="Direct link to 2022-FEB-15" class="hash-link" href="#2022-feb-15" title="Direct link to 2022-FEB-15">
+              ​
+             </a>
+            </h3>
+            <p>
+             <strong>
+              Fixes
+             </strong>
+            </p>
+            <ul>
+             <li>
+              Blockchain Network Ids (
+              <code>
+               blockchain_ids
+              </code>
+              ) should now appear in the Transaction response.
+             </li>
+             <li>
+              <code>
+               GET /v1/portfolios/:id/orders
+              </code>
+              and
+              <code>
+               GET /v1/portfolios/:id/order_fills
+              </code>
+              pagination should now function as expected.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-jan-31">
+             2022-JAN-31
+             <a aria-label="Direct link to 2022-JAN-31" class="hash-link" href="#2022-jan-31" title="Direct link to 2022-JAN-31">
+              ​
+             </a>
+            </h3>
+            <p>
+             <strong>
+              Additions
+             </strong>
+            </p>
+            <ul>
+             <li>
+              <code>
+               GET /v1/portfolios/:id/credit
+              </code>
+              will return 200 response if post trade credit is not enabled.
+             </li>
+            </ul>
+            <p>
+             An enabled flag has also been added:
+            </p>
+            <ul>
+             <li>
+              <code>
+               GET /v1/portfolios/:id/portfolio_balances
+              </code>
+              now has a
+              <code>
+               type
+              </code>
+              filter.
+             </li>
+             <li>
+              <code>
+               GET /v1/portfolios/:id/commissions
+              </code>
+              is now available to retrieve commissions for your portfolio.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-jan-19">
+             2022-JAN-19
+             <a aria-label="Direct link to 2022-JAN-19" class="hash-link" href="#2022-jan-19" title="Direct link to 2022-JAN-19">
+              ​
+             </a>
+            </h3>
+            <p>
+             <strong>
+              Fixes
+             </strong>
+            </p>
+            <ul>
+             <li>
+              The
+              <code>
+               account_identifier
+              </code>
+              field now appears within
+              <code>
+               GET /v1/portfolios/:id/wallets/:wallet_id/deposit_instructions
+              </code>
+              .
+             </li>
+             <li>
+              The missing Transaction resources should now appear in
+              <code>
+               GET /v1/portfolio/:id/transactions
+              </code>
+              .
+             </li>
+            </ul>
+            <p>
+             <strong>
+              Additions
+             </strong>
+            </p>
+            <ul>
+             <li>
+              The Transaction
+              <code>
+               transfer_from
+              </code>
+              and
+              <code>
+               transfer_to
+              </code>
+              fields should now appear in the Transaction resource for Transfer Withdrawals and Deposits.
+             </li>
+             <li>
+              External address deposit information should now be included in the Transaction resource response.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2022-jan-15">
+             2022-JAN-15
+             <a aria-label="Direct link to 2022-JAN-15" class="hash-link" href="#2022-jan-15" title="Direct link to 2022-JAN-15">
+              ​
+             </a>
+            </h3>
+            <p>
+             <strong>
+              Additions
+             </strong>
+            </p>
+            <ul>
+             <li>
+              For deposits and withdrawals to bank accounts, the payment method associated with that bank account now appears in the Transaction response as the
+              <code>
+               transfer_from
+              </code>
+              and
+              <code>
+               transfer_to
+              </code>
+              type.
+             </li>
+             <li>
+              Non-balance impacting Transaction types now appear in
+              <code>
+               GET /v1/portfolios/:id/transactions
+              </code>
+              .
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2021-dec-15">
+             2021-DEC-15
+             <a aria-label="Direct link to 2021-DEC-15" class="hash-link" href="#2021-dec-15" title="Direct link to 2021-DEC-15">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              Welcome to the Coinbase Prime REST API.
+             </li>
+            </ul>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="2021-oct-15">
+             2021-OCT-15
+             <a aria-label="Direct link to 2021-OCT-15" class="hash-link" href="#2021-oct-15" title="Direct link to 2021-OCT-15">
+              ​
+             </a>
+            </h3>
+            <ul>
+             <li>
+              Welcome to the Coinbase Prime REST API beta.
+             </li>
+            </ul>
+           </div>
+           <footer class="theme-doc-footer docusaurus-mt-lg">
+            <div class="theme-doc-footer-edit-meta-row row">
+             <div class="col">
+             </div>
+             <div class="col lastUpdated_vwxv">
+             </div>
+            </div>
+           </footer>
+           <div class="thumbnailRating_V63g hide-on-print">
+            <p>
+             Was this helpful?
+            </p>
+            <div class="buttonGroup_vjMq">
+             <style data-emotion="css 1wf493t">
+              .css-1wf493t{text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1wf493t:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1wf493t:hover{background-color:transparent;}}.css-1wf493t.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+             </style>
+             <style data-emotion="css 1yxmbwk">
+              .css-1yxmbwk{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1yxmbwk::-moz-focus-inner{border-style:none;}.css-1yxmbwk.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-1yxmbwk{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-1yxmbwk:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1yxmbwk:hover{background-color:transparent;}}.css-1yxmbwk.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+             </style>
+             <button aria-label="Helpful" class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1yxmbwk" tabindex="0" type="button">
+              <style data-emotion="css vubbuv">
+               .css-vubbuv{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
+              </style>
+              <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" data-testid="ThumbUpOffAltIcon" focusable="false" viewbox="0 0 24 24">
+               <path d="m13.11 5.72-.57 2.89c-.12.59.04 1.2.42 1.66.38.46.94.73 1.54.73H20v1.08L17.43 18H9.34c-.18 0-.34-.16-.34-.34V9.82l4.11-4.1M14 2 7.59 8.41C7.21 8.79 7 9.3 7 9.83v7.83C7 18.95 8.05 20 9.34 20h8.1c.71 0 1.36-.37 1.72-.97l2.67-6.15c.11-.25.17-.52.17-.8V11c0-1.1-.9-2-2-2h-5.5l.92-4.65c.05-.22.02-.46-.08-.66-.23-.45-.52-.86-.88-1.22L14 2zM4 9H2v11h2c.55 0 1-.45 1-1v-9c0-.55-.45-1-1-1z">
+               </path>
+              </svg>
+             </button>
+             <style data-emotion="css 1e2dcm1">
+              .css-1e2dcm1{z-index:1500;pointer-events:none;}
+             </style>
+             <style data-emotion="css okvapm">
+              .css-okvapm{z-index:1500;pointer-events:none;}
+             </style>
+             <style data-emotion="css 1wf493t">
+              .css-1wf493t{text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1wf493t:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1wf493t:hover{background-color:transparent;}}.css-1wf493t.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+             </style>
+             <style data-emotion="css 1yxmbwk">
+              .css-1yxmbwk{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1yxmbwk::-moz-focus-inner{border-style:none;}.css-1yxmbwk.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-1yxmbwk{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-1yxmbwk:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1yxmbwk:hover{background-color:transparent;}}.css-1yxmbwk.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}
+             </style>
+             <button aria-label="Not helpful" class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1yxmbwk" tabindex="0" type="button">
+              <style data-emotion="css vubbuv">
+               .css-vubbuv{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
+              </style>
+              <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" data-testid="ThumbDownOffAltIcon" focusable="false" viewbox="0 0 24 24">
+               <path d="m10.89 18.28.57-2.89c.12-.59-.04-1.2-.42-1.66-.38-.46-.94-.73-1.54-.73H4v-1.08L6.57 6h8.09c.18 0 .34.16.34.34v7.84l-4.11 4.1M10 22l6.41-6.41c.38-.38.59-.89.59-1.42V6.34C17 5.05 15.95 4 14.66 4h-8.1c-.71 0-1.36.37-1.72.97l-2.67 6.15c-.11.25-.17.52-.17.8V13c0 1.1.9 2 2 2h5.5l-.92 4.65c-.05.22-.02.46.08.66.23.45.52.86.88 1.22L10 22zm10-7h2V4h-2c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1z">
+               </path>
+              </svg>
+             </button>
+             <style data-emotion="css 1e2dcm1">
+              .css-1e2dcm1{z-index:1500;pointer-events:none;}
+             </style>
+             <style data-emotion="css okvapm">
+              .css-okvapm{z-index:1500;pointer-events:none;}
+             </style>
+            </div>
+           </div>
+           <style data-emotion="css 1k371a6">
+            @media print{.css-1k371a6{position:absolute!important;}}
+           </style>
+          </article>
+          <nav aria-label="Docs pages navigation" class="pagination-nav docusaurus-mt-lg">
+           <a class="pagination-nav__link pagination-nav__link--prev" href="/prime/docs/rest-pagination">
+            <div class="pagination-nav__sublabel">
+             Previous
+            </div>
+            <div class="pagination-nav__label">
+             Pagination
+            </div>
+           </a>
+           <a class="pagination-nav__link pagination-nav__link--next" href="/prime/docs/fix-connectivity">
+            <div class="pagination-nav__sublabel">
+             Next
+            </div>
+            <div class="pagination-nav__label">
+             Connectivity
+            </div>
+           </a>
+          </nav>
+         </div>
+        </div>
+        <div class="col col--3">
+         <div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop">
+          <ul class="table-of-contents table-of-contents__left-border">
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2023-mar-17">
+             2023-MAR-17
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-sep-2">
+             2022-SEP-2
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-aug-12">
+             2022-AUG-12
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-aug-10">
+             2022-AUG-10
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-jul-27">
+             2022-JUL-27
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-jul-01">
+             2022-JUL-01
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-jun-08">
+             2022-JUN-08
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-apr-22">
+             2022-APR-22
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-apr-07">
+             2022-APR-07
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-mar-24">
+             2022-MAR-24
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-mar-19">
+             2022-MAR-19
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-mar-07">
+             2022-MAR-07
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-feb-15">
+             2022-FEB-15
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-jan-31">
+             2022-JAN-31
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-jan-19">
+             2022-JAN-19
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2022-jan-15">
+             2022-JAN-15
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2021-dec-15">
+             2021-DEC-15
+            </a>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#2021-oct-15">
+             2021-OCT-15
+            </a>
+           </li>
+          </ul>
+         </div>
+        </div>
+       </div>
+      </div>
+     </main>
+    </div>
+   </div>
+   <footer class="footer">
+    <div class="container container-fluid">
+     <ul>
+      <li>
+       <div class="footer__copyright">
+        © 2023 Coinbase
+       </div>
+      </li>
+      <li>
+       <a class="footer__link-item" href="https://www.coinbase.com/legal/privacy" rel="noopener noreferrer" target="_blank">
+        Privacy
+        <svg aria-hidden="true" class="iconExternalLink_nPIU" height="13.5" viewbox="0 0 24 24" width="13.5">
+         <path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z" fill="currentColor">
+         </path>
+        </svg>
+       </a>
+      </li>
+     </ul>
+    </div>
+   </footer>
+  </div>
+  <script src="/assets/js/runtime~main.91f0d63d.js">
+  </script>
+  <script src="/assets/js/main.440d9293.js">
+  </script>
+ </body>
+</html>
