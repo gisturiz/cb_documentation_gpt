@@ -62,6 +62,6 @@ def crawl(url, base_url):
         crawl(next_url, base_url)
 
 if __name__ == "__main__":
-    start_url = "https://docs.cloud.coinbase.com"  # Replace with the URL you want to start with
+    start_url = "https://docs.cloud.coinbase.com"
     base_url = "https://docs.cloud.coinbase.com"
     crawl(start_url, base_url)
