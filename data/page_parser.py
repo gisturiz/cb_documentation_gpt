@@ -39,5 +39,3 @@ class ReadDocLoader():
 
 loader = ReadDocLoader("saved_pages")
 docs = loader.load()
-print(len(docs))
-print(docs[10])
